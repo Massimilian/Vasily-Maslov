@@ -3,9 +3,9 @@ package ru.job4j;
 /**
  * Calculate.
  *
- * @author Vasily Maslov (vasalekmas@gmail.com)
- * @version $~$
- * @since 06/12/2017
+ * @author Vasily Maslov (vasalekmas@gmail.com).
+ * @version $~$.
+ * @since 06/12/2017.
  */
 public class Calculate {
     public static void main(String[] args) {
@@ -14,7 +14,6 @@ public class Calculate {
 
     /**
      * Method echo.
-     * @param my name.
      * @return 3*Echo plus my name.
      */
     public String echo(String name) {
