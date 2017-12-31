@@ -13,8 +13,10 @@ public class DummyBotTest {
     @Test
     public void whenGreetBot() {
         DummyBot bot = new DummyBot();
-        assertThat(bot.answer("Привет, Бот."), is("Привет, умник.") || bot.answer("Привет, бот."), is("Привет, умник."));
-    }
+        assertThat(bot.answer("Привет, Бот."), is("Привет, умник."));
+		//assertThat((bot.answer("Привет, Бот."), is("Привет, умник.") || bot.answer("Привет, бот.")), is("Привет, умник.")) - почему-то тест заявил, что я неверно использую знак "||". 
+		// вариант assertThat для усложнённого варианта программы
+	}
 
     @Test
     public void whenByeBot() {
