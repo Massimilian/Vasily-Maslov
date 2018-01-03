@@ -1,5 +1,11 @@
 package ru.job4j.calculator;
 
+/**
+ * @author Vasily Maslov (vasalekmas@gmail.com)
+ * @version $Id$
+ * @since 31/12/2017
+ */
+ 
 import org.junit.Test;
 
 import static org.hamcrest.core.Is.is;
