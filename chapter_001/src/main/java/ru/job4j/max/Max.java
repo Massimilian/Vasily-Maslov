@@ -11,7 +11,7 @@ public class Max {
      * @param два числа.
      * @return максимальное число.
      */
-	 public int max(int first, int second) {
+	public int max(int first, int second) {
 		 return first <= second ? second : first;
 		 
 		 /**
@@ -25,5 +25,8 @@ public class Max {
 		 * return a;
 		 */
 		 }
-	 }
-	 
+	public int max(int first, int second, int third) {
+	return max(first, second) <= max(second, third) ? max(second, third) : max(first, second);
+	}
+}
+	

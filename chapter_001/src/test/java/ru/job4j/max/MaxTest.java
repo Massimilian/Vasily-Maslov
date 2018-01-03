@@ -19,5 +19,12 @@ public class MaxTest {
 		int result = maxim.max(1, 2);
 		assertThat(result, is(2));
 	}
+	
+	@Test
+	public void whenEnterThreeNumbersReturnMax() {
+		Max maximal = new Max();
+		int result = maximal.max(1, 3, 2);
+		assertThat(result, is(3));
+	}	
 }
 	
