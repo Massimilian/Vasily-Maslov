@@ -11,19 +11,24 @@ import static org.junit.Assert.*;
  */
  
  public class FindLoopTest {
+	 @Test
 	 public void whenEnterANumberThenReturnItsPlace() {
 		 FindLoop fl = new FindLoop();
 		 int[] test = new int[10];
-		 test[3] = 4;
-		 int result = fl.indexOf(test, 3);
-		 assertThat(result, is(4));
+		 test[3] = 7;
+		 int result = fl.indexOf(test, 7);
+		 assertThat(result, is(3));
 	 }
 	 
+	 @Test
 	 public void whenEnterImpossibleNumberThenReturnMenosOne() {
 		FindLoop fl = new FindLoop();
 		int[] test = new int[10];
-		int result = fl.indexOf(test, 11);
+		for (int i = 0; i < test.length; i++) {
+			test[i] = i;
+			}
+		int result = fl.indexOf(test, 10);
 		assertThat(result, is(-1));
 	 }
-	 
+	
  }

@@ -10,8 +10,8 @@ package ru.job4j.array;
 	public int[] calculate(int bound) {
 	int[] rsl = new int[bound];
     // заполнить массив через цикл элементами от 1 до bound возведенные в квадрат
-	for (int i = 1; i <= (bound + 1); i++) {
-		rsl[(i - 1)] = (int) Math.pow(i, i);
+	for (int i = 1; i <= bound; i++) {
+		rsl[(i - 1)] = (int) Math.pow(i, 2);
 		}
     return rsl;
 	}

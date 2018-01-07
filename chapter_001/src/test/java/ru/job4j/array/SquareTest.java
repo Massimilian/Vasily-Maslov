@@ -11,6 +11,7 @@ import static org.junit.Assert.*;
  */
  
  public class SquareTest {
+	 @Test
 	 public void whenEnterANumberThenReturnAllNumbersFromOneToNumber() {
 		 Square sq = new Square();
 		 int[] result = sq.calculate(3);
