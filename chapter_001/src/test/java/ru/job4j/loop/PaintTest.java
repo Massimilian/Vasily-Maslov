@@ -19,10 +19,17 @@ public class PaintTest {
     }
 	
 	@Test
-	public void whenPyramidThenFourLeft() {
+	public void whenPyramidFourThenLeft() {
     Paint paint = new Paint();
     String rst = paint.leftTrl(4);
     assertThat(rst, is(new StringJoiner(System.lineSeparator(), "", System.lineSeparator()).add("   ^").add("  ^^").add(" ^^^").add("^^^^").toString()));
+	}
+	
+	@Test
+	public void whenFinalPiramidThreeThenAllPyramidPaint() {
+	Paint paint = new Paint();
+	String rst = paint.pyramid(3);
+	assertThat(rst, is(new StringJoiner(System.lineSeparator(), "", System.lineSeparator()).add("  ^  ").add(" ^^^ ").add("^^^^^").toString()));
 	}
 	
 	@Test
@@ -38,5 +45,4 @@ public class PaintTest {
     String rst = paint.leftTriangle(4);
     assertThat(rst, is(new StringJoiner(System.lineSeparator(), "", System.lineSeparator()).add("   ^").add("  ^^").add(" ^^^").add("^^^^").toString()));
 	}
-	
 }
