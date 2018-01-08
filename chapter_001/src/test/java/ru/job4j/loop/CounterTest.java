@@ -16,21 +16,21 @@ import static org.junit.Assert.assertThat;
 	 @Test
 	 public void whenEnterTenNumbersThenTheSumOfEvenReturnsFirstTry() {
 		 Counter cont = new Counter();
-		 int result = cont.addOne();
-		 assertThat(result, is(30));
+		 int result = cont.addOne(3, 15);
+		 assertThat(result, is(54));
 	 }
 	 
 	 @Test
 	 public void whenEnterTenNumbersThenTheSumOfEvenReturnsSecondTry() {
 		 Counter cont = new Counter();
-		 int result = cont.addTwo();
+		 int result = cont.addTwo(0, 10);
 		 assertThat(result, is(30));
 	 }
 	 
 	 @Test
 	 public void whenEnterTenNumbersThenTheSumOfEvenReturnsThirdTry() {
 		 Counter cont = new Counter();
-		 int result = cont.addThree();
-		 assertThat(result, is(30));
+		 int result = cont.addThree(1, 13);
+		 assertThat(result, is(42));
 	 }
  }

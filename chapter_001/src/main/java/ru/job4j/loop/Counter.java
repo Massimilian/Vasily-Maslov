@@ -9,18 +9,24 @@ package ru.job4j.loop;
  public class Counter {
 	 int finish = 10;
 	//Вариант 1, упрощённый и не очень красивый.
-	public int addOne() {
+	public int addOne(int start, int finish) {
 		int sum = 0;
-		for (int i = 0; i <= finish; i = i + 2) {
+		if (start % 2 != 0) {
+			start++;
+		}
+		for (int i = start; i <= finish; i = i + 2) {
 			sum = sum + i;
 		}
 		return sum;
 	}
 	
-	public int addTwo() {
+	public int addTwo(int start, int finish) {
 	//Вариант 2, мне кажется - оптимальный.
 		int sum = 0;
-		for (int i = 0; i <= finish; i++) {
+		if (start % 2 != 0) {
+		start++;
+		}
+		for (int i = start; i <= finish; i++) {
 			if (i % 2 == 0) {
 				sum = sum + i;
 			}
@@ -28,18 +34,21 @@ package ru.job4j.loop;
 		return sum;
 	}
 	
-	public int addThree() {
+	public int addThree(int start, int finish) {
 	// Вариант 3, для тренировки цикла foreach, использования нерекомендованного continue и разминки использования массивов.
-	int sum = 0;
-	int[] arr = new int[finish + 1];
-	for (int i = 0; i <= finish; i++) {
+		int sum = 0;
+		if (start % 2 != 0) {
+		start++;
+		}
+	int[] arr = new int[finish - start + 1];
+	for (int i = 0; i <= finish - start; i++) {
 		arr[i] = i;
 		}
 	for (int i : arr) {
 		if (i % 2 != 0) {
 			continue;
 			}
-		sum = sum + i;
+		sum = sum + i + start;
 		}
 		return sum;
 	}
