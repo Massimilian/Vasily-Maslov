@@ -14,8 +14,7 @@ import static org.junit.Assert.*;
 	 @Test
 	 public void whenEnterANumberThenReturnItsPlace() {
 		 FindLoop fl = new FindLoop();
-		 int[] test = new int[10];
-		 test[3] = 7;
+		 int[] test = new int[]{1, 2, 3, 7, 4, 5, 6, 7, 8, 9};
 		 int result = fl.indexOf(test, 7);
 		 assertThat(result, is(3));
 	 }
