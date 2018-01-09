@@ -7,6 +7,13 @@ package ru.job4j.array;
  */
 
  public class Square {
+	 	 
+	 /**
+	 * Pows;
+	 * @param number of cells;
+	 * @return matrix with pows;
+	 */
+	 
 	public int[] calculate(int bound) {
 	int[] rsl = new int[bound];
     // заполнить массив через цикл элементами от 1 до bound возведенные в квадрат

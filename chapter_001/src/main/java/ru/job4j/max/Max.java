@@ -6,11 +6,13 @@ package ru.job4j.max;
  * @since 03/01/2018
  */
 public class Max {
+
 	 /**
-     * Ищет максимальное число
-     * @param два числа.
-     * @return максимальное число.
-     */
+	 * to find max number of two numbers;
+	 * @param two numbers;
+	 * @return max number;
+	 */
+	
 	public int max(int first, int second) {
 		 return first <= second ? second : first;
 		 
@@ -25,6 +27,13 @@ public class Max {
 		 * return a;
 		 */
 		 }
+		 
+	 /**
+	 * to find max number of three numbers;
+	 * @param three numbers;
+	 * @return max number;
+	 */
+	
 	public int max(int first, int second, int third) {
 	return max(first, second) <= max(second, third) ? max(second, third) : max(first, second);
 	}

@@ -15,7 +15,7 @@ import static org.junit.Assert.*;
 	 public void whenEnterTheMatrixLengthThenReturnTheMatrixWithThisSize() {
 		 Matrix mat = new Matrix();
 		 int[][] test = mat.multiple(2);
-		 int[][] result = new int[][]{{0, 0, 0}, {0, 1, 2}, {0, 2, 4}};
+		 int[][] result = {{0, 0, 0}, {0, 1, 2}, {0, 2, 4}};
 		 assertThat(test, is(result));
 	 }
  }

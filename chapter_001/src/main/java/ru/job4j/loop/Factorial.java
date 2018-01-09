@@ -7,6 +7,13 @@ package ru.job4j.loop;
  */
  
  public class Factorial {
+	  
+	 /**
+	 * to get a factorial
+	 * @param the number;
+	 * @return the number's factorial;
+	 */
+	
 	 public int calc(int max) {
 		int tempMax = 1;
 		if (max >= 13) {

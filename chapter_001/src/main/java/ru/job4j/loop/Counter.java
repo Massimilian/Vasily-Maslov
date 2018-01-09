@@ -8,6 +8,14 @@ package ru.job4j.loop;
  
  public class Counter {
 	 int finish = 10;
+	 
+	 /**
+	 * to find a sum of even numbers;
+	 * @param start and finish numbers;
+	 * @return the sum of numbers;
+	 */
+	
+	 
 	//Вариант 1, упрощённый и не очень красивый.
 	public int addOne(int start, int finish) {
 		int sum = 0;

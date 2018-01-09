@@ -7,6 +7,13 @@ package ru.job4j.loop;
  */
  
  public class Board {
+	 
+	 /**
+	 * to get chess board
+	 * @param width&height;
+	 * @return filled board with "x" and " ";
+	 */
+	
 	 public String paint(int width, int height) {
 		StringBuilder screen = new StringBuilder();
         String ln = System.lineSeparator();

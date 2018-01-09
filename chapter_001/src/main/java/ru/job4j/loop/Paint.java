@@ -9,6 +9,13 @@ package ru.job4j.loop;
 import java.util.function.BiPredicate;
  
  public class Paint {
+	 
+	 /**
+	 * to get right triangle;
+	 * @param side height;
+	 * @return that triangle;
+	 */
+	
     public String rightTrl(int height) {
         // Буфер для результата.
         StringBuilder screen = new StringBuilder();
@@ -32,6 +39,13 @@ import java.util.function.BiPredicate;
         // Получаем результат.
         return screen.toString();
     }
+	
+	 /**
+	 * to get left triangle;
+	 * @param side height;
+	 * @return that triangle;
+	 */
+	
 	public String leftTrl(int height) {
     StringBuilder screen = new StringBuilder();
     int weight = height;
@@ -47,6 +61,13 @@ import java.util.function.BiPredicate;
     }
     return screen.toString();
 	}
+	
+	 /**
+	 * to get pyramid;
+	 * @param side height;
+	 * @return that pyramid;
+	 */
+	
 	public String pyramid(int height) {
     StringBuilder screen = new StringBuilder();
     int weight = 2 * height - 1;
@@ -64,6 +85,7 @@ import java.util.function.BiPredicate;
 	}
 	
 	// тот же код, только после рефакторинга
+	
 	
 	public String rightTriangle(int height) {
     return this.loopBy(height, height, (row, column) -> row >= column);

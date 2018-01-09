@@ -27,6 +27,8 @@ public class Triangle {
 	*@param bc расстояние между точками b и c
 	*@return Полупериметр
 	*/
+	
+	
 	public double period(double ab, double ac, double bc) {
     return ab / 2 + ac / 2 + bc / 2;
 	}

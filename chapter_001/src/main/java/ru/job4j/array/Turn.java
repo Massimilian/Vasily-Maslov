@@ -8,16 +8,20 @@ package ru.job4j.array;
  
  
  public class Turn {
-	 public int[] back(int[] array) {
-		 // {1, 2, 3, 4, 5}
-		 // {5, 4, 3, 2, 1}
-		 
-		 for (int i = 0; i < array.length / 2; i++) {
-		 array[i] = array[i] + array[array.length - 1 - i];
-		 array[array.length - 1 - i] = array[i] - array[array.length - 1 - i];
-		 array[i] = array[i] - array[array.length - 1 - i];
-		 }
-		 return array;
+	 	 	 
+	 /**
+	 * Turn array;
+	 * @param array;
+	 * @return turned array;
+	 */
+
+	 public int[] back(int[] array) {		 
+		for (int i = 0; i < array.length / 2; i++) {
+		array[i] = array[i] + array[array.length - 1 - i];
+		array[array.length - 1 - i] = array[i] - array[array.length - 1 - i];
+		array[i] = array[i] - array[array.length - 1 - i];
+		}
+		return array;
 	 }
  }
  

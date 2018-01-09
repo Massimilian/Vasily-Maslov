@@ -7,6 +7,13 @@ package ru.job4j.array;
  */
 
  public class Matrix {
+	 
+	 /**
+	 * To prepare the matrix with multiplied integers;
+	 * @param number of cells;
+	 * @return matrix with filled cells;
+	 */
+	 
 	 int[][] multiple(int size) {
 		 size++; // наверняка пользователь захочет получить таблицу до того номера ВКЛЮЧИТЕЛЬНО, который укажет во входных параметрах
 		 int[][] mult = new int[size][size]; 

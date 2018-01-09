@@ -15,6 +15,12 @@ public class Point {
 		this.y = y;
 	}
 	
+	 /**
+	 * to get the distance between two points;
+	 * @param point;
+	 * @return the distance;
+	 */
+	
 	public double distanceTo(Point that) {
 		return Math.sqrt(Math.pow(this.x - that.x, 2) + Math.pow(this.y - that.y, 2));
 	}
