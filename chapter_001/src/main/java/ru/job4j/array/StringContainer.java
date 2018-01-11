@@ -9,7 +9,7 @@ package ru.job4j.array;
  public class StringContainer {
 	 
 	 /**
-	 * To prepare the matrix with multiplied integers;
+	 * To look the equal part of String;
 	 * @param 2 Strings;
 	 * @return true or false;
 	 */
