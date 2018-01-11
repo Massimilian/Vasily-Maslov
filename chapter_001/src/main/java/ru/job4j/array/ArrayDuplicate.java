@@ -12,6 +12,13 @@ import java.util.Arrays;
 
  
  public class ArrayDuplicate {
+	 
+	 /**
+	 * To pick out the duplicates in array;
+	 * @param array;
+	 * @return array without duplicates;
+	 */
+	 
 	 public String[] remove(String[] array) {
 	 int numberOfNotDuplicates = array.length;
 	 for (int i = 0; i < numberOfNotDuplicates; i++) {
@@ -36,7 +43,6 @@ import java.util.Arrays;
  * @version $Id$
  * @since 10/01/2018
  */
-
 
 	public String[] removeAnotherWay(String[] array) {
 		int duplicates = 0;

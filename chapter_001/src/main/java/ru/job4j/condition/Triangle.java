@@ -2,7 +2,7 @@ package ru.job4j.condition;
 
 /**
  * @author Vasily Maslov (vasalekmas@gmail.com)
- * @version $Id$
+ * @version $IIId$
  * @since 03/01/2018
  */
 
