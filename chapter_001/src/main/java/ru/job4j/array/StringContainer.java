@@ -9,7 +9,7 @@ package ru.job4j.array;
  public class StringContainer {
 	 
 	 /**
-	 * To look the equal part of String;
+	 * To look the equal part of String without casting to char;
 	 * @param 2 Strings;
 	 * @return true or false;
 	 */
@@ -38,4 +38,30 @@ package ru.job4j.array;
 		 }
 		 return false;
 	 }
+
+	 /**
+	 * To look the equal part of String;
+	 * @param 2 Strings;
+	 * @return true or false;
+	 */
+	 
+	 boolean containsVersionOne(String origin, String sub) {
+		 char[] originArray = origin.toCharArray();
+		 char[] subArray = sub.toCharArray();
+		 if (subArray.length > originArray.length) {
+			 return false;
+		 }
+		 for (int i = 0; i <= originArray.length - subArray.length; i++) {
+			 boolean isThisWordIsAPartOfString = true;
+			 for (int j = 0; j < subArray.length; j++) {
+			 if (originArray[i + j] != subArray[j]) {
+				 isThisWordIsAPartOfString = false;
+			 }
+			 if (isThisWordIsAPartOfString) {
+				 return true;
+				}
+			}
+		}
+		return false;
+	}
  }

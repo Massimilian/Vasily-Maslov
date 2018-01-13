@@ -34,4 +34,36 @@ import static org.junit.Assert.*;
 	 boolean result = true;
 	 assertThat(test, is(result));
 	 }
+	 
+	 @Test
+	 public void whenEnterTwoStringsThenLookEqualPartsAndDoNotFoundThemAnotherTry() {
+	 StringContainer str = new StringContainer();
+	 boolean test = str.containsVersionOne("Это правильный тест", "А это неправильный");
+	 boolean result = false;
+	 assertThat(test, is(result));
+	 }
+	 
+	 @Test
+	 public void whenEnterTwoSimilarStringsThenLookEqualAndReturnTrueAnotherTry() {
+	 StringContainer str = new StringContainer();
+	 boolean test = str.containsVersionOne("Мир, труд, май!", "Мир, труд, май!");
+	 boolean result = true;
+	 assertThat(test, is(result));
+	 }
+	 
+	 @Test
+	 public void whenEnterTwoStringsThenLookEqualAndReturnTrueAnotherTry() {
+	 StringContainer str = new StringContainer();
+	 boolean test = str.containsVersionOne("Мой дядя самых честных правил, когда не в шутку занемог, вдруг уважать себя заставил и лучше выдумать не мог.", "ог, вдр");
+	 boolean result = true;
+	 assertThat(test, is(result));
+	 }
+
+	 @Test
+	 public void whenEnterTooBigSecondWorldThenReturnFalse() {
+	 StringContainer str = new StringContainer();
+	 boolean test = str.contains("Это маленькая строчка", "А это ну просто слищком большая строка!!!!!");
+	 boolean result = false;
+	 assertThat(test, is(result));
+	 }
 }
