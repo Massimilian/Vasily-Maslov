@@ -48,20 +48,22 @@ package ru.job4j.array;
 	 boolean containsVersionOne(String origin, String sub) {
 		 char[] originArray = origin.toCharArray();
 		 char[] subArray = sub.toCharArray();
-		 if (subArray.length > originArray.length) {
-			 return false;
-		 }
-		 for (int i = 0; i <= originArray.length - subArray.length; i++) {
-			 boolean isThisWordIsAPartOfString = true;
-			 for (int j = 0; j < subArray.length; j++) {
-			 if (originArray[i + j] != subArray[j]) {
-				 isThisWordIsAPartOfString = false;
-			 }
-			 if (isThisWordIsAPartOfString) {
-				 return true;
+		 boolean isThisWordIsAPartOfString = false;
+		 int count = 0;
+		 if (subArray.length <= originArray.length) {
+			for (int i = 0; i <= originArray.length - subArray.length; i++) {
+				for (int j = 0; j < subArray.length; j++) {
+					if (originArray[i + j] != subArray[j]) {
+					break;
+					} else {
+					count++;
+					}
+					if (count == subArray.length) {
+						isThisWordIsAPartOfString = true;
+						}
+					}
 				}
-			}
-		}
-		return false;
+			} 
+		return isThisWordIsAPartOfString;
 	}
  }

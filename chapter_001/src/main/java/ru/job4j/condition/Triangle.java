@@ -44,11 +44,11 @@ public class Triangle {
 		double ac = this.first.distanceTo(this.third);
 		double bc = this.second.distanceTo(this.third);
 		double period = this.period(ab, ac, bc);
-//		if (this.exist(ab, ac, bc)) {
+		if (this.exist(ab, ac, bc)) {
 			// написать формулу для расчета площади треугольника.
 			//result = ...;
 		result = Math.sqrt(period * (period - ab) * (period - ac) * (period - bc));
-//		}
+		}
 		return result;
 	}
 
@@ -62,13 +62,13 @@ public class Triangle {
 	* @param bc Длина от точки b c.
 	* @return
 	*/
-//	private boolean exist(double ab, double ac, double bc) {
+	private boolean exist(double ab, double ac, double bc) {
 //	if (ab == 0D || ac == 0D || bc == 0D) {
 //	if (ab == ac + bc || bc == ac + ab || ac == ab + bc) {
 //	if (ab == ac + bc || bc == ac + ab || ac == ab + bc || ab == 0D || ac == 0D || bc == 0D) {
 //		return false;
 //		} else {
-//		return true;
+		return true;
 //		}
-//	}
+	}
 }
