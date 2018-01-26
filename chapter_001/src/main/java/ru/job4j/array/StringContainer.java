@@ -54,13 +54,17 @@ package ru.job4j.array;
 			for (int i = 0; i <= originArray.length - subArray.length; i++) {
 				for (int j = 0; j < subArray.length; j++) {
 					if (originArray[i + j] != subArray[j]) {
-					break;
+						break;
 					} else {
-					count++;
+						count++;
 					}
 					if (count == subArray.length) {
 						isThisWordIsAPartOfString = true;
+						break;
 						}
+					}
+					if (isThisWordIsAPartOfString) {
+						break;
 					}
 				}
 			} 
