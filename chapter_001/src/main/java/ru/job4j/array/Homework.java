@@ -4,8 +4,8 @@ import java.util.Arrays;
 
 /**
  * @author Vasily Maslov (vasalekmas@gmail.com)
- * @version $Id$
- * @since 19/01/2018
+ * @version $IId$
+ * @since 27/01/2018
  */
  
 public class Homework {
@@ -16,30 +16,23 @@ public class Homework {
         int resultNumbers = 0;
         while (firstNumbers < first.length && secondNumbers < second.length) {
             if (first[firstNumbers] <= second[secondNumbers]) {
-                result[resultNumbers] =  first[firstNumbers];
+                result[resultNumbers] = first[firstNumbers];
                 firstNumbers++;
-                resultNumbers++;
             } else {
                 result[resultNumbers] = second[secondNumbers];
                 secondNumbers++;
-                resultNumbers++;
-            }
+			}
+            resultNumbers++;
         }
         if (firstNumbers < first.length) {
-            for (int i = resultNumbers; i < result.length; i++) {
-                result[i] = first[firstNumbers];
-                firstNumbers++;
-            }
+			System.arraycopy(first, firstNumbers, result, result.length - first.length + firstNumbers, first.length - firstNumbers);
         }
         if (secondNumbers < second.length) {
-            for (int i = resultNumbers; i < result.length; i++) {
-                result[i] = second[secondNumbers];
-                secondNumbers++;
-            }
+			System.arraycopy(second, secondNumbers, result, result.length - second.length + secondNumbers, second.length - secondNumbers);
         }
         return result;
     }
-	
+
 	public int[] easyUnity(int[] first, int[] second) {
 		int[] result = new int[first.length + second.length];
 		for (int i = 0; i < first.length; i++) {		
