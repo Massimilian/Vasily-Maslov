@@ -15,14 +15,13 @@ public class Homework {
         int secondNumbers = 0;
         int resultNumbers = 0;
         while (firstNumbers < first.length && secondNumbers < second.length) {
+			result[resultNumbers] = first[firstNumbers] <= second[secondNumbers] ? first[firstNumbers] : second[secondNumbers];
+			resultNumbers++;
             if (first[firstNumbers] <= second[secondNumbers]) {
-                result[resultNumbers] = first[firstNumbers];
                 firstNumbers++;
             } else {
-                result[resultNumbers] = second[secondNumbers];
                 secondNumbers++;
 			}
-            resultNumbers++;
         }
         if (firstNumbers < first.length) {
 			System.arraycopy(first, firstNumbers, result, result.length - first.length + firstNumbers, first.length - firstNumbers);
@@ -33,6 +32,7 @@ public class Homework {
         return result;
     }
 
+	
 	public int[] easyUnity(int[] first, int[] second) {
 		int[] result = new int[first.length + second.length];
 		for (int i = 0; i < first.length; i++) {		
