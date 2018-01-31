@@ -63,9 +63,6 @@ package ru.job4j.array;
 						break;
 						}
 					}
-					if (isThisWordIsAPartOfString) {
-						break;
-					}
 				}
 			} 
 		return isThisWordIsAPartOfString;
