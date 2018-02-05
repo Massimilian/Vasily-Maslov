@@ -64,13 +64,10 @@ public class Triangle {
 	*/
 	
 	private boolean exist(double ab, double ac, double bc) {
-//	if (ab == 0D || ac == 0D || bc == 0D) {
-//	if (ab == ac + bc || bc == ac + ab || ac == ab + bc) {
-//	if (ab == ac + bc || bc == ac + ab || ac == ab + bc || ab == 0D || ac == 0D || bc == 0D) {
-//   ни одно из этих условий нормально не отрабатывает. Почему и какое должно быть условие? Спасибо!
-//		return false;
-//		} else {
-		return true;
-//		}
+		boolean test = true;
+		if (ab >= ac + bc || bc >= ac + ab || ac >= ab + bc || ab == 0D || ac == 0D || bc == 0D) {
+		test = false;
+		}
+		return test;
 	}
 }
