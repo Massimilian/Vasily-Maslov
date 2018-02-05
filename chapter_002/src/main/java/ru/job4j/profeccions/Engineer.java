@@ -5,6 +5,10 @@ public class Engineer extends Person {
 	public boolean teachNeed;
 	public short altitude;
 	
+	public Engineer(String name) {
+		super.name = name;
+	}
+	
 	public Doctor setHospital(Doctor doctor) {
 		if (doctor.newHospitalNeed) {
 			doctor.howManyJobs++;

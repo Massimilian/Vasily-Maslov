@@ -5,6 +5,10 @@ public class Doctor extends Person {
 	public boolean newHospitalNeed;
 	public long fat;
 	
+	public Doctor(String name) {
+		super.name = name;
+	}
+	
 	public Teacher heal(Teacher teacher) {
 		if (teacher.health < 0) {
 			teacher.health = 0;
