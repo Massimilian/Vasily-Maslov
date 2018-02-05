@@ -4,8 +4,8 @@ import java.util.Arrays;
 
 /**
  * @author Vasily Maslov (vasalekmas@gmail.com)
- * @version $IId$
- * @since 27/01/2018
+ * @version $IIId$
+ * @since 05/02/2018
  */
  
 public class Homework {
