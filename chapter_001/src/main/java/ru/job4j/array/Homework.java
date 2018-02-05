@@ -15,13 +15,7 @@ public class Homework {
         int secondNumbers = 0;
         int resultNumbers = 0;
         while (firstNumbers < first.length && secondNumbers < second.length) {
-			result[resultNumbers] = first[firstNumbers] <= second[secondNumbers] ? first[firstNumbers] : second[secondNumbers];
-			resultNumbers++;
-            if (first[firstNumbers] <= second[secondNumbers]) {
-                firstNumbers++;
-            } else {
-                secondNumbers++;
-			}
+			result[resultNumbers++] = first[firstNumbers] <= second[secondNumbers] ? first[firstNumbers++] : second[secondNumbers++]; 
         }
         if (firstNumbers < first.length) {
 			System.arraycopy(first, firstNumbers, result, result.length - first.length + firstNumbers, first.length - firstNumbers);
