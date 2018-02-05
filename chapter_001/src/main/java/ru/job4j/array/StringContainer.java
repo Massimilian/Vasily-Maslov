@@ -24,18 +24,15 @@ package ru.job4j.array;
 			if (subArray.length <= originArray.length) {
 				for (int i = 0; i <= originArray.length - subArray.length; i++) {
 					int allLetters = 0;
-					if (rs) {
-						break;
-					}
 					for (int j = 0; j < subArray.length; j++) {
 						if (originArray[i + j].equals(subArray[j])) {
 							allLetters++;
 						} else {
 							break;
 						}
-						if (allLetters == subArray.length) {
-							rs = true;
-						}
+					}
+					if (allLetters == subArray.length) {
+						rs = true;
 					}
 				 }
 			 }
