@@ -15,28 +15,32 @@ package ru.job4j.array;
 	 */
 	 
 	 boolean contains(String origin, String sub) {
+		 boolean rs = false;
 		 if (origin.equals(sub)) {
-			 return true;
-		 }
-		 String[] originArray = origin.split("");
-		 String[] subArray = sub.split("");
-		 if (subArray.length > originArray.length) {
-			 return false;
-		 }
-		 for (int i = 0; i <= originArray.length - subArray.length; i++) {
-			 int allLetters = 0;
-			 for (int j = 0; j < subArray.length; j++) {
-				 if (originArray[i + j].equals(subArray[j])) {
-					 allLetters++;
-				 } else {
-					 break;
-				 }
-				 if (allLetters == subArray.length) {
-					 return true;
+			 rs = true;
+		 } else {
+			String[] originArray = origin.split("");
+			String[] subArray = sub.split("");
+			if (subArray.length <= originArray.length) {
+				for (int i = 0; i <= originArray.length - subArray.length; i++) {
+					int allLetters = 0;
+					if (rs) {
+						break;
+					}
+					for (int j = 0; j < subArray.length; j++) {
+						if (originArray[i + j].equals(subArray[j])) {
+							allLetters++;
+						} else {
+							break;
+						}
+						if (allLetters == subArray.length) {
+							rs = true;
+						}
+					}
 				 }
 			 }
 		 }
-		 return false;
+		 return rs;
 	 }
 
 	 /**
@@ -53,7 +57,7 @@ package ru.job4j.array;
 		 if (subArray.length <= originArray.length) {
 			for (int i = 0; i <= originArray.length - subArray.length; i++) {
 				for (int j = 0; j < subArray.length; j++) {
-					if (originArray[i + j] != subArray[j]) {
+					if (originArray[i + j] != subArray[j] || isThisWordIsAPartOfString) {
 						break;
 					} else {
 						count++;
