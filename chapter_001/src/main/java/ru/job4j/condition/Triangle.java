@@ -65,9 +65,7 @@ public class Triangle {
 	
 	private boolean exist(double ab, double ac, double bc) {
 		boolean test = true;
-		if (ab >= ac + bc || bc >= ac + ab || ac >= ab + bc || ab == 0D || ac == 0D || bc == 0D) {
-		test = false;
-		}
+		test = (ab >= ac + bc || bc >= ac + ab || ac >= ab + bc || ab == 0D || ac == 0D || bc == 0D) ? false : true;
 		return test;
 	}
 }
