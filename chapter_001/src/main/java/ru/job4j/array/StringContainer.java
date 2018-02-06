@@ -19,13 +19,13 @@ package ru.job4j.array;
 		 if (origin.equals(sub)) {
 			 rs = true;
 		 } else {
-			String[] originArray = origin.split("");
-			String[] subArray = sub.split("");
+			char[] originArray = origin.toCharArray();
+			char[] subArray = sub.toCharArray();
 			if (subArray.length <= originArray.length) {
 				for (int i = 0; i <= originArray.length - subArray.length; i++) {
 					int allLetters = 0;
 					for (int j = 0; j < subArray.length; j++) {
-						if (originArray[i + j].equals(subArray[j])) {
+						if (originArray[i + j] == subArray[j]) {
 							allLetters++;
 						} else {
 							break;
