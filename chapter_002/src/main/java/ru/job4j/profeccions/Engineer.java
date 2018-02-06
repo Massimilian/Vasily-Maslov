@@ -5,8 +5,11 @@ public class Engineer extends Person {
 	public boolean teachNeed;
 	public short altitude;
 	
-	public Engineer(String name) {
+	public Engineer(String name, long knowledge, short altitude) {
 		super.name = name;
+		this.knowledge = knowledge;
+		this.altitude = altitude;
+		this.teachNeed = false;
 	}
 	
 	public Doctor setHospital(Doctor doctor) {

@@ -5,8 +5,11 @@ public class Doctor extends Person {
 	public boolean newHospitalNeed;
 	public long fat;
 	
-	public Doctor(String name) {
+	public Doctor(String name, int howManyJobs, long fat) {
 		super.name = name;
+		this.howManyJobs = howManyJobs;
+		this.fat = fat;
+		this.newHospitalNeed = false;
 	}
 	
 	public Teacher heal(Teacher teacher) {

@@ -5,9 +5,13 @@ public class Teacher extends Person {
 	public boolean healNeed;
 	public int age;
 	
-	public Teacher(String name) {
+	public Teacher(String name, double health, int age) {
 		super.name = name;
+		this.health = health;
+		this.age = age;
+		this.healNeed = false;
 	}
+	
 	public Engineer teach(Engineer engineer) {
 		engineer.knowledge = engineer.knowledge + 8;
 		this.health = this.health - 1.6;
