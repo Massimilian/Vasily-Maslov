@@ -93,7 +93,11 @@ package ru.job4j.tracker;
 	 private void findById() {
 		System.out.println("------------ Поиск заявки по номеру --------------");
 		Item item = this.tracker.findById(this.tracker.cons.ask("Введите номер заявки :"));
-		System.out.printf("Информация по заявке номер  '%s':\tИмя - '%s', описание - '%s'.\n", item.id, item.name, item.description);	
+		if (item == null) {
+		System.out.println("Заявка не найдена. Уточните данные и попробуйте ещё раз.");
+		} else {
+		System.out.printf("Информация по заявке номер  '%s':\tИмя - '%s', описание - '%s'.\n", item.id, item.name, item.description);
+		}
 	 }
 	 
 	 private void showMeChangedItems(Item[] items) {

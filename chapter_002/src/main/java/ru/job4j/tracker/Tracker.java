@@ -94,6 +94,10 @@ public class Tracker {
     public Item findById(String id) {
         Item item = null;
         for (Item it : this.items) {
+			// без трёх строчек ниже метод вываливает NullPointerException. Как-то можно это забороть?
+            if (item == null) {
+                break;
+            }
             if (it.id.equals(id)) {
                 item = it;
                 break;
