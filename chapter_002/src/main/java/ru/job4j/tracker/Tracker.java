@@ -8,13 +8,14 @@ import java.util.Random;
  * @since 02/02/2018
  */
 public class Tracker {
-    private final Item[] items = new Item[10];
+    public final Item[] items = new Item[10];
     private int position = 0;
     private static final Random RN = new Random();
+	ConsoleInput cons = new ConsoleInput();
 
     public Item add(Item item) {
-        item.setId(this.generateId());
-//      item.setId(this.generateIdAnotherMethod());
+//      item.setId(this.generateId());
+        item.setId(this.generateIdAnotherMethod());
 //		item.setId(this.generateIdMostBigMethod());
 		this.items[this.position++] = item;
         return item;

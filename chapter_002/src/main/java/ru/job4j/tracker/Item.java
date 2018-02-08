@@ -24,6 +24,10 @@ package ru.job4j.tracker;
 
 	public void setId(String id) {
 		this.id = id;
-	}	
+	}
+
+	public String getId() {
+		return this.id;
+	}
 }
  
