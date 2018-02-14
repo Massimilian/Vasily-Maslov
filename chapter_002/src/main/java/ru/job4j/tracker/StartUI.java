@@ -94,7 +94,7 @@ public class StartUI {
         if (item == null) {
             System.out.println("Заявка не найдена. Уточните данные и попробуйте ещё раз.");
         } else {
-            System.out.printf("Информация по заявке номер  '%s':\tИмя - '%s', описание - '%s'.\n", item.id, item.name, item.description);
+            System.out.printf("Информация по заявке номер  '%s':\tИмя - '%s', описание - '%s'.\n", item.getId(), item.getName(), item.getDescription());
         }
     }
 
@@ -102,7 +102,7 @@ public class StartUI {
         int count = 1;
         System.out.println("------------ Начало документа --------------");
         for (Item item : items) {
-            System.out.printf("Заявка №%d:\tИмя - '%s', описание - '%s', номер - '%s'.\n", count, item.name, item.description, item.id);
+            System.out.printf("Заявка №%d:\tИмя - '%s', описание - '%s', номер - '%s'.\n", count, item.getName(), item.getDescription(), item.getId());
             count++;
         }
         System.out.println("------------ Конец документа --------------");

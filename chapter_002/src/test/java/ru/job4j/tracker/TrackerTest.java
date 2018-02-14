@@ -59,6 +59,7 @@ public class TrackerTest {
 //		tracker.add(item);
 //		tracker.add(itemTwo);
 //		tracker.add(itemThree);
-//		assertThat(tracker.findById(tracker.getAccess(0).getId()), is(item));
+//      Item result = tracker.findById(tracker.getAccess(0).getId());
+//		assertThat(result, is(item));
 //	}
 }

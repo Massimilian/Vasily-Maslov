@@ -28,7 +28,7 @@ public class Tracker {
     public void replace(String id, Item item) {
         int numberOfArray;
         for (int i = 0; i < this.items.length; i++) {
-            if (item.id.equals(id)) {
+            if (item.getId().equals(id)) {
                 numberOfArray = i;
             }
         }
@@ -38,11 +38,7 @@ public class Tracker {
     public void delete(String str) {
         int count = 0;
         for (Item item : this.items) {
-            // без трёх строчек ниже метод вываливает NullPointerException. Как-то можно это забороть?
-            if (item == null) {
-                break;
-            }
-            if (item.id.equals(str)) {
+            if (item != null && item.getId().equals(str)) {
                 this.items[count] = null;
             }
             count++;
@@ -53,10 +49,9 @@ public class Tracker {
     public Item[] findAll() {
         int notNull = 0;
         for (Item it : this.items) {
-            if (it == null) {
-                break;
-            }
+            if (it != null) {
             notNull++;
+            }
         }
         Item[] result = new Item[notNull];
         System.arraycopy(this.items, 0, result, 0, notNull);
@@ -67,23 +62,15 @@ public class Tracker {
     public Item[] findByName(String key) {
         int count = 0;
         for (Item it : this.items) {
-            // без трёх строчек ниже метод вываливает NullPointerException. Как-то можно это забороть?
-            if (it == null) {
-                break;
-            }
-            if (it.name.equals(key)) {
+            if (it != null && it.getName().equals(key)) {
                 count++;
             }
         }
         Item[] result = new Item[count];
         for (int i = 0; i < result.length; i++) {
             for (int j = 0; j < this.items.length; j++) {
-                if (this.items[j] == null) {
-                    break;
-                }
-                if (this.items[j].name.equals(key)) {
+                if (this.items[j] != null && this.items[j].getName().equals(key)) {
                     result[i] = this.items[j];
-                    break;
                 }
             }
         }
@@ -94,11 +81,7 @@ public class Tracker {
     public Item findById(String id) {
         Item item = null;
         for (Item it : this.items) {
-			// без трёх строчек ниже метод вываливает NullPointerException. Как-то можно это забороть?
-            if (item == null) {
-                break;
-            }
-            if (it.id.equals(id)) {
+            if (item != null && it.getId().equals(id)) {
                 item = it;
                 break;
             }
@@ -121,13 +104,8 @@ public class Tracker {
 		do {
 			number = RN.nextInt(Integer.MAX_VALUE);
 			for (Item item : this.items) {
-// без трёх строчек ниже метод вываливает NullPointerException. Как-то можно это забороть?
-            if (item == null) {
-                break;
-            }
-			if (item.id.equals(String.valueOf(number))) {
+			if (item != null && item.getId().equals(String.valueOf(number))) {
 					isDuplicate = true;
-					break;
 				}
 			}
 		} while (isDuplicate);
@@ -138,11 +116,10 @@ public class Tracker {
         int count = 0;
         Item[] tempItem = new Item[items.length];
         for (int i = 0; i < this.items.length; i++) {
-            if (this.items[i] == null) {
-                continue;
-            }
-            tempItem[count] = this.items[i];
+            if (this.items[i] != null) {
+			tempItem[count] = this.items[i];
             count++;
+			}
         }
         count = 0;
         // если бы массив items не был бы финальным, это упростило бы жизнь - можно было бы просто приравнять массив

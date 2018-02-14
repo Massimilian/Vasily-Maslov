@@ -7,9 +7,9 @@ package ru.job4j.tracker;
  */
  
  public class Item {
-	public String name;
-	public String id;
-	public String description;
+	private String name;
+	private String id;
+	private String description;
 
 	public Item(String name, String description) {
 		this.name = name;
@@ -28,6 +28,14 @@ package ru.job4j.tracker;
 
 	public String getId() {
 		return this.id;
+	}
+	
+	public String getName() {
+		return this.name;
+	}
+	
+	public String getDescription() {
+		return this.description;
 	}
 }
  
