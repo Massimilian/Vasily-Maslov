@@ -1,7 +1,7 @@
 package ru.job4j.profeccions;
 
 public class Person {
-	public String name;
+	protected String name;
 	
 	public Person(String name) {
 		this.name = name;
