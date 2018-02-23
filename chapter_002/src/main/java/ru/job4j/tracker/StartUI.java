@@ -15,12 +15,9 @@ public class StartUI {
     private static final String FIND_BY_NAME = "5";
     private static final String EXIT = "6";
     Tracker tracker = new Tracker();
-	//Input input = new Input();
-	//создаётся экземпляр интерфейса, соответственно - в класс StartUI может создаться не экземпляр класса, а экземпляр интерфейса. Как это вообще возможно?
-	ConsoleInput input = new ConsoleInput();
+	private Input input;
 	
-    public StartUI(Tracker tracker, ConsoleInput input) {
-        this.tracker = tracker;
+    public StartUI(Input input) {
 		this.input = input;
     }
 
@@ -34,6 +31,7 @@ public class StartUI {
     }
 
     public void init() {
+		Tracker tracker = new Tracker();
         boolean exit = false;
         while (!exit) {
             this.showMenu();
@@ -113,6 +111,8 @@ public class StartUI {
     }
 
     public static void main(String[] args) {
-        new StartUI(new Tracker(), new ConsoleInput()).init();
+		//Input input = new StubInput(new String[] {""});
+		Input input = new ConsoleInput();
+        new StartUI(input).init();
     }
 }

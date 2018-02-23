@@ -11,11 +11,20 @@ import static org.junit.Assert.*;
  */
  
 public class TrackerTest {
-		Tracker tracker = new Tracker();
-		Item item = new Item("Имя", "Описание");
-		Item itemTwo = new Item("Name", "Description");
-		Item itemThree = new Item("Имя", "Description");
-		
+	Tracker tracker = new Tracker();
+	Item item = new Item("Имя", "Описание");
+	Item itemTwo = new Item("Name", "Description");
+	Item itemThree = new Item("Имя", "Description");
+	
+	@Test
+	public void whenPutANewItemThenReturnIt() {
+		Input input = new StubInput(new String[]{"0", "TestItem", "TestDesc"});
+		StartUI start = new StartUI(input);
+		start.init();
+		assertThat(start.tracker.getAccess(0).getName(), is("TestItem));
+	}
+	
+	
 	@Test
 	public void whenPutAnItemThenFindAPlaceForIt() {
 		tracker.add(item);
@@ -53,6 +62,7 @@ public class TrackerTest {
 		assertThat(res, is(2));
 	}
 
+	
 // в какой-то момент этот тест перестал работать. Попытался весь код расставить по полочкам, но ничего не получилось. Ошибка, которую выдаёт компилятор - то, что item указывает на null (даже несмотря на то, что ранее он был явно объявлен). В чём причина?	
 //	@Test
 //	public void whenItemIdIsEqualThenReturnThatItem() {
