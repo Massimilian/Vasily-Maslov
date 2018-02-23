@@ -15,9 +15,13 @@ public class StartUI {
     private static final String FIND_BY_NAME = "5";
     private static final String EXIT = "6";
     Tracker tracker = new Tracker();
-
-    public StartUI(Tracker tracker) {
+	//Input input = new Input();
+	//создаётся экземпляр интерфейса, соответственно - в класс StartUI может создаться не экземпляр класса, а экземпляр интерфейса. Как это вообще возможно?
+	ConsoleInput input = new ConsoleInput();
+	
+    public StartUI(Tracker tracker, ConsoleInput input) {
         this.tracker = tracker;
+		this.input = input;
     }
 
     private void showMenu() {
@@ -26,14 +30,14 @@ public class StartUI {
     }
 
     boolean doNotYouWantToContinue() {
-        return this.tracker.cons.ask("Хотите продолжать(1/0)?").equals("1") ? false : true;
+        return input.ask("Хотите продолжать(1/0)?").equals("1") ? false : true;
     }
 
     public void init() {
         boolean exit = false;
         while (!exit) {
             this.showMenu();
-            String answer = this.tracker.cons.ask("Введите пункт меню");
+            String answer = input.ask("Введите пункт меню");
             switch (answer) {
                 case(ADD):
                     this.createItem();
@@ -67,7 +71,7 @@ public class StartUI {
     }
     private void createItem() {
         System.out.println("------------ Добавление новой языки --------------");
-        Item item = new Item(this.tracker.cons.ask("Введите имя заявки :"), this.tracker.cons.ask("Введите описание заявки :"));
+        Item item = new Item(input.ask("Введите имя заявки :"), input.ask("Введите описание заявки :"));
         this.tracker.add(item);
         System.out.println("------------ Новая заявка под номером : " + item.getId() + " добавлена. -----------");
         System.out.println();
@@ -79,18 +83,18 @@ public class StartUI {
 
     private void deleteItem() {
         System.out.println("------------ Удаление заявки --------------");
-        this.tracker.delete(this.tracker.cons.ask("Укажите номер заявки, которую следует удалить"));
+        this.tracker.delete(input.ask("Укажите номер заявки, которую следует удалить"));
         System.out.println("Заявка успешно удалена");
     }
 
     private void findByName() {
         System.out.println("------------ Поиск заявки по имени --------------");
-        this.showMeChangedItems(this.tracker.findByName(this.tracker.cons.ask("Введите имя заявки :")));
+        this.showMeChangedItems(this.tracker.findByName(input.ask("Введите имя заявки :")));
     }
 
     private void findById() {
         System.out.println("------------ Поиск заявки по номеру --------------");
-        Item item = this.tracker.findById(this.tracker.cons.ask("Введите имя заявки :"));
+        Item item = this.tracker.findById(input.ask("Введите имя заявки :"));
         if (item == null) {
             System.out.println("Заявка не найдена. Уточните данные и попробуйте ещё раз.");
         } else {
@@ -109,6 +113,6 @@ public class StartUI {
     }
 
     public static void main(String[] args) {
-        new StartUI(new Tracker()).init();
+        new StartUI(new Tracker(), new ConsoleInput()).init();
     }
 }

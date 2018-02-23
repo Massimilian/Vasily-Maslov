@@ -11,8 +11,8 @@ public class Tracker {
     public final Item[] items = new Item[10];
     private int position = 0;
     private static final Random RN = new Random();
-	ConsoleInput cons = new ConsoleInput();
 
+	
     public Item add(Item item) {
 //      item.setId(this.generateId());
         item.setId(this.generateIdAnotherMethod());
@@ -44,6 +44,8 @@ public class Tracker {
             count++;
         }
         exceptNulls(this.items);
+		this.position--;
+	// позицию добавления заявки в массив также необходимо уменьшить на один, согласно уменьшенному количеству ячеек.
     }
 
     public Item[] findAll() {
@@ -81,7 +83,7 @@ public class Tracker {
     public Item findById(String id) {
         Item item = null;
         for (Item it : this.items) {
-            if (item != null && it.getId().equals(id)) {
+            if (it.getId().equals(id)) {
                 item = it;
                 break;
             }
@@ -125,6 +127,6 @@ public class Tracker {
         for (int i = 0; i < tempItem.length; i++) {
             this.items[i] = tempItem[i];
         }
-    }
+	}
     // если бы массив items не был бы финальным, это упростило бы жизнь - можно было бы просто приравнять массив
 }
