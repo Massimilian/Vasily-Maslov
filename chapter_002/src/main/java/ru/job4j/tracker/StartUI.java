@@ -20,6 +20,11 @@ public class StartUI {
     public StartUI(Input input) {
 		this.input = input;
     }
+	
+	public StartUI(Input input, Tracker tracker) {
+		this.input = input;
+		this.tracker = tracker;
+	}
 
     private void showMenu() {
         System.out.printf("Введите команду:\n0.\tВнести новую заявку / Add new Item\n1.\tПоказать все заявки / Show all items\n2.\tРедактировать заявку / Edit item\n3.\tУдалить заявку / Delete item\n4.\tНайти заявку по персональному номеру / Find item by Id\n5.\tНайти заявку по имени / Find items by name\n6.\tВыйти из программы / Exit Program\n");

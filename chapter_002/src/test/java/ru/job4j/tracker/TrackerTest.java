@@ -24,9 +24,9 @@ public class TrackerTest {
 //	@Test
 //	public void whenPutANewItemThenReturnIt() {
 //		Input input = new StubInput(new String[]{"0", "TestItem", "TestDesc"});
-//		StartUI start = new StartUI(input);
+//		StartUI start = new StartUI(input, tracker);
 //		start.init();
-//		assertThat(start.tracker.getAccess(0).getName(), is("TestItem));
+//		assertThat(start.tracker.getAccess(0).getName(), is("TestItem"));
 //	}
 	
 	
