@@ -21,6 +21,7 @@ public class StartUI {
 		this.input = input;
     }
 	
+	// добавленный конструктор
 	public StartUI(Input input, Tracker tracker) {
 		this.input = input;
 		this.tracker = tracker;
