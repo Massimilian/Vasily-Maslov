@@ -23,11 +23,13 @@ import java.io.PrintStream;
 	@Before
     public void loadOutput() {
         System.out.println("execute before method");
+		//Заменяем стандартный вывод на вывод в память для тестирования.
         System.setOut(new PrintStream(this.out));
     }
 
     @After
     public void backOutput() {
+		// возвращаем обратно стандартный вывод в консоль.
         System.setOut(this.stdout);
         System.out.println("execute after method");
     }
@@ -46,14 +48,10 @@ import java.io.PrintStream;
 	 
 	@Test
     public void whenDrawSquare() {
-		//Заменяем стандартный вывод на вывод в память для тестирования.
-		//System.setOut(new PrintStream(out));
 		// выполняем действия пишушие в консоль.
 		new Paint().draw(new Square());
 		// проверяем результат вычисления
 		assertThat(new String(out.toByteArray()), is(new StringBuilder().append("***").append("* *").append("***").toString()));
-		// возвращаем обратно стандартный вывод в консоль.
-		//System.setOut(stdout);
     }
 	
 	@Test
