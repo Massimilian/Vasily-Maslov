@@ -7,11 +7,11 @@ import java.util.Random;
  * @version $Id$
  * @since 02/02/2018
  */
+ 
 public class Tracker {
     public final Item[] items = new Item[10];
     private int position = 0;
     private static final Random RN = new Random();
-
 	
     public Item add(Item item) {
 //      item.setId(this.generateId());

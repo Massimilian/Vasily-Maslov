@@ -20,13 +20,14 @@ public class TrackerTest {
 // В образце в конструктор передаётся также и класс tracker, но в конструкторе её наличие не предусмотрено.
 // Спасибо!
 	
-//	@Test
-//	public void whenPutANewItemThenReturnIt() {
-//		Input input = new StubInput(new String[]{"0", "TestItem", "TestDesc"});
-//		StartUI start = new StartUI(input, tracker);
-//		start.init();
-//		assertThat(start.tracker.getAccess(0).getName(), is("TestItem"));
-//	}
+	@Test
+	public void whenPutANewItemThenReturnIt() {
+		String[] asks = {"0", "TestItem", "TestDesc"};
+		Input input = new StubInput(asks);
+		StartUI start = new StartUI(input, tracker);
+		start.init();
+		assertThat(start.tracker.getAccess(0).getName(), is("TestItem"));
+	}
 	
 	
 	@Test

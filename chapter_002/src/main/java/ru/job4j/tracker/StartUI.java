@@ -38,40 +38,44 @@ public class StartUI {
 
     public void init() {
 		Tracker tracker = new Tracker();
-        boolean exit = false;
-        while (!exit) {
-            this.showMenu();
-            String answer = input.ask("Введите пункт меню");
-            switch (answer) {
-                case(ADD):
-                    this.createItem();
-                    exit = this.doNotYouWantToContinue();
-                    break;
-                case(SHOW):
-                    this.showItems();
-                    exit = this.doNotYouWantToContinue();
-                    break;
-                case(EDIT):
-                    break;
-                case(DELETE):
-                    this.deleteItem();
-                    exit = this.doNotYouWantToContinue();
-                    break;
-                case(FIND_BY_ID):
-                    this.findById();
-                    exit = this.doNotYouWantToContinue();
-                    break;
-                case(FIND_BY_NAME):
-                    this.findByName();
-                    exit = this.doNotYouWantToContinue();
-                    break;
-                case(EXIT):
-                    exit = true;
-                    break;
-                default:
-                    break;
-            }
-        }
+		MenuTracker menu = new MenuTracker(this.input, tracker);
+		do {
+			menu.show();
+		} while (!"y".equals(this.input.ask("Выйти? (y/n)/ Exit? (y/n)")));
+//        boolean exit = false;
+//       while (!exit) {
+//            this.showMenu();
+//            String answer = input.ask("Введите пункт меню");
+//            switch (answer) {
+//                case(ADD):
+//                    this.createItem();
+//                    exit = this.doNotYouWantToContinue();
+//                    break;
+//                case(SHOW):
+//                    this.showItems();
+//                    exit = this.doNotYouWantToContinue();
+//                    break;
+//                case(EDIT):
+//                    break;
+//                case(DELETE):
+//                    this.deleteItem();
+//                    exit = this.doNotYouWantToContinue();
+//                    break;
+//                case(FIND_BY_ID):
+//                    this.findById();
+//                    exit = this.doNotYouWantToContinue();
+//                    break;
+//                case(FIND_BY_NAME):
+//                    this.findByName();
+//                    exit = this.doNotYouWantToContinue();
+//                    break;
+//                case(EXIT):
+//                    exit = true;
+//                    break;
+//                default:
+//                    break;
+//            }
+//        }
     }
     private void createItem() {
         System.out.println("------------ Добавление новой языки --------------");
