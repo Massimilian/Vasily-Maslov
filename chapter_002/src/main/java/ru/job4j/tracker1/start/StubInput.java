@@ -1,4 +1,4 @@
-package ru.job4j.tracker;
+package ru.job4j.tracker1.start;
 
 public class StubInput implements Input {
 	private String[] answers;
@@ -9,6 +9,6 @@ public class StubInput implements Input {
 	}
 	
 	public String ask(String question) {
-	return answers[position++];
+		return answers[position++];
 	}
 }
