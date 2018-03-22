@@ -4,14 +4,18 @@ import ru.job4j.tracker2.models.*;
 
 public class StartUISecond {
 	private InputSecond input;
-	
+	private TrackerSecond tracker = new TrackerSecond();
 	public StartUISecond(InputSecond input) {
 		this.input = input;
 	}
 	
+	public StartUISecond(InputSecond input, TrackerSecond tracker) {
+		this.input = input;
+		this.tracker = tracker;
+	}
+	
 	public void init() {
-		TrackerSecond tracker = new TrackerSecond();
-		MenuTracker menu = new MenuTracker(this.input, tracker);
+		MenuTracker menu = new MenuTracker(this.input, this.tracker);
 		menu.fillActions();
 		boolean cont = true;
 		do {
