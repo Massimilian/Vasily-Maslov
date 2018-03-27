@@ -29,7 +29,7 @@ public class StartUISecond {
 	}
 	
 	public static void main(String[] args) {
-		InputSecond input = new ValidateInput();
+		InputSecond input = new ValidateInput(new ConsoleInputSecond());
 		new StartUISecond(input).init();
 	}
 }

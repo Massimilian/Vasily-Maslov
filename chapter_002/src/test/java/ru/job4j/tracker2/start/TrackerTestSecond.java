@@ -2,7 +2,6 @@ package ru.job4j.tracker2.start;
 
 import org.junit.After;
 import org.junit.Before;
-import ru.job4j.tracker2.*;
 import org.junit.Test;
 import static org.hamcrest.Matchers.is;
 import static org.junit.Assert.*;
