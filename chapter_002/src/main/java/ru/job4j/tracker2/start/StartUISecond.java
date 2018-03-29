@@ -18,6 +18,21 @@ public class StartUISecond {
 	public void init() {
 		MenuTracker menu = new MenuTracker(this.input, this.tracker);
 		menu.fillActions();
+		UserAction exit = new UserAction() { // анонимный класс
+			public int key() {
+			return 7;
+			}
+		public void execute(InputSecond input, TrackerSecond tracker) {
+			if ("y".equals(input.ask("Вы действительно хотите выйти? / Do you want to exit?"))) {
+				System.exit(0);
+				}
+			}
+		public String info() {
+			return String.format("%s . %s", this.key(), "Выход из Программы. / Exit Program.");
+			}
+		};
+		
+		menu.addAction(exit);
 		boolean cont = true;
 		do {
 			menu.show();
