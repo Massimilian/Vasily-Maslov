@@ -33,7 +33,7 @@ class DeleteItem extends BaseAction implements UserAction {
 public class MenuTracker {
 	private InputSecond input;
 	private TrackerSecond tracker;
-	private UserAction[] actions = new UserAction[7];
+	private UserAction[] actions = new UserAction[8];
 	private int position = 0;
 	
 	public MenuTracker(InputSecond input, TrackerSecond tracker) {
@@ -54,9 +54,13 @@ public class MenuTracker {
 		this.actions[position++] = userAction; 
 	}
 	
-	public void select(int key) {
-		this.actions[key - 1].execute(this.input, this.tracker);
-	}
+    public void select(int key) {
+        if (key == 0) {
+         this.actions[7].execute(this.input, this.tracker);
+        } else {
+            this.actions[key - 1].execute(this.input, this.tracker);
+        }
+    }
 	
 	public void show() {
 		for (UserAction action : this.actions) {
@@ -71,12 +75,12 @@ public class MenuTracker {
 			super(key, name);
 		}
 		
-		public void execute(InputSecond input, TrackerSecond tracker) {
-//			String name = input.ask("Введите имя новой заявки. / Enter new Task's name.");
-//			String desc = input.ask("Введите описание новой заявки. / Enter new Task's description.");
-//			tracker.add(new ItemSecond(name, desc));
-			tracker.add(new ItemSecond(input.ask("Введите имя новой заявки. / Enter new Task's name."), input.ask("Введите описание новой заявки. / Enter new Task's description.")));
-			System.out.println("Новая заявка добавлена. / New Item added.");
+	public void execute(InputSecond input, TrackerSecond tracker) {
+//		String name = input.ask("Введите имя новой заявки. / Enter new Task's name.");
+//		String desc = input.ask("Введите описание новой заявки. / Enter new Task's description.");
+//		tracker.add(new ItemSecond(name, desc));
+		tracker.add(new ItemSecond(input.ask("Введите имя новой заявки. / Enter new Task's name."), input.ask("Введите описание новой заявки. / Enter new Task's description.")));
+		System.out.println("Новая заявка добавлена. / New Item added.");
 		}
 	}
 	

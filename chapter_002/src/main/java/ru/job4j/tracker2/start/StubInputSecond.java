@@ -14,6 +14,7 @@ public class StubInputSecond implements InputSecond {
 	
 	public int ask(String question, int[] range) {
 //		throw new UnsupportedOperationException("Unsupported operation");
-		return -1;
+//		return -1;
+		return Integer.parseInt(answers[position++]);
 	}
 }
