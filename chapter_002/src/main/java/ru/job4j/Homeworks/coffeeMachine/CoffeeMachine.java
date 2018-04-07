@@ -1,7 +1,7 @@
-//package ru.job4j.homeworks.coffeeMachine;
+// package ru.job4j.homeworks.coffeeMachine;
 
-//public class CoffeeMachine {
-//    int[] changes(int value, int price) {
+// public class CoffeeMachine {
+//     int[] changes(int value, int price) {
 //        int change = value > price ? value - price : 0;
 //        int[] result = new int[change];
 //        int[] values = {10, 5, 2, 1};

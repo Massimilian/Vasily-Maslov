@@ -25,11 +25,6 @@ public class TrackerSecondTest {
 	
 	@Test
 	public void whenAddItemThenPutItIntoArray() { 
-// данный тест почему-то воспринимал метод exit как ошибочный.
-// Ошибка возникала в тот момент, когда я делал System.exit(0) (то есть "грубый" выход из системы).
-// Компилятор сообщает, что "The forked VM terminated without saying properly goodbye. VM crash or System.exit called ?"
-// Специально для данного теста создан альтернативный метод "мягкого" выхода anotherExit, который занимает больше объёма, но нормально отрабатывает в тесте.
-// Правильно ли я понимаю, что System.exit(0) тестовая система воспринимает, как нечто недопустимое? И если да - почему так? Спасибо!
 		new StartUISecond(input, tracker).init();
 		assertThat(tracker.getItem(1).getDescription(), is("Desc"));
 	}
