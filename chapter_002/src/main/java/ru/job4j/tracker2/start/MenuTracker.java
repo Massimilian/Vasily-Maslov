@@ -13,8 +13,8 @@ class EditItem extends BaseAction implements UserAction {
 //		String desc = input.ask("Введите описание. / Enter new description.");
 //		ItemSecond item = new TaskSecond(name, desc);
 //		item.setId(id);
-		tracker.update(new TaskSecond(input.ask("Пожалуйста, введите персональный номер заявки. / Please, enter the task's id."), input.ask("Введите имя. / Enter new name."), input.ask("Введите описание. / Enter new description.")));
-		System.out.println("Заявка номер добавлена. / New Item added.");
+		tracker.update(new TaskSecond(input.ask("Please, enter the task's id."), input.ask("Enter new name."), input.ask("Enter new description.")));
+		System.out.println("New Item added.");
 	}
 }
 
@@ -25,8 +25,8 @@ class DeleteItem extends BaseAction implements UserAction {
 	public void execute(InputSecond input, TrackerSecond tracker) {
 //		String id = input.ask("Пожалуйста, введите персональный номер заявки. / Please, enter the task's id.");
 //		tracker.delete(id);
-		tracker.delete(input.ask("Пожалуйста, введите персональный номер заявки. / Please, enter the task's id."));
-		System.out.println("Заявка удалена.");
+		tracker.delete(input.ask("Please, enter the task's id."));
+		System.out.println("This task has been deleted");
 	}
 }
 
@@ -42,12 +42,12 @@ public class MenuTracker {
 	}
 	
 	public void fillActions() {
-		this.actions[position++] = this.new AddItem(1, "Добавить новую заявку. / Add new Item."); // Внутренний класс
-		this.actions[position++] = new MenuTracker.ShowItems(2, "Показать все заявки. / Show all items."); // Внутренний статичный класс
-		this.actions[position++] = new EditItem(3, "Редактировать заявку. / Edit item."); // "Внутренний внешний класс"
-		this.actions[position++] = new DeleteItem(4, "Удалить заявку. / Delete item.");  // "Внутренний внешний класс"
-		this.actions[position++] = this.new FindById(5, "Найти заявку по персональному номеру. / Find item by Id."); // Внутренний класс
-		this.actions[position++] = new MenuTracker.FindByName(6, "Найти заявку по имени. / Find items by name."); // Внутренний статичный класс
+		this.actions[position++] = this.new AddItem(1, "Add new Item."); // Внутренний класс
+		this.actions[position++] = new MenuTracker.ShowItems(2, "Show all items."); // Внутренний статичный класс
+		this.actions[position++] = new EditItem(3, "Edit item."); // "Внутренний внешний класс"
+		this.actions[position++] = new DeleteItem(4, "Delete item.");  // "Внутренний внешний класс"
+		this.actions[position++] = this.new FindById(5, "Find item by Id."); // Внутренний класс
+		this.actions[position++] = new MenuTracker.FindByName(6, "Find items by name."); // Внутренний статичный класс
 	}
 	
 	public void addAction(UserAction userAction) { // метод для профилактического использования анонимного класса
@@ -79,8 +79,8 @@ public class MenuTracker {
 //		String name = input.ask("Введите имя новой заявки. / Enter new Task's name.");
 //		String desc = input.ask("Введите описание новой заявки. / Enter new Task's description.");
 //		tracker.add(new ItemSecond(name, desc));
-		tracker.add(new ItemSecond(input.ask("Введите имя новой заявки. / Enter new Task's name."), input.ask("Введите описание новой заявки. / Enter new Task's description.")));
-		System.out.println("Новая заявка добавлена. / New Item added.");
+		tracker.add(new ItemSecond(input.ask("Enter new Task's name."), input.ask("Enter new Task's description.")));
+		System.out.println("New Item added.");
 		}
 	}
 	
@@ -91,8 +91,8 @@ public class MenuTracker {
 		public void execute(InputSecond input, TrackerSecond tracker) {
 //			String id = input.ask("Пожалуйста, введите персональный номер заявки. / Please, enter the task's id.");
 //			ItemSecond it = tracker.findById(id);
-			ItemSecond it = tracker.findById(input.ask("Пожалуйста, введите персональный номер заявки. / Please, enter the task's id."));
-			System.out.printf("Заявка с номером %s:\n Имя заявки - \"%s\",\n Описание заявки - \"%s\".\n", it.getId(), it.getName(), it.getDescription());			
+			ItemSecond it = tracker.findById(input.ask("Please, enter the task's id."));
+			System.out.printf("Task's number - %s:\n Task's name - \"%s\",\n Task's description \"%s\".\n", it.getId(), it.getName(), it.getDescription());			
 		}	
 	}
 	
@@ -104,11 +104,11 @@ public class MenuTracker {
 //			String name = input.ask("Пожалуйста, введите имя. / Please, enter the task's name.");
 			int count = 0;
 //			ItemSecond[] its = tracker.findByName(name);
-			ItemSecond[] its = tracker.findByName(input.ask("Пожалуйста, введите имя. / Please, enter the task's name."));
-			System.out.println("Найдены следующие заявки:");
+			ItemSecond[] its = tracker.findByName(input.ask("Please, enter the task's name."));
+			System.out.println("Task's founded:");
 			for (ItemSecond item : its) {
 				count++;
-				System.out.printf("%d.\nЗаявка с номером %s:\n Описание заявки - \"%s\".\n", count, item.getId(), item.getDescription());
+				System.out.printf("%d.\n Task's number %s:\n Task's description - \"%s\".\n", count, item.getId(), item.getDescription());
 			}
 		}
 	}

@@ -26,12 +26,12 @@ public class StartUISecond {
 				return 7;
 			}
 			public void execute(InputSecond input, TrackerSecond tracker) {
-				if ("y".equals(input.ask("Вы действительно хотите выйти? / Do you want to exit?"))) {
+				if ("y".equals(input.ask("Do you want to exit?"))) {
 					System.exit(0);
 				}
 			}
 			public String info() {
-				return String.format("%s . %s", this.key(), "Выход из Программы. / Exit Program.");
+				return String.format("%s . %s", this.key(), "Exit Program.");
 			}
 		};
 		menu.addAction(exit);
@@ -41,10 +41,10 @@ public class StartUISecond {
 				return 0;
 			}
 			public void execute(InputSecond input, TrackerSecond tracker) {
-				System.out.println("Отработал запасной выход. / Special exit worked.");
+				System.out.println("Special exit worked.");
 			}
 			public String info() {
-				return String.format("%s . %s", this.key(), "Специальный выход из Программы. / Special exit from Program.");
+				return String.format("%s . %s", this.key(), "Special exit from Program.");
 			}			
 		};
 		menu.addAction(anotherExit);
@@ -52,7 +52,7 @@ public class StartUISecond {
 	do {
 		menu.show();
 		System.out.println("");
-		int result = input.ask("Выберите меню: / Select:", ranges);
+		int result = input.ask("Select:", ranges);
 		menu.select(result);
 		System.out.println("");
 		cont = result == 0 ? false : true;

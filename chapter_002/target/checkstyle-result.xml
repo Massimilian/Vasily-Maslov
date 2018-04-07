@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<checkstyle version="6.11.2">
+<file name="C:\projects\Vasily-Maslov\chapter_002\src\main\java\ru\job4j\homeworks\coffeeMachine\CoffeeMachine.java">
+</file>
+<file name="C:\projects\Vasily-Maslov\chapter_002\src\main\java\ru\job4j\profeccions\Doctor.java">
+</file>
+<file name="C:\projects\Vasily-Maslov\chapter_002\src\main\java\ru\job4j\profeccions\Engineer.java">
+</file>
+<file name="C:\projects\Vasily-Maslov\chapter_002\src\main\java\ru\job4j\profeccions\Person.java">
+</file>
+<file name="C:\projects\Vasily-Maslov\chapter_002\src\main\java\ru\job4j\profeccions\Teacher.java">
+</file>
+<file name="C:\projects\Vasily-Maslov\chapter_002\src\main\java\ru\job4j\shapes\Paint.java">
+</file>
+<file name="C:\projects\Vasily-Maslov\chapter_002\src\main\java\ru\job4j\shapes\Shape.java">
+</file>
+<file name="C:\projects\Vasily-Maslov\chapter_002\src\main\java\ru\job4j\shapes\Square.java">
+</file>
+<file name="C:\projects\Vasily-Maslov\chapter_002\src\main\java\ru\job4j\shapes\Triangle.java">
+</file>
+<file name="C:\projects\Vasily-Maslov\chapter_002\src\main\java\ru\job4j\tracker2\models\BugSecond.java">
+</file>
+<file name="C:\projects\Vasily-Maslov\chapter_002\src\main\java\ru\job4j\tracker2\models\ItemSecond.java">
+</file>
+<file name="C:\projects\Vasily-Maslov\chapter_002\src\main\java\ru\job4j\tracker2\models\TaskSecond.java">
+</file>
+<file name="C:\projects\Vasily-Maslov\chapter_002\src\main\java\ru\job4j\tracker2\start\BaseAction.java">
+</file>
+<file name="C:\projects\Vasily-Maslov\chapter_002\src\main\java\ru\job4j\tracker2\start\ConsoleInputSecond.java">
+</file>
+<file name="C:\projects\Vasily-Maslov\chapter_002\src\main\java\ru\job4j\tracker2\start\InputSecond.java">
+</file>
+<file name="C:\projects\Vasily-Maslov\chapter_002\src\main\java\ru\job4j\tracker2\start\MenuOutException.java">
+</file>
+<file name="C:\projects\Vasily-Maslov\chapter_002\src\main\java\ru\job4j\tracker2\start\MenuTracker.java">
+</file>
+<file name="C:\projects\Vasily-Maslov\chapter_002\src\main\java\ru\job4j\tracker2\start\StartUISecond.java">
+</file>
+<file name="C:\projects\Vasily-Maslov\chapter_002\src\main\java\ru\job4j\tracker2\start\StubInputSecond.java">
+</file>
+<file name="C:\projects\Vasily-Maslov\chapter_002\src\main\java\ru\job4j\tracker2\start\TrackerSecond.java">
+</file>
+<file name="C:\projects\Vasily-Maslov\chapter_002\src\main\java\ru\job4j\tracker2\start\UserAction.java">
+</file>
+<file name="C:\projects\Vasily-Maslov\chapter_002\src\main\java\ru\job4j\tracker2\start\ValidateInput.java">
+</file>
+<file name="C:\projects\Vasily-Maslov\chapter_002\src\test\java\ru\job4j\shapes\PaintTest.java">
+</file>
+<file name="C:\projects\Vasily-Maslov\chapter_002\src\test\java\ru\job4j\tracker2\start\AnotherTrackerSecondTest.java">
+</file>
+<file name="C:\projects\Vasily-Maslov\chapter_002\src\test\java\ru\job4j\tracker2\start\TrackerSecondTest.java">
+</file>
+</checkstyle>
