@@ -6,12 +6,12 @@
 // import static org.hamcrest.Matchers.is;
 // import static org.junit.Assert.*;
 
-// public class CoffeeMachineTest {
-//	 CoffeMachine cof = new CoffeMachine();
+//public class CoffeeMachineTest {
 	
 //	 @Test
 //	 public void whenEnterANumberThenReturnTheResult() {
-//		 int[] change = cof(100, 82);
-//		 assertThat(change, is({1, 1, 1, 1}))
+//	 CoffeeMachine cof = new CoffeeMachine();
+//	 int[] change = cof.changes(100, 82);
+//	 assertThat(change, is(new int[]{10, 5, 2, 1}));
 //	 }
-// }
+//}
