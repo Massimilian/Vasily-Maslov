@@ -68,6 +68,7 @@ public class TrackerSecond {
 			if (item != null && item.getName().equals(key)) {
 				result[length] = item;
 				length++;
+				break;
 			}
 		}
 		ItemSecond[] finalResult = new ItemSecond[length];
