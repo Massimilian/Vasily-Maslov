@@ -28,21 +28,21 @@ public class Board {
     }
 
     boolean move(Cell source, Cell dest) throws OccupiedWayException, FigureNotFoundException {
-        boolean haveFigure = false;
-        for (int i = 0; i < this.count; i++) {
-            if (this.figures[i].getPosition().equals(source)) {
-                haveFigure = true;
-                this.figures[i].copy(dest);
-                break;
-            }
-            if (!haveFigure) {
-                throw new FigureNotFoundException("There is no any figure here!");
-            }
-        }
         for (int i = 0; i < this.count; i++) {
             if (this.figures[i].getPosition().equals(dest)) {
                 throw new OccupiedWayException("This cell is busy!");
             }
+        }
+        boolean haveFigure = false;
+        for (int i = 0; i < this.count; i++) {
+            if (this.figures[i].getPosition().equals(source)) {
+                haveFigure = true;
+                this.figures[i] = this.figures[i].copy(dest);
+                break;
+            }
+        }
+        if (!haveFigure) {
+            throw new FigureNotFoundException("There is no any figure here!");
         }
         return true; // Зачем булев метод? Не проще ли сделать void?
     }
