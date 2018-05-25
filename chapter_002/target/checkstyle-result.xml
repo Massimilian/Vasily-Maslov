@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<checkstyle version="6.11.2">
+<file name="C:\projects\Vasily-Maslov\chapter_002\src\main\java\ru\job4j\chess\Board.java">
+</file>
+<file name="C:\projects\Vasily-Maslov\chapter_002\src\main\java\ru\job4j\chess\Cell.java">
+</file>
+<file name="C:\projects\Vasily-Maslov\chapter_002\src\main\java\ru\job4j\chess\exceptions\FigureNotFoundException.java">
+</file>
+<file name="C:\projects\Vasily-Maslov\chapter_002\src\main\java\ru\job4j\chess\exceptions\ImpossibleCellException.java">
+</file>
+<file name="C:\projects\Vasily-Maslov\chapter_002\src\main\java\ru\job4j\chess\exceptions\ImpossibleMoveException.java">
+</file>
+<file name="C:\projects\Vasily-Maslov\chapter_002\src\main\java\ru\job4j\chess\exceptions\OccupiedWayException.java">
+</file>
+<file name="C:\projects\Vasily-Maslov\chapter_002\src\main\java\ru\job4j\chess\figures\Bishop.java">
+</file>
+<file name="C:\projects\Vasily-Maslov\chapter_002\src\main\java\ru\job4j\chess\figures\Figure.java">
+</file>
+<file name="C:\projects\Vasily-Maslov\chapter_002\src\main\java\ru\job4j\homeworks\coffeemachine\CoffeeMachine.java">
+</file>
+<file name="C:\projects\Vasily-Maslov\chapter_002\src\main\java\ru\job4j\homeworks\tasks\Task111.java">
+</file>
+<file name="C:\projects\Vasily-Maslov\chapter_002\src\main\java\ru\job4j\homeworks\tasks\Task1110.java">
+</file>
+<file name="C:\projects\Vasily-Maslov\chapter_002\src\main\java\ru\job4j\homeworks\tasks\Task1111.java">
+</file>
+<file name="C:\projects\Vasily-Maslov\chapter_002\src\main\java\ru\job4j\homeworks\tasks\Task1112.java">
+</file>
+<file name="C:\projects\Vasily-Maslov\chapter_002\src\main\java\ru\job4j\homeworks\tasks\Task1113.java">
+</file>
+<file name="C:\projects\Vasily-Maslov\chapter_002\src\main\java\ru\job4j\homeworks\tasks\Task1114.java">
+</file>
+<file name="C:\projects\Vasily-Maslov\chapter_002\src\main\java\ru\job4j\homeworks\tasks\Task112.java">
+</file>
+<file name="C:\projects\Vasily-Maslov\chapter_002\src\main\java\ru\job4j\homeworks\tasks\Task113.java">
+</file>
+<file name="C:\projects\Vasily-Maslov\chapter_002\src\main\java\ru\job4j\homeworks\tasks\Task1136.java">
+</file>
+<file name="C:\projects\Vasily-Maslov\chapter_002\src\main\java\ru\job4j\homeworks\tasks\Task1137.java">
+</file>
+<file name="C:\projects\Vasily-Maslov\chapter_002\src\main\java\ru\job4j\homeworks\tasks\Task1138.java">
+</file>
+<file name="C:\projects\Vasily-Maslov\chapter_002\src\main\java\ru\job4j\homeworks\tasks\Task1139.java">
+</file>
+<file name="C:\projects\Vasily-Maslov\chapter_002\src\main\java\ru\job4j\homeworks\tasks\Task114.java">
+</file>
+<file name="C:\projects\Vasily-Maslov\chapter_002\src\main\java\ru\job4j\homeworks\tasks\Task1140.java">
+</file>
+<file name="C:\projects\Vasily-Maslov\chapter_002\src\main\java\ru\job4j\homeworks\tasks\Task115.java">
+</file>
+<file name="C:\projects\Vasily-Maslov\chapter_002\src\main\java\ru\job4j\homeworks\tasks\Task116.java">
+</file>
+<file name="C:\projects\Vasily-Maslov\chapter_002\src\main\java\ru\job4j\homeworks\tasks\Task117.java">
+</file>
+<file name="C:\projects\Vasily-Maslov\chapter_002\src\main\java\ru\job4j\homeworks\tasks\Task118.java">
+</file>
+<file name="C:\projects\Vasily-Maslov\chapter_002\src\main\java\ru\job4j\homeworks\tasks\Task119.java">
+</file>
+<file name="C:\projects\Vasily-Maslov\chapter_002\src\main\java\ru\job4j\homeworks\tasks\Test.java">
+</file>
+<file name="C:\projects\Vasily-Maslov\chapter_002\src\main\java\ru\job4j\profeccions\Doctor.java">
+</file>
+<file name="C:\projects\Vasily-Maslov\chapter_002\src\main\java\ru\job4j\profeccions\Engineer.java">
+</file>
+<file name="C:\projects\Vasily-Maslov\chapter_002\src\main\java\ru\job4j\profeccions\Person.java">
+</file>
+<file name="C:\projects\Vasily-Maslov\chapter_002\src\main\java\ru\job4j\profeccions\Teacher.java">
+</file>
+<file name="C:\projects\Vasily-Maslov\chapter_002\src\main\java\ru\job4j\shapes\Paint.java">
+</file>
+<file name="C:\projects\Vasily-Maslov\chapter_002\src\main\java\ru\job4j\shapes\Shape.java">
+</file>
+<file name="C:\projects\Vasily-Maslov\chapter_002\src\main\java\ru\job4j\shapes\Square.java">
+</file>
+<file name="C:\projects\Vasily-Maslov\chapter_002\src\main\java\ru\job4j\shapes\Triangle.java">
+</file>
+<file name="C:\projects\Vasily-Maslov\chapter_002\src\main\java\ru\job4j\tracker2\models\BugSecond.java">
+</file>
+<file name="C:\projects\Vasily-Maslov\chapter_002\src\main\java\ru\job4j\tracker2\models\ItemSecond.java">
+</file>
+<file name="C:\projects\Vasily-Maslov\chapter_002\src\main\java\ru\job4j\tracker2\models\TaskSecond.java">
+</file>
+<file name="C:\projects\Vasily-Maslov\chapter_002\src\main\java\ru\job4j\tracker2\start\BaseAction.java">
+</file>
+<file name="C:\projects\Vasily-Maslov\chapter_002\src\main\java\ru\job4j\tracker2\start\ConsoleInputSecond.java">
+</file>
+<file name="C:\projects\Vasily-Maslov\chapter_002\src\main\java\ru\job4j\tracker2\start\InputSecond.java">
+</file>
+<file name="C:\projects\Vasily-Maslov\chapter_002\src\main\java\ru\job4j\tracker2\start\MenuOutException.java">
+</file>
+<file name="C:\projects\Vasily-Maslov\chapter_002\src\main\java\ru\job4j\tracker2\start\MenuTracker.java">
+</file>
+<file name="C:\projects\Vasily-Maslov\chapter_002\src\main\java\ru\job4j\tracker2\start\StartUISecond.java">
+</file>
+<file name="C:\projects\Vasily-Maslov\chapter_002\src\main\java\ru\job4j\tracker2\start\StubInputSecond.java">
+</file>
+<file name="C:\projects\Vasily-Maslov\chapter_002\src\main\java\ru\job4j\tracker2\start\TrackerSecond.java">
+</file>
+<file name="C:\projects\Vasily-Maslov\chapter_002\src\main\java\ru\job4j\tracker2\start\UserAction.java">
+</file>
+<file name="C:\projects\Vasily-Maslov\chapter_002\src\main\java\ru\job4j\tracker2\start\ValidateInput.java">
+</file>
+<file name="C:\projects\Vasily-Maslov\chapter_002\src\test\java\ru\job4j\chess\ChessTest.java">
+</file>
+<file name="C:\projects\Vasily-Maslov\chapter_002\src\test\java\ru\job4j\homeworks\coffeemachine\CoffeeMachineTest.java">
+</file>
+<file name="C:\projects\Vasily-Maslov\chapter_002\src\test\java\ru\job4j\homeworks\tasks\Task1110Test.java">
+</file>
+<file name="C:\projects\Vasily-Maslov\chapter_002\src\test\java\ru\job4j\homeworks\tasks\Task1111Test.java">
+</file>
+<file name="C:\projects\Vasily-Maslov\chapter_002\src\test\java\ru\job4j\homeworks\tasks\Task1112Test.java">
+</file>
+<file name="C:\projects\Vasily-Maslov\chapter_002\src\test\java\ru\job4j\homeworks\tasks\Task1113Test.java">
+</file>
+<file name="C:\projects\Vasily-Maslov\chapter_002\src\test\java\ru\job4j\homeworks\tasks\Task1114Test.java">
+</file>
+<file name="C:\projects\Vasily-Maslov\chapter_002\src\test\java\ru\job4j\homeworks\tasks\Task111Test.java">
+</file>
+<file name="C:\projects\Vasily-Maslov\chapter_002\src\test\java\ru\job4j\homeworks\tasks\Task112Test.java">
+</file>
+<file name="C:\projects\Vasily-Maslov\chapter_002\src\test\java\ru\job4j\homeworks\tasks\Task1136Test.java">
+</file>
+<file name="C:\projects\Vasily-Maslov\chapter_002\src\test\java\ru\job4j\homeworks\tasks\Task1137Test.java">
+</file>
+<file name="C:\projects\Vasily-Maslov\chapter_002\src\test\java\ru\job4j\homeworks\tasks\Task1138Test.java">
+</file>
+<file name="C:\projects\Vasily-Maslov\chapter_002\src\test\java\ru\job4j\homeworks\tasks\Task1139Test.java">
+</file>
+<file name="C:\projects\Vasily-Maslov\chapter_002\src\test\java\ru\job4j\homeworks\tasks\Task113Test.java">
+</file>
+<file name="C:\projects\Vasily-Maslov\chapter_002\src\test\java\ru\job4j\homeworks\tasks\Task114Test.java">
+</file>
+<file name="C:\projects\Vasily-Maslov\chapter_002\src\test\java\ru\job4j\homeworks\tasks\Task115Test.java">
+</file>
+<file name="C:\projects\Vasily-Maslov\chapter_002\src\test\java\ru\job4j\homeworks\tasks\Task116Test.java">
+</file>
+<file name="C:\projects\Vasily-Maslov\chapter_002\src\test\java\ru\job4j\homeworks\tasks\Task117Test.java">
+</file>
+<file name="C:\projects\Vasily-Maslov\chapter_002\src\test\java\ru\job4j\homeworks\tasks\Task118Test.java">
+</file>
+<file name="C:\projects\Vasily-Maslov\chapter_002\src\test\java\ru\job4j\homeworks\tasks\Task119Test.java">
+</file>
+<file name="C:\projects\Vasily-Maslov\chapter_002\src\test\java\ru\job4j\homeworks\tasks\Tasl1140Test.java">
+</file>
+<file name="C:\projects\Vasily-Maslov\chapter_002\src\test\java\ru\job4j\shapes\PaintTest.java">
+</file>
+<file name="C:\projects\Vasily-Maslov\chapter_002\src\test\java\ru\job4j\tracker2\start\AnotherTrackerSecondTest.java">
+</file>
+<file name="C:\projects\Vasily-Maslov\chapter_002\src\test\java\ru\job4j\tracker2\start\TrackerSecondTest.java">
+</file>
+</checkstyle>
