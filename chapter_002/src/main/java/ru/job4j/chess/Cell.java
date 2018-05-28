@@ -3,8 +3,8 @@ package ru.job4j.chess;
 import ru.job4j.chess.exceptions.*;
 
 public class Cell {
-    int posX;
-    int posY;
+    private int posX;
+    private int posY;
 
     public Cell(int posX, int posY) throws ImpossibleCellException {
         if (posX > 8 || posY > 8 || posX < 1 || posY < 1) {

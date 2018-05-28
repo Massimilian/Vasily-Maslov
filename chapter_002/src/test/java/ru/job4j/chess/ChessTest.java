@@ -18,7 +18,7 @@ public class ChessTest {
         Board board = new Board();
         Figure bish = new Bishop(new Cell(2, 3));
         board.add(bish);
-        assertThat(board.figures[0], is(bish));
+        assertThat(board.getFigures()[0], is(bish));
     }
 
     @Test
@@ -35,6 +35,6 @@ public class ChessTest {
         Board board = new Board();
         board.add(new Bishop(source));
         board.move(source, dest);
-        assertThat(board.figures[0].getPosition(), is(dest));
+        assertThat(board.getFigures()[0].getPosition(), is(dest));
     }
 }

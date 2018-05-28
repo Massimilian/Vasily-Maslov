@@ -4,19 +4,19 @@ import ru.job4j.chess.figures.*;
 import ru.job4j.chess.exceptions.*;
 
 public class Board {
-    int count = 0;
-    Figure[] figures = new Figure[32];
+    private int count = 0;
+    private Figure[] figures = new Figure[32];
 
     void add(Figure figure) {
         boolean canSet = true;
-        if (count >= figures.length) {
+        if (this.count >= this.figures.length) {
             canSet = false;
         }
-        for (int i = 0; i < figures.length; i++) {
-            if (figures[i] == null) {
+        for (int i = 0; i < this.figures.length; i++) {
+            if (this.figures[i] == null) {
                 break;
             }
-            if (figure.getPosition().equals(figures[i].getPosition())) {
+            if (figure.getPosition().equals(this.figures[i].getPosition())) {
                 canSet = false;
             }
         }
@@ -45,5 +45,9 @@ public class Board {
             throw new FigureNotFoundException("There is no any figure here!");
         }
         return true; // Зачем булев метод? Не проще ли сделать void?
+    }
+
+    public Figure[] getFigures() {
+        return figures;
     }
 }
