@@ -10,4 +10,22 @@ package ru.job4j.homeworks.tasks;
 //        Составить программу для расчета оценки, которая пойдет в зачет этому спортсмену.
 
 public class Task11114 {
+    public double finalMark(int[] marks) {
+        int minMark = Integer.MAX_VALUE;
+        int maxMark = Integer.MIN_VALUE;
+        int res = 0;
+        for (int mark : marks) {
+            res += mark;
+            if (mark < minMark) {
+                minMark = mark;
+            }
+            if (mark > maxMark) {
+                maxMark = mark;
+            }
+        }
+        int a = res - minMark - maxMark;
+        int b = marks.length - 2;
+        int c = a / b;
+        return (double) (res - minMark - maxMark) / (double) (marks.length - 2);
+    }
 }
