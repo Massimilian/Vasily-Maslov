@@ -38,4 +38,24 @@ public class PhoneDictionaryTest {
         result.add(person2);
         assertThat(pd.find("Something"), is(result));
     }
+
+    @Test
+    public void whenTryToFindThePersonFromThePhoneDictionaryBySurnameMoreEasyWayThenReturnIt() {
+        pd.addPerson(person);
+        pd.addPerson(person1);
+        pd.addPerson(person2);
+        result.add(person1);
+        assertThat(pd.findMoreEasyWay("Maslov"), is(result));
+    }
+
+
+    @Test
+    public void whenTryToFindThePersonFromThePhoneDictionaryByNumberMoreEasyWayThenReturnIt() {
+        pd.addPerson(person);
+        pd.addPerson(person1);
+        pd.addPerson(person2);
+        result.add(person2);
+        assertThat(pd.findMoreEasyWay("Something"), is(result));
+    }
+
 }

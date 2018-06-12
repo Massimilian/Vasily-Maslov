@@ -14,8 +14,27 @@ public class PhoneDictionary {
         return this.persons;
     }
 
-    public List<Person> easyFind(String key) {
+    public List<Person> findMoreEasyWay(String key) {
         List<Person> result = new ArrayList<>();
+        char[] chkey = key.toCharArray();
+        boolean needToPut;
+        for (Person person : persons) {
+            char[] chperson = person.toString().toCharArray();
+            if (chperson.length >= chkey.length) {
+                for (int j = 0; j < chperson.length - chkey.length + 1; j++) {
+                    needToPut = true;
+                    for (int k = 0; k < chkey.length; k++) {
+                        if (chperson[j + k] != chkey[k]) {
+                            needToPut = false;
+                            break;
+                        }
+                    }
+                    if (needToPut) {
+                        result.add(person);
+                    }
+                }
+            }
+        }
         return result;
     }
 

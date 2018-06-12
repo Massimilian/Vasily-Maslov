@@ -28,4 +28,8 @@ public class Person {
     public String getAddress() {
         return address;
     }
+
+    public String toString() {
+        return String.format("%s %s %s %s", this.getName(), this.getSurname(), this.getPhoneNumber(), this.getAddress());
+    }
 }
