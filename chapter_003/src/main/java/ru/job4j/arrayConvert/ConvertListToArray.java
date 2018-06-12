@@ -13,7 +13,7 @@ public class ConvertListToArray {
                     array[i][j] = list.get(count);
                     count++;
                 } else {
-                    array[i][j] = 0;
+                    break;
                 }
             }
         }

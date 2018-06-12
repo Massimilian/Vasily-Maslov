@@ -14,6 +14,12 @@ public class PhoneDictionary {
         return this.persons;
     }
 
+    public List<Person> easyFind(String key) {
+        List<Person> result = new ArrayList<>();
+        return result;
+    }
+
+
     public List<Person> find(String key) {
         List<Person> result = new ArrayList<>();
         char[] keyToArray = key.toCharArray();
