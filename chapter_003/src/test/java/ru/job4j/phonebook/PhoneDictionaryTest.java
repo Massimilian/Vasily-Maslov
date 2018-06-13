@@ -45,7 +45,7 @@ public class PhoneDictionaryTest {
         pd.addPerson(person1);
         pd.addPerson(person2);
         result.add(person1);
-        assertThat(pd.findMoreEasyWay("Maslov"), is(result));
+        assertThat(pd.findMoreEasyWay("Mas"), is(result));
     }
 
 
@@ -55,7 +55,7 @@ public class PhoneDictionaryTest {
         pd.addPerson(person1);
         pd.addPerson(person2);
         result.add(person2);
-        assertThat(pd.findMoreEasyWay("Something"), is(result));
+        assertThat(pd.findMoreEasyWay("hing"), is(result));
     }
 
 }

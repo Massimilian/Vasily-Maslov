@@ -2,6 +2,7 @@ package ru.job4j.homeworks.deparsing;
 
 public class DeparsingEasy {
     private String str;
+    private char[] string;
 
     public int[][] deparse(String str) {
         this.str = str;
@@ -67,6 +68,72 @@ public class DeparsingEasy {
                 timeToGoAway = true;
             }
         } while (!timeToGoAway);
+        return result;
+    }
+
+
+    public int[][] deparseAnotherWay(String str) {
+        this.string = str.toCharArray();
+        int[][] result = new int[string.length / 2 + 1][2];
+        int count = 0;
+        char[] openValues = {'{', '(', '['};
+        char[] closeValues = {'}', ')', ']'};
+        for (int i = string.length - 2; i >= 0; i--) {
+            if (string[i] == closeValues[0] || string[i] == closeValues[1] || string[i] == closeValues[2]) {
+                continue;
+            }
+            if (string[i] == openValues[0]) {
+                closeValues = new char[]{'}', ')', ']'};
+                result = this.preparing(result, i, closeValues, count);
+                count++;
+            }
+            if (string[i] == openValues[1]) {
+                closeValues = new char[]{')', ']', '}'};
+                result = this.preparing(result, i, closeValues, count);
+                count++;
+            }
+            if (string[i] == openValues[2]) {
+                closeValues = new char[]{']', '}', ')'};
+                result = this.preparing(result, i, closeValues, count);
+                count++;
+            }
+        }
+
+        return this.correct(result);
+    }
+
+
+    private int[][] preparing(int[][] result, int numberOfI, char[] closeValues, int count) {
+        for (int j = numberOfI + 1; j < string.length; j++) {
+            if (string[j] == closeValues[0]) {
+                result[count][0] = numberOfI + 1;
+                result[count][1] = j + 1;
+                string[numberOfI] = '*';
+                string[j] = '*';
+                break;
+            }
+            if (string[j] == closeValues[1] || string[j] == closeValues[2]) {
+                break;
+            }
+        }
+        return result;
+    }
+
+    private int[][] correct(int[][] mediumResult) {
+        int count = 0;
+        for (int i = 0; i < mediumResult.length; i++) {
+            if (mediumResult[i][0] != 0) {
+                count++;
+            }
+        }
+        int[][] result = new int[count][2];
+        count = 0;
+        for (int i = 0; i < mediumResult.length; i++) {
+            if (mediumResult[i][0] != 0) {
+                result[count][0] = mediumResult[i][0];
+                result[count++][1] = mediumResult[i][1];
+            }
+        }
         return result;
     }
 }
