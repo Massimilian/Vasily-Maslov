@@ -16,10 +16,11 @@ public class Person {
     }
 
     public boolean equals(String s) {
-        return (this.check(s, this.name) || this.check(s, this.surname) || this.check(s, this.phoneNumber) || this.check(s, this.address));
-//        return (s.contains(this.name) || s.contains(this.surname) || s.contains(this.phoneNumber) || s.contains(this.address));
+//        return (this.check(s, this.name) || this.check(s, this.surname) || this.check(s, this.phoneNumber) || this.check(s, this.address));
+        return (this.name.contains(s) || this.surname.contains(s) || this.phoneNumber.contains(s) || this.address.contains(s));
     }
 
+// check и другие "устаревшие" методы оставляю просто для того, чтобы потом учесть свои ошибки
     private boolean check(String str, String parameter) {
         char[] strChar = str.toCharArray();
         char[] parameterChar = parameter.toCharArray();
