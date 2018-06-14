@@ -1,8 +1,10 @@
 package ru.job4j.phonebook;
 
 import org.junit.Test;
+
 import java.util.ArrayList;
 import java.util.List;
+
 import static org.hamcrest.Matchers.is;
 import static org.junit.Assert.*;
 
@@ -58,4 +60,23 @@ public class PhoneDictionaryTest {
         assertThat(pd.findMoreEasyWay("hing"), is(result));
     }
 
+
+    @Test
+    public void whenTryToFindThePersonFromThePhoneDictionaryBySurnameAnotherWayThenReturnIt() {
+        pd.addPerson(person);
+        pd.addPerson(person1);
+        pd.addPerson(person2);
+        result.add(person1);
+        assertThat(pd.findAnotherWay("Mas"), is(result));
+    }
+
+
+    @Test
+    public void whenTryToFindThePersonFromThePhoneDictionaryByNumberAnotherWayThenReturnIt() {
+        pd.addPerson(person);
+        pd.addPerson(person1);
+        pd.addPerson(person2);
+        result.add(person2);
+        assertThat(pd.findAnotherWay("hing"), is(result));
+    }
 }

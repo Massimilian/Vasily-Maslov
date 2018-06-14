@@ -1,6 +1,7 @@
 package ru.job4j.phonebook;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 
 public class PhoneDictionary {
@@ -63,6 +64,16 @@ public class PhoneDictionary {
                         }
                     }
                 }
+            }
+        }
+        return result;
+    }
+
+    public List<Person> findAnotherWay(String key) {
+        List<Person> result = new ArrayList<>();
+        for (Person person : this.persons) {
+            if (person.equals(key)) {
+                result.add(person);
             }
         }
         return result;
