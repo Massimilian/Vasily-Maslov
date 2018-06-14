@@ -67,7 +67,7 @@ public class PhoneDictionaryTest {
         pd.addPerson(person1);
         pd.addPerson(person2);
         result.add(person1);
-        assertThat(pd.findAnotherWay("Mas"), is(result));
+        assertThat(pd.findAnotherWay("aslo"), is(result));
     }
 
 
@@ -77,6 +77,6 @@ public class PhoneDictionaryTest {
         pd.addPerson(person1);
         pd.addPerson(person2);
         result.add(person2);
-        assertThat(pd.findAnotherWay("hing"), is(result));
+        assertThat(pd.findAnotherWay("ing"), is(result));
     }
 }

@@ -17,6 +17,7 @@ public class Person {
 
     public boolean equals(String s) {
         return (this.check(s, this.name) || this.check(s, this.surname) || this.check(s, this.phoneNumber) || this.check(s, this.address));
+//        return (s.contains(this.name) || s.contains(this.surname) || s.contains(this.phoneNumber) || s.contains(this.address));
     }
 
     private boolean check(String str, String parameter) {
