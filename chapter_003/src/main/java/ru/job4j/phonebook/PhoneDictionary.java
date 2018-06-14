@@ -72,7 +72,7 @@ public class PhoneDictionary {
     public List<Person> findAnotherWay(String key) {
         List<Person> result = new ArrayList<>();
         for (Person person : this.persons) {
-            if (person.equals(key)) {
+            if (person.areEquals(key)) {
                 result.add(person);
             }
         }

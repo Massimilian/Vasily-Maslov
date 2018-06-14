@@ -1,7 +1,5 @@
 package ru.job4j.phonebook;
 
-import java.util.Objects;
-
 public class Person {
     private String name;
     private String surname;
@@ -15,7 +13,7 @@ public class Person {
         this.address = address;
     }
 
-    public boolean equals(String s) {
+    public boolean areEquals(String s) {
 //        return (this.check(s, this.name) || this.check(s, this.surname) || this.check(s, this.phoneNumber) || this.check(s, this.address));
         return (this.name.contains(s) || this.surname.contains(s) || this.phoneNumber.contains(s) || this.address.contains(s));
     }
@@ -40,11 +38,6 @@ public class Person {
             }
         }
         return needToPut;
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(name, surname, phoneNumber, address);
     }
 
     public String getName() {
