@@ -2,17 +2,14 @@ package ru.job4j.tracker2.start;
 
 import ru.job4j.tracker2.models.*;
 
+import java.util.ArrayList;
+
 class EditItem extends BaseAction implements UserAction {
 	public EditItem(int key, String name) {
 		super(key, name);
 	}
 	
 	public void execute(InputSecond input, TrackerSecond tracker) {
-//		String id = input.ask("Пожалуйста, введите персональный номер заявки. / Please, enter the task's id.");
-//		String name = input.ask("Введите имя. / Enter new name.");
-//		String desc = input.ask("Введите описание. / Enter new description.");
-//		ItemSecond item = new TaskSecond(name, desc);
-//		item.setId(id);
 		tracker.update(new TaskSecond(input.ask("Please, enter the task's id."), input.ask("Enter new name."), input.ask("Enter new description.")));
 		System.out.println("New Item added.");
 	}
@@ -23,8 +20,6 @@ class DeleteItem extends BaseAction implements UserAction {
 		super(key, name);
 	}	
 	public void execute(InputSecond input, TrackerSecond tracker) {
-//		String id = input.ask("Пожалуйста, введите персональный номер заявки. / Please, enter the task's id.");
-//		tracker.delete(id);
 		tracker.delete(input.ask("Please, enter the task's id."));
 		System.out.println("This task has been deleted");
 	}
@@ -76,9 +71,6 @@ public class MenuTracker {
 		}
 		
 	public void execute(InputSecond input, TrackerSecond tracker) {
-//		String name = input.ask("Введите имя новой заявки. / Enter new Task's name.");
-//		String desc = input.ask("Введите описание новой заявки. / Enter new Task's description.");
-//		tracker.add(new ItemSecond(name, desc));
 		tracker.add(new ItemSecond(input.ask("Enter new Task's name."), input.ask("Enter new Task's description.")));
 		System.out.println("New Item added.");
 		}
@@ -89,8 +81,6 @@ public class MenuTracker {
 			super(key, name);
 		}
 		public void execute(InputSecond input, TrackerSecond tracker) {
-//			String id = input.ask("Пожалуйста, введите персональный номер заявки. / Please, enter the task's id.");
-//			ItemSecond it = tracker.findById(id);
 			ItemSecond it = tracker.findById(input.ask("Please, enter the task's id."));
 			System.out.printf("Task's number - %s:\n Task's name - \"%s\",\n Task's description \"%s\".\n", it.getId(), it.getName(), it.getDescription());			
 		}	
@@ -101,10 +91,8 @@ public class MenuTracker {
 			super(key, name);
 		}
 		public void execute(InputSecond input, TrackerSecond tracker) {
-//			String name = input.ask("Пожалуйста, введите имя. / Please, enter the task's name.");
 			int count = 0;
-//			ItemSecond[] its = tracker.findByName(name);
-			ItemSecond[] its = tracker.findByName(input.ask("Please, enter the task's name."));
+			ArrayList<ItemSecond> its = tracker.findByName(input.ask("Please, enter the task's name."));
 			System.out.println("Task's founded:");
 			for (ItemSecond item : its) {
 				count++;

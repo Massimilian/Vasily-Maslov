@@ -1,6 +1,7 @@
 package ru.job4j.userconvert;
 
 import java.util.HashMap;
+import java.util.Iterator;
 import java.util.List;
 
 public class UserConvert {

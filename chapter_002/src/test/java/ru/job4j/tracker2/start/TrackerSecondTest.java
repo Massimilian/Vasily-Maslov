@@ -7,15 +7,14 @@ import static org.hamcrest.Matchers.is;
 import static org.junit.Assert.*;
 
 public class TrackerSecondTest {
-	TrackerSecond tracker = new TrackerSecond();
-	InputSecond input = new ConsoleInputSecond();
+	private TrackerSecond tracker = new TrackerSecond();
+	private InputSecond input = new ConsoleInputSecond();
 	
 	@Before
     public void setStub() {
         System.out.println("StubInput has been set");
 		input = new StubInputSecond(new String[]{"1", "Task", "Desc", "1", "Task", "Desc", "0"});
-//		input = new StubInputSecond(new String[]{"1", "Task", "Desc", "1", "Task", "Desc", "7", "y"}); // StubInputSecond, вызывающий необъяснимую ошибку.
-    }
+	}
 
     @After
     public void setIn() {

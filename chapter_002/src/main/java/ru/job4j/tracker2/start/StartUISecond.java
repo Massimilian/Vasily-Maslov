@@ -1,7 +1,5 @@
 package ru.job4j.tracker2.start;
 
-import ru.job4j.tracker2.models.*;
-
 public class StartUISecond {
 	private int[] ranges = {1, 2, 3, 4, 5, 6, 7, 0};
 	private InputSecond input;
@@ -57,7 +55,6 @@ public class StartUISecond {
 		System.out.println("");
 		cont = result == 0 ? false : true;
 		} while (cont);
-//		} while (!"n".equals(this.input.ask("Хотите продолжить (y/n)? / Do you want to continue (y/n)?")));
 	}
 	
 	public static void main(String[] args) {
