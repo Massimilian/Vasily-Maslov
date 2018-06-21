@@ -10,11 +10,7 @@ public class Test {
         TreeMap<Integer, List<Integer>> tree = new TreeMap<>();
         List<Integer> list = new ArrayList<>(Arrays.asList(0));
         tree.put(0, list);
-//        tree.put(1, 10);
-//        tree.put(2, 20);
-//        tree.put(2, 30);
-//        tree.putIfAbsent(3, 30);
-//        tree.putIfAbsent(4, 40);
+//для первого коммита
         System.out.println(tree);
     }
 }
