@@ -12,6 +12,7 @@ public class Test {
         tree.put(0, list);
         // для первого коммита
         // для второго коммита
+        // для третьего коммита
         System.out.println(tree);
     }
 }
