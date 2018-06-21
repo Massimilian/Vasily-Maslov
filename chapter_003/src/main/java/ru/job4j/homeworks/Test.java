@@ -10,7 +10,8 @@ public class Test {
         TreeMap<Integer, List<Integer>> tree = new TreeMap<>();
         List<Integer> list = new ArrayList<>(Arrays.asList(0));
         tree.put(0, list);
-//для первого коммита
+        // для первого коммита
+        // для второго коммита
         System.out.println(tree);
     }
 }
