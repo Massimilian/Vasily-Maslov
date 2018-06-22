@@ -76,11 +76,11 @@ public class Bank {
         boolean operationWorked = true;
         User srcUser = this.findUser(srcPassport);
         User destUser = this.findUser(destPassport);
-        int srcReqNum = this.findAccountNumber(srcUser, srcRequisite);
-        int destReqNum = this.findAccountNumber(destUser, destRequisite);
+        int srcReqNum = this.findAccountNumber(srcUser, srcRequisite); // исправлено
+        int destReqNum = this.findAccountNumber(destUser, destRequisite); // исправлено
         if (srcUser != null && destUser != null && srcReqNum != -1 && destReqNum != -1 && bankUsers.get(srcUser).get(srcReqNum).getValue() >= amount) {
-            bankUsers.get(srcUser).get(srcReqNum).setValue(bankUsers.get(srcUser).get(srcReqNum).getValue() - amount);
-            bankUsers.get(destUser).get(destReqNum).setValue(bankUsers.get(destUser).get(destReqNum).getValue() + amount);
+            bankUsers.get(srcUser).get(srcReqNum).setValue(bankUsers.get(srcUser).get(srcReqNum).getValue() - amount); // исправлено
+            bankUsers.get(destUser).get(destReqNum).setValue(bankUsers.get(destUser).get(destReqNum).getValue() + amount); // исправлено
             System.out.println("Operation successfully finished!");
         } else {
             System.out.println("Operation interrupted!");
