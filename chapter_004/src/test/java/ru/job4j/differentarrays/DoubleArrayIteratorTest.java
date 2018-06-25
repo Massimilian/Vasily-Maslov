@@ -1,4 +1,4 @@
-package ru.job4j.doublearray;
+package ru.job4j.differentarrays;
 
 import org.junit.Test;
 
