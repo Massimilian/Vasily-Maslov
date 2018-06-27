@@ -2,7 +2,6 @@ package ru.job4j.differentarrays;
 
 import java.util.Iterator;
 
-// {1, 2}{3, 4}
 public class DoubleArrayIterator implements Iterator<Integer> {
     private int[][] values;
     private int index;
@@ -15,7 +14,7 @@ public class DoubleArrayIterator implements Iterator<Integer> {
     }
 
     public boolean hasNext() {
-        return (secondIndex < values[values.length - 1].length);
+        return values.length - 1 == index ? values[index].length > secondIndex ? true : false : true;
     }
 
     public Integer next() {

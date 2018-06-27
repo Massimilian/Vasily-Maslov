@@ -3,6 +3,9 @@ package ru.job4j.chess;
 import ru.job4j.chess.figures.*;
 import ru.job4j.chess.exceptions.*;
 
+import java.util.HashSet;
+import java.util.Set;
+
 public class Board {
     private int count = 0;
     private Figure[] figures = new Figure[32];
