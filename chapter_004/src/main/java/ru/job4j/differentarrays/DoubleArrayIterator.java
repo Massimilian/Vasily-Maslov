@@ -14,7 +14,8 @@ public class DoubleArrayIterator implements Iterator<Integer> {
     }
 
     public boolean hasNext() {
-        return values.length - 1 == index ? values[index].length > secondIndex ? true : false : true;
+        //return values.length - 1 == index ? values[index].length > secondIndex ? true : false : true;
+        return values.length - 1 > index || (values[index].length > secondIndex);
     }
 
     public Integer next() {

@@ -22,7 +22,8 @@ public class IteratorOfIterators implements Iterator<Integer> {
         if (intArray.length == index + 1 && !intArray[index].hasNext()) {
             throw new NoSuchElementException();
         }
-        return !intArray[index].hasNext() ? intArray[++index].next() : intArray[index].next();
+        return !intArray[index].
+                hasNext() ? intArray[++index].next() : intArray[index].next();
     }
 
     public void remove() {

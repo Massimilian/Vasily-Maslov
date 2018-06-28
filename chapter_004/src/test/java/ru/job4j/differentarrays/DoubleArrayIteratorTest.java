@@ -11,18 +11,6 @@ public class DoubleArrayIteratorTest {
     private DoubleArrayIterator dai = new DoubleArrayIterator(new int[][]{{1, 2}, {3, 4, 5}, {6, 7, 8, 9}});
 
     @Test
-    public void test() {
-        Iterator two = new DoubleArrayIterator(new int[][]{new int[]{4, 5}, new int[]{6, 7}});
-        System.out.println(two.next());
-        System.out.println(two.next());
-        System.out.println(two.hasNext());
-        System.out.println(two.next());
-        System.out.println(two.next());
-        System.out.println(two.hasNext());
-
-    }
-
-    @Test
     public void whenAskThePointOfArrayThenReturnIt() {
         dai.next();
         dai.next();
@@ -49,7 +37,6 @@ public class DoubleArrayIteratorTest {
         dai.next();
         dai.next();
         dai.next();
-        System.out.println(dai.hasNext());
         assertThat(dai.hasNext(), is(true));
     }
 
