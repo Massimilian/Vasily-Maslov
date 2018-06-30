@@ -7,12 +7,12 @@ public class Converter {
         return new Iterator<Integer>() {
             @Override
             public boolean hasNext() {
-                return false;
+                return it.hasNext();
             }
 
             @Override
             public Integer next() {
-                return null;
+                return it.next().next();
             }
         };
     }

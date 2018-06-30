@@ -3,12 +3,12 @@ package ru.job4j.differentarrays;
 import java.util.Iterator;
 import java.util.NoSuchElementException;
 
-public class IteratorOfIterators implements Iterator<Integer> {
+public class ItOfIterators implements Iterator<Integer> {
 
     private Iterator<Integer>[] intArray;
     private int index;
 
-    public IteratorOfIterators(Iterator<Integer>[] intArray) {
+    public ItOfIterators(Iterator<Integer>[] intArray) {
         this.intArray = intArray;
         this.index = 0;
     }

@@ -15,7 +15,7 @@ public class IteratorOfIteratorsTest {
     private Iterator<Integer> two = new DoubleArrayIterator(new int[][]{new int[]{4, 5}, new int[]{6, 7}});
     private Iterator<Integer> three = new EvenArrayIterator(new int[]{8, 9});
 
-    private IteratorOfIterators ioi = new IteratorOfIterators(new Iterator[]{one, two, three});
+    private ItOfIterators ioi = new ItOfIterators(new Iterator[]{one, two, three});
 
     @Test
     public void whenTryToUseIteratorOfIteratorsThenReturnResult() {
@@ -68,7 +68,7 @@ public class IteratorOfIteratorsTest {
     @Test(expected = NoSuchElementException.class)
     public void invocationOfNextMethodShouldThrowNoSuchElementException() {
         Iterator<Integer> it1 = Arrays.asList(1, 2, 3).iterator();
-        IteratorOfIterators its = new IteratorOfIterators(new Iterator[]{it1});
+        ItOfIterators its = new ItOfIterators(new Iterator[]{it1});
         assertThat(its.next(), is(1));
         assertThat(its.next(), is(2));
         assertThat(its.next(), is(3));
