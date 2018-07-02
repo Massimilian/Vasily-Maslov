@@ -37,10 +37,17 @@ public class Converter {
 
             @Override
             public Integer next() {
+
                 // если внутренний итератор отсутствует, но в будущем он предвидится - сдвигаем просмотр на следующий итератор
                 if (current == null || !current.hasNext() && iterator.hasNext()) {
                     current = iterator.next();
                 }
+
+                // проверка отсутствующего внутреннего итератора - даже после использования метода next()
+                if (current == null) {
+                    throw new NoSuchElementException();
+                }
+
                 // а если нет - просто даём следующее значение
                 return current.next();
             }
