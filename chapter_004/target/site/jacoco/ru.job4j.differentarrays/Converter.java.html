@@ -3,53 +3,49 @@
 import java.util.Iterator;
 import java.util.NoSuchElementException;
 
-//1, 2, 3
-//4, 5, 6
-//7, 8, 9
-
-<span class="fc" id="L10">public class Converter {</span>
+<span class="fc" id="L6">public class Converter {</span>
     Iterator&lt;Integer&gt; convert(Iterator&lt;Iterator&lt;Integer&gt;&gt; it) {
-<span class="fc" id="L12">        return new Iterator&lt;Integer&gt;() {</span>
-<span class="fc" id="L13">            private final Iterator&lt;Iterator&lt;Integer&gt;&gt; iterator = it;</span>
+<span class="fc" id="L8">        return new Iterator&lt;Integer&gt;() {</span>
+<span class="fc" id="L9">            private final Iterator&lt;Iterator&lt;Integer&gt;&gt; iterator = it;</span>
             private Iterator&lt;Integer&gt; current;
 
             @Override
             public boolean hasNext() {
                 // проверяем внутренний итератор на ноль, а внешний на наличие внутренних итераторов
-<span class="pc bpc" id="L19" title="1 of 4 branches missed.">                if (current == null &amp;&amp; iterator.hasNext()) {</span>
-<span class="fc" id="L20">                    current = iterator.next();</span>
+<span class="pc bpc" id="L15" title="1 of 4 branches missed.">                if (current == null &amp;&amp; iterator.hasNext()) {</span>
+<span class="fc" id="L16">                    current = iterator.next();</span>
                 }
                 // если больше внутренних итераторов нет - возвращаем false
-<span class="pc bpc" id="L23" title="1 of 2 branches missed.">                if (current == null) {</span>
-<span class="nc" id="L24">                    return false;</span>
+<span class="pc bpc" id="L19" title="1 of 2 branches missed.">                if (current == null) {</span>
+<span class="nc" id="L20">                    return false;</span>
                 }
                 // если  внутренний итератор имеет значения - возвращаем true
-<span class="fc bfc" id="L27" title="All 2 branches covered.">                if (current.hasNext()) {</span>
-<span class="fc" id="L28">                    return true;</span>
+<span class="fc bfc" id="L23" title="All 2 branches covered.">                if (current.hasNext()) {</span>
+<span class="fc" id="L24">                    return true;</span>
                 }
                 // Если внешний итератор имеет итераторы - возвращаем значение этого итератора
-<span class="fc bfc" id="L31" title="All 2 branches covered.">                if (iterator.hasNext()) {</span>
-<span class="fc" id="L32">                    current = iterator.next();</span>
+<span class="fc bfc" id="L27" title="All 2 branches covered.">                if (iterator.hasNext()) {</span>
+<span class="fc" id="L28">                    current = iterator.next();</span>
                 }
                 // если ничего не прокатило - значит, просто возвращаем сдвигаем каретку
-<span class="fc" id="L35">                return current.hasNext();</span>
+<span class="fc" id="L31">                return current.hasNext();</span>
             }
 
             @Override
             public Integer next() {
 
                 // если внутренний итератор отсутствует, но в будущем он предвидится - сдвигаем просмотр на следующий итератор
-<span class="fc bfc" id="L42" title="All 6 branches covered.">                if (current == null || !current.hasNext() &amp;&amp; iterator.hasNext()) {</span>
-<span class="fc" id="L43">                    current = iterator.next();</span>
+<span class="fc bfc" id="L38" title="All 6 branches covered.">                if (current == null || !current.hasNext() &amp;&amp; iterator.hasNext()) {</span>
+<span class="fc" id="L39">                    current = iterator.next();</span>
                 }
 
                 // проверка отсутствующего внутреннего итератора - даже после использования метода next()
-<span class="pc bpc" id="L47" title="1 of 2 branches missed.">                if (current == null) {</span>
-<span class="nc" id="L48">                    throw new NoSuchElementException();</span>
+<span class="pc bpc" id="L43" title="1 of 2 branches missed.">                if (current == null) {</span>
+<span class="nc" id="L44">                    throw new NoSuchElementException();</span>
                 }
 
                 // а если нет - просто даём следующее значение
-<span class="fc" id="L52">                return current.next();</span>
+<span class="fc" id="L48">                return current.next();</span>
             }
         };
     }

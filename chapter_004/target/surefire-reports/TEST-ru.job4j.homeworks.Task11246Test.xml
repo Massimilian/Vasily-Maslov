@@ -67,8 +67,8 @@
   </properties>
   <testcase classname="ru.job4j.homeworks.Task11246Test" name="whenNeedToSumElementsAtArraysThenReturnIt" time="0"/>
   <testcase classname="ru.job4j.homeworks.Task11246Test" name="whenNeedToCalculateElementsAtArraysThenReturnItListWay" time="0"/>
-  <testcase classname="ru.job4j.homeworks.Task11246Test" name="whenNeedToSumEementsAtArraysThenReturnItListWay" time="0.001"/>
+  <testcase classname="ru.job4j.homeworks.Task11246Test" name="whenNeedToSumEementsAtArraysThenReturnItListWay" time="0"/>
   <testcase classname="ru.job4j.homeworks.Task11246Test" name="whenNeedToCalculateElementsAtArraysThenReturnIt" time="0"/>
-  <testcase classname="ru.job4j.homeworks.Task11246Test" name="whenNeedToFindMaxAtElementsOfArrayThenReturnIt" time="0"/>
+  <testcase classname="ru.job4j.homeworks.Task11246Test" name="whenNeedToFindMaxAtElementsOfArrayThenReturnIt" time="0.001"/>
   <testcase classname="ru.job4j.homeworks.Task11246Test" name="whenNeedToFindMaxAtElementsOfArrayThenReturnItListWay" time="0"/>
 </testsuite>

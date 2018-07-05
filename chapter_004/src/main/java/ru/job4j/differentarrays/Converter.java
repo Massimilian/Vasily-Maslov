@@ -3,10 +3,6 @@ package ru.job4j.differentarrays;
 import java.util.Iterator;
 import java.util.NoSuchElementException;
 
-//1, 2, 3
-//4, 5, 6
-//7, 8, 9
-
 public class Converter {
     Iterator<Integer> convert(Iterator<Iterator<Integer>> it) {
         return new Iterator<Integer>() {
