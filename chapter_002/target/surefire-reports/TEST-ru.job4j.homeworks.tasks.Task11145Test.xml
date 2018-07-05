@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="6" failures="0" name="ru.job4j.homeworks.tasks.Task11145Test" time="0" errors="0" skipped="0">
+<testsuite tests="6" failures="0" name="ru.job4j.homeworks.tasks.Task11145Test" time="0.001" errors="0" skipped="0">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="c:\Program Files\Java\jdk1.8.0_144\jre\bin"/>
@@ -67,7 +67,7 @@
   </properties>
   <testcase classname="ru.job4j.homeworks.tasks.Task11145Test" name="whenPutNotEvenArrayThenMixIt" time="0"/>
   <testcase classname="ru.job4j.homeworks.tasks.Task11145Test" name="whenPutEvenArrayThenTurnIt" time="0"/>
-  <testcase classname="ru.job4j.homeworks.tasks.Task11145Test" name="whenPutEvenArrayThenMixIt" time="0"/>
+  <testcase classname="ru.job4j.homeworks.tasks.Task11145Test" name="whenPutEvenArrayThenMixIt" time="0.001"/>
   <testcase classname="ru.job4j.homeworks.tasks.Task11145Test" name="whenPutNotEvenArrayThenReturnItWithChangedHalfs" time="0"/>
   <testcase classname="ru.job4j.homeworks.tasks.Task11145Test" name="whenPutEvenArrayThenReturnItWithChangedHalfs" time="0"/>
   <testcase classname="ru.job4j.homeworks.tasks.Task11145Test" name="whenPutNotEvenArrayThenTurnIt" time="0"/>
