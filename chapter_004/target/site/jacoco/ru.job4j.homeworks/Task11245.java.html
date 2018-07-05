@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="ru"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Task11245.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">chapter_004</a> &gt; <a href="index.source.html" class="el_package">ru.job4j.homeworks</a> &gt; <span class="el_source">Task11245.java</span></div><h1>Task11245.java</h1><pre class="source lang-java linenums">package ru.job4j.homeworks;
+
+//11.245.*Дан массив. Переписать его элементы в другой массив такого же размера
+//        следующим образом: сначала должны идти все отрицательные элементы,
+//        а затем все остальные. Использовать только один проход по исходному
+//        массиву.
+
+import java.util.ArrayList;
+
+<span class="fc" id="L10">public class Task11245 {</span>
+    public int[] minusAndPlus(int[] array) {
+<span class="fc" id="L12">        int count = 0;</span>
+<span class="fc" id="L13">        int backCount = array.length - 1;</span>
+<span class="fc" id="L14">        int[] result = new int[array.length];</span>
+<span class="fc bfc" id="L15" title="All 2 branches covered.">        for (int number : array) {</span>
+<span class="fc bfc" id="L16" title="All 2 branches covered.">            if (number &lt; 0) {</span>
+<span class="fc" id="L17">                result[count++] = number;</span>
+            } else {
+<span class="fc" id="L19">                result[backCount--] = number;</span>
+            }
+        }
+<span class="fc" id="L22">        return result;</span>
+    }
+
+    public ArrayList&lt;Integer&gt; minusAndPlus(ArrayList&lt;Integer&gt; list) {
+<span class="fc" id="L26">        ArrayList&lt;Integer&gt; result = (ArrayList&lt;Integer&gt;) list.clone();</span>
+<span class="fc" id="L27">        int count = 0;</span>
+<span class="fc" id="L28">        int backCount = list.size() - 1;</span>
+<span class="fc bfc" id="L29" title="All 2 branches covered.">        for (Integer number : list) {</span>
+<span class="fc bfc" id="L30" title="All 2 branches covered.">            if (number &lt; 0) {</span>
+<span class="fc" id="L31">                result.set(count++, number);</span>
+            } else {
+<span class="fc" id="L33">                result.set(backCount--, number);</span>
+            }
+<span class="fc" id="L35">        }</span>
+<span class="fc" id="L36">        return result;</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.7.9.201702052155</span></div></body></html>

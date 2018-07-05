@@ -19,11 +19,11 @@ public class Task11246 {
         return result;
     }
 
-    public int[] theResult (int[] firstArray, int[] secondArray){
+    public int[] theResult(int[] firstArray, int[] secondArray) {
         int[] result = new int[firstArray.length];
         if (firstArray.length == secondArray.length) {
             for (int i = 0; i < firstArray.length; i++) {
-                result[i] = firstArray[i]*secondArray[i];
+                result[i] = firstArray[i] * secondArray[i];
             }
         }
         return result;

@@ -1,0 +1,26 @@
+GROUP,PACKAGE,CLASS,INSTRUCTION_MISSED,INSTRUCTION_COVERED,BRANCH_MISSED,BRANCH_COVERED,LINE_MISSED,LINE_COVERED,COMPLEXITY_MISSED,COMPLEXITY_COVERED,METHOD_MISSED,METHOD_COVERED
+chapter_004,ru.job4j.generics,SimpleArray,9,92,2,4,4,27,4,9,2,8
+chapter_004,ru.job4j.generics,AbstractStore,0,3,0,0,0,1,0,1,0,1
+chapter_004,ru.job4j.generics,Base,0,9,0,0,0,4,0,2,0,2
+chapter_004,ru.job4j.generics,UserStore,0,89,2,8,0,25,2,8,0,5
+chapter_004,ru.job4j.generics,User,0,4,0,0,0,2,0,1,0,1
+chapter_004,ru.job4j.generics,RoleStore,89,0,10,0,25,0,10,0,5,0
+chapter_004,ru.job4j.generics,Role,4,0,0,0,2,0,1,0,1,0
+chapter_004,ru.job4j.generics,SimpleArray.new Iterator() {...},0,31,0,2,0,4,0,4,0,3
+chapter_004,ru.job4j.departments,Department,0,9,0,0,0,4,0,2,0,2
+chapter_004,ru.job4j.departments,Departments,0,146,0,16,0,31,0,14,0,6
+chapter_004,ru.job4j.departments,Departments.new Comparator() {...},0,12,0,0,0,2,0,2,0,2
+chapter_004,ru.job4j.departments,Departments.new Comparator() {...},0,12,0,0,0,2,0,2,0,2
+chapter_004,ru.job4j.differentarrays,Test,37,0,2,0,6,0,3,0,2,0
+chapter_004,ru.job4j.differentarrays,DoubleArrayIterator,49,66,4,6,5,10,3,6,1,3
+chapter_004,ru.job4j.differentarrays,PrimeIterator,4,124,2,24,1,24,3,16,1,5
+chapter_004,ru.job4j.differentarrays,Converter,0,9,0,0,0,2,0,2,0,2
+chapter_004,ru.job4j.differentarrays,EvenArrayIterator,4,67,0,8,1,13,1,8,1,4
+chapter_004,ru.job4j.differentarrays,ItOfIterators,6,85,1,11,1,9,2,8,1,3
+chapter_004,ru.job4j.differentarrays,ArrayIterator,37,31,4,2,5,6,3,4,1,3
+chapter_004,ru.job4j.differentarrays,Converter.new Iterator() {...},6,74,3,15,2,14,3,9,0,3
+chapter_004,ru.job4j.homeworks,Task11246,0,195,6,18,0,34,6,13,0,7
+chapter_004,ru.job4j.homeworks,Task11245,0,85,0,8,0,18,0,7,0,3
+chapter_004,ru.job4j.homeworks,Task11241,0,106,2,12,0,22,2,10,0,5
+chapter_004,ru.job4j.homeworks,Task11237,0,57,0,8,0,9,0,7,0,3
+chapter_004,ru.job4j.homeworks,Task11236,0,95,1,9,0,16,1,7,0,3

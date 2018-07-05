@@ -25,15 +25,10 @@
 <file name="C:\projects\Vasily-Maslov\chapter_004\src\main\java\ru\job4j\generics\Role.java">
 </file>
 <file name="C:\projects\Vasily-Maslov\chapter_004\src\main\java\ru\job4j\generics\RoleStore.java">
-<error line="3" column="68" severity="error" message="&apos;&gt;&apos; is followed by an illegal character." source="com.puppycrawl.tools.checkstyle.checks.whitespace.GenericWhitespaceCheck"/>
-<error line="3" column="68" severity="error" message="&apos;{&apos; is not preceded with whitespace." source="com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"/>
 </file>
 <file name="C:\projects\Vasily-Maslov\chapter_004\src\main\java\ru\job4j\generics\SimpleArray.java">
 </file>
 <file name="C:\projects\Vasily-Maslov\chapter_004\src\main\java\ru\job4j\generics\Store.java">
-<error line="3" column="23" severity="error" message="&apos;&lt;&apos; is preceded with whitespace." source="com.puppycrawl.tools.checkstyle.checks.whitespace.GenericWhitespaceCheck"/>
-<error line="3" column="40" severity="error" message="&apos;&gt;&apos; is followed by an illegal character." source="com.puppycrawl.tools.checkstyle.checks.whitespace.GenericWhitespaceCheck"/>
-<error line="3" column="40" severity="error" message="&apos;{&apos; is not preceded with whitespace." source="com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"/>
 </file>
 <file name="C:\projects\Vasily-Maslov\chapter_004\src\main\java\ru\job4j\generics\User.java">
 </file>
@@ -48,10 +43,6 @@
 <file name="C:\projects\Vasily-Maslov\chapter_004\src\main\java\ru\job4j\homeworks\Task11245.java">
 </file>
 <file name="C:\projects\Vasily-Maslov\chapter_004\src\main\java\ru\job4j\homeworks\Task11246.java">
-<error line="22" column="28" severity="error" message="&apos;(&apos; is preceded with whitespace." source="com.puppycrawl.tools.checkstyle.checks.whitespace.MethodParamPadCheck"/>
-<error line="22" column="65" severity="error" message="&apos;{&apos; is not preceded with whitespace." source="com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"/>
-<error line="26" column="42" severity="error" message="&apos;*&apos; is not preceded with whitespace." source="com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"/>
-<error line="26" column="43" severity="error" message="&apos;*&apos; is not followed by whitespace." source="com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"/>
 </file>
 <file name="C:\projects\Vasily-Maslov\chapter_004\src\test\java\ru\job4j\departments\DepartmentsTest.java">
 </file>
@@ -66,7 +57,6 @@
 <file name="C:\projects\Vasily-Maslov\chapter_004\src\test\java\ru\job4j\differentarrays\PrimeIteratorTest.java">
 </file>
 <file name="C:\projects\Vasily-Maslov\chapter_004\src\test\java\ru\job4j\generics\ContainersTest.java">
-<error line="41" column="52" severity="error" message="&apos;(&apos; is preceded with whitespace." source="com.puppycrawl.tools.checkstyle.checks.whitespace.MethodParamPadCheck"/>
 </file>
 <file name="C:\projects\Vasily-Maslov\chapter_004\src\test\java\ru\job4j\generics\SimpleArrayTest.java">
 </file>

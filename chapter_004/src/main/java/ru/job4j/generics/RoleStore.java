@@ -1,6 +1,6 @@
 package ru.job4j.generics;
 
-public class RoleStore extends AbstractStore implements Store<Role>{
+public class RoleStore extends AbstractStore implements Store<Role> {
 
     public RoleStore(int size) {
         this.userSa = new SimpleArray<>(size);

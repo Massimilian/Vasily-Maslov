@@ -38,7 +38,7 @@ public class ContainersTest {
         users.add(user2);
         users.add(user3);
         users.delete("1");
-        assertThat(users.findById("1").getId(), is (nullValue()));
+        assertThat(users.findById("1").getId(), is(nullValue()));
     }
 
 
