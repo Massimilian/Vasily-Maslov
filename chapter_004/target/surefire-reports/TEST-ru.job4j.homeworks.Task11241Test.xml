@@ -66,7 +66,7 @@
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
   <testcase classname="ru.job4j.homeworks.Task11241Test" name="whenAskArrayWithNullsThenReturnIt" time="0"/>
-  <testcase classname="ru.job4j.homeworks.Task11241Test" name="whenAskListWithNullsThenReturnIt" time="0"/>
+  <testcase classname="ru.job4j.homeworks.Task11241Test" name="whenAskListWithNullsThenReturnIt" time="0.001"/>
   <testcase classname="ru.job4j.homeworks.Task11241Test" name="whenAskListWithoutNullsThenReturnIt" time="0"/>
-  <testcase classname="ru.job4j.homeworks.Task11241Test" name="whenAskArrayWithoutNullsThenReturnIt" time="0.001"/>
+  <testcase classname="ru.job4j.homeworks.Task11241Test" name="whenAskArrayWithoutNullsThenReturnIt" time="0"/>
 </testsuite>
