@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="ru"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Paint.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">chapter_001</a> &gt; <a href="index.source.html" class="el_package">ru.job4j.loop</a> &gt; <span class="el_source">Paint.java</span></div><h1>Paint.java</h1><pre class="source lang-java linenums">package ru.job4j.loop;
+
+/**
+ * @author Petr Arsentev (parsentev@yandex.ru)
+ * @version $IId$
+ * @since 06/01/2018
+ */
+
+import java.util.function.BiPredicate;
+ 
+<span class="fc" id="L11"> public class Paint {</span>
+	 
+	 /**
+	 * to get right triangle;
+	 * @param side height;
+	 * @return that triangle;
+	 */
+	
+    public String rightTrl(int height) {
+        // Буфер для результата.
+<span class="fc" id="L21">        StringBuilder screen = new StringBuilder();</span>
+        // ширина будет равна высоте. 
+<span class="fc" id="L23">        int weight = height; </span>
+        // внешний цикл двигается по строкам.
+<span class="fc bfc" id="L25" title="All 2 branches covered.">        for (int row = 0; row != height; row++) {</span>
+            // внутренний цикл определяет положение ячейки в строке.
+<span class="fc bfc" id="L27" title="All 2 branches covered.">            for (int column = 0; column != weight; column++) {</span>
+                // если строка равна ячейки, то рисуем галку. 
+                // в данном случае строка определяем, сколько галок будет на строке
+<span class="fc bfc" id="L30" title="All 2 branches covered.">                if (row &gt;= column) {</span>
+<span class="fc" id="L31">                    screen.append(&quot;^&quot;);</span>
+                } else {
+<span class="fc" id="L33">                    screen.append(&quot; &quot;);</span>
+                }
+            }
+            // добавляем перевод строки.
+<span class="fc" id="L37">            screen.append(System.lineSeparator());</span>
+        }
+        // Получаем результат.
+<span class="fc" id="L40">        return screen.toString();</span>
+    }
+	
+	 /**
+	 * to get left triangle;
+	 * @param side height;
+	 * @return that triangle;
+	 */
+	
+	public String leftTrl(int height) {
+<span class="fc" id="L50">    StringBuilder screen = new StringBuilder();</span>
+<span class="fc" id="L51">    int weight = height;</span>
+<span class="fc bfc" id="L52" title="All 2 branches covered.">    for (int row = 0; row != height; row++) {</span>
+<span class="fc bfc" id="L53" title="All 2 branches covered.">        for (int column = 0; column != weight; column++) {</span>
+<span class="fc bfc" id="L54" title="All 2 branches covered.">            if (row &gt;= weight - column - 1) {</span>
+<span class="fc" id="L55">                screen.append(&quot;^&quot;);</span>
+            } else {
+<span class="fc" id="L57">                screen.append(&quot; &quot;);</span>
+            }
+        }
+<span class="fc" id="L60">        screen.append(System.lineSeparator());</span>
+    }
+<span class="fc" id="L62">    return screen.toString();</span>
+	}
+	
+	 /**
+	 * to get pyramid;
+	 * @param side height;
+	 * @return that pyramid;
+	 */
+	
+	public String pyramid(int height) {
+<span class="fc" id="L72">    StringBuilder screen = new StringBuilder();</span>
+<span class="fc" id="L73">    int weight = 2 * height - 1;</span>
+<span class="fc bfc" id="L74" title="All 2 branches covered.">    for (int row = 0; row != height; row++) {</span>
+<span class="fc bfc" id="L75" title="All 2 branches covered.">        for (int column = 0; column != weight; column++) {</span>
+<span class="fc bfc" id="L76" title="All 4 branches covered.">            if (row &gt;= height - column - 1 &amp;&amp; row &gt;= column - height + 1) {</span>
+<span class="fc" id="L77">                screen.append(&quot;^&quot;);</span>
+            } else {
+<span class="fc" id="L79">                screen.append(&quot; &quot;);</span>
+            }
+        }
+<span class="fc" id="L82">        screen.append(System.lineSeparator());</span>
+    }
+<span class="fc" id="L84">    return screen.toString();</span>
+	}
+	
+	// тот же код, только после рефакторинга
+	
+	
+	public String rightTriangle(int height) {
+<span class="fc bfc" id="L91" title="All 2 branches covered.">    return this.loopBy(height, height, (row, column) -&gt; row &gt;= column);</span>
+	}
+	
+	public String leftTriangle(int height) {
+<span class="fc bfc" id="L95" title="All 2 branches covered.">    return this.loopBy(height, height, (row, column) -&gt; row &gt;= height - column - 1);</span>
+    }
+	
+	private String loopBy(int height, int weight, BiPredicate&lt;Integer, Integer&gt; predict) {
+<span class="fc" id="L99">    StringBuilder screen = new StringBuilder();</span>
+<span class="fc bfc" id="L100" title="All 2 branches covered.">    for (int row = 0; row != height; row++) {</span>
+<span class="fc bfc" id="L101" title="All 2 branches covered.">        for (int column = 0; column != weight; column++) {</span>
+<span class="fc bfc" id="L102" title="All 2 branches covered.">            if (predict.test(row, column)) {</span>
+<span class="fc" id="L103">                screen.append(&quot;^&quot;);</span>
+            } else {
+<span class="fc" id="L105">                screen.append(&quot; &quot;);</span>
+            }
+        }
+<span class="fc" id="L108">        screen.append(System.lineSeparator());</span>
+    }
+<span class="fc" id="L110">    return screen.toString();</span>
+	}
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.7.9.201702052155</span></div></body></html>

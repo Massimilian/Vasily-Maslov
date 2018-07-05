@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="ru"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Triangle.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">chapter_001</a> &gt; <a href="index.source.html" class="el_package">ru.job4j.condition</a> &gt; <span class="el_source">Triangle.java</span></div><h1>Triangle.java</h1><pre class="source lang-java linenums">package ru.job4j.condition;
+
+/**
+ * @author Vasily Maslov (vasalekmas@gmail.com)
+ * @version $IIId$
+ * @since 03/01/2018
+ */
+
+public class Triangle {
+	private Point first;
+	private Point second;
+	private Point third;
+	
+<span class="fc" id="L14">	public Triangle(Point first, Point second, Point third) {</span>
+<span class="fc" id="L15">	this.first = first;</span>
+<span class="fc" id="L16">	this.second = second;</span>
+<span class="fc" id="L17">	this.third = third;</span>
+<span class="fc" id="L18">	}</span>
+	
+	/**
+	* Метод вычисления полупериметра по длинам сторон:
+	*
+	* result = (ab + ac + bc) / 2;
+	*
+	*@param ab расстояние между точками a и b
+	*@param ac расстояние между точками a и c
+	*@param bc расстояние между точками b и c
+	*@return Полупериметр
+	*/
+	
+	
+	public double period(double ab, double ac, double bc) {
+<span class="fc" id="L33">    return ab / 2 + ac / 2 + bc / 2;</span>
+	}
+	
+	/**
+	* Метод должен вычислить площадь треугольника.
+	*
+	* @return Вернуть прощадь, если треугольник существует или -1, если треугольника нет.
+	*/
+	public double area() {
+<span class="fc" id="L42">		double result = -1;</span>
+<span class="fc" id="L43">		double ab = this.first.distanceTo(this.second);</span>
+<span class="fc" id="L44">		double ac = this.first.distanceTo(this.third);</span>
+<span class="fc" id="L45">		double bc = this.second.distanceTo(this.third);</span>
+<span class="fc" id="L46">		double period = this.period(ab, ac, bc);</span>
+<span class="pc bpc" id="L47" title="1 of 2 branches missed.">		if (this.exist(ab, ac, bc)) {</span>
+			// написать формулу для расчета площади треугольника.
+			//result = ...;
+<span class="fc" id="L50">		result = Math.sqrt(period * (period - ab) * (period - ac) * (period - bc));</span>
+		}
+<span class="fc" id="L52">		return result;</span>
+	}
+
+	/**
+	* Метод проверяет можно ли построить треугольник с такими длинами сторон.
+	* 
+	* Подумайте какое надо написать условие, чтобы определить можно ли построить треугольник.
+	* 
+	* @param ab Длина от точки a b. 
+	* @param ac Длина от точки a c.
+	* @param bc Длина от точки b c.
+	* @return
+	*/
+	
+	private boolean exist(double ab, double ac, double bc) {
+<span class="pc bpc" id="L67" title="3 of 6 branches missed.">		return !(ab &gt;= ac + bc || bc &gt;= ac + ab || ac &gt;= ab + bc);</span>
+	}
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.7.9.201702052155</span></div></body></html>

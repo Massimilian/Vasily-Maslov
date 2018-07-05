@@ -1,0 +1,32 @@
+GROUP,PACKAGE,CLASS,INSTRUCTION_MISSED,INSTRUCTION_COVERED,BRANCH_MISSED,BRANCH_COVERED,LINE_MISSED,LINE_COVERED,COMPLEXITY_MISSED,COMPLEXITY_COVERED,METHOD_MISSED,METHOD_COVERED
+chapter_003,ru.job4j.tasks,Task,3,12,0,0,1,5,1,2,1,2
+chapter_003,ru.job4j.tasks,PriorityQueue,0,53,0,6,0,12,0,7,0,4
+chapter_003,ru.job4j.comparator,ListCompare,2,45,1,9,1,12,1,6,0,2
+chapter_003,ru.job4j.arrayconvert,ConvertArrayToList,0,46,0,4,0,6,0,4,0,2
+chapter_003,ru.job4j.arrayconvert,ConvertListToArray,0,95,0,12,0,16,0,9,0,3
+chapter_003,ru.job4j.banking,Bank,32,301,8,26,3,58,8,20,0,11
+chapter_003,ru.job4j.banking,User,0,21,0,0,0,7,0,4,0,4
+chapter_003,ru.job4j.banking,Account,0,34,0,0,0,15,0,6,0,6
+chapter_003,ru.job4j.userconvert,UserConvert,0,27,0,2,0,6,0,3,0,2
+chapter_003,ru.job4j.userconvert,User,0,20,0,0,0,7,0,2,0,2
+chapter_003,ru.job4j.homeworks,Shop,0,37,0,2,0,9,0,4,0,3
+chapter_003,ru.job4j.homeworks,Task11167,0,61,0,6,0,13,0,5,0,2
+chapter_003,ru.job4j.homeworks,Task11189,40,335,7,55,7,48,5,30,0,4
+chapter_003,ru.job4j.homeworks,Task11166,0,155,0,12,0,21,0,9,0,3
+chapter_003,ru.job4j.homeworks,Task11169,3,53,2,6,1,7,2,4,0,2
+chapter_003,ru.job4j.homeworks,Task11168,0,94,2,12,0,15,2,7,0,2
+chapter_003,ru.job4j.homeworks,Task11223,2,279,1,29,0,31,1,20,0,6
+chapter_003,ru.job4j.homeworks,Task11181,7,80,7,11,0,12,6,5,0,2
+chapter_003,ru.job4j.homeworks,Task11180,4,97,4,14,0,12,4,7,0,2
+chapter_003,ru.job4j.homeworks,Task11190,0,45,0,8,0,12,0,6,0,2
+chapter_003,ru.job4j.homeworks,Task11214,0,55,0,4,0,12,0,7,0,5
+chapter_003,ru.job4j.homeworks,Task11230,16,44,1,3,0,2,1,3,0,2
+chapter_003,ru.job4j.homeworks,Task11170,0,34,0,2,0,6,0,3,0,2
+chapter_003,ru.job4j.homeworks,Task11192,8,98,2,12,3,20,2,8,0,3
+chapter_003,ru.job4j.homeworks,Task11191,0,50,0,8,0,11,0,6,0,2
+chapter_003,ru.job4j.sortuser,User,15,21,0,0,1,7,1,4,1,4
+chapter_003,ru.job4j.sortuser,SortUser,0,26,0,0,0,7,0,4,0,4
+chapter_003,ru.job4j.sortuser,SortUser.new Comparator() {...},0,24,0,2,0,3,0,3,0,2
+chapter_003,ru.job4j.sortuser,SortUser.new Comparator() {...},0,14,0,0,0,2,0,2,0,2
+chapter_003,ru.job4j.phonebook,PhoneDictionary,0,224,1,29,0,45,1,20,0,6
+chapter_003,ru.job4j.phonebook,Person,53,76,12,6,13,12,8,9,1,7

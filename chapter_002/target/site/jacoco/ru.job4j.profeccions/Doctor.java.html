@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="ru"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Doctor.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">chapter_002</a> &gt; <a href="index.source.html" class="el_package">ru.job4j.profeccions</a> &gt; <span class="el_source">Doctor.java</span></div><h1>Doctor.java</h1><pre class="source lang-java linenums">package ru.job4j.profeccions;
+
+public class Doctor extends Person {
+	private int howManyJobs;
+	private boolean newHospitalNeed;
+	private long fat;
+	
+<span class="nc" id="L8">	public Doctor(String name, int howManyJobs, long fat) {</span>
+<span class="nc" id="L9">		super.name = name;</span>
+<span class="nc" id="L10">		this.howManyJobs = howManyJobs;</span>
+<span class="nc" id="L11">		this.fat = fat;</span>
+<span class="nc" id="L12">		this.newHospitalNeed = false;</span>
+<span class="nc" id="L13">	}</span>
+	
+	public Teacher heal(Teacher teacher) {
+<span class="nc bnc" id="L16" title="All 2 branches missed.">		if (teacher.getHealth() &lt; 0) {</span>
+<span class="nc" id="L17">			teacher.setHealth(0);</span>
+		}
+<span class="nc" id="L19">		teacher.setHealth(teacher.getHealth() * 2 + 0.1);</span>
+<span class="nc" id="L20">		return teacher;</span>
+	}
+	
+	public void doYouNeedMore() {
+<span class="nc bnc" id="L24" title="All 2 branches missed.">		this.newHospitalNeed = howManyJobs &lt; 5 ? true : false;</span>
+<span class="nc" id="L25">	}</span>
+	
+	public int getHowManyJobs() {
+<span class="nc" id="L28">		return this.howManyJobs;</span>
+	}
+	
+	public void setHowManyJobs(int howManyJobs) {
+<span class="nc" id="L32">		this.howManyJobs = howManyJobs;</span>
+<span class="nc" id="L33">	}</span>
+	
+	public boolean getNewHospitalNeed() {
+<span class="nc" id="L36">		return this.newHospitalNeed;</span>
+	}
+	
+	// если развивать программу дальше, то параметр howManyJobs со временем должен падать. Для этого будет нужен отдельный метод, привязанный к отсчёту времени.
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.7.9.201702052155</span></div></body></html>

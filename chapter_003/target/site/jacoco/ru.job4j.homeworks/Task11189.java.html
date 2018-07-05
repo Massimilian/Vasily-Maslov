@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="ru"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Task11189.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">chapter_003</a> &gt; <a href="index.source.html" class="el_package">ru.job4j.homeworks</a> &gt; <span class="el_source">Task11189.java</span></div><h1>Task11189.java</h1><pre class="source lang-java linenums">package ru.job4j.homeworks;
+
+//11.189.*Для арифметических операций с большими числами, которые не могут быть
+//        представлены в памяти компьютера, используется следующий прием. Каждая
+//        цифра таких чисел записывается в отдельный элемент массива, и необходимые
+//        операции проводятся с элементами массива цифр. Составить программу:
+//        а) выполняющую сложение 20-значных чисел;
+//        б) выполняющую вычитание 30-значных чисел;
+
+<span class="fc" id="L10">public class Task11189 {</span>
+    public String bigSumAndDifference(String first, String second, String value) {
+<span class="fc" id="L12">        StringBuilder result = new StringBuilder();</span>
+<span class="fc" id="L13">        boolean minus = false;</span>
+<span class="fc bfc" id="L14" title="All 4 branches covered.">        if (!value.equals(&quot;+&quot;) &amp;&amp; !value.equals(&quot;-&quot;)) {</span>
+<span class="fc" id="L15">            result = new StringBuilder(&quot;ERROR!&quot;);</span>
+<span class="fc bfc" id="L16" title="All 4 branches covered.">        } else if (this.theBiggest(second, first) &amp;&amp; value.equals(&quot;-&quot;)) {</span>
+<span class="fc" id="L17">            result = new StringBuilder(this.bigSumAndDifference(second, first, value));</span>
+<span class="fc" id="L18">            minus = true;</span>
+<span class="fc bfc" id="L19" title="All 2 branches covered.">        } else if (first.charAt(0) == '-') {</span>
+<span class="fc" id="L20">            first = first.substring(1);</span>
+<span class="fc bfc" id="L21" title="All 2 branches covered.">            if (value.equals(&quot;+&quot;)) {</span>
+<span class="fc" id="L22">                result = new StringBuilder(this.bigSumAndDifference(second, first, &quot;-&quot;));</span>
+            } else {
+<span class="fc" id="L24">                result = new StringBuilder(this.bigSumAndDifference(second, first, &quot;+&quot;));</span>
+<span class="fc" id="L25">                minus = true;</span>
+            }
+<span class="pc bpc" id="L27" title="1 of 2 branches missed.">        } else if (second.charAt(0) == '-') {</span>
+<span class="nc" id="L28">            second = second.substring(1);</span>
+<span class="nc bnc" id="L29" title="All 2 branches missed.">            if (value.equals(&quot;+&quot;)) {</span>
+<span class="nc" id="L30">                result = new StringBuilder(this.bigSumAndDifference(second, first, &quot;-&quot;));</span>
+<span class="nc" id="L31">                minus = true;</span>
+            } else {
+<span class="nc" id="L33">                result = new StringBuilder(this.bigSumAndDifference(second, first, &quot;+&quot;));</span>
+            }
+        } else {
+<span class="fc" id="L36">            int count = 0;</span>
+<span class="fc bfc" id="L37" title="All 2 branches covered.">            if (first.length() != second.length()) {</span>
+<span class="fc" id="L38">                int diff = Math.abs(first.length() - second.length());</span>
+<span class="fc bfc" id="L39" title="All 2 branches covered.">                if (first.length() &gt; second.length()) {</span>
+<span class="fc" id="L40">                    second = this.redString(second, diff);</span>
+                } else {
+<span class="fc" id="L42">                    first = this.redString(first, diff);</span>
+                }
+            }
+<span class="fc bfc" id="L45" title="All 2 branches covered.">            if (value.equals(&quot;+&quot;)) {</span>
+<span class="fc bfc" id="L46" title="All 2 branches covered.">                for (int i = first.length() - 1; i &gt;= 0; i--) {</span>
+<span class="fc" id="L47">                    int res = Character.getNumericValue(first.charAt(i)) + Character.getNumericValue(second.charAt(i)) + count;</span>
+<span class="fc bfc" id="L48" title="All 2 branches covered.">                    count = res &gt;= 10 ? 1 : 0;</span>
+<span class="fc bfc" id="L49" title="All 2 branches covered.">                    res = res &gt;= 10 ? res - 10 : res;</span>
+<span class="fc" id="L50">                    result.insert(0, Integer.toString(res));</span>
+                }
+<span class="fc bfc" id="L52" title="All 2 branches covered.">                result = new StringBuilder(count == 1 ? Integer.toString(count) + result : result.toString());</span>
+            }
+<span class="fc bfc" id="L54" title="All 2 branches covered.">            if (value.equals(&quot;-&quot;)) {</span>
+<span class="fc bfc" id="L55" title="All 2 branches covered.">                for (int i = first.length() - 1; i &gt;= 0; i--) {</span>
+<span class="fc" id="L56">                    int res = 10 + Character.getNumericValue(first.charAt(i)) - Character.getNumericValue(second.charAt(i)) - count;</span>
+<span class="fc bfc" id="L57" title="All 2 branches covered.">                    count = res &lt; 10 ? 1 : 0;</span>
+<span class="fc bfc" id="L58" title="All 2 branches covered.">                    res = res &gt;= 10 ? res - 10 : res;</span>
+<span class="fc" id="L59">                    result.insert(0, Integer.toString(res));</span>
+
+                }
+<span class="fc bfc" id="L62" title="All 4 branches covered.">                while (result.charAt(0) == '0' &amp;&amp; result.length() != 1) {</span>
+<span class="fc" id="L63">                    result = new StringBuilder(result.substring(1));</span>
+                }
+            }
+<span class="pc bpc" id="L66" title="3 of 4 branches missed.">            minus = first.charAt(0) == '-' &amp;&amp; second.charAt(0) == '-' ? true : false;</span>
+        }
+<span class="fc bfc" id="L68" title="All 4 branches covered.">        if (minus &amp;&amp; !result.toString().equals(&quot;0&quot;)) {</span>
+<span class="fc bfc" id="L69" title="All 2 branches covered.">            result = new StringBuilder(result.charAt(0) == '-' ? result.substring(1) : &quot;-&quot; + result);</span>
+        }
+<span class="fc" id="L71">        return result.toString();</span>
+    }
+
+    private String redString(String s, int diff) {
+<span class="fc bfc" id="L75" title="All 2 branches covered.">        for (int i = 0; i &lt; diff; i++) {</span>
+<span class="fc" id="L76">            s = &quot;0&quot; + s;</span>
+        }
+<span class="fc" id="L78">        return s;</span>
+    }
+
+    private boolean theBiggest(String first, String second) {
+<span class="fc bfc" id="L82" title="All 2 branches covered.">        boolean result = first.length() &gt; second.length() ? true : false;</span>
+<span class="fc bfc" id="L83" title="All 2 branches covered.">        if (first.length() == second.length()) {</span>
+<span class="fc bfc" id="L84" title="All 2 branches covered.">            for (int i = 0; i &lt; second.length(); i++) {</span>
+<span class="pc bpc" id="L85" title="1 of 2 branches missed.">                if (Character.getNumericValue(first.charAt(i)) &gt; Character.getNumericValue(second.charAt(i))) {</span>
+<span class="nc" id="L86">                    result = true;</span>
+<span class="nc" id="L87">                    break;</span>
+                }
+            }
+        }
+<span class="fc" id="L91">        return result;</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.7.9.201702052155</span></div></body></html>

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="ru"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Task113.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">chapter_002</a> &gt; <a href="index.source.html" class="el_package">ru.job4j.homeworks.tasks</a> &gt; <span class="el_source">Task113.java</span></div><h1>Task113.java</h1><pre class="source lang-java linenums">package ru.job4j.homeworks.tasks;
+
+//11.3. Заполнить массив из пятнадцати элементов случайным образом:
+//        а) вещественными значениями, лежащими в диапазоне от 0 до 1;
+//        б) вещественными значениями х (22 х &lt; 23);
+//        в) вещественными значениями х (0 х &lt; 10);
+//        г) вещественными значениями х (–50 х &lt; 50);
+//        д) целыми значениями, лежащими в диапазоне от 0 до 10 включительно.
+
+import java.util.Random;
+
+<span class="nc" id="L12">public class Task113 {</span>
+<span class="nc" id="L13">    Random random = new Random();</span>
+
+    public String[] method(String[] sub) {
+<span class="nc" id="L16">        int change = random.nextInt(5);</span>
+<span class="nc bnc" id="L17" title="All 6 branches missed.">        switch (change) {</span>
+            case 0:
+<span class="nc" id="L19">                System.out.println(&quot;Отработал вариант №&quot; + change);</span>
+<span class="nc" id="L20">                sub = this.newMethodZeroOneTwoThree(sub, 0, 0);</span>
+<span class="nc" id="L21">                break;</span>
+            case 1:
+<span class="nc" id="L23">                System.out.println(&quot;Отработал вариант №&quot; + change);</span>
+<span class="nc" id="L24">                sub = this.newMethodZeroOneTwoThree(sub, 0, 22);</span>
+<span class="nc" id="L25">                break;</span>
+            case 2:
+<span class="nc" id="L27">                System.out.println(&quot;Отработал вариант №&quot; + change);</span>
+<span class="nc" id="L28">                sub = this.newMethodZeroOneTwoThree(sub, 10, 0);</span>
+<span class="nc" id="L29">                break;</span>
+            case 3:
+<span class="nc" id="L31">                System.out.println(&quot;Отработал вариант №&quot; + change);</span>
+<span class="nc" id="L32">                sub = this.newMethodZeroOneTwoThree(sub, 100, -50);</span>
+<span class="nc" id="L33">                break;</span>
+            case 4:
+<span class="nc" id="L35">                System.out.println(&quot;Отработал вариант №&quot; + change);</span>
+<span class="nc" id="L36">                sub = this.newMethodFour(sub);</span>
+<span class="nc" id="L37">                break;</span>
+            default:
+<span class="nc" id="L39">                System.out.println(&quot;Unknown error!&quot;);</span>
+                break;
+        }
+<span class="nc" id="L42">        return sub;</span>
+    }
+
+    private String[] newMethodZeroOneTwoThree(String[] sub, int size, int position) {
+<span class="nc" id="L46">        double[] array = new double[sub.length];</span>
+<span class="nc bnc" id="L47" title="All 2 branches missed.">        if (size != 0) {</span>
+<span class="nc bnc" id="L48" title="All 2 branches missed.">            for (int i = 0; i &lt; array.length; i++) {</span>
+<span class="nc" id="L49">                array[i] = random.nextDouble() + random.nextInt(size) + position;</span>
+            }
+        } else {
+<span class="nc bnc" id="L52" title="All 2 branches missed.">            for (int i = 0; i &lt; array.length; i++) {</span>
+<span class="nc" id="L53">                array[i] = random.nextDouble() + position;</span>
+            }
+        }
+
+<span class="nc bnc" id="L57" title="All 2 branches missed.">        for (int i = 0; i &lt; sub.length; i++) {</span>
+<span class="nc" id="L58">            sub[i] = Double.toString(array[i]);</span>
+        }
+<span class="nc" id="L60">        return sub;</span>
+    }
+
+    private String[] newMethodFour(String[] sub) {
+<span class="nc" id="L64">        int[] array = new int[sub.length];</span>
+<span class="nc bnc" id="L65" title="All 2 branches missed.">        for (int i = 0; i &lt; sub.length; i++) {</span>
+<span class="nc" id="L66">            array[i] = random.nextInt(10);</span>
+        }
+<span class="nc bnc" id="L68" title="All 2 branches missed.">        for (int i = 0; i &lt; sub.length; i++) {</span>
+<span class="nc" id="L69">            sub[i] = Integer.toString(array[i]);</span>
+        }
+<span class="nc" id="L71">        return sub;</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.7.9.201702052155</span></div></body></html>

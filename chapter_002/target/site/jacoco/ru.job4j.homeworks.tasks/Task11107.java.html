@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="ru"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Task11107.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">chapter_002</a> &gt; <a href="index.source.html" class="el_package">ru.job4j.homeworks.tasks</a> &gt; <span class="el_source">Task11107.java</span></div><h1>Task11107.java</h1><pre class="source lang-java linenums">package ru.job4j.homeworks.tasks;
+
+//11.107. Дан массив. Определить:
+//        а) максимальный элемент;
+//        б) минимальный элемент;
+//        в) на сколько максимальный элемент больше минимального;
+//        г) индекс максимального элемента;
+//        д) индекс минимального и индекс максимального элементов.
+
+<span class="fc" id="L10">public class Task11107 {</span>
+    public int[] getInfo(int[] array) {
+<span class="fc" id="L12">        int[] result = new int[5]; // для краткости все ответы помещаю в массив: 0 - а), 1 - б), 2 - в), 3 и 4 - д).</span>
+<span class="fc" id="L13">        int max = Integer.MIN_VALUE;</span>
+<span class="fc" id="L14">        int min = Integer.MAX_VALUE;</span>
+<span class="fc bfc" id="L15" title="All 2 branches covered.">        for (int i = 0; i &lt; array.length; i++) {</span>
+<span class="fc bfc" id="L16" title="All 2 branches covered.">            if (array[i] &gt; max) {</span>
+<span class="fc" id="L17">                max = array[i];</span>
+<span class="fc" id="L18">                result[0] = max;</span>
+<span class="fc" id="L19">                result[3] = i;</span>
+            }
+<span class="fc bfc" id="L21" title="All 2 branches covered.">            if (array[i] &lt; min) {</span>
+<span class="fc" id="L22">                min = array[i];</span>
+<span class="fc" id="L23">                result[1] = min;</span>
+<span class="fc" id="L24">                result[4] = i;</span>
+            }
+        }
+<span class="fc" id="L27">        result[2] = result[0] - result[1];</span>
+<span class="fc" id="L28">        return result;</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.7.9.201702052155</span></div></body></html>

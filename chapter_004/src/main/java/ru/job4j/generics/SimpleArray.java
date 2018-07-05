@@ -44,6 +44,17 @@ public class SimpleArray<T> implements Iterable<T> {
         return (T) this.objects[index];
     }
 
+    public int findIndex(T model) {
+        int result = -1;
+        for (int i = 0; i < this.count; i++) {
+            if (model.equals(this.objects[i])) {
+                result = i;
+                break;
+            }
+        }
+        return result;
+    }
+
     @Override
     public Iterator<T> iterator() {
         return new Iterator<T>() {

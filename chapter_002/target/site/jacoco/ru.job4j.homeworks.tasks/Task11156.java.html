@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="ru"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Task11156.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">chapter_002</a> &gt; <a href="index.source.html" class="el_package">ru.job4j.homeworks.tasks</a> &gt; <span class="el_source">Task11156.java</span></div><h1>Task11156.java</h1><pre class="source lang-java linenums">package ru.job4j.homeworks.tasks;
+
+//11.156. Удалить из массива:
+//        а) все отрицательные элементы;
+//        б) все элементы, большие данного числа n;
+//        в) все элементы, начиная с n1-го по n2-й (n1 &lt;= n2).
+
+<span class="fc" id="L8">public class Task11156 {</span>
+    public int[] deleteAllSubzero(int[] array) {
+<span class="fc" id="L10">        int[] result = new int[this.finder(array, Integer.MIN_VALUE, -1)];</span>
+<span class="fc" id="L11">        int count = 0;</span>
+<span class="fc bfc" id="L12" title="All 2 branches covered.">        for (int i = 0; i &lt; array.length; i++) {</span>
+<span class="fc bfc" id="L13" title="All 2 branches covered.">            if (array[i] &gt;= 0) {</span>
+<span class="fc" id="L14">                result[count++] = array[i];</span>
+            }
+        }
+<span class="fc" id="L17">        return result;</span>
+    }
+
+    public int[] deleteAllBiggerThen(int[] array, int point) {
+<span class="fc" id="L21">        int[] result = new int[this.finder(array, point + 1, Integer.MAX_VALUE)];</span>
+<span class="fc" id="L22">        int count = 0;</span>
+<span class="fc bfc" id="L23" title="All 2 branches covered.">        for (int i = 0; i &lt; array.length; i++) {</span>
+<span class="fc bfc" id="L24" title="All 2 branches covered.">            if (array[i] &lt;= point) {</span>
+<span class="fc" id="L25">                result[count++] = array[i];</span>
+            }
+        }
+<span class="fc" id="L28">        return result;</span>
+    }
+
+
+    public int[] deleteNumbersBetween(int[] array, int minimal, int maximal) {
+<span class="fc" id="L33">        int[] result = new int[this.finder(array, minimal + 1, maximal - 1)];</span>
+<span class="fc" id="L34">        int count = 0;</span>
+<span class="fc bfc" id="L35" title="All 2 branches covered.">        for (int i = 0; i &lt; array.length; i++) {</span>
+<span class="fc bfc" id="L36" title="All 4 branches covered.">            if (array[i] &lt;= minimal || array[i] &gt;= maximal) {</span>
+<span class="fc" id="L37">                result[count++] = array[i];</span>
+            }
+        }
+<span class="fc" id="L40">        return result;</span>
+    }
+
+
+    private int finder(int[] array, int smallest, int biggest) {
+<span class="fc" id="L45">        int count = 0;</span>
+<span class="fc bfc" id="L46" title="All 2 branches covered.">        for (int i : array) {</span>
+<span class="fc bfc" id="L47" title="All 4 branches covered.">            if (i &lt;= biggest &amp;&amp; i &gt;= smallest) {</span>
+<span class="fc" id="L48">                count++;</span>
+            }
+        }
+<span class="fc" id="L51">        return array.length - count;</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.7.9.201702052155</span></div></body></html>

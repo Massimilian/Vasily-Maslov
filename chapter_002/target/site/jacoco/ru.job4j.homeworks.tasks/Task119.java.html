@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="ru"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Task119.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">chapter_002</a> &gt; <a href="index.source.html" class="el_package">ru.job4j.homeworks.tasks</a> &gt; <span class="el_source">Task119.java</span></div><h1>Task119.java</h1><pre class="source lang-java linenums">package ru.job4j.homeworks.tasks;
+
+//11.9. Заполнить массив:
+//        а) десятью первыми членами арифметической прогрессии с известным пер-вым членом прогрессии а и ее разностью р;
+//        б) двадцатью первыми членами геометрической прогрессии с известным первым членом прогрессии а и ее знаменателем z;
+//        в) двенадцатью первыми членами последовательности Фибоначчи (после-довательности, в которой первые два члена равны 1,
+//        а каждый следующий равен сумме двух предыдущих).
+
+<span class="fc" id="L9">public class Task119 {</span>
+    public int[] arithmeticProgress(int first, int step) {
+<span class="fc" id="L11">        int[] result = new int[10];</span>
+<span class="fc" id="L12">        result[0] = first;</span>
+<span class="fc bfc" id="L13" title="All 2 branches covered.">        for (int i = 1; i &lt; result.length; i++) {</span>
+<span class="fc" id="L14">            result[i] = result[i - 1] + step;</span>
+        }
+<span class="fc" id="L16">        return result;</span>
+    }
+
+    public int[] geometricProgress(int first, int step) {
+<span class="fc" id="L20">        int[] result = new int[20];</span>
+<span class="fc" id="L21">        result[0] = first;</span>
+<span class="fc bfc" id="L22" title="All 2 branches covered.">        for (int i = 1; i &lt; result.length; i++) {</span>
+<span class="fc" id="L23">            result[i] = result[i - 1] * step;</span>
+        }
+<span class="fc" id="L25">        return result;</span>
+    }
+
+    public int[] easyFibonachiPrigress() {
+<span class="fc" id="L29">        return new int[]{1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144};</span>
+    }
+
+    public int[] fibonachiProgress() {
+<span class="fc" id="L33">        int[] fib = new int[12];</span>
+        //fib[0] = fib[1] = 1; inner assigment should be avoid
+<span class="fc" id="L35">        fib[0] = 1;</span>
+<span class="fc" id="L36">        fib[1] = fib[0];</span>
+<span class="fc bfc" id="L37" title="All 2 branches covered.">        for (int i = 2; i &lt; fib.length; i++) {</span>
+<span class="fc" id="L38">            fib[i] = fib[i - 2] + fib[i - 1];</span>
+        }
+<span class="fc" id="L40">        return fib;</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.7.9.201702052155</span></div></body></html>

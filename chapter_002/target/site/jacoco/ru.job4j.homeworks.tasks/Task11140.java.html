@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="ru"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Task11140.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">chapter_002</a> &gt; <a href="index.source.html" class="el_package">ru.job4j.homeworks.tasks</a> &gt; <span class="el_source">Task11140.java</span></div><h1>Task11140.java</h1><pre class="source lang-java linenums">package ru.job4j.homeworks.tasks;
+
+//11.140. В массиве хранится информация о среднедневной температуре за каждый
+//        день февраля. Определить даты двух самых холодных дней.
+//        П р и м е ч а н и е
+//        Задачу решить, не используя два прохода по массиву.
+
+import java.util.Arrays;
+
+// метод для двух дней (согласно ТЗ)
+<span class="fc" id="L11">public class Task11140 {</span>
+    public int[] mostColdDays(int[] array) {
+<span class="fc" id="L13">        int firstTemp = Integer.MAX_VALUE;</span>
+<span class="fc" id="L14">        int secondTemp = Integer.MAX_VALUE;</span>
+<span class="fc" id="L15">        int firstDay = -1;</span>
+<span class="fc" id="L16">        int secondDay = -1;</span>
+<span class="fc bfc" id="L17" title="All 2 branches covered.">        for (int i = 0; i &lt; array.length; i++) {</span>
+<span class="fc bfc" id="L18" title="All 4 branches covered.">            if (array[i] &lt; firstTemp &amp;&amp; firstTemp == secondTemp) {</span>
+<span class="fc" id="L19">                firstTemp = array[i];</span>
+<span class="fc" id="L20">                firstDay = i + 1;</span>
+            }
+<span class="pc bpc" id="L22" title="1 of 4 branches missed.">            if (array[i] &lt; firstTemp &amp;&amp; firstTemp != secondTemp) {</span>
+<span class="fc" id="L23">                secondTemp = firstTemp;</span>
+<span class="fc" id="L24">                firstTemp = array[i];</span>
+<span class="fc" id="L25">                secondDay = firstDay;</span>
+<span class="fc" id="L26">                firstDay = i + 1;</span>
+            }
+        }
+<span class="fc" id="L29">        return new int[]{firstDay, secondDay};</span>
+    }
+
+// метод для рандомного количества дней.
+    public int[] mostColdDays(int[] array, int days) {
+<span class="pc bpc" id="L34" title="1 of 2 branches missed.">        if (array.length &lt; days) {</span>
+<span class="nc" id="L35">            days = array.length;</span>
+        }
+<span class="fc" id="L37">        int[] coldDays = new int[days];</span>
+<span class="fc" id="L38">        int[] temp = new int[days];</span>
+<span class="fc bfc" id="L39" title="All 2 branches covered.">        for (int i = 0; i &lt; temp.length; i++) {</span>
+<span class="fc" id="L40">            temp[i] = Integer.MAX_VALUE;</span>
+        }
+<span class="fc bfc" id="L42" title="All 2 branches covered.">        for (int i = 0; i &lt; array.length; i++) {</span>
+<span class="fc bfc" id="L43" title="All 2 branches covered.">            for (int j = temp.length - 1; j &gt;= 0; j--) {</span>
+<span class="fc bfc" id="L44" title="All 2 branches covered.">                if (array[i] &lt; temp[j]) {</span>
+<span class="fc" id="L45">                    temp[j] = array[i];</span>
+<span class="fc" id="L46">                    Arrays.sort(temp);</span>
+<span class="fc" id="L47">                    break;</span>
+                }
+            }
+        }
+<span class="fc" id="L51">        int count = 0;</span>
+<span class="fc bfc" id="L52" title="All 2 branches covered.">        for (int i = 0; i &lt; array.length; i++) {</span>
+<span class="fc bfc" id="L53" title="All 2 branches covered.">            for (int j = 0; j &lt; temp.length; j++) {</span>
+<span class="fc bfc" id="L54" title="All 2 branches covered.">                if (array[i] == temp[j]) {</span>
+<span class="fc" id="L55">                    temp[j] = Integer.MAX_VALUE;</span>
+<span class="fc" id="L56">                    coldDays[count++] = i + 1;</span>
+<span class="fc" id="L57">                    break;</span>
+                }
+            }
+        }
+<span class="fc" id="L61">        Arrays.sort(coldDays);</span>
+<span class="fc" id="L62">        return coldDays;</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.7.9.201702052155</span></div></body></html>

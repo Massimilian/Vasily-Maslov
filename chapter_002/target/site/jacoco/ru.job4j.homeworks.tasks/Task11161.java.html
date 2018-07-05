@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="ru"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Task11161.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">chapter_002</a> &gt; <a href="index.source.html" class="el_package">ru.job4j.homeworks.tasks</a> &gt; <span class="el_source">Task11161.java</span></div><h1>Task11161.java</h1><pre class="source lang-java linenums">package ru.job4j.homeworks.tasks;
+
+//11.161. В массив записали информацию о высоте над уровнем моря двадцати горных вершин мира.
+//        Данные записаны в порядке,
+//        соответствующем алфавитному порядку названий вершин.
+//        После этого решили ввести в массив сведения еще по одной вершине.
+//        Получить новый массив, имея в виду,
+//        что место в массиве для записи дополнительной информации известно.
+
+<span class="fc" id="L10">public class Task11161 {</span>
+    public int[] addMountain(int[] array, int mountain, int place) {
+<span class="fc" id="L12">        int[] result = new int[array.length + 1];</span>
+<span class="fc bfc" id="L13" title="All 2 branches covered.">        for (int i = 0; i &lt;= array.length; i++) {</span>
+<span class="fc bfc" id="L14" title="All 2 branches covered.">            if (place - 1 &gt; i) {</span>
+<span class="fc" id="L15">                result[i] = array[i];</span>
+<span class="fc bfc" id="L16" title="All 2 branches covered.">            } else if (place - 1 == i) {</span>
+<span class="fc" id="L17">                result[i] = mountain;</span>
+            } else {
+<span class="fc" id="L19">                result[i] = array[i - 1];</span>
+            }
+        }
+<span class="fc" id="L22">        return result;</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.7.9.201702052155</span></div></body></html>

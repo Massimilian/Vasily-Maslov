@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="ru"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Task11192.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">chapter_003</a> &gt; <a href="index.source.html" class="el_package">ru.job4j.homeworks</a> &gt; <span class="el_source">Task11192.java</span></div><h1>Task11192.java</h1><pre class="source lang-java linenums">package ru.job4j.homeworks;
+
+//11.192.*В массиве имеются только два одинаковых элемента. Найти их.
+
+import java.util.TreeMap;
+
+<span class="fc" id="L7">public class Task11192 {</span>
+    public TreeMap&lt;Integer, int[]&gt; findEquals(char[] array) {
+<span class="fc" id="L9">        char check = this.checkCount(array);</span>
+<span class="fc" id="L10">        TreeMap&lt;Integer, int[]&gt; result = new TreeMap&lt;&gt;();</span>
+<span class="fc" id="L11">        int count = 0;</span>
+<span class="fc bfc" id="L12" title="All 2 branches covered.">        for (int i = 0; i &lt; array.length - 1; i++) {</span>
+<span class="fc bfc" id="L13" title="All 2 branches covered.">            if (array[i] == check) {</span>
+<span class="fc" id="L14">                continue;</span>
+            }
+<span class="fc bfc" id="L16" title="All 2 branches covered.">            for (int j = i + 1; j &lt; array.length; j++) {</span>
+<span class="fc bfc" id="L17" title="All 2 branches covered.">                if (array[i] == array[j]) {</span>
+<span class="fc" id="L18">                    result.put(++count, new int[]{i + 1, j + 1});</span>
+<span class="fc" id="L19">                    array[i] = check;</span>
+<span class="fc" id="L20">                    array[j] = check;</span>
+<span class="fc" id="L21">                    break;</span>
+                }
+            }
+        }
+<span class="fc" id="L25">        return result;</span>
+    }
+
+    private char checkCount(char[] array) {
+<span class="fc" id="L29">        char ch = 0;</span>
+        boolean crossed;
+        do {
+<span class="fc" id="L32">            crossed = false;</span>
+<span class="fc bfc" id="L33" title="All 2 branches covered.">            for (int i = 0; i &lt; array.length; i++) {</span>
+<span class="pc bpc" id="L34" title="1 of 2 branches missed.">                if (ch == array[i]) {</span>
+<span class="nc" id="L35">                    crossed = true;</span>
+<span class="nc" id="L36">                    ch++;</span>
+<span class="nc" id="L37">                    break;</span>
+                }
+            }
+<span class="pc bpc" id="L40" title="1 of 2 branches missed.">        } while (crossed);</span>
+<span class="fc" id="L41">        return ch;</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.7.9.201702052155</span></div></body></html>

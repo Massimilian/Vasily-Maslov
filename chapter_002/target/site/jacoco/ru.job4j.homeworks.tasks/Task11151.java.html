@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="ru"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Task11151.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">chapter_002</a> &gt; <a href="index.source.html" class="el_package">ru.job4j.homeworks.tasks</a> &gt; <span class="el_source">Task11151.java</span></div><h1>Task11151.java</h1><pre class="source lang-java linenums">package ru.job4j.homeworks.tasks;
+
+//11.151. Удалить из массива, в котором все элементы различны(последнее не учитываем для большей универмальности кода):
+//        а) максимальный элемент;
+//        б) минимальный элемент.
+
+<span class="fc" id="L7">public class Task11151 {</span>
+    public int[] deleteMax(int[] array) {
+<span class="fc" id="L9">        int count = 0;</span>
+<span class="fc" id="L10">        int max = Integer.MIN_VALUE;</span>
+<span class="fc bfc" id="L11" title="All 2 branches covered.">        for (int i = 0; i &lt; array.length; i++) {</span>
+<span class="fc bfc" id="L12" title="All 2 branches covered.">            if (array[i] &gt; max) {</span>
+<span class="fc" id="L13">                max = array[i];</span>
+<span class="fc" id="L14">                count = 1;</span>
+<span class="fc bfc" id="L15" title="All 2 branches covered.">            } else if (array[i] == max) {</span>
+<span class="fc" id="L16">                count++;</span>
+            }
+        }
+<span class="fc" id="L19">        return getResult(array, count, max);</span>
+    }
+
+    public int[] deleteMin(int[] array) {
+<span class="fc" id="L23">        int count = 0;</span>
+<span class="fc" id="L24">        int min = Integer.MAX_VALUE;</span>
+<span class="fc bfc" id="L25" title="All 2 branches covered.">        for (int i = 0; i &lt; array.length; i++) {</span>
+<span class="fc bfc" id="L26" title="All 2 branches covered.">            if (array[i] &lt; min) {</span>
+<span class="fc" id="L27">                min = array[i];</span>
+<span class="fc" id="L28">                count = 1;</span>
+<span class="fc bfc" id="L29" title="All 2 branches covered.">            } else if (array[i] == min) {</span>
+<span class="fc" id="L30">                count++;</span>
+            }
+        }
+<span class="fc" id="L33">        return getResult(array, count, min);</span>
+    }
+
+    private int[] getResult(int[] array, int count, int point) {
+<span class="fc" id="L37">        int[] result = new int[array.length - count];</span>
+<span class="fc" id="L38">        count = 0;</span>
+<span class="fc bfc" id="L39" title="All 2 branches covered.">        for (int i = 0; i &lt; array.length; i++) {</span>
+<span class="fc bfc" id="L40" title="All 2 branches covered.">            if (array[i] == point) {</span>
+<span class="fc" id="L41">                continue;</span>
+            } else {
+<span class="fc" id="L43">                result[count++] = array[i];</span>
+            }
+        }
+<span class="fc" id="L46">        return result;</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.7.9.201702052155</span></div></body></html>

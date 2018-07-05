@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="ru"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Counter.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">chapter_001</a> &gt; <a href="index.source.html" class="el_package">ru.job4j.loop</a> &gt; <span class="el_source">Counter.java</span></div><h1>Counter.java</h1><pre class="source lang-java linenums">package ru.job4j.loop;
+
+/**
+ * @author Vasily Maslov (vasalekmas@gmail.com)
+ * @version $Id$
+ * @since 04/01/2018
+ */
+ 
+<span class="fc" id="L9"> public class Counter {</span>
+<span class="fc" id="L10">	 int finish = 10;</span>
+	 
+	 /**
+	 * to find a sum of even numbers;
+	 * @param start and finish numbers;
+	 * @return the sum of numbers;
+	 */
+	
+	 
+	//Вариант 1, упрощённый и не очень красивый.
+	public int addOne(int start, int finish) {
+<span class="fc" id="L21">		int sum = 0;</span>
+<span class="pc bpc" id="L22" title="1 of 2 branches missed.">		if (start % 2 != 0) {</span>
+<span class="fc" id="L23">			start++;</span>
+		}
+<span class="fc bfc" id="L25" title="All 2 branches covered.">		for (int i = start; i &lt;= finish; i = i + 2) {</span>
+<span class="fc" id="L26">			sum = sum + i;</span>
+		}
+<span class="fc" id="L28">		return sum;</span>
+	}
+	
+	public int addTwo(int start, int finish) {
+	//Вариант 2, мне кажется - оптимальный.
+<span class="fc" id="L33">		int sum = 0;</span>
+<span class="pc bpc" id="L34" title="1 of 2 branches missed.">		if (start % 2 != 0) {</span>
+<span class="nc" id="L35">		start++;</span>
+		}
+<span class="fc bfc" id="L37" title="All 2 branches covered.">		for (int i = start; i &lt;= finish; i++) {</span>
+<span class="fc bfc" id="L38" title="All 2 branches covered.">			if (i % 2 == 0) {</span>
+<span class="fc" id="L39">				sum = sum + i;</span>
+			}
+		}
+<span class="fc" id="L42">		return sum;</span>
+	}
+	
+	public int addThree(int start, int finish) {
+	// Вариант 3, для тренировки цикла foreach, использования нерекомендованного continue и разминки использования массивов.
+<span class="fc" id="L47">		int sum = 0;</span>
+<span class="pc bpc" id="L48" title="1 of 2 branches missed.">		if (start % 2 != 0) {</span>
+<span class="fc" id="L49">		start++;</span>
+		}
+<span class="fc" id="L51">	int[] arr = new int[finish - start + 1];</span>
+<span class="fc bfc" id="L52" title="All 2 branches covered.">	for (int i = 0; i &lt;= finish - start; i++) {</span>
+<span class="fc" id="L53">		arr[i] = i;</span>
+		}
+<span class="fc bfc" id="L55" title="All 2 branches covered.">	for (int i : arr) {</span>
+<span class="fc bfc" id="L56" title="All 2 branches covered.">		if (i % 2 != 0) {</span>
+<span class="fc" id="L57">			continue;</span>
+			}
+<span class="fc" id="L59">		sum = sum + i + start;</span>
+		}
+<span class="fc" id="L61">		return sum;</span>
+	}
+ }
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.7.9.201702052155</span></div></body></html>

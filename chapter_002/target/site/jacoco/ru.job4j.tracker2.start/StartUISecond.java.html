@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="ru"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>StartUISecond.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">chapter_002</a> &gt; <a href="index.source.html" class="el_package">ru.job4j.tracker2.start</a> &gt; <span class="el_source">StartUISecond.java</span></div><h1>StartUISecond.java</h1><pre class="source lang-java linenums">package ru.job4j.tracker2.start;
+
+public class StartUISecond {
+<span class="pc" id="L4">	private int[] ranges = {1, 2, 3, 4, 5, 6, 7, 0};</span>
+	private InputSecond input;
+<span class="pc" id="L6">	private TrackerSecond tracker = new TrackerSecond();</span>
+<span class="pc" id="L7">	boolean cont = true;</span>
+	
+<span class="nc" id="L9">	public StartUISecond(InputSecond input) {</span>
+<span class="nc" id="L10">		this.input = input;</span>
+<span class="nc" id="L11">	}</span>
+	
+<span class="fc" id="L13">	public StartUISecond(InputSecond input, TrackerSecond tracker) {</span>
+<span class="fc" id="L14">		this.input = input;</span>
+<span class="fc" id="L15">		this.tracker = tracker;</span>
+<span class="fc" id="L16">	}</span>
+	
+	public void init() {
+<span class="fc" id="L19">		MenuTracker menu = new MenuTracker(this.input, this.tracker);</span>
+<span class="fc" id="L20">		menu.fillActions();</span>
+		
+<span class="fc" id="L22">		UserAction exit = new UserAction() { // анонимный класс</span>
+			public int key() {
+<span class="fc" id="L24">				return 7;</span>
+			}
+			public void execute(InputSecond input, TrackerSecond tracker) {
+<span class="nc bnc" id="L27" title="All 2 branches missed.">				if (&quot;y&quot;.equals(input.ask(&quot;Do you want to exit?&quot;))) {</span>
+<span class="nc" id="L28">					System.exit(0);</span>
+				}
+<span class="nc" id="L30">			}</span>
+			public String info() {
+<span class="fc" id="L32">				return String.format(&quot;%s . %s&quot;, this.key(), &quot;Exit Program.&quot;);</span>
+			}
+		};
+<span class="fc" id="L35">		menu.addAction(exit);</span>
+		
+<span class="fc" id="L37">		UserAction anotherExit = new UserAction() { // Вспомогательный анонимный класс</span>
+			public int key() {
+<span class="fc" id="L39">				return 0;</span>
+			}
+			public void execute(InputSecond input, TrackerSecond tracker) {
+<span class="fc" id="L42">				System.out.println(&quot;Special exit worked.&quot;);</span>
+<span class="fc" id="L43">			}</span>
+			public String info() {
+<span class="fc" id="L45">				return String.format(&quot;%s . %s&quot;, this.key(), &quot;Special exit from Program.&quot;);</span>
+			}			
+		};
+<span class="fc" id="L48">		menu.addAction(anotherExit);</span>
+		
+	do {
+<span class="fc" id="L51">		menu.show();</span>
+<span class="fc" id="L52">		System.out.println(&quot;&quot;);</span>
+<span class="fc" id="L53">		int result = input.ask(&quot;Select:&quot;, ranges);</span>
+<span class="fc" id="L54">		menu.select(result);</span>
+<span class="fc" id="L55">		System.out.println(&quot;&quot;);</span>
+<span class="fc bfc" id="L56" title="All 2 branches covered.">		cont = result == 0 ? false : true;</span>
+<span class="fc bfc" id="L57" title="All 2 branches covered.">		} while (cont);</span>
+<span class="fc" id="L58">	}</span>
+	
+	public static void main(String[] args) {
+<span class="nc" id="L61">		InputSecond input = new ValidateInput(new ConsoleInputSecond());</span>
+<span class="nc" id="L62">		new StartUISecond(input).init();</span>
+<span class="nc" id="L63">	}</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.7.9.201702052155</span></div></body></html>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="ru"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Task11164.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">chapter_002</a> &gt; <a href="index.source.html" class="el_package">ru.job4j.homeworks.tasks</a> &gt; <span class="el_source">Task11164.java</span></div><h1>Task11164.java</h1><pre class="source lang-java linenums">package ru.job4j.homeworks.tasks;
+
+//11.164. Вставить заданное число в массив целых чисел:
+//        а) перед всеми элементами, кратными числу a;
+//        б) после всех отрицательных элементов.
+//        Каким должен быть максимальный размер исходного массива в обоих случаях?
+
+<span class="fc" id="L8">public class Task11164 {</span>
+    public int[] numbers(int[] array, int a, int checkPoint) {
+<span class="fc" id="L10">        int[] result = new int[array.length * 2];</span>
+<span class="fc" id="L11">        int count = 0;</span>
+<span class="pc bpc" id="L12" title="1 of 2 branches missed.">        if (a == 0) {</span>
+<span class="nc" id="L13">            System.out.println(&quot;Error!&quot;);</span>
+        } else {
+<span class="fc bfc" id="L15" title="All 2 branches covered.">            for (int i = 0; i &lt; array.length; i++) {</span>
+<span class="fc bfc" id="L16" title="All 2 branches covered.">                if (array[i] % a == 0) {</span>
+<span class="fc" id="L17">                    result[i + count] = checkPoint;</span>
+<span class="fc" id="L18">                    count++;</span>
+<span class="fc" id="L19">                    result[i + count] = array[i];</span>
+                } else {
+<span class="fc" id="L21">                    result[i + count] = array[i];</span>
+                }
+            }
+        }
+<span class="fc" id="L25">        return this.checkArray(result, array.length + count);</span>
+    }
+
+    public int[] numbersMinusVersion(int[] array, int checkPoint) {
+<span class="fc" id="L29">        int[] result = new int[array.length * 2];</span>
+<span class="fc" id="L30">        int count = 0;</span>
+<span class="fc bfc" id="L31" title="All 2 branches covered.">        for (int i = 0; i &lt; array.length; i++) {</span>
+<span class="fc bfc" id="L32" title="All 2 branches covered.">            if (array[i] &lt; 0) {</span>
+<span class="fc" id="L33">                result[i + count] = array[i];</span>
+<span class="fc" id="L34">                count++;</span>
+<span class="fc" id="L35">                result[i + count] = checkPoint;</span>
+            } else {
+<span class="fc" id="L37">                result[i + count] = array[i];</span>
+            }
+        }
+<span class="fc" id="L40">        return this.checkArray(result, array.length + count);</span>
+    }
+
+    public int[] checkArray(int[] array, int count) {
+<span class="fc" id="L44">        int[] result = new int[count];</span>
+<span class="fc bfc" id="L45" title="All 2 branches covered.">        for (int i = 0; i &lt; result.length; i++) {</span>
+<span class="fc" id="L46">            result[i] = array[i];</span>
+        }
+<span class="fc" id="L48">        return result;</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.7.9.201702052155</span></div></body></html>
