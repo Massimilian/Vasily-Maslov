@@ -67,7 +67,7 @@
   </properties>
   <testcase classname="ru.job4j.homeworks.tasks.Task11155Test" name="whenAskToDeleteTwoPupilsByHeightThenDoIt" time="0"/>
   <testcase classname="ru.job4j.homeworks.tasks.Task11155Test" name="whenAskToDeleteRandomNumberOfPupilsThenDoItAnotherTry" time="0"/>
-  <testcase classname="ru.job4j.homeworks.tasks.Task11155Test" name="whenAskToDeleteRandomNumberOfPupilsThenDoItErrorTry" time="0.001"/>
-  <testcase classname="ru.job4j.homeworks.tasks.Task11155Test" name="whenAskToDeleteTwoPupilsByPositionThenDoIt" time="0"/>
+  <testcase classname="ru.job4j.homeworks.tasks.Task11155Test" name="whenAskToDeleteRandomNumberOfPupilsThenDoItErrorTry" time="0"/>
+  <testcase classname="ru.job4j.homeworks.tasks.Task11155Test" name="whenAskToDeleteTwoPupilsByPositionThenDoIt" time="0.001"/>
   <testcase classname="ru.job4j.homeworks.tasks.Task11155Test" name="whenAskToDeleteRandomNumberOfPupilsThenDoIt" time="0"/>
 </testsuite>
