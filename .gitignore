@@ -25,5 +25,4 @@ hs_err_pid*
 *.iml
 
 target/
-!/target/
-!/junior.iml
+junior.iml

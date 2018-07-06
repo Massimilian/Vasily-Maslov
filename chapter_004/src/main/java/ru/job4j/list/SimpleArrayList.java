@@ -1,17 +1,19 @@
 package ru.job4j.list;
 
+import java.util.Objects;
+
 /**
  * Класс SimpleArrayList.
  */
-public class SimpleArrayList<e> {
+public class SimpleArrayList<E> {
     private int size;
-    private Node<e> first;
+    private Node<E> first;
 
     /**
      * Метод вставляет в начало списка данные.
      */
     public void add(E date) {
-        Node<e> newLink = new Node<>(date);
+        Node<E> newLink = new Node<>(date); //
         newLink.next = this.first;
         this.first = newLink;
         this.size++;
@@ -20,7 +22,9 @@ public class SimpleArrayList<e> {
     /**
      * Реализовать метод удаления первого элемент в списке.
      */
-    public E delete() {
+    public E deleteFirst() {
+        this.first.next = first;
+        size--;
         return null;
     }
 
@@ -28,7 +32,7 @@ public class SimpleArrayList<e> {
      * Метод получения элемента по индексу.
      */
     public E get(int index) {
-        Node<e> result = this.first;
+        Node<E> result = this.first;
         for (int i = 0; i < index; i++) {
             result = result.next;
         }
@@ -45,9 +49,9 @@ public class SimpleArrayList<e> {
     /**
      * Класс предназначен для хранения данных.
      */
-    private static class Node<e> {
+    private static class Node<E> {
         E date;
-        Node<e> next;
+        Node<E> next;
 
         Node(E date) {
             this.date = date;
