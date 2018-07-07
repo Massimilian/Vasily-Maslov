@@ -25,7 +25,7 @@ public class SimpleArrayList<E> {
     public E deleteFirst() {
         this.first = first.next;
         size--;
-        return null;
+        return first.date;
     }
 
     /**
