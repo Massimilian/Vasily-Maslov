@@ -39,5 +39,19 @@ public class SimpleArrayListTest {
         assertThat(list.getSize(), is(1));
         assertThat(list.get(0), is(1));
     }
+
+    @Test
+    public void whenTryToDeleteFirstElementThenDeleteItHincuVersion() {
+        list.deleteFirst();
+        assertThat(list.getSize(), is(2));
+        assertThat(list.get(1), is(1));
+        assertThat(list.get(0), is(2));
+        int i = list.deleteFirst();
+        System.out.println(i);
+        assertThat(i, is(2));
+        assertThat(list.getSize(), is(1));
+        assertThat(list.get(0), is(1));
+    }
 }
 
+//
