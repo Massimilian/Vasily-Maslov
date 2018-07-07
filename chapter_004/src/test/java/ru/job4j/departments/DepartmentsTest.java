@@ -3,6 +3,7 @@ package ru.job4j.departments;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Iterator;
 
 import org.junit.Test;
 
@@ -22,31 +23,41 @@ public class DepartmentsTest {
 
     @Test
     public void whenAskSortingByRangeThenReturnIt() {
-        allDeps.sorting();
-        assertThat(allDeps.getDeps().get(0).getName(), is("K1"));
-        assertThat(allDeps.getDeps().get(1).getName(), is("K1\\SK1"));
-        assertThat(allDeps.getDeps().get(2).getName(), is("K1\\SK1\\SSK1"));
-        assertThat(allDeps.getDeps().get(3).getName(), is("K1\\SK1\\SSK2"));
-        assertThat(allDeps.getDeps().get(4).getName(), is("K1\\SK2"));
-        assertThat(allDeps.getDeps().get(5).getName(), is("K2"));
-        assertThat(allDeps.getDeps().get(6).getName(), is("K2\\SK1\\SSK2"));
-        assertThat(allDeps.getDeps().get(7).getName(), is("K2\\SK1\\SSK3"));
-        assertThat(allDeps.getDeps().get(8).getName(), is("K3"));
-        assertThat(allDeps.getDeps().get(9).getName(), is("K3\\SK1"));
+        ArrayList<String> result = allDeps.sorting();
+        Iterator<String> it = result.iterator();
+        assertThat(it.hasNext(), is(true));
+        assertThat(it.next(), is("K1"));
+        assertThat(it.next(), is("K1\\SK1"));
+        assertThat(it.hasNext(), is(true));
+        assertThat(it.hasNext(), is(true));
+        assertThat(it.next(), is("K1\\SK1\\SSK1"));
+        assertThat(it.next(), is("K1\\SK1\\SSK2"));
+        assertThat(it.next(), is("K1\\SK2"));
+        assertThat(it.next(), is("K2"));
+        assertThat(it.next(), is("K2\\SK1\\SSK2"));
+        assertThat(it.next(), is("K2\\SK1\\SSK3"));
+        assertThat(it.next(), is("K3"));
+        assertThat(it.next(), is("K3\\SK1"));
+        assertThat(it.hasNext(), is(false));
     }
 
     @Test
     public void whenAskSortingByBackRangeThenReturnIt() {
-        allDeps.backSorting();
-        assertThat(allDeps.getDeps().get(0).getName(), is("K3"));
-        assertThat(allDeps.getDeps().get(1).getName(), is("K3\\SK1"));
-        assertThat(allDeps.getDeps().get(2).getName(), is("K2"));
-        assertThat(allDeps.getDeps().get(3).getName(), is("K2\\SK1\\SSK3"));
-        assertThat(allDeps.getDeps().get(4).getName(), is("K2\\SK1\\SSK2"));
-        assertThat(allDeps.getDeps().get(5).getName(), is("K1"));
-        assertThat(allDeps.getDeps().get(6).getName(), is("K1\\SK2"));
-        assertThat(allDeps.getDeps().get(7).getName(), is("K1\\SK1\\SSK2"));
-        assertThat(allDeps.getDeps().get(8).getName(), is("K1\\SK1\\SSK1"));
-        assertThat(allDeps.getDeps().get(9).getName(), is("K1\\SK1"));
+        ArrayList<String> result = allDeps.backSorting();
+        Iterator<String> it = result.iterator();
+        assertThat(it.hasNext(), is(true));
+        assertThat(it.next(), is("K3"));
+        assertThat(it.next(), is("K3\\SK1"));
+        assertThat(it.next(), is("K2"));
+        assertThat(it.next(), is("K2\\SK1\\SSK3"));
+        assertThat(it.next(), is("K2\\SK1\\SSK2"));
+        assertThat(it.next(), is("K1"));
+        assertThat(it.hasNext(), is(true));
+        assertThat(it.hasNext(), is(true));
+        assertThat(it.next(), is("K1\\SK2"));
+        assertThat(it.next(), is("K1\\SK1\\SSK2"));
+        assertThat(it.next(), is("K1\\SK1\\SSK1"));
+        assertThat(it.next(), is("K1\\SK1"));
+        assertThat(it.hasNext(), is(false));
     }
 }

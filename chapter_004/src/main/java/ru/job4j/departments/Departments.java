@@ -2,6 +2,7 @@ package ru.job4j.departments;
 
 import java.util.ArrayList;
 import java.util.Comparator;
+import java.util.Iterator;
 
 public class Departments {
     private ArrayList<Department> deps = new ArrayList<>();
@@ -15,60 +16,70 @@ public class Departments {
     }
 
     // сортировка по возрастанию
-    public void sorting() {
+    public ArrayList<String> sorting() {
+        ArrayList<String> names = getNames();
         // готовим сортировку
-        this.deps.sort(new Comparator<Department>() {
+        names.sort(new Comparator<String>() {
             @Override
-            public int compare(Department o1, Department o2) {
-                return o1.getName().compareTo(o2.getName());
+            public int compare(String o1, String o2) {
+                return o1.compareTo(o2);
             }
         });
-        this.makeList();
+        names = this.makeList(names);
+        return names;
     }
 
     //сортировка по убыванию
-    public void backSorting() {
+    public ArrayList<String> backSorting() {
+        ArrayList<String> names = getNames();
         // удаляем головные департаменты для правильной сортировки
-        for (int i = 0; i < deps.size(); i++) {
-            if (!deps.get(i).getName().contains("\\")) {
-                deps.remove(i);
+        for (int i = 0; i < names.size(); i++) {
+            if (!names.get(i).contains("\\")) {
+                names.remove(i);
             }
         }
         // готовим сортировку
-        this.deps.sort(new Comparator<Department>() {
+        names.sort(new Comparator<String>() {
             @Override
-            public int compare(Department o1, Department o2) {
-                return o2.getName().compareTo(o1.getName());
+            public int compare(String o1, String o2) {
+                return o2.compareTo(o1);
             }
         });
-        this.makeList();
+        names = this.makeList(names);
+        return names;
     }
 
     // вставляем головные департаменты
-    private void makeList() {
-        for (int i = 0; i < deps.size(); i++) {
-            StringBuilder name = new StringBuilder();
-            for (int j = 0; j < this.deps.get(i).getName().length(); j++) {
-                if (this.deps.get(i).getName().charAt(j) == '\\') {
-                    break;
+    private ArrayList<String> makeList(ArrayList<String> names) {
+        for (int i = 0; i < names.size(); i++) {
+            if (names.get(i).contains("\\")) {
+                String headName = "";
+                for (int j = 0; j < names.get(i).length(); j++) {
+                    if (names.get(i).charAt(j) != '\\') {
+                        headName += names.get(i).charAt(j);
+                    } else {
+                        if (!names.contains(headName)) {
+                            names.add(i, headName);
+                            i++;
+                        }
+                        break;
+                    }
                 }
-                name.append(this.deps.get(i).getName().charAt(j));
-            }
-            Department dep = new Department(name.toString());
-            if (!this.container(dep.getName())) {
-                this.deps.add(i, dep);
             }
         }
+        return names;
     }
 
     // проверяем целесообразность вставки головного департамента
-    private boolean container(String name) {
-        boolean result = false;
-        for (Department department : this.deps) {
-            if (department.getName().equals(name)) {
-                result = true;
-                break;
-            }
+    private boolean container(String name, ArrayList<String> names) {
+        return names.contains(name);
+    }
+
+    private ArrayList<String> getNames() {
+        ArrayList<String> result = new ArrayList<>(deps.size());
+        Iterator<Department> depsIt = deps.iterator();
+        while (depsIt.hasNext()) {
+            result.add(depsIt.next().getName());
         }
         return result;
     }
