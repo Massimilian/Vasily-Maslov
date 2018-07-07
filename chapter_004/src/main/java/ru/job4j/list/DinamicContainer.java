@@ -2,6 +2,7 @@ package ru.job4j.list;
 
 import java.util.ConcurrentModificationException;
 import java.util.Iterator;
+import java.util.NoSuchElementException;
 
 public class DinamicContainer<E> implements Iterable<E> {
 
@@ -44,6 +45,9 @@ public class DinamicContainer<E> implements Iterable<E> {
             @Override
             public E next() {
                 findException();
+                if (this.itCount == count) {
+                    throw new NoSuchElementException("Out of bounds!");
+                }
                 return (E) container[itCount++];
             }
 
