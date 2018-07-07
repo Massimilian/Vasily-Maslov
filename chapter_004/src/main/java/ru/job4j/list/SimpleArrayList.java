@@ -23,7 +23,7 @@ public class SimpleArrayList<E> {
      * Реализовать метод удаления первого элемент в списке.
      */
     public E deleteFirst() {
-        this.first.next = first;
+        this.first = first.next;
         size--;
         return null;
     }
