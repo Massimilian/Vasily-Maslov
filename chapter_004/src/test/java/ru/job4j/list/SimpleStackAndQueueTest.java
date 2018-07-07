@@ -10,19 +10,19 @@ public class SimpleStackAndQueueTest {
     private SimpleQueue<String> sq = new SimpleQueue<>();
 
     @Test
-    public void whenAddNewPointsIntoStackAndTryToGetThemThenDoIt() {
-        ss.push("first");
-        ss.push("second");
-        assertThat(ss.poll(), is("second"));
-        assertThat(ss.poll(), is("first"));
-    }
-
-    @Test
     public void whenAddNewPointsIntoQueueAndTryToGetThemThenDoIt() {
         sq.push("first");
         sq.push("second");
         assertThat(sq.poll(), is("first"));
         assertThat(sq.poll(), is("second"));
+    }
+
+    @Test
+    public void whenAddNewPointsIntoStackAndTryToGetThemThenDoIt() {
+        ss.push("first");
+        ss.push("second");
+        assertThat(ss.poll(), is("second"));
+        assertThat(ss.poll(), is("first"));
     }
 
 }

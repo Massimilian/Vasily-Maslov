@@ -1,34 +1,31 @@
 package ru.job4j.list;
 
-import java.util.NoSuchElementException;
-
 public class SimpleQueue<T> {
-    private int size = 10;
-    private Object[] container = new Object[size];
-    private int count = 0;
-    private int returnCount = 0;
+    private int size = 0;
+    private Node<T> node = null;
 
     public T poll() {
-        if (count == returnCount) {
-            throw new NoSuchElementException("Stack is empty!");
+        Node<T> result = this.node;
+        for (int i = 0; i < size - 1; i++) {
+            result = result.next;
         }
-        T t = (T) container[returnCount];
-        container[returnCount++] = null;
-        return t;
+        size--;
+        return result.info;
     }
 
     public void push(T value) {
-        this.grow();
-        container[count++] = value;
+        Node<T> node = new Node<>(value);
+        node.next = this.node;
+        this.node = node;
+        size++;
     }
 
-    private void grow() {
-        if (count == size) {
-            int tempSize = this.size;
-            this.size += (this.size >> 1);
-            Object[] upgradeContainer = new Object[this.size];
-            System.arraycopy(this.container, 0, upgradeContainer, 0, tempSize);
-            this.container = upgradeContainer;
+    private class Node<T> {
+        T info;
+        Node<T> next;
+
+        private Node(T info) {
+            this.info = info;
         }
     }
 }
