@@ -1,6 +1,6 @@
 package ru.job4j.generics;
 
-public abstract class AbstractStore <T extends Base> implements Store<Base>{
+public abstract class AbstractStore<T extends Base> implements Store<Base> {
     protected int size;
     SimpleArray<Base> userSa;
 

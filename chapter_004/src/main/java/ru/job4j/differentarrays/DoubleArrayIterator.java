@@ -13,11 +13,13 @@ public class DoubleArrayIterator implements Iterator<Integer> {
         secondIndex = 0;
     }
 
+    @Override
     public boolean hasNext() {
         //return values.length - 1 == index ? values[index].length > secondIndex ? true : false : true;
         return values.length - 1 > index || (values[index].length > secondIndex);
     }
 
+    @Override
     public Integer next() {
         if (secondIndex == values[index].length) {
             secondIndex = 0;
@@ -26,6 +28,7 @@ public class DoubleArrayIterator implements Iterator<Integer> {
         return values[index][secondIndex++];
     }
 
+    @Override
     public void remove() {
         int[] result = new int[this.values[index].length - 1];
         for (int i = 0; i < result.length; i++) {
