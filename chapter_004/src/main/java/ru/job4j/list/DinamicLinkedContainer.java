@@ -7,6 +7,14 @@ public class DinamicLinkedContainer<E> implements Iterable<E> {
     private int size = 0;
     private Node<E> node = null;
 
+    public Node<E> getNode() {
+        return node;
+    }
+
+    public int getSize() {
+        return size;
+    }
+
     public void add(E info) {
         Node<E> node = new Node<>(info);
         node.next = this.node;
