@@ -1,6 +1,7 @@
 package ru.job4j.differentarrays;
 
 import java.util.Iterator;
+import java.util.NoSuchElementException;
 
 public class DoubleArrayIterator implements Iterator<Integer> {
     private int[][] values;
@@ -21,6 +22,9 @@ public class DoubleArrayIterator implements Iterator<Integer> {
 
     @Override
     public Integer next() {
+        if (!hasNext()) {
+            throw new NoSuchElementException("Error! There's no more elements!");
+        }
         if (secondIndex == values[index].length) {
             secondIndex = 0;
             index++;
