@@ -10,6 +10,10 @@ public class DinamicContainer<E> implements Iterable<E> {
     private int count = 0;
     private Object[] container = new Object[size];
 
+    public int getCount() {
+        return count;
+    }
+
     public void add(E value) {
         this.grow();
         this.container[count++] = value;
