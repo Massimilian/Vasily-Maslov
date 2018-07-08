@@ -16,7 +16,6 @@ public class SimpleArrayTest {
         arr.add(1);
         arr.add(2, 3);
         arr.add(2);
-        arr.add(4);
         int result = arr.get(0);
         assertThat(result, is(1));
     }

@@ -7,29 +7,26 @@ import java.util.function.Consumer;
 public class SimpleArray<T> implements Iterable<T> {
     private Object[] objects;
     private int count = 0;
+    private int size;
 
     public SimpleArray(int size) {
         this.objects = new Object[size];
+        this.size = size;
         System.out.println("Attention! This class has limited size.");
     }
 
     public void add(T model) {
-        try {
-            while (this.objects[count] != null) {
-                count++;
-            }
-            this.objects[count++] = model;
-        } catch (IndexOutOfBoundsException ioobe) {
-            System.out.println("Impossible! This is a limited size class.");
+        check();
+        while (this.objects[count] != null) {
+            count++;
+            check();
         }
+        this.objects[count++] = model;
     }
 
     public void add(int index, T model) {
-        try {
-            this.objects[index] = model;
-        } catch (IndexOutOfBoundsException ioobe) {
-            System.out.println("Impossible! This is a limited size class.");
-        }
+        check();
+        this.objects[index] = model;
     }
 
     public void set(int index, T model) {
@@ -80,5 +77,11 @@ public class SimpleArray<T> implements Iterable<T> {
     @Override
     public Spliterator<T> spliterator() {
         return null;
+    }
+
+    private void check() {
+        if (count == size) {
+            throw new IndexOutOfBoundsException("Out of array's size!");
+        }
     }
 }
