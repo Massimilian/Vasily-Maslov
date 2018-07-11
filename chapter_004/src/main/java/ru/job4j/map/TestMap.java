@@ -33,7 +33,7 @@ public class TestMap {
 
         @Override
         public int hashCode() {
-            return Objects.hash(name);
+            return name.hashCode();
         }
     }
 
@@ -41,8 +41,7 @@ public class TestMap {
     public void test() {
         User first = new User("Petr");
         User second = new User("Petr");
-        System.out.println(first.hashCode());
-        System.out.println(second.hashCode());
+        System.out.println(first.hashCode() == second.hashCode());
 
         Map<User, String> map = new HashMap<>();
         map.put(first, "first");
