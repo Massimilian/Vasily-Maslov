@@ -1,10 +1,7 @@
 package ru.job4j.map;
 
 import org.junit.Test;
-import ru.job4j.map.Users.AbstractUser;
-import ru.job4j.map.Users.User;
-import ru.job4j.map.Users.UserWithEquals;
-import ru.job4j.map.Users.UserWithHash;
+import ru.job4j.map.Users.*;
 
 import static org.hamcrest.Matchers.is;
 import static org.junit.Assert.assertThat;
@@ -15,18 +12,17 @@ import java.util.Map;
 
 public class MapWorkingPlaceTest {
     private Object anything = new Object();
-    private User user1 = new User("Igor", 3, new GregorianCalendar(1990, 11, 12));
-    private User user2 = new User("Igor", 3, new GregorianCalendar(1990, 11, 12));
-    private UserWithHash userWithHash1 = new UserWithHash("Igor", 3, new GregorianCalendar(1990, 11, 12));
-    private UserWithHash userWithHash2 = new UserWithHash("Igor", 3, new GregorianCalendar(1990, 11, 12));
-    private UserWithEquals userWithEquals1 = new UserWithEquals("Igor", 3, new GregorianCalendar(1990, 11, 12));
-    private UserWithEquals userWithEquals2 = new UserWithEquals("Igor", 3, new GregorianCalendar(1990, 11, 12));
+    private AbstractUser user1;
+    private AbstractUser user2;
     private Map<AbstractUser, Object> map = new HashMap<>();
 
     @Test
     public void whenAddTwoEqualsObjectsWithoutOverridingEqualsAndHashCodeThenReturnMapWithTwoObjects() {
+        user1 = new User("Igor", 3, new GregorianCalendar(1990, 11, 12));
+        user2 = new User("Igor", 3, new GregorianCalendar(1990, 11, 12));
         map.put(user1, anything);
         map.put(user2, anything);
+
         // В созданную карту мы вводим два объекта (в качестве ключей) в которых не переопределены методы equals() и hashCode().
         // Соответственно, данные методы будут отрабатывать по умолчанию.
         // hashCode() будет генерировать каждый раз новое число,
@@ -49,8 +45,11 @@ public class MapWorkingPlaceTest {
 
     @Test
     public void whenAddTwoEqualsObjectsWithoutOverrodeEqualsAndWithOverrodeHashCodeThenReturnMapWithTwoObjects() {
-        map.put(userWithHash1, anything);
-        map.put(userWithHash2, anything);
+        user1 = new UserWithHash("Igor", 3, new GregorianCalendar(1990, 11, 12));
+        user2 = new UserWithHash("Igor", 3, new GregorianCalendar(1990, 11, 12));
+        map.put(user1, anything);
+        map.put(user2, anything);
+
         // В данном случае мы переопределили функцию hashCode(), и теперь мы вызываем не значение hashCode()
         // конкретного объекта UserWithHash, а сумму hash-кодов составляющих данный объект (в данном случае - 1978839649).
         // Сумма одинаковая у обоих объектов (так как все составляющие - Calendar, String и int обладают переопределёнными методами
@@ -58,15 +57,18 @@ public class MapWorkingPlaceTest {
         // Но, тем не менее, они всё ещё не идентичны по equals(так как ссылаются на разные ячейки памяти),
         // поэтому расцениваются как разные объекты и успешно добавляются в коллекцию.
 
-        assertThat(userWithHash1.hashCode() == userWithHash2.hashCode(), is(true));
-        assertThat(userWithHash1.equals(userWithHash2), is(false));
+        assertThat(user1.hashCode() == user2.hashCode(), is(true));
+        assertThat(user1.equals(user2), is(false));
         assertThat(map.size(), is(2));
     }
 
     @Test
     public void whenAddTwoEqualsObjectsWithOverrodeEqualsAndWithoutOverrodeHashCodeThenReturnMapWithTwoObjects() {
-        map.put(userWithEquals1, anything);
-        map.put(userWithEquals2, anything);
+        user1 = new UserWithEquals("Igor", 3, new GregorianCalendar(1990, 11, 12));
+        user2 = new UserWithEquals("Igor", 3, new GregorianCalendar(1990, 11, 12));
+        map.put(user1, anything);
+        map.put(user2, anything);
+
         // Теперь у нас переопредела функция equals(). Если раньше она просто смотрела, на что (конкретнее - на какое место в памяти)
         // идёт ссылка, то теперь она сравнивает все объекты поотдельности (как и в HashCode(), метод equals()
         // переопределён в int, String и Calendar). Но, так как в нашем классе не переопределён метод hashCode(),
@@ -75,8 +77,27 @@ public class MapWorkingPlaceTest {
         // Поэтому оба объекта успешно добавлены в коллекцию map.
         // P.S. Поправил прошлый код - закралась ошибка.
 
-        assertThat(userWithEquals1.hashCode() == userWithEquals2.hashCode(), is(false));
-        assertThat(userWithEquals1.equals(userWithEquals2), is(true));
+        assertThat(user1.hashCode() == user2.hashCode(), is(false));
+        assertThat(user1.equals(user2), is(true));
         assertThat(map.size(), is(2));
+    }
+
+    @Test
+    public void whenAddTwoEqualsObjectsWithOverrodeEqualsAndHashCodeThenReturnMapWithOnlyOneObjec() {
+        user1 = new UserWithEqualsAndHash("Igor", 3, new GregorianCalendar(1990, 11, 12));
+        user2 = new UserWithEqualsAndHash("Igor", 3, new GregorianCalendar(1990, 11, 12));
+        map.put(user1, anything);
+        map.put(user2, anything);
+
+        // Теперь мы переопределили и HashCode(), и equals(). При проверке во время добавления (.put),
+        // мы сравниваем оба объекта сначала по hash - и приходим к выводу, что hash одинаковый,
+        // а затем сравниваем по equals - и снова приходим к выводу, что речь идёт об одном и том же объекте.
+        // Дубликаты ключей в Map недопустимы, поэтому второе значение затирает первое. Таким образом,
+        // в результате мы имеем коллекцию типа Map с одним добавленным значением.
+        // P.S. Традиционно немного поправил старый код.
+
+        assertThat(user1.hashCode() == user2.hashCode(), is(true));
+        assertThat(user1.equals(user2), is(true));
+        assertThat(map.size(), is(1));
     }
 }
