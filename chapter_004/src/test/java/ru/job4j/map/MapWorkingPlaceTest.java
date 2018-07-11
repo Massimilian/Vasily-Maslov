@@ -3,6 +3,7 @@ package ru.job4j.map;
 import org.junit.Test;
 import ru.job4j.map.Users.AbstractUser;
 import ru.job4j.map.Users.User;
+import ru.job4j.map.Users.UserWithEquals;
 import ru.job4j.map.Users.UserWithHash;
 
 import static org.hamcrest.Matchers.is;
@@ -13,11 +14,13 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class MapWorkingPlaceTest {
-    Object anything = new Object();
+    private Object anything = new Object();
     private User user1 = new User("Igor", 3, new GregorianCalendar(1990, 11, 12));
     private User user2 = new User("Igor", 3, new GregorianCalendar(1990, 11, 12));
     private UserWithHash userWithHash1 = new UserWithHash("Igor", 3, new GregorianCalendar(1990, 11, 12));
     private UserWithHash userWithHash2 = new UserWithHash("Igor", 3, new GregorianCalendar(1990, 11, 12));
+    private UserWithEquals userWithEquals1 = new UserWithEquals("Igor", 3, new GregorianCalendar(1990, 11, 12));
+    private UserWithEquals userWithEquals2 = new UserWithEquals("Igor", 3, new GregorianCalendar(1990, 11, 12));
     private Map<AbstractUser, Object> map = new HashMap<>();
 
     @Test
@@ -45,10 +48,9 @@ public class MapWorkingPlaceTest {
     }
 
     @Test
-    public void whenAddTwoEqualsObjectsWithoutOverridingEqualsAndWithOverridedHashCodeThenReturnMapWithTwoObjects() {
+    public void whenAddTwoEqualsObjectsWithoutOverrodeEqualsAndWithOverrodeHashCodeThenReturnMapWithTwoObjects() {
         map.put(userWithHash1, anything);
         map.put(userWithHash2, anything);
-        System.out.println(userWithHash1.hashCode());
         // В данном случае мы переопределили функцию hashCode(), и теперь мы вызываем не значение hashCode()
         // конкретного объекта UserWithHash, а сумму hash-кодов составляющих данный объект (в данном случае - 1978839649).
         // Сумма одинаковая у обоих объектов (так как все составляющие - Calendar, String и int обладают переопределёнными методами
@@ -57,7 +59,24 @@ public class MapWorkingPlaceTest {
         // поэтому расцениваются как разные объекты и успешно добавляются в коллекцию.
 
         assertThat(userWithHash1.hashCode() == userWithHash2.hashCode(), is(true));
-        assertThat(user1.equals(user2), is(false));
+        assertThat(userWithHash1.equals(userWithHash2), is(false));
+        assertThat(map.size(), is(2));
+    }
+
+    @Test
+    public void whenAddTwoEqualsObjectsWithOverrodeEqualsAndWithoutOverrodeHashCodeThenReturnMapWithTwoObjects() {
+        map.put(userWithEquals1, anything);
+        map.put(userWithEquals2, anything);
+        // Теперь у нас переопредела функция equals(). Если раньше она просто смотрела, на что (конкретнее - на какое место в памяти)
+        // идёт ссылка, то теперь она сравнивает все объекты поотдельности (как и в HashCode(), метод equals()
+        // переопределён в int, String и Calendar). Но, так как в нашем классе не переопределён метод hashCode(),
+        // то для JVM эти два объекта разные (как мы помним, не добавляется в коллекцию объект только тот,
+        // который одинаковый по hashCode() и по equals()).
+        // Поэтому оба объекта успешно добавлены в коллекцию map.
+        // P.S. Поправил прошлый код - закралась ошибка.
+
+        assertThat(userWithEquals1.hashCode() == userWithEquals2.hashCode(), is(false));
+        assertThat(userWithEquals1.equals(userWithEquals2), is(true));
         assertThat(map.size(), is(2));
     }
 }
