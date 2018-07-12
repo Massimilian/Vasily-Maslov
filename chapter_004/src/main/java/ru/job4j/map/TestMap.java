@@ -1,54 +1,113 @@
 package ru.job4j.map;
 
-
-import org.junit.jupiter.api.Test;
-
-import static org.hamcrest.MatcherAssert.assertThat;
-import static org.hamcrest.Matchers.is;
-
-import java.util.HashMap;
-import java.util.Map;
+import java.util.Iterator;
 import java.util.Objects;
 
-public class TestMap {
-    public static final class User {
-        public String name;
+public class TestMap<K, V> implements Iterable {
+    private int nodeSize = 4;
+    private Node[] table = new Node[nodeSize];
+    private int capacity = 0;
 
-        @Override
-        public String toString() {
-            return "User{" + "name='" + name + '\'' + '}';
+    public TestMap() {
+        System.out.println("Attention! This map working without hash system!");
+    }
+
+    public boolean insert(K key, V value) {
+        boolean hasInserted;
+        Node node = new Node(key, value);
+        int place = Math.abs(node.hash % nodeSize);
+        if (table[place] == null) {
+            table[place] = node;
+            lookCapacity();
+            hasInserted = true;
+        } else {
+            System.out.println("Cannot put this object!");
+            hasInserted = false;
+        }
+        return hasInserted;
+    }
+
+    public V get(K key) {
+        Node node = new Node(key, null);
+        node = table[Math.abs(node.getHash() % nodeSize)];
+        return (V) node.getValue();
+    }
+
+    public boolean delete(K key) {
+        boolean hasDeleted = false;
+        Node node = new Node(key, null);
+        if (table[node.getHash() % nodeSize] != null) {
+            table[node.getHash() % nodeSize] = null;
+            capacity--;
+            hasDeleted = true;
+        } else {
+            System.out.println("This field is empty!");
+        }
+        return hasDeleted;
+    }
+
+    public int getSize() {
+        return capacity;
+    }
+
+    private void lookCapacity() {
+        if (++capacity >= this.nodeSize * 0.75) {
+            Node[] newTable = new Node[nodeSize <<= 1];
+            for (Node node : table) {
+                if (node != null) {
+                    newTable[Math.abs(node.getHash() % newTable.length)] = node;
+                }
+            }
+            table = newTable;
+        }
+    }
+
+    @Override
+    public Iterator iterator() {
+        return new Iterator() {
+            int count = 0;
+
+            @Override
+            public boolean hasNext() {
+                int tempCount = count;
+                while (table[tempCount] == null && tempCount != capacity) {
+                    tempCount++;
+                }
+                return !(tempCount == capacity);
+            }
+
+            @Override
+            public Object next() {
+                while (table[count] == null) {
+                    count++;
+                }
+                return table[count++].getValue();
+            }
+        };
+    }
+
+    class Node<K, V> {
+        private final int hash;
+        private K key;
+        private V value;
+
+        public int getHash() {
+            return hash;
         }
 
-        public User(String name) {
-            this.name = name;
+        public V getValue() {
+            return value;
         }
 
-        @Override
-        public boolean equals(Object o) {
-            if (this == o) return true;
-            if (o == null || getClass() != o.getClass()) return false;
-            User user = (User) o;
-            return Objects.equals(name, user.name);
+        public Node(K key, V value) {
+            this.key = key;
+            this.value = value;
+            hash = this.hashCode();
         }
 
         @Override
         public int hashCode() {
-            return name.hashCode();
+            return Objects.hash(key);
         }
     }
-
-    @Test
-    public void test() {
-        User first = new User("Petr");
-        User second = new User("Petr");
-        System.out.println(first.hashCode() == second.hashCode());
-
-        Map<User, String> map = new HashMap<>();
-        map.put(first, "first");
-        map.put(second, "second");
-
-        System.out.println(map);
-    }
 }
-
-
