@@ -1,4 +1,4 @@
-package ru.job4j.map.Users;
+package ru.job4j.map.users;
 
 import java.util.Calendar;
 

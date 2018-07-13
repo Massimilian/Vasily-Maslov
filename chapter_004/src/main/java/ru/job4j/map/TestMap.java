@@ -1,5 +1,6 @@
 package ru.job4j.map;
 
+import java.util.ConcurrentModificationException;
 import java.util.Iterator;
 import java.util.Objects;
 
@@ -29,7 +30,9 @@ public class TestMap<K, V> implements Iterable {
 
     public V get(K key) {
         Node node = new Node(key, null);
-        node = table[Math.abs(node.getHash() % nodeSize)];
+        if (table[Math.abs(node.getHash() % nodeSize)] != null) {
+            node = table[Math.abs(node.getHash() % nodeSize)];
+        }
         return (V) node.getValue();
     }
 
@@ -66,9 +69,10 @@ public class TestMap<K, V> implements Iterable {
     public Iterator iterator() {
         return new Iterator() {
             int count = 0;
-
+            int iteratorCapacity = capacity;
             @Override
             public boolean hasNext() {
+                hasNoTBeenChanged();
                 int tempCount = count;
                 while (table[tempCount] == null && tempCount != capacity) {
                     tempCount++;
@@ -76,12 +80,23 @@ public class TestMap<K, V> implements Iterable {
                 return !(tempCount == capacity);
             }
 
+
+
             @Override
             public Object next() {
                 while (table[count] == null) {
+                    if (!hasNext()) {
+                        throw new NullPointerException("Has no much elements!");
+                    }
                     count++;
                 }
                 return table[count++].getValue();
+            }
+
+            private void hasNoTBeenChanged() {
+                if (this.iteratorCapacity != capacity) {
+                    throw new ConcurrentModificationException("The changes in time of iterator's work are impossible!");
+                }
             }
         };
     }

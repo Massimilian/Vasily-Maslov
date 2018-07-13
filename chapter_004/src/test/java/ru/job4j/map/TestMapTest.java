@@ -5,6 +5,7 @@ import org.junit.Test;
 import java.util.Iterator;
 
 import static org.hamcrest.Matchers.is;
+import static org.hamcrest.Matchers.nullValue;
 import static org.junit.Assert.assertThat;
 
 public class TestMapTest {
@@ -14,6 +15,11 @@ public class TestMapTest {
     public void whenInsertNewValueThenPutItIn() {
         tm.insert("1", "111");
         assertThat(tm.get("1"), is("111"));
+    }
+
+    @Test
+    public void whenTryToGetNullPointThenReturnNull() {
+        assertThat(tm.get("1"), is(nullValue()));
     }
 
     @Test
@@ -56,6 +62,5 @@ public class TestMapTest {
         assertThat(iterator.hasNext(), is(true));
         assertThat(iterator.next(), is("333"));
         assertThat(iterator.hasNext(), is(false));
-
     }
 }
