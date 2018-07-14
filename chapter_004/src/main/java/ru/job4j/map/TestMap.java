@@ -2,6 +2,7 @@ package ru.job4j.map;
 
 import java.util.ConcurrentModificationException;
 import java.util.Iterator;
+import java.util.NoSuchElementException;
 import java.util.Objects;
 
 public class TestMap<K, V> implements Iterable {
@@ -55,7 +56,8 @@ public class TestMap<K, V> implements Iterable {
 
     private void lookCapacity() {
         if (++capacity >= this.nodeSize * 0.75) {
-            Node[] newTable = new Node[nodeSize <<= 1];
+            nodeSize <<= 1;
+            Node[] newTable = new Node[nodeSize];
             for (Node node : table) {
                 if (node != null) {
                     newTable[Math.abs(node.getHash() % newTable.length)] = node;
@@ -86,12 +88,13 @@ public class TestMap<K, V> implements Iterable {
             public Object next() {
                 while (table[count] == null) {
                     if (!hasNext()) {
-                        throw new NullPointerException("Has no much elements!");
+                        throw new NoSuchElementException("Has no much elements!");
                     }
                     count++;
                 }
                 return table[count++].getValue();
             }
+
 
             private void hasNoTBeenChanged() {
                 if (this.iteratorCapacity != capacity) {

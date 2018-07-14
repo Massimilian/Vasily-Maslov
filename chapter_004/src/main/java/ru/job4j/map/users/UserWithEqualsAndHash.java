@@ -3,7 +3,7 @@ package ru.job4j.map.users;
 import java.util.Calendar;
 import java.util.Objects;
 
-public class UserWithEqualsAndHash extends AbstractUser{
+public class UserWithEqualsAndHash extends AbstractUser {
 
     public UserWithEqualsAndHash(String name, int children, Calendar birthday) {
         super(name, children, birthday);
@@ -21,9 +21,7 @@ public class UserWithEqualsAndHash extends AbstractUser{
         }
         if (obj instanceof AbstractUser) {
             UserWithEqualsAndHash uweah = (UserWithEqualsAndHash) obj;
-            if (uweah.birthday.equals(this.birthday) && uweah.children == this.children && uweah.name.equals(this.name)) {
-                return true;
-            }
+            return uweah.birthday.equals(this.birthday) && uweah.children == this.children && uweah.name.equals(this.name);
         }
         return false;
     }

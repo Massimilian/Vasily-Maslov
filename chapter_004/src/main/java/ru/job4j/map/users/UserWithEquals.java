@@ -1,6 +1,8 @@
 package ru.job4j.map.users;
 
 import java.util.Calendar;
+import java.util.Objects;
+import java.util.Random;
 
 public class UserWithEquals extends AbstractUser {
 
@@ -21,4 +23,11 @@ public class UserWithEquals extends AbstractUser {
         }
         return false;
     }
+
+    @Override
+    public int hashCode() {
+        Random random = new Random();
+        return random.nextInt();
+    }
+
 }
