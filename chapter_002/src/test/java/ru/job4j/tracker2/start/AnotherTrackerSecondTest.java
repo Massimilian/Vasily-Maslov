@@ -12,6 +12,7 @@ import java.io.PrintStream;
 public class AnotherTrackerSecondTest {
     private final ByteArrayOutputStream mem = new ByteArrayOutputStream();
     private final PrintStream out = System.out;
+    private String ls = System.lineSeparator();
 
     @Before
     public void loadMem() {
@@ -28,6 +29,6 @@ public class AnotherTrackerSecondTest {
    public void whenInvalidInput() {
        ValidateInput input = new ValidateInput(new StubInputSecond(new String[] {"invalid", "7", "y"}));
        input.ask("Enter", new int[] {1});
-       assertThat(this.mem.toString(), is(String.format("Please enter valid data again.\r\n")));
+       assertThat(this.mem.toString(), is(String.format("Please enter valid data again.%s", ls)));
    }
 }

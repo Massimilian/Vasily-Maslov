@@ -21,10 +21,8 @@ public class ValidateInput implements InputSecond {
 				value = this.input.ask(question, range);
 				invalid = false;
 			} catch (NumberFormatException nfe) {
-				nfe.printStackTrace();
 				System.out.println("Please enter valid data again.");
 			} catch (MenuOutException moe) {
-				moe.printStackTrace();
 				System.out.println("Please select correct menu.");
 			}
 		} while (invalid);
