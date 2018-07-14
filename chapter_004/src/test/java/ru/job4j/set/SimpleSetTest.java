@@ -22,8 +22,8 @@ public class SimpleSetTest {
     @Test
     public void whenAddThreeEqualsIntoSetThenReturnOnlyNotEquals() {
         Random random = new Random();
-        ss.add(random.nextBoolean());
-        ss.add(random.nextBoolean());
+        ss.add(true);
+        ss.add(false);
         ss.add(random.nextBoolean());
         Iterator<Boolean> iterator = ss.iterator();
         assertThat(iterator.hasNext(), is(true));
