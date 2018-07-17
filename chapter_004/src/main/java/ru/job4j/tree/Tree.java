@@ -136,43 +136,80 @@ public class Tree<E extends Comparable<E>> implements SimpleTree<E> {
         // возвращаем результат
     }
 
-    @Override
     public Iterator<E> iterator() {
-        return new Iterator<E>() {
-            LinkedList<Node> data = makeData();
-            int checkSteps = size;
-
-            public LinkedList<Node> makeData() {
-                LinkedList<Node> data = new LinkedList<>();
-                adding(data, root);
-                return data;
-            }
-
-            private LinkedList<Node> adding(LinkedList<Node> data, Node node) {
-                data.add(node);
-                for (int i = 0; i < node.leaves().size(); i++) {
-                    if (node.leaves().size() > 0) {
-                        adding(data, (Node) node.leaves().get(i));
-                    }
-                }
-                return data;
-            }
-
-            @Override
-            public boolean hasNext() {
-                if (checkSteps != size) {
-                    throw new ConcurrentModificationException("The changes in time of iterator's work are impossible!");
-                }
-                return data.size() != 0;
-            }
-
-            @Override
-            public E next() {
-                if (!hasNext()) {
-                    throw new NoSuchElementException("Has no much elements!");
-                }
-                return (E) data.poll().getValue();
-            }
-        };
+        return new NewIterator<>();
     }
+
+    private class NewIterator<E> implements Iterator<E> {
+        private Queue<Node> queue;
+        private int expectedModCount = size;
+
+        public NewIterator() {
+            this.queue = new LinkedList<>();
+            queue.add(root);
+        }
+
+        public void getChild (Node node) {
+            for (Object n: node.leaves()) {
+                queue.offer((Node)n);
+            }
+        }
+
+        @Override
+        public boolean hasNext() {
+            if (expectedModCount != size) {
+                throw new ConcurrentModificationException();
+            }
+            return !queue.isEmpty();
+        }
+
+        @Override
+        public E next() {
+            if (!hasNext()) {
+                throw new NoSuchElementException();
+            }
+            Node res = queue.poll();
+            getChild(res);
+            return (E) res.getValue();
+        }
+    }
+//    @Override
+//    public Iterator<E> iterator() {
+//        return new Iterator<E>() {
+//            LinkedList<Node> data = makeData();
+//            int checkSteps = size;
+//
+//            public LinkedList<Node> makeData() {
+//                LinkedList<Node> data = new LinkedList<>();
+//                adding(data, root);
+//                return data;
+//            }
+//
+//            private LinkedList<Node> adding(LinkedList<Node> data, Node node) {
+//                data.add(node);
+//                for (int i = 0; i < node.leaves().size(); i++) {
+//                    if (node.leaves().size() > 0) {
+//                        adding(data, (Node) node.leaves().get(i));
+//                    }
+//                }
+//                return data;
+//            }
+//
+//            @Override
+//            public boolean hasNext() {
+//                if (checkSteps != size) {
+//                    throw new ConcurrentModificationException("The changes in time of iterator's work are impossible!");
+//                }
+//                return data.size() != 0;
+//            }
+//
+//            @Override
+//            public E next() {
+//                if (!hasNext()) {
+//                    throw new NoSuchElementException("Has no much elements!");
+//                }
+//                return (E) data.poll().getValue();
+//            }
+//        };
+//    }
 }
