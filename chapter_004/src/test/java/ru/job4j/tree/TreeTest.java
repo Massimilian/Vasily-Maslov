@@ -1,8 +1,9 @@
 package ru.job4j.tree;
 
+import org.junit.Ignore;
 import org.junit.Test;
 
-import java.util.Iterator;
+import java.util.*;
 
 import static org.hamcrest.Matchers.is;
 import static org.junit.Assert.assertThat;
@@ -43,14 +44,14 @@ public class TreeTest {
         assertThat(it.hasNext(), is(true));
         assertThat(it.next(), is(5));
         assertThat(it.hasNext(), is(true));
+        assertThat(it.next(), is(8));
+        assertThat(it.hasNext(), is(true));
         assertThat(it.next(), is(6));
+        assertThat(it.hasNext(), is(true));
         assertThat(it.hasNext(), is(true));
         assertThat(it.next(), is(7));
         assertThat(it.hasNext(), is(true));
-        assertThat(it.hasNext(), is(true));
         assertThat(it.next(), is(9));
-        assertThat(it.hasNext(), is(true));
-        assertThat(it.next(), is(8));
         assertThat(it.hasNext(), is(false));
     }
 
@@ -88,14 +89,14 @@ public class TreeTest {
         assertThat(it.hasNext(), is(true));
         assertThat(it.next(), is(5));
         assertThat(it.hasNext(), is(true));
+        assertThat(it.next(), is(8));
+        assertThat(it.hasNext(), is(true));
         assertThat(it.next(), is(6));
+        assertThat(it.hasNext(), is(true));
         assertThat(it.hasNext(), is(true));
         assertThat(it.next(), is(7));
         assertThat(it.hasNext(), is(true));
-        assertThat(it.hasNext(), is(true));
         assertThat(it.next(), is(9));
-        assertThat(it.hasNext(), is(true));
-        assertThat(it.next(), is(8));
         assertThat(it.hasNext(), is(false));
     }
 
@@ -140,6 +141,4 @@ public class TreeTest {
         tree.add(5, 9);
         assertThat(tree.isBinary(), is(true));
     }
-
-
 }

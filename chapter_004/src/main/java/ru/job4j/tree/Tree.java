@@ -149,9 +149,9 @@ public class Tree<E extends Comparable<E>> implements SimpleTree<E> {
             queue.add(root);
         }
 
-        public void getChild (Node node) {
-            for (Object n: node.leaves()) {
-                queue.offer((Node)n);
+        public void getChild(Node node) {
+            for (Object n : node.leaves()) {
+                queue.offer((Node) n);
             }
         }
 
