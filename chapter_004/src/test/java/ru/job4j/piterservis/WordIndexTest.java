@@ -10,8 +10,8 @@ import static org.junit.Assert.assertThat;
 
 public class WordIndexTest {
 
-    WordIndex wi = new WordIndex();
-    Set<Integer> set = new LinkedHashSet<>();
+    private WordIndex wi = new WordIndex();
+    private Set<Integer> set = new LinkedHashSet<>();
 
 
     @Test
