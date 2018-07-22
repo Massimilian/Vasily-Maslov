@@ -16,7 +16,7 @@ public class RectangleMove implements Runnable {
     public void run() {
         while (true) {
             this.rect.setX(this.rect.getX() + countX);
-            if (this.rect.getX() >= this.wallX - countX + 1 || this.rect.getX() <= 10 ) {
+            if (this.rect.getX() >= this.wallX - countX + 1 || this.rect.getX() <= 10) {
                 countX = -countX;
             }
             try {
