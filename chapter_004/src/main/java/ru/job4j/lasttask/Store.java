@@ -1,5 +1,9 @@
 package ru.job4j.lasttask;
 
+import ru.job4j.tree.Tree;
+
+import java.util.HashMap;
+import java.util.HashSet;
 import java.util.Iterator;
 import java.util.List;
 
@@ -22,6 +26,21 @@ class Store {
         }
         return result;
     }
+
+    public int howMuchChangedAlternative(List<User> previous, List<User> current) {
+        HashMap<Integer, String> map = new HashMap<>();
+        int result = 0;
+        for (User user : previous) {
+            map.put(user.getId(), user.getName());
+        }
+        for (User user : current) {
+            if (map.containsKey(user.getId()) && !map.containsValue(user.getName())) {
+                result++;
+            }
+        }
+        return result;
+    }
+
 
     private int howMuchChanged(List<User> previous, List<User> current) {
         int result = 0;

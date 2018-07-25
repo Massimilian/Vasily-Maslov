@@ -58,4 +58,32 @@ public class StoreTest {
         assertThat(store.diff(list1, list2), is(new int[]{1, 1, 1}));
     }
 
+    @Test
+    public void whenTryToUseAlternativeMethodThenWorksWellFirst() {
+        list1.add(user1);
+        list2.add(user1);
+        list2.add(user2);
+        list2.add(user3);
+        assertThat(store.howMuchChangedAlternative(list1, list2), is(0));
+    }
+
+    @Test
+    public void whenTryToUseAlternativeMethodThenWorksWellSecond() {
+        list1.add(user1);
+        list1.add(user2);
+        list1.add(user3);
+        list2.add(user1);
+        list2.add(user2);
+        assertThat(store.howMuchChangedAlternative(list1, list2), is(0));
+    }
+
+    @Test
+    public void whenTryToUseAlternativeMethodThenWorksWellThird() {
+        list1.add(user1);
+        list1.add(user2);
+        user2 = new User(2, "AnotherName");
+        list2.add(user2);
+        list2.add(user3);
+        assertThat(store.howMuchChangedAlternative(list1, list2), is(1));
+    }
 }
