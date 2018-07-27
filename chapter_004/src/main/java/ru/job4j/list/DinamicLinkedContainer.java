@@ -1,10 +1,16 @@
 package ru.job4j.list;
 
+import net.jcip.annotations.GuardedBy;
+import org.apache.http.annotation.ThreadSafe;
+
 import java.util.ConcurrentModificationException;
 import java.util.Iterator;
 
+@ThreadSafe
 public class DinamicLinkedContainer<E> implements Iterable<E> {
     private int size = 0;
+
+    @GuardedBy("this")
     private Node<E> node = null;
 
     public Node<E> getNode() {
@@ -15,14 +21,14 @@ public class DinamicLinkedContainer<E> implements Iterable<E> {
         return size;
     }
 
-    public void add(E info) {
+    public synchronized void add(E info) {
         Node<E> node = new Node<>(info);
         node.next = this.node;
         this.node = node;
         size++;
     }
 
-    public E get(int index) {
+    public synchronized E get(int index) {
         Node<E> result = this.node;
         for (int i = 0; i < index; i++) {
             result = result.next;

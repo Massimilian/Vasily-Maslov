@@ -1,25 +1,31 @@
 package ru.job4j.list;
 
+import org.apache.http.annotation.GuardedBy;
+import org.apache.http.annotation.ThreadSafe;
+
 import java.util.ConcurrentModificationException;
 import java.util.Iterator;
 import java.util.NoSuchElementException;
 
+@ThreadSafe
 public class DinamicContainer<E> implements Iterable<E> {
 
     private int size = 10;
     private int count = 0;
+
+    @GuardedBy("this")
     private Object[] container = new Object[size];
 
     public int getCount() {
         return count;
     }
 
-    public void add(E value) {
+    public synchronized void add(E value) {
         this.grow();
         this.container[count++] = value;
     }
 
-    public E get(int index) {
+    public synchronized E get(int index) {
         return (E) container[index];
     }
 
