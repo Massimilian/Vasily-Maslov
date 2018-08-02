@@ -17,16 +17,22 @@ public class DinamicContainer<E> implements Iterable<E> {
     private Object[] container = new Object[size];
 
     public int getCount() {
-        return count;
+        synchronized (container) {
+            return count;
+        }
     }
 
-    public synchronized void add(E value) {
-        this.grow();
-        this.container[count++] = value;
+    public void add(E value) {
+        synchronized (container) {
+            this.grow();
+            this.container[count++] = value;
+        }
     }
 
-    public synchronized E get(int index) {
-        return (E) container[index];
+    public E get(int index) {
+        synchronized (container) {
+            return (E) container[index];
+        }
     }
 
 
