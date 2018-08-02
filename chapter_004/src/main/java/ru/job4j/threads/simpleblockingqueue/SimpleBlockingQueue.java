@@ -14,7 +14,9 @@ public class SimpleBlockingQueue<T> {
     final private Queue<T> queue = new LinkedList<>();
 
     public int size() {
-        return queue.size();
+        synchronized (queue) {
+            return queue.size();
+        }
     }
 
     public void offer(T value) {
