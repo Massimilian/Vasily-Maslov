@@ -9,7 +9,7 @@ import static org.hamcrest.Matchers.is;
 import static org.junit.Assert.assertThat;
 
 public class TreeTest {
-    Tree<Integer> tree = new Tree<>(1);
+    private Tree<Integer> tree = new Tree<>(1);
 
     @Test
     public void when6ElFindLastThen6() {
@@ -119,7 +119,6 @@ public class TreeTest {
         assertThat(tree.isBinary(), is(false));
     }
 
-
     @Test
     public void whenCheckIfNotBinaryTreeThenReturnFalse() {
         tree.add(1, 4);
@@ -140,5 +139,47 @@ public class TreeTest {
         tree.add(5, 8);
         tree.add(5, 9);
         assertThat(tree.isBinary(), is(true));
+    }
+
+
+    @Test
+    public void whenCheckIfBinaryTreeWithoutRecursionsThenReturnTrue() {
+        tree.addByVeryDifficultWay(1, 4);
+        tree.addByVeryDifficultWay(4, 5);
+        tree.addByVeryDifficultWay(1, 6);
+        tree.addByVeryDifficultWay(4, 7);
+        assertThat(tree.isBinaryWithoutRecursions(), is(true));
+    }
+
+    @Test
+    public void whenCheckIfNotBinaryTreeWithoutRecursionsThenReturnFalseEasyWay() {
+        tree.add(1, 4);
+        tree.add(4, 5);
+        tree.add(1, 6);
+        tree.add(4, 7);
+        tree.add(4, 8);
+        assertThat(tree.isBinaryWithoutRecursions(), is(false));
+    }
+
+    @Test
+    public void whenCheckIfNotBinaryTreeWithoutRecursionsThenReturnFalse() {
+        tree.add(1, 4);
+        tree.add(4, 5);
+        tree.add(1, 6);
+        tree.add(4, 7);
+        tree.add(4, 8);
+        tree.add(8, 9);
+        assertThat(tree.isBinaryWithoutRecursions(), is(false));
+    }
+
+    @Test
+    public void whenCheckIfNotBinaryTreeWithoutRecursionsThenReturnFalseAnotherWay() {
+        tree.add(1, 4);
+        tree.add(4, 5);
+        tree.add(1, 6);
+        tree.add(4, 7);
+        tree.add(5, 8);
+        tree.add(5, 9);
+        assertThat(tree.isBinaryWithoutRecursions(), is(true));
     }
 }

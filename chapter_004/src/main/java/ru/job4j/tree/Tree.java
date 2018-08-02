@@ -10,6 +10,19 @@ public class Tree<E extends Comparable<E>> implements SimpleTree<E> {
         this.root = new Node<>(elem);
     }
 
+    public boolean isBinaryWithoutRecursions() {
+        boolean bin = true;
+        ArrayList<Node> data = new ArrayList<>();
+        data.add(root);
+        int count = 0;
+        while (bin && count < data.size()) {
+            Node node = data.get(count++);
+            bin = node.leaves().size() == 2 || node.leaves().size() == 0;
+            data.addAll(node.leaves());
+        }
+        return bin;
+    }
+
     public boolean isBinary() {
         boolean bin = false;
         if (this.size % 2 == 0) {
