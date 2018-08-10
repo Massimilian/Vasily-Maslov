@@ -16,9 +16,9 @@ public class Tree<E extends Comparable<E>> implements SimpleTree<E> {
         data.add(root);
         int count = 0;
         while (bin && count < data.size()) {
-            Node node = data.get(count++);
-            bin = node.leaves().size() == 2 || node.leaves().size() == 0;
-            data.addAll(node.leaves());
+            bin = data.get(count).leaves().size() == 2 || data.get(count).leaves().size() == 0;
+            data.addAll(data.get(count).leaves());
+            count++;
         }
         return bin;
     }

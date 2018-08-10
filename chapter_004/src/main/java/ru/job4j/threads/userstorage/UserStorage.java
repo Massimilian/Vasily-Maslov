@@ -15,24 +15,30 @@ public class UserStorage {
     }
 
     boolean add(User user) {
-        users.put(user.getId(), user.getAmount());
-        return true;
+        synchronized (users) {
+            users.put(user.getId(), user.getAmount());
+            return true;
+        }
     }
 
     boolean update(User user) {
-        boolean is = users.containsKey(user.getId());
-        if (is) {
-            this.add(user);
+        synchronized (users) {
+            boolean is = users.containsKey(user.getId());
+            if (is) {
+                this.add(user);
+            }
+            return is;
         }
-        return is;
     }
 
     boolean delete(User user) {
-        boolean is = users.containsKey(user.getId());
-        if (is) {
-            users.remove(user.getId());
+        synchronized (users) {
+            boolean is = users.containsKey(user.getId());
+            if (is) {
+                users.remove(user.getId());
+            }
+            return is;
         }
-        return is;
     }
 
     public synchronized void transfer(int fromId, int toId, int amount) {
