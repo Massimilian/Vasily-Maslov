@@ -1,9 +1,9 @@
 package ru.job4j.threads.threadsproblems.cashnotrenovated;
 
 public class CashClass implements Runnable {
-    Incrementator incr;
-    int count;
-    boolean iWas;
+    private Incrementator incr;
+    private int count;
+    private boolean iWas;
 
     public CashClass(Incrementator incr, int count, boolean iWas) {
         this.incr = incr;
@@ -24,6 +24,6 @@ public class CashClass implements Runnable {
 
     @Override
     public void run() {
-        change();
+        this.change();
     }
 }

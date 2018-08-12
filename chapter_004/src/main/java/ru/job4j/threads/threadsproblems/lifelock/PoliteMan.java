@@ -21,7 +21,7 @@ public class PoliteMan {
     public synchronized void work(BackPoliteMan backPoliteMan, PoliteMan otherMan) {
 //        Пока сохраняется активность (а она будет сохраняться всегда)...
         while (active) {
-            // если в переменной backWorker хранится ссылка на этого же worker, то ждём. Если нет - тогда "передаём ресурс" другому worker
+            // если в переменной backPoliteMan хранится ссылка на этого же PoliteMan, то ждём. Если нет - тогда "передаём ресурс" другому worker
             if (backPoliteMan.getMan() != this) {
                 try {
 //                  Если вдруг backPoliteMan и наш экземпляр не совпали - значит,

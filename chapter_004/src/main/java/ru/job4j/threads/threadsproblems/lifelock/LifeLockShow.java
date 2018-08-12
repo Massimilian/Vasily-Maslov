@@ -2,11 +2,11 @@ package ru.job4j.threads.threadsproblems.lifelock;
 
 public class LifeLockShow {
     public static void main(String[] args) {
-//      Создаём два объекта класса Worker
+//      Создаём два объекта класса PoliteMan
         PoliteMan man1 = new PoliteMan("First", true);
         PoliteMan man2 = new PoliteMan("Second", true);
 
-//      Создаём класс BackWorker, который будет содержать в себе первый объект (потом будут перемены);
+//      Создаём класс BackPoliteMan, который будет содержать в себе первый объект (потом будут перемены);
         BackPoliteMan someMan = new BackPoliteMan(man1);
 
 //      при помощи двух анонимных классов создаём два потока.
