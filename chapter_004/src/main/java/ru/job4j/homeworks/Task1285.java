@@ -9,4 +9,27 @@ package ru.job4j.homeworks;
 //            то должен быть найден номер строки самого нижнего из них.
 
 public class Task1285 {
+    public int findMin(int[][] array, int string) {
+        int count = Integer.MAX_VALUE;
+        int result = 0;
+        for (int i = 0; i < array[string].length; i++) {
+            if (array[string][i] < count) {
+                count = array[string][i];
+                result = i;
+            }
+        }
+        return result;
+    }
+
+    public int findMax(int[][] array, int post) {
+        int count = Integer.MIN_VALUE;
+        int result = 0;
+        for (int i = 0; i < array.length; i++) {
+            if (array[i][post] > count) {
+                count = array[i][post];
+                result = i;
+            }
+        }
+        return result;
+    }
 }

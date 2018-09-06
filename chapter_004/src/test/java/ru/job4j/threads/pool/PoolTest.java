@@ -6,7 +6,8 @@ import java.util.concurrent.TimeUnit;
 
 public class PoolTest {
     private Pool pool = new Pool();
-    private Runnable r = () -> {};
+    private Runnable r = () -> {
+    };
 
     @Test
     public void whenTryToWorkThenDoIt() {
