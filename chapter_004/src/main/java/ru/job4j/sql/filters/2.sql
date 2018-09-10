@@ -1,0 +1,1 @@
+﻿select * from product where product.name='%мороженое%';

@@ -1,0 +1,1 @@
+﻿select name, type_id from product
