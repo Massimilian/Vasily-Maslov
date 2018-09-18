@@ -1,0 +1,1 @@
+﻿select product.id, product.name, type.name from product inner join type on product.type_id=type.id;
