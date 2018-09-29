@@ -67,9 +67,9 @@ public class Board {
         }
     }
 
-    private void toLock(Cell cell) {
+    private boolean toLock(Cell cell) {
         // блокируем ячейку
-        board[cell.getX()][cell.getY()].tryLock();
+        return board[cell.getX()][cell.getY()].tryLock();
     }
 
     private void toUnlock(Cell cell) {
@@ -90,14 +90,13 @@ public class Board {
 
     public boolean move(Cell source, Cell dist) {
         boolean result = false;
-        // проверяем - не заблокирована ли клетка назначения
-        if (!this.isLocked(dist)) {
+        // проверяем - не заблокирована ли клетка назначения, если нет - хватаем блок
+        if (this.toLock(dist)) {
             // проверяем - заблокирована ли клетка отправления
             if (this.isLocked(source)) {
                 // если заблокирована - разблокируем
                 this.toUnlock(source);
             }
-            this.toLock(dist);
             result = true;
         }
         return result;
