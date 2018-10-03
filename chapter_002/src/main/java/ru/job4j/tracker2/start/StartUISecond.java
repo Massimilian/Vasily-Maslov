@@ -17,6 +17,7 @@ public class StartUISecond {
 	
 	public void init() {
 		MenuTracker menu = new MenuTracker(this.input, this.tracker);
+		this.tracker.firstStep();
 		menu.fillActions();
 		
 		UserAction exit = new UserAction() { // анонимный класс
