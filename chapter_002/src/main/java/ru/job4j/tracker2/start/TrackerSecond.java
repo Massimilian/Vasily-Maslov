@@ -1,10 +1,11 @@
 package ru.job4j.tracker2.start;
+
 import ru.job4j.tracker2.models.*;
 
 import java.sql.*;
 import java.util.*;
 
-public class TrackerSecond implements AutoCloseable{
+public class TrackerSecond implements AutoCloseable {
     private List<ItemSecond> items = new ArrayList<>();
     private static final Random RN = new Random();
     private Connection connection;

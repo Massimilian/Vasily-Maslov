@@ -36,9 +36,9 @@ public class SQLStorage {
             st3.setString(3, "Maslova");
             st3.setInt(4, 0);
             st3.setTimestamp(5, new Timestamp(System.currentTimeMillis()));
-            st3.setString(6,"m");
+            st3.setString(6, "m");
             // посылаем запрос на получение итератора ResultSet (для варианта №1)
-             ResultSet rs = st.executeQuery("SELECT * FROM family");
+            ResultSet rs = st.executeQuery("SELECT * FROM family");
             // внимание! здесь уже не надо передавать запрос - он уже создан! (для варианта №2)
             // ResultSet rs = st2.executeQuery();
             // внимание! здесь уже не надо передавать запрос - он уже создан! (для варианта №3)
