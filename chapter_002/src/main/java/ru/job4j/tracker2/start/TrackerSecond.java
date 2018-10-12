@@ -17,6 +17,12 @@ public class TrackerSecond implements AutoCloseable{
         String url = "jdbc:postgresql://localhost:5432/tracker";
         String username = "postgres";
         String password = "qetupoi";
+        String driverName = "org.postgresql.Driver";
+        try {
+            Class.forName(driverName);
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        }
         try {
             this.connection = DriverManager.getConnection(url, username, password);
             Statement st = connection.createStatement();
