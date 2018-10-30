@@ -1,4 +1,4 @@
-package ru.job4j.homeworks.ExamTask;
+package ru.job4j.homeworks.examtask;
 
 import java.util.concurrent.TimeUnit;
 

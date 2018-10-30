@@ -1,4 +1,4 @@
-package ru.job4j.homeworks.ExamTask;
+package ru.job4j.homeworks.examtask;
 
 public class WorkingPlace {
     public static void main(String[] args) {
