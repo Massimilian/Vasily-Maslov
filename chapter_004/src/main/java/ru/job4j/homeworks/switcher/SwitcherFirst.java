@@ -19,7 +19,9 @@ public class SwitcherFirst {
             t2.start();
             try {
                 t2.join();
-                TimeUnit.SECONDS.sleep(1); // для наглядного показа работы программы
+                for (int i = 0; i < 1; i *= i) {
+                }
+//                TimeUnit.SECONDS.sleep(1); // для наглядного показа работы программы
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }

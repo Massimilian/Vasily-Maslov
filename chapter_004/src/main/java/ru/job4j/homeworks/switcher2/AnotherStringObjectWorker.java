@@ -35,10 +35,12 @@ public class AnotherStringObjectWorker implements Runnable {
         for (int i = 0; i < count; i++) {
             System.out.printf("%s: %s %d%s.", this.name, so.getS(), i + 1, System.lineSeparator());
             latch.countDown();
-            try {
-                TimeUnit.MILLISECONDS.sleep(500); // для наглядности работы программы
-            } catch (InterruptedException e) {
-                e.printStackTrace();
+//            try {
+//                TimeUnit.MILLISECONDS.sleep(500); // для наглядности работы программы
+//            } catch (InterruptedException e) {
+//                e.printStackTrace();
+//            }
+            for (int j = 0; j < 1; j *= j) {
             }
         }
     }
