@@ -1,0 +1,1 @@
+﻿Select p.name, c.name from company as c left outer join person as p on p.company_id=c.id where c.id<>5; 
