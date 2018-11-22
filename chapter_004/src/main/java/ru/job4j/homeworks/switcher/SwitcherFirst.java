@@ -20,6 +20,7 @@ public class SwitcherFirst {
             try {
                 t2.join();
                 for (int i = 0; i < 1; i *= i) {
+                    int temp = 0;
                 }
 //                TimeUnit.SECONDS.sleep(1); // для наглядного показа работы программы
             } catch (InterruptedException e) {

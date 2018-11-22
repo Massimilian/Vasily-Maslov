@@ -3,7 +3,7 @@ package ru.job4j.homeworks.sbertech;
 import java.sql.*;
 
 public class Organizer {
-    // инициализация органайзера
+    // ????????????? ???????????
     public void init() {
         String url = "jdbc:postgresql://localhost:5432/organizer";
         String username = "postgres";
@@ -17,8 +17,8 @@ public class Organizer {
         Connection connection = null;
         try {
             connection = DriverManager.getConnection(url, username, password);
-            Statement st = connection.createStatement();
-            ResultSet rs = st.executeQuery("CREATE TABLE organizer");
+            PreparedStatement st = connection.prepareStatement("CREATE TABLE newTable (id int PRIMARY KEY)");
+            ResultSet rs = st.executeQuery();
             rs.close();
             st.close();
         } catch (SQLException e) {

@@ -5,7 +5,7 @@ package ru.job4j.homeworks;
 //        верхнюю, нижнюю, левую и правую. Найти сумму элементов:
 //        а) верхней четверти; в) нижней четверти;
 //        б) правой четверти; г) левой четверти.
-//
+
 //        1000001
 //        0100010
 //        0010100
@@ -33,13 +33,31 @@ public class Task12190 {
                 }
                 break;
             case 2:
-
+                for (int i = 1; i < array.length - 1; i++) {
+                    for (int j = i < array.length / 2 ? array.length - i : i + 1; j < array.length; j++) {
+                        sum += array[i][j];
+                    }
+                }
                 break;
             case 3:
-
+                for (int i = array.length - 1; i > array.length / 2; i--) {
+                    for (int j = array.length - i; j < i; j++) {
+                        sum += array[i][j];
+                    }
+                }
                 break;
             case 4:
-
+                for (int i = 1; i < array.length / 2; i++) {
+                    for (int j = 0; j < i; j++) {
+                        sum += array[i][j];
+                        sum += array[array.length - 1 - i][j];
+                    }
+                    if (array.length % 2 != 0) {
+                        for (int j = 0; j < array.length / 2; j++) {
+                            sum += array[array.length / 2][j];
+                        }
+                    }
+                }
                 break;
             default:
                 System.out.println("Unknown operation");

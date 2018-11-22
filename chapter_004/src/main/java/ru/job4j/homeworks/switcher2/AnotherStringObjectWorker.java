@@ -41,6 +41,7 @@ public class AnotherStringObjectWorker implements Runnable {
 //                e.printStackTrace();
 //            }
             for (int j = 0; j < 1; j *= j) {
+                int temp = j + j * j;
             }
         }
     }

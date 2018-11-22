@@ -29,7 +29,7 @@ public class TrackerSecond implements AutoCloseable {
         for (int i = 0; i < this.items.size(); i++) {
             if (this.items.get(i) != null && this.items.get(i).getId().equals(fresh.getId())) {
                 items.remove(i);
-                this.makeAction(String.format("DELETE FROM tracker WHERE name='%s';", items.get(i).getName()));
+                this.makeAction(String.format("DELETE FROM tracker WHERE code='%s';", items.get(i).getId()));
                 items.add(i, fresh);
                 this.makeAction(String.format("INSERT INTO tracker(name, description, code) VALUES ('%s', '%s', '%s');",
                         fresh.getName(), fresh.getDescription(), fresh.getId()));
@@ -56,7 +56,7 @@ public class TrackerSecond implements AutoCloseable {
                 result.add(item);
             }
         }
-        this.makeAction(String.format("SELECT * FROM tracker WHERE name=%s;", key));
+        this.showAction(String.format("SELECT * FROM tracker WHERE name='%s';", key), key);
         return result;
     }
 
@@ -68,7 +68,7 @@ public class TrackerSecond implements AutoCloseable {
                 break;
             }
         }
-        this.makeAction(String.format("SELECT * FROM tracker WHERE code=%s;", id));
+        this.showAction(String.format("SELECT * FROM tracker WHERE code=%s;", id), id);
         return result;
     }
 
@@ -99,6 +99,41 @@ public class TrackerSecond implements AutoCloseable {
             this.connection = DriverManager.getConnection(url, username, password);
             Statement st = connection.createStatement();
             ResultSet rs = st.executeQuery(action);
+            rs.close();
+            st.close();
+        } catch (SQLException e) {
+            System.out.println(e.getMessage());
+        } finally {
+            if (connection != null) {
+                try {
+                    connection.close();
+                } catch (SQLException e) {
+                    System.out.println(e.getMessage());
+                }
+            }
+        }
+    }
+
+    public void showAction(String action, String info) {
+        System.out.println("ShowAction works");
+        String url = "jdbc:postgresql://localhost:5432/tracker";
+        String username = "postgres";
+        String password = "qetupoi";
+        String driverName = "org.postgresql.Driver";
+        try {
+            Class.forName(driverName);
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        }
+        try {
+            this.connection = DriverManager.getConnection(url, username, password);
+            PreparedStatement st = connection.prepareStatement(action);
+            st.setString(1, info);
+            ResultSet rs = st.executeQuery();
+            while (rs.next()) {
+                System.out.printf("%s: %s. Id number - %s", rs.getString("name"), rs.getString("description"),
+                        rs.getString("code"));
+            }
             rs.close();
             st.close();
         } catch (SQLException e) {
