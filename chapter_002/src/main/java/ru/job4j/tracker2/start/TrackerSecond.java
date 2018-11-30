@@ -15,13 +15,13 @@ public class TrackerSecond implements AutoCloseable {
     }
 
     public void firstStep() {
-        makeAction("CREATE TABLE tracker (id SERIAL PRIMARY KEY, name VARCHAR(50), description TEXT, code TEXT);");
+        makeAction("CREATE TABLE tracker (number SERIAL PRIMARY KEY, name VARCHAR(50), description TEXT, id TEXT);");
     }
 
     public void add(ItemSecond item) {
         item.setId(this.generateId());
         items.add(item);
-        this.makeAction(String.format("INSERT INTO tracker(name, description, code) VALUES ('%s', '%s', '%s');",
+        this.makeAction(String.format("INSERT INTO tracker(name, description, id) VALUES ('%s', '%s', '%s');",
                 item.getName(), item.getDescription(), item.getId()));
     }
 
@@ -29,9 +29,9 @@ public class TrackerSecond implements AutoCloseable {
         for (int i = 0; i < this.items.size(); i++) {
             if (this.items.get(i) != null && this.items.get(i).getId().equals(fresh.getId())) {
                 items.remove(i);
-                this.makeAction(String.format("DELETE FROM tracker WHERE code='%s';", items.get(i).getId()));
+                this.makeAction(String.format("DELETE FROM tracker WHERE id='%s';", items.get(i).getId()));
                 items.add(i, fresh);
-                this.makeAction(String.format("INSERT INTO tracker(name, description, code) VALUES ('%s', '%s', '%s');",
+                this.makeAction(String.format("INSERT INTO tracker(name, description, id) VALUES ('%s', '%s', '%s');",
                         fresh.getName(), fresh.getDescription(), fresh.getId()));
                 break;
             }
@@ -43,7 +43,7 @@ public class TrackerSecond implements AutoCloseable {
         for (int i = 0; i < this.items.size(); i++) {
             if (items.get(i).getId().equals(id)) {
                 items.remove(i);
-                this.makeAction(String.format("DELETE FROM tracker WHERE code='%s';", items.get(i).getId()));
+                this.makeAction(String.format("DELETE FROM tracker WHERE id='%s';", items.get(i).getId()));
                 break;
             }
         }
@@ -68,7 +68,7 @@ public class TrackerSecond implements AutoCloseable {
                 break;
             }
         }
-        this.showAction(String.format("SELECT * FROM tracker WHERE code=%s;", id), id);
+        this.showAction(String.format("SELECT * FROM tracker WHERE id=%s;", id), id);
         return result;
     }
 
@@ -97,8 +97,8 @@ public class TrackerSecond implements AutoCloseable {
         }
         try {
             this.connection = DriverManager.getConnection(url, username, password);
-            Statement st = connection.createStatement();
-            ResultSet rs = st.executeQuery(action);
+            PreparedStatement st = connection.prepareStatement(action);
+            ResultSet rs = st.executeQuery();
             rs.close();
             st.close();
         } catch (SQLException e) {
@@ -115,7 +115,6 @@ public class TrackerSecond implements AutoCloseable {
     }
 
     public void showAction(String action, String info) {
-        System.out.println("ShowAction works");
         String url = "jdbc:postgresql://localhost:5432/tracker";
         String username = "postgres";
         String password = "qetupoi";
