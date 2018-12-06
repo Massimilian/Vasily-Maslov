@@ -1,6 +1,6 @@
 package ru.job4j.tracker2.models;
 
-public class TaskSecond extends ItemSecond {
+public class TaskSecond extends Item {
 	public TaskSecond(String name, String desc) {
 		this.name = name;
 		this.description = desc;

@@ -1,23 +1,23 @@
 package ru.job4j.tracker2.models;
 
-public class ItemSecond {
+public class Item {
 	protected String id;
 	public String name;
 	public String description;
 	public long create;
 	
-	public ItemSecond(String name, String description, long create) {
+	public Item(String name, String description, long create) {
 		this.name = name;
 		this.description = description;
 		this.create = create;
 	}
 	
-	public ItemSecond(String name, String description) {
+	public Item(String name, String description) {
 		this.name = name;
 		this.description = description;
 	}
 	
-	public ItemSecond() {
+	public Item() {
 	}
 	
 	public String getName() {

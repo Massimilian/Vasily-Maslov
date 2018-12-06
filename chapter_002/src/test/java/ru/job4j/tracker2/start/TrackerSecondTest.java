@@ -7,7 +7,7 @@ import static org.hamcrest.Matchers.is;
 import static org.junit.Assert.*;
 
 public class TrackerSecondTest {
-	private TrackerSecond tracker = new TrackerSecond();
+	private Tracker tracker = new Tracker();
 	private InputSecond input = new ConsoleInputSecond();
 	
 	@Before

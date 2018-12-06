@@ -9,8 +9,7 @@ class EditItem extends BaseAction implements UserAction {
 		super(key, name);
 	}
 	
-	public void execute(InputSecond input, TrackerSecond tracker) {
-		tracker.update(new TaskSecond(input.ask("Please, enter the task's id."), input.ask("Enter new name."), input.ask("Enter new description.")));
+	public void execute(InputSecond input, Tracker tracker) {
 		System.out.println("New Item added.");
 	}
 }
@@ -19,7 +18,7 @@ class DeleteItem extends BaseAction implements UserAction {
 	public DeleteItem(int key, String name) {
 		super(key, name);
 	}	
-	public void execute(InputSecond input, TrackerSecond tracker) {
+	public void execute(InputSecond input, Tracker tracker) {
 		tracker.delete(input.ask("Please, enter the task's id."));
 		System.out.println("This task has been deleted");
 	}
@@ -27,11 +26,11 @@ class DeleteItem extends BaseAction implements UserAction {
 
 public class MenuTracker {
 	private InputSecond input;
-	private TrackerSecond tracker;
+	private Tracker tracker;
 	private UserAction[] actions = new UserAction[8];
 	private int position = 0;
 	
-	public MenuTracker(InputSecond input, TrackerSecond tracker) {
+	public MenuTracker(InputSecond input, Tracker tracker) {
 		this.input = input;
 		this.tracker = tracker;
 	}
@@ -70,8 +69,8 @@ public class MenuTracker {
 			super(key, name);
 		}
 		
-	public void execute(InputSecond input, TrackerSecond tracker) {
-		tracker.add(new ItemSecond(input.ask("Enter new Task's name."), input.ask("Enter new Task's description.")));
+	public void execute(InputSecond input, Tracker tracker) {
+		tracker.add(new Item(input.ask("Enter new Task's name."), input.ask("Enter new Task's description.")));
 		System.out.println("New Item added.");
 		}
 	}
@@ -80,8 +79,8 @@ public class MenuTracker {
 		public FindById(int key, String name) {
 			super(key, name);
 		}
-		public void execute(InputSecond input, TrackerSecond tracker) {
-			ItemSecond it = tracker.findById(input.ask("Please, enter the task's id."));
+		public void execute(InputSecond input, Tracker tracker) {
+			Item it = tracker.findById(input.ask("Please, enter the task's id."));
 			System.out.printf("Task's number - %s:\n Task's name - \"%s\",\n Task's description \"%s\".\n", it.getId(), it.getName(), it.getDescription());			
 		}	
 	}
@@ -90,11 +89,11 @@ public class MenuTracker {
 		public FindByName(int key, String name) {
 			super(key, name);
 		}
-		public void execute(InputSecond input, TrackerSecond tracker) {
+		public void execute(InputSecond input, Tracker tracker) {
 			int count = 0;
-			ArrayList<ItemSecond> its = tracker.findByName(input.ask("Please, enter the task's name."));
+			ArrayList<Item> its = tracker.findByName(input.ask("Please, enter the task's name."));
 			System.out.println("Task's founded:");
-			for (ItemSecond item : its) {
+			for (Item item : its) {
 				count++;
 				System.out.printf("%d.\n Task's number %s:\n Task's description - \"%s\".\n", count, item.getId(), item.getDescription());
 			}
@@ -105,8 +104,8 @@ public class MenuTracker {
 		public ShowItems(int key, String name) {
 			super(key, name);
 		}
-		public void execute(InputSecond input, TrackerSecond tracker) {
-			for (ItemSecond item : tracker.getAll()) {
+		public void execute(InputSecond input, Tracker tracker) {
+			for (Item item : tracker.getAll()) {
 				System.out.println(String.format("%s. %s", item.getId(), item.getName()));
 			}
 		}
