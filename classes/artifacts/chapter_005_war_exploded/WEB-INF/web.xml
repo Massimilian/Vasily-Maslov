@@ -42,7 +42,7 @@
 
     <servlet>
         <servlet-name>UserServlet</servlet-name>
-        <servlet-class>ru.job4j.crudservlet.UserServlet</servlet-class>
+        <servlet-class>ru.job4j.crud_servlet.UserServlet</servlet-class>
     </servlet>
 
     <servlet-mapping>
