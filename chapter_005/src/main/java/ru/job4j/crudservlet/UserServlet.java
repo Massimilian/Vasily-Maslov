@@ -44,8 +44,8 @@ public class UserServlet extends HttpServlet {
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         resp.setContentType("text/html");
         // Вводим в тестовом режиме двух новых пользователей, которых потом надо будет вывести на странице.
-        this.users.add(new User(1, "First", "first", "first@.com"));
-        this.users.add(new User(2, "Second", "second", "second@.com"));
+//        this.users.add(new User(1, "First", "first", "first@.com"));
+//        this.users.add(new User(2, "Second", "second", "second@.com"));
         doGet(req, resp);
     }
 }
