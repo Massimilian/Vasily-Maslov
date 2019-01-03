@@ -7,7 +7,7 @@ public class Calculator {
 	public void subtrack(double first, double second) {
 		this.result = first - second;
 	}
-	public void div(double first, double second) {
+	public void div(double first, double second) throws SubZeroMultipleException {
 		this.result = first / second;
 	}
 	public void multiple(double first, double second) {
@@ -17,4 +17,5 @@ public class Calculator {
 	public double getResult() {
 	return this.result;	
 	}
+
 }
