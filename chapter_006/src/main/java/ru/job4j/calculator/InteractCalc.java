@@ -25,8 +25,25 @@ public class InteractCalc extends Calculator {
     private Scanner scanner = new Scanner(System.in);
 
     /**
+     * Setter special for tests
+     * @param first
+     */
+    public void setFirst(double first) {
+        this.first = first;
+    }
+
+    /**
+     * Setter special for tests
+     * @param second
+     */
+    public void setSecond(double second) {
+        this.second = second;
+    }
+
+    /**
      * Method for child class
      * @return number
+
      */
     public double getFirst() {
         return first;
