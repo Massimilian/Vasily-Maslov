@@ -25,6 +25,46 @@ public class InteractCalc extends Calculator {
     private Scanner scanner = new Scanner(System.in);
 
     /**
+     * Method for child class
+     * @return number
+     */
+    public double getFirst() {
+        return first;
+    }
+
+    /**
+     * Method for child class
+     * @return number
+     */
+    public double getSecond() {
+        return second;
+    }
+
+    /**
+     * Method for child class
+     * @return type of operation
+     */
+    public String getType() {
+        return type;
+    }
+
+    /**
+     * Method for child class
+     * @param type
+     */
+    public void setType(String type) {
+        this.type = type;
+    }
+
+    /**
+     * Method for child class
+     * @return
+     */
+    public Scanner getScanner() {
+        return scanner;
+    }
+
+    /**
      * checking the zero dividing
      *
      * @param first
@@ -38,6 +78,7 @@ public class InteractCalc extends Calculator {
         } else {
             super.div(first, second);
         }
+
     }
 
     /**
@@ -60,7 +101,7 @@ public class InteractCalc extends Calculator {
      * Method for choosing the operation
      */
     public void choosing() {
-        System.out.printf("Enter the type of operation: (+, -, *, /).");
+        System.out.println("Enter the type of operation: (+, -, *, /).");
         this.type = scanner.next();
     }
 

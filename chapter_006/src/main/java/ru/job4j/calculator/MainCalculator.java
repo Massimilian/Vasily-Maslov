@@ -2,7 +2,7 @@ package ru.job4j.calculator;
 
 public class MainCalculator {
     public static void main(String[] args) {
-        InteractCalc calc = new InteractCalc();
+        EngeneerCalc calc = new EngeneerCalc();
         calc.operationFirst();
         do {
             calc.operationSecond();
