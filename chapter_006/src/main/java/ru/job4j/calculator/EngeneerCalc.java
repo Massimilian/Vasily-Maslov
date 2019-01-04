@@ -10,20 +10,12 @@ public class EngeneerCalc extends InteractCalc {
      */
     @Override
     public void calc() throws OperationException, SubZeroMultipleException {
-        if (getType().equals("+")) {
-            add(getFirst(), getSecond());
-        } else if (getType().equals("-")) {
-            subtrack(getFirst(), getSecond());
-        } else if (getType().equals("*")) {
-            multiple(getFirst(), getSecond());
-        } else if (getType().equals("/")) {
-            div(getFirst(), getSecond());
-        } else if (getType().equals("pow")) {
+        if (getType().equals("pow")) {
             pow(getFirst(), getSecond());
         } else if (getType().equals("%")) {
             percent(getFirst(), getSecond());
         } else {
-            throw new OperationException("Impossible operation!");
+            super.calc();
         }
     }
 
@@ -51,7 +43,16 @@ public class EngeneerCalc extends InteractCalc {
      * Method for choosing the operation.
      */
     public void choosing() {
-        System.out.println("Enter the type of operation: (+, -, *, /, pow, %).");
+        System.out.println("Enter the type of operation: (+, -, *, /, pow, %, =).");
         setType(getScanner().next());
+        setOperations(this.getType());
+        checkExit();
+    }
+
+    private void checkExit() {
+        if (getType().equals("=")) {
+            setOperations(String.valueOf(this.getResult()));
+            setExit(true);
+        }
     }
 }

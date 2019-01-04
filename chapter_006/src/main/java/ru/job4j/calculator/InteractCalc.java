@@ -5,6 +5,11 @@ import java.util.Scanner;
 public class InteractCalc extends Calculator {
 
     /**
+     * Special string to write all operations.
+     */
+    private String operations = "Result:";
+
+    /**
      * First number for operation.
      */
     private double first = 0;
@@ -26,6 +31,7 @@ public class InteractCalc extends Calculator {
 
     /**
      * Setter special for tests
+     *
      * @param first
      */
     public void setFirst(double first) {
@@ -34,6 +40,7 @@ public class InteractCalc extends Calculator {
 
     /**
      * Setter special for tests
+     *
      * @param second
      */
     public void setSecond(double second) {
@@ -42,8 +49,8 @@ public class InteractCalc extends Calculator {
 
     /**
      * Method for child class
+     *
      * @return number
-
      */
     public double getFirst() {
         return first;
@@ -51,6 +58,7 @@ public class InteractCalc extends Calculator {
 
     /**
      * Method for child class
+     *
      * @return number
      */
     public double getSecond() {
@@ -59,6 +67,7 @@ public class InteractCalc extends Calculator {
 
     /**
      * Method for child class
+     *
      * @return type of operation
      */
     public String getType() {
@@ -67,6 +76,7 @@ public class InteractCalc extends Calculator {
 
     /**
      * Method for child class
+     *
      * @param type
      */
     public void setType(String type) {
@@ -75,6 +85,7 @@ public class InteractCalc extends Calculator {
 
     /**
      * Method for child class
+     *
      * @return
      */
     public Scanner getScanner() {
@@ -104,6 +115,7 @@ public class InteractCalc extends Calculator {
     public void operationFirst() {
         System.out.println("Enter first number:");
         this.first = scanner.nextDouble();
+        setOperations(String.valueOf(getFirst()));
     }
 
     /**
@@ -112,6 +124,7 @@ public class InteractCalc extends Calculator {
     public void operationSecond() {
         System.out.println("Enter second number:");
         this.second = scanner.nextDouble();
+        setOperations(String.valueOf(getSecond()));
     }
 
     /**
@@ -120,6 +133,7 @@ public class InteractCalc extends Calculator {
     public void choosing() {
         System.out.println("Enter the type of operation: (+, -, *, /).");
         this.type = scanner.next();
+        setOperations(this.type);
     }
 
     /**
@@ -155,5 +169,13 @@ public class InteractCalc extends Calculator {
             this.first = getResult();
             return false;
         }
+    }
+
+    public String getOperations() {
+        return operations;
+    }
+
+    public void setOperations(String operations) {
+        this.operations = String.format("%s %s", getOperations(), operations);
     }
 }

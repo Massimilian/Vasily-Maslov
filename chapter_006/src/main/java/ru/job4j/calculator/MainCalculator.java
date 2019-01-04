@@ -4,9 +4,9 @@ public class MainCalculator {
     public static void main(String[] args) {
         EngeneerCalc calc = new EngeneerCalc();
         calc.operationFirst();
-        do {
+        calc.choosing();
+        while (!calc.getExit()) {
             calc.operationSecond();
-            calc.choosing();
             try {
                 calc.calc();
             } catch (OperationException oe) {
@@ -15,6 +15,8 @@ public class MainCalculator {
                 szme.printStackTrace();
             }
             System.out.println(calc.getResult());
-        } while (!calc.exit());
+            calc.choosing();
+        }
+        System.out.println(calc.getOperations());
     }
 }
