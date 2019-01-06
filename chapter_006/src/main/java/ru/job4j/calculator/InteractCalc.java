@@ -157,6 +157,13 @@ public class InteractCalc extends Calculator {
     }
 
     /**
+     * Special operation for renovation parameter 'first'.
+     */
+    public void renovation() {
+        this.first = this.getResult();
+    }
+
+    /**
      * Try to exit
      *
      * @return true if need to exit.

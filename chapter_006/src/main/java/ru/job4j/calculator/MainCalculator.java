@@ -15,6 +15,7 @@ public class MainCalculator {
                 szme.printStackTrace();
             }
             System.out.println(calc.getResult());
+            calc.renovation();
             calc.choosing();
         }
         System.out.println(calc.getOperations());
