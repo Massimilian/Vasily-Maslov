@@ -15,8 +15,10 @@ public class Food {
     private boolean toWareshop;
     private boolean toShop;
     private boolean toGarbage;
+    private final boolean canReproduct;
+    private final boolean isVegetable;
 
-    public Food(String name, long createDate, long expaireDate, double price) {
+    public Food(String name, long createDate, long expaireDate, double price, boolean canReproduct, boolean isVegetable) {
         this.name = name;
         this.createDate = new Date(createDate);
         this.expaireDate = new Date(expaireDate);
@@ -25,6 +27,16 @@ public class Food {
         this.toWareshop = true;
         this.toShop = false;
         this.toGarbage = false;
+        this.canReproduct = canReproduct;
+        this.isVegetable = isVegetable;
+    }
+
+    public boolean isVegetable() {
+        return isVegetable;
+    }
+
+    public boolean isCanReproduct() {
+        return canReproduct;
     }
 
     public boolean isDiscount() {
