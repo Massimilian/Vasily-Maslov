@@ -9,8 +9,8 @@ public class DoubleDecorContainer extends Decorator {
     private BaseContainer warehouse;
     private int maxSize;
 
-    public DoubleDecorContainer(BaseContainer baseContainer, int maxSize) {
-        super(baseContainer);
+    public DoubleDecorContainer(BaseContainer bc, int maxSize) {
+        super(bc);
         this.warehouse = new StandartDecorContainer(new Warehouse());
         this.maxSize = maxSize;
     }
