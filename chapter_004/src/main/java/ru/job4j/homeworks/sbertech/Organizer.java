@@ -1,6 +1,5 @@
-package ru.job4j.homeworks.sbertech;
 
-import com.sun.org.apache.xpath.internal.SourceTree;
+package ru.job4j.homeworks.sbertech;
 
 import java.sql.*;
 import java.util.Scanner;
