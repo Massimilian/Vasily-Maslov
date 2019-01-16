@@ -1,0 +1,99 @@
+package ru.job4j.chainstorage;
+
+import org.junit.Test;
+
+import static org.hamcrest.Matchers.is;
+import static org.junit.Assert.*;
+
+import java.util.ArrayList;
+
+public class ChainStorageTest {
+    FoodManager fm;
+    long now = System.currentTimeMillis();
+    long minute = 60000L;
+    private long nowPlusFourSeconds = now + minute / 15;
+    private long nowPlusSixSeconds = now + minute / 10;
+    private long nowPlusEightSeconds = now + minute / 15 * 2;
+    private long nowPlusTenSeconds = now + minute / 6;
+    private int waitTime = 2000;
+
+    @Test
+    public void whenTryToPutSomeFoodsIntoWarehouseThenDoIt() {
+        Food first = new Food("First", now, nowPlusFourSeconds, 100);
+        Food second = new Food("Second", now, nowPlusFourSeconds, 100);
+        ArrayList<Food> goods = new ArrayList<>();
+        goods.add(first);
+        goods.add(second);
+        fm = new FoodManager(goods);
+        fm.getWarehouse().renovate(goods);
+        assertThat(fm.getWarehouse().getGoods().size(), is(2));
+    }
+
+    @Test
+    public void whenTryToUseAllStoragesInTimeThenDoIt() {
+        Food one = new Food("One", now, nowPlusFourSeconds, 100.0);
+        Food two = new Food("Two", now, nowPlusSixSeconds, 200.0);
+        Food three = new Food("Three", now, nowPlusEightSeconds, 300.0);
+        Food four = new Food("Four", now, nowPlusTenSeconds, 400.0);
+        ArrayList<Food> goods = new ArrayList<>();
+        goods.add(one);
+        goods.add(two);
+        goods.add(three);
+        goods.add(four);
+        fm = new FoodManager(goods);
+        fm.action();
+        assertThat(fm.getWarehouse().getGoods().size(), is(4));
+        assertThat(fm.getShop().getGoods().size(), is(0));
+        assertThat(fm.getTrash().getGoods().size(), is(0));
+        try {
+            Thread.sleep(waitTime);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        fm.action();
+        System.out.println("Two seconds passed. 'Four' is in the warehouse, other foods are in the shop.");
+        assertThat(fm.getWarehouse().getGoods().size(), is(1));
+        assertThat(fm.getShop().getGoods().size(), is(3));
+        assertThat(fm.getTrash().getGoods().size(), is(0));
+        try {
+            Thread.sleep(waitTime);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        fm.action();
+        System.out.println("Two more seconds passed. 'Four', 'Three' and 'Two' are in the shop, 'One' is in the trash.");
+        assertThat(fm.getWarehouse().getGoods().size(), is(0));
+        assertThat(fm.getShop().getGoods().size(), is(3));
+        assertThat(fm.getTrash().getGoods().size(), is(1));
+        try {
+            Thread.sleep(waitTime);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        fm.action();
+        System.out.println("Two more seconds passed. 'Four' and 'Three' are in the shop, 'One' and 'Two' are in the trash.");
+        assertThat(fm.getWarehouse().getGoods().size(), is(0));
+        assertThat(fm.getShop().getGoods().size(), is(2));
+        assertThat(fm.getTrash().getGoods().size(), is(2));
+        try {
+            Thread.sleep(waitTime);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        fm.action();
+        System.out.println("Two more seconds passed. 'Four' is in the shop, others are in the trash.");
+        assertThat(fm.getWarehouse().getGoods().size(), is(0));
+        assertThat(fm.getShop().getGoods().size(), is(1));
+        assertThat(fm.getTrash().getGoods().size(), is(3));
+        try {
+            Thread.sleep(waitTime + 1000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        fm.action();
+        System.out.println("All goods are in the trash.");
+        assertThat(fm.getWarehouse().getGoods().size(), is(0));
+        assertThat(fm.getShop().getGoods().size(), is(0));
+        assertThat(fm.getTrash().getGoods().size(), is(4));
+    }
+}
