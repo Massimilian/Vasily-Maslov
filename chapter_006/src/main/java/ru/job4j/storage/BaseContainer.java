@@ -4,7 +4,10 @@ import java.util.ArrayList;
 
 public interface BaseContainer {
 
-    ArrayList<Food> container = new ArrayList<>();
+    /**
+     * Special container for goods.
+     */
+    ArrayList<Food> array = new ArrayList<>();
 
     ArrayList<Food> getContainer();
 

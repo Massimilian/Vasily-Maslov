@@ -18,7 +18,7 @@ public abstract class Decorator implements BaseContainer {
 
     @Override
     public ArrayList<Food> getContainer() {
-        return this.bc.container;
+        return this.bc.array;
     }
 
     @Override

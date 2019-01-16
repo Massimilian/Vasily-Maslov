@@ -12,7 +12,7 @@ import java.util.Scanner;
 
 public class Task12250 {
     // special methods for test
-    int [] newPupil;
+    int[] newPupil;
 
     public Task12250(int[] newPupil) {
         this.newPupil = newPupil;

@@ -27,7 +27,7 @@ public class MenuTest {
             "Tarea 2", System.lineSeparator(), "Tarea 3");
 
     @Test
-    public void WhenAskAllTareasThenReturnThem() {
+    public void whenAskAllGroupOfTasksThenReturnThemAll() {
         for (int i = 0; i < main.length; i++) {
             result = String.format("%s%s%s", result, System.lineSeparator(), main[i].getMenuName());
         }

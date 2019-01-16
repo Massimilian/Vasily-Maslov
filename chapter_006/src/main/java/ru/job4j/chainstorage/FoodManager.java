@@ -4,6 +4,9 @@ import ru.job4j.chainstorage.storages.*;
 
 import java.util.ArrayList;
 
+/**
+ * Special class for manage all Containers and goods.
+ */
 public class FoodManager {
     private Storage warehouse = new Warehouse();
     private Storage shop = new Shop();
@@ -26,6 +29,9 @@ public class FoodManager {
         return trash;
     }
 
+    /**
+     * Special method for renovating the whole situation.
+     */
     public void action() {
         this.warehouse.renovate(this.goods);
         this.cleanGoods();
@@ -35,6 +41,9 @@ public class FoodManager {
         this.cleanGoods();
     }
 
+    /**
+     * This Method is cleaning the List of goods.
+     */
     private void cleanGoods() {
         for (int i = this.goods.size() - 1; i >= 0; i--) {
             if (this.goods.get(i).isAdded()) {

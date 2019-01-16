@@ -4,7 +4,7 @@ import java.util.Date;
 import java.util.Objects;
 
 /**
- * Special class of foods
+ * Special class of goods
  */
 public class Food {
     private String name;
