@@ -7,7 +7,7 @@ public interface BaseContainer {
     /**
      * Special container for goods.
      */
-    ArrayList<Food> array = new ArrayList<>();
+    ArrayList<Food> FOODS = new ArrayList<>();
 
     ArrayList<Food> getContainer();
 

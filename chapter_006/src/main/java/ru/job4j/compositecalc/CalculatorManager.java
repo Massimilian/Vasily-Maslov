@@ -3,8 +3,8 @@ package ru.job4j.compositecalc;
 import ru.job4j.calculator.SubZeroMultipleException;
 
 public class CalculatorManager {
-    CalculatorForComposite cfc = new CalculatorForComposite();
-    EngennerCalculatorForComposite ecfc = new EngennerCalculatorForComposite();
+    private CalculatorForComposite cfc = new CalculatorForComposite();
+    private EngeneerCalculatorForComposite ecfc = new EngeneerCalculatorForComposite();
 
 
     public double working(double first, String operation, double second) throws SubZeroMultipleException {

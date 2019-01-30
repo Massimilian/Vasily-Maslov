@@ -1,6 +1,6 @@
 package ru.job4j.compositecalc;
 
-public class EngennerCalculatorForComposite {
+public class EngeneerCalculatorForComposite {
 
     /**
      * Find percent.

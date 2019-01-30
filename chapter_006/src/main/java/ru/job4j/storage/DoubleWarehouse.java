@@ -1,7 +1,5 @@
 package ru.job4j.storage;
 
-import com.sun.xml.internal.bind.v2.TODO;
-
 /**
  * Special variation of warehouse. Working without pattern "Decorator".
  */

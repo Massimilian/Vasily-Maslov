@@ -27,7 +27,7 @@ public class AnotherTrackerSecondTest {
 
    @Test
    public void whenInvalidInput() {
-       ValidateInput input = new ValidateInput(new StubInputSecond(new String[] {"invalid", "7", "y"}));
+       ValidateInput input = new ValidateInput(new StubInput(new String[] {"invalid", "7", "y"}));
        input.ask("Enter", new int[] {1});
        assertThat(this.mem.toString(), is(String.format("Please enter valid data again.%s", ls)));
    }
