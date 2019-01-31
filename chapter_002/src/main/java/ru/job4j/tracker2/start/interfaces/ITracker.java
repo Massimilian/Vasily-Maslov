@@ -16,6 +16,4 @@ public interface ITracker {
 
     Item[] findAll();
 
-    String generateId();
-
 }

@@ -11,4 +11,6 @@ public interface ITrackerStandart extends ITracker {
     Item findById(String id);
 
     List<Item> getAll();
+
+    String generateId();
 }

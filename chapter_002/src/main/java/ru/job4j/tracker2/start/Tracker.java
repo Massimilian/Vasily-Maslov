@@ -76,6 +76,7 @@ public class Tracker implements ITrackerStandart, AutoCloseable {
         return result;
     }
 
+    @Override
     public String generateId() {
         return String.valueOf(System.currentTimeMillis() + RN.nextInt(100));
     }

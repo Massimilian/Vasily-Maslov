@@ -19,14 +19,11 @@ public class TrackerSQL implements ITrackerSQL, AutoCloseable {
 
     @Override
     public void add(Item item) {
-        item.setId(this.generateId());
-        try {
-            PreparedStatement pst = connection.prepareStatement("INSERT INTO tracker (id, name, description, createDate) VALUES (?, ?, ?, ?)");
-            pst.setString(1, item.getId());
-            pst.setString(2, item.getName());
-            pst.setString(3, item.getDescription());
+        try (PreparedStatement pst = connection.prepareStatement("INSERT INTO tracker (name, description, createDate) VALUES (?, ?, ?)")) {
+            pst.setString(1, item.getName());
+            pst.setString(2, item.getDescription());
             Date date = new Date(System.currentTimeMillis());
-            pst.setString(4, date.toString());
+            pst.setString(3, date.toString());
             ResultSet rs = pst.executeQuery();
             rs.close();
             pst.close();
@@ -42,9 +39,8 @@ public class TrackerSQL implements ITrackerSQL, AutoCloseable {
 
     @Override
     public void delete(String id) {
-        try {
-            PreparedStatement pst = connection.prepareStatement("DELETE FROM tracker WHERE id = ?");
-            pst.setString(1, id);
+        try (PreparedStatement pst = connection.prepareStatement("DELETE FROM tracker WHERE id = ?")) {
+            pst.setInt(1, Integer.parseInt(id));
             ResultSet rs = pst.executeQuery();
             rs.close();
             pst.close();
@@ -55,11 +51,10 @@ public class TrackerSQL implements ITrackerSQL, AutoCloseable {
 
     @Override
     public boolean update(Item fresh) {
-        try {
-            PreparedStatement pst = connection.prepareStatement("UPDATE tracker SET name = ?,  description = ? WHERE id = ?");
+        try (PreparedStatement pst = connection.prepareStatement("UPDATE tracker SET name = ?,  description = ? WHERE id = ?")) {
             pst.setString(1, fresh.getName());
             pst.setString(2, fresh.getDescription());
-            pst.setString(3, fresh.getId());
+            pst.setInt(3, Integer.parseInt(fresh.getId()));
             ResultSet rs = pst.executeQuery();
             rs.close();
             pst.close();
@@ -81,8 +76,7 @@ public class TrackerSQL implements ITrackerSQL, AutoCloseable {
 
     @Override
     public void findByNameSQL(String key) {
-        try {
-            PreparedStatement pst = connection.prepareStatement("SELECT * FROM tracker WHERE name = ?");
+        try (PreparedStatement pst = connection.prepareStatement("SELECT * FROM tracker WHERE name = ?")) {
             pst.setString(1, key);
             ResultSet rs = pst.executeQuery();
             this.show(rs);
@@ -95,9 +89,8 @@ public class TrackerSQL implements ITrackerSQL, AutoCloseable {
 
     @Override
     public void findByIdSQL(String id) {
-        try {
-            PreparedStatement pst = connection.prepareStatement("SELECT * FROM tracker WHERE id = ?");
-            pst.setString(1, id);
+        try (PreparedStatement pst = connection.prepareStatement("SELECT * FROM tracker WHERE id = ?")) {
+            pst.setInt(1, Integer.parseInt(id));
             ResultSet rs = pst.executeQuery();
             this.show(rs);
             rs.close();
@@ -128,7 +121,7 @@ public class TrackerSQL implements ITrackerSQL, AutoCloseable {
         try {
             connection = DriverManager.getConnection(url, username, password);
             Statement st = connection.createStatement();
-            ResultSet rs = st.executeQuery("CREATE TABLE tracker (id TEXT, name TEXT, description TEXT, createDate TEXT)");
+            ResultSet rs = st.executeQuery("CREATE TABLE tracker (id SERIAL PRIMARY KEY, name TEXT, description TEXT, createDate TEXT)");
             rs.close();
             st.close();
         } catch (SQLException e) {
@@ -136,14 +129,10 @@ public class TrackerSQL implements ITrackerSQL, AutoCloseable {
         }
     }
 
-    public String generateId() {
-        return String.valueOf(System.currentTimeMillis() + RN.nextInt(100));
-    }
-
     private void show(ResultSet rs) {
         try {
             while (rs.next()) {
-                System.out.println(String.format("Task with id-number %s named %s has description: '%s'. Date of birth - %s.", rs.getString("id"),
+                System.out.println(String.format("Task with id-number %s named '%s' has description: '%s'. Date of birth - %s.", rs.getString("id"),
                         rs.getString("name"), rs.getString("description"), rs.getDate("createdate")));
             }
         } catch (SQLException e) {

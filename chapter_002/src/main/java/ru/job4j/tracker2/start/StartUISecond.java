@@ -90,9 +90,9 @@ public class StartUISecond {
         Input input = new ValidateInput(new ConsoleInput());
         StartUISecond suis = new StartUISecond(input);
 //      For SQL-tracker
-        MenuTracker menu = new MenuTracker(suis.input, suis.trackersql);
+//      MenuTracker menu = new MenuTracker(suis.input, suis.trackersql);
 //      For standart tracker
-//        MenuTracker menu = new MenuTracker(suis.input, suis.tracker);
+        MenuTracker menu = new MenuTracker(suis.input, suis.tracker);
         suis.isSQL = menu.setIsSQL();
         suis.init(menu);
         suis.go(menu, suis.isSQL);
