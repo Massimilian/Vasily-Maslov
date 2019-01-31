@@ -2,12 +2,15 @@ package ru.job4j.tracker2.start;
 
 import ru.job4j.tracker2.start.interfaces.*;
 
+import java.sql.SQLException;
+
 public class StartUISecond {
     private int[] ranges = {1, 2, 3, 4, 5, 6, 7, 0};
     private Input input;
     private ITracker tracker;
     private TrackerSQL trackersql = new TrackerSQL();
-    boolean cont = true;
+    private boolean cont = true;
+    private boolean isSQL = false;
 
     public StartUISecond(Input input) {
         this.input = input;
@@ -35,8 +38,15 @@ public class StartUISecond {
 
             public void execute(Input input, ITrackerSQL tracker) {
                 if ("y".equals(input.ask("Do you want to exit?"))) {
-                    System.exit(0);
+                    if (((TrackerSQL) tracker).getConnection() != null) {
+                        try {
+                            ((TrackerSQL) tracker).getConnection().close();
+                        } catch (SQLException e) {
+                            System.out.println(e.getMessage());
+                        }
+                    }
                 }
+                System.exit(0);
             }
 
             public String info() {
@@ -80,11 +90,11 @@ public class StartUISecond {
         Input input = new ValidateInput(new ConsoleInput());
         StartUISecond suis = new StartUISecond(input);
 //      For SQL-tracker
-//      MenuTracker menu = new MenuTracker(suis.input, suis.trackersql);
+        MenuTracker menu = new MenuTracker(suis.input, suis.trackersql);
 //      For standart tracker
-        MenuTracker menu = new MenuTracker(suis.input, suis.tracker);
-        boolean isSQL = menu.setIsSQL();
+//        MenuTracker menu = new MenuTracker(suis.input, suis.tracker);
+        suis.isSQL = menu.setIsSQL();
         suis.init(menu);
-        suis.go(menu, isSQL);
+        suis.go(menu, suis.isSQL);
     }
 }

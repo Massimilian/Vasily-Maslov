@@ -21,7 +21,6 @@ public class TrackerSQL implements ITrackerSQL, AutoCloseable {
     public void add(Item item) {
         item.setId(this.generateId());
         try {
-            connection = DriverManager.getConnection(url, username, password);
             PreparedStatement pst = connection.prepareStatement("INSERT INTO tracker (id, name, description, createDate) VALUES (?, ?, ?, ?)");
             pst.setString(1, item.getId());
             pst.setString(2, item.getName());
@@ -33,14 +32,6 @@ public class TrackerSQL implements ITrackerSQL, AutoCloseable {
             pst.close();
         } catch (SQLException e) {
             System.out.println(e.getMessage());
-        } finally {
-            if (connection != null) {
-                try {
-                    connection.close();
-                } catch (SQLException e) {
-                    System.out.println(e.getMessage());
-                }
-            }
         }
     }
 
@@ -52,7 +43,6 @@ public class TrackerSQL implements ITrackerSQL, AutoCloseable {
     @Override
     public void delete(String id) {
         try {
-            connection = DriverManager.getConnection(url, username, password);
             PreparedStatement pst = connection.prepareStatement("DELETE FROM tracker WHERE id = ?");
             pst.setString(1, id);
             ResultSet rs = pst.executeQuery();
@@ -60,21 +50,12 @@ public class TrackerSQL implements ITrackerSQL, AutoCloseable {
             pst.close();
         } catch (SQLException e) {
             System.out.println(e.getMessage());
-        } finally {
-            if (connection != null) {
-                try {
-                    connection.close();
-                } catch (SQLException e) {
-                    System.out.println(e.getMessage());
-                }
-            }
         }
     }
 
     @Override
     public boolean update(Item fresh) {
         try {
-            connection = DriverManager.getConnection(url, username, password);
             PreparedStatement pst = connection.prepareStatement("UPDATE tracker SET name = ?,  description = ? WHERE id = ?");
             pst.setString(1, fresh.getName());
             pst.setString(2, fresh.getDescription());
@@ -84,16 +65,12 @@ public class TrackerSQL implements ITrackerSQL, AutoCloseable {
             pst.close();
         } catch (SQLException e) {
             System.out.println(e.getMessage());
-        } finally {
-            if (connection != null) {
-                try {
-                    connection.close();
-                } catch (SQLException e) {
-                    System.out.println(e.getMessage());
-                }
-            }
         }
         return true;
+    }
+
+    public Connection getConnection() {
+        return connection;
     }
 
     @Override
@@ -105,7 +82,6 @@ public class TrackerSQL implements ITrackerSQL, AutoCloseable {
     @Override
     public void findByNameSQL(String key) {
         try {
-            connection = DriverManager.getConnection(url, username, password);
             PreparedStatement pst = connection.prepareStatement("SELECT * FROM tracker WHERE name = ?");
             pst.setString(1, key);
             ResultSet rs = pst.executeQuery();
@@ -114,21 +90,12 @@ public class TrackerSQL implements ITrackerSQL, AutoCloseable {
             pst.close();
         } catch (SQLException e) {
             System.out.println(e.getMessage());
-        } finally {
-            if (connection != null) {
-                try {
-                    connection.close();
-                } catch (SQLException e) {
-                    System.out.println(e.getMessage());
-                }
-            }
         }
     }
 
     @Override
     public void findByIdSQL(String id) {
         try {
-            connection = DriverManager.getConnection(url, username, password);
             PreparedStatement pst = connection.prepareStatement("SELECT * FROM tracker WHERE id = ?");
             pst.setString(1, id);
             ResultSet rs = pst.executeQuery();
@@ -137,20 +104,11 @@ public class TrackerSQL implements ITrackerSQL, AutoCloseable {
             pst.close();
         } catch (SQLException e) {
             System.out.println(e.getMessage());
-        } finally {
-            if (connection != null) {
-                try {
-                    connection.close();
-                } catch (SQLException e) {
-                    System.out.println(e.getMessage());
-                }
-            }
         }
     }
 
     public void getAllwithSQL() {
         try {
-            connection = DriverManager.getConnection(url, username, password);
             Statement st = connection.createStatement();
             ResultSet rs = st.executeQuery("SELECT * FROM tracker");
             this.show(rs);
@@ -158,14 +116,6 @@ public class TrackerSQL implements ITrackerSQL, AutoCloseable {
             st.close();
         } catch (SQLException e) {
             System.out.println(e.getMessage());
-        } finally {
-            if (connection != null) {
-                try {
-                    connection.close();
-                } catch (SQLException e) {
-                    System.out.println(e.getMessage());
-                }
-            }
         }
     }
 
@@ -183,14 +133,6 @@ public class TrackerSQL implements ITrackerSQL, AutoCloseable {
             st.close();
         } catch (SQLException e) {
             System.out.println(e.getMessage());
-        } finally {
-            if (connection != null) {
-                try {
-                    connection.close();
-                } catch (SQLException e) {
-                    System.out.println(e.getMessage());
-                }
-            }
         }
     }
 
