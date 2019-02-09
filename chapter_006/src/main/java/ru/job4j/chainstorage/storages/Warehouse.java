@@ -8,6 +8,7 @@ public class Warehouse extends Storage {
 
     /**
      * Change with special conditions.
+     *
      * @param goods
      * @return
      */

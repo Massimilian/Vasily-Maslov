@@ -15,6 +15,7 @@ public abstract class Storage {
 
     /**
      * Method for organizate transportations of goods
+     *
      * @param goods
      * @return goods after modification
      */
@@ -28,6 +29,7 @@ public abstract class Storage {
 
     /**
      * Method for delete incompatibles goods.
+     *
      * @param goods
      * @return goods after modification
      */
@@ -43,6 +45,7 @@ public abstract class Storage {
 
     /**
      * Special container modifications.
+     *
      * @param goods
      * @return goods after modification.
      */
@@ -50,6 +53,7 @@ public abstract class Storage {
 
     /**
      * Method to add all new goods.
+     *
      * @param goods
      */
     public void addAll(ArrayList<Food> goods) {
@@ -62,10 +66,14 @@ public abstract class Storage {
 
     /**
      * Method for returning goods of container.
+     *
      * @return
      */
     public ArrayList<Food> getGoods() {
         return goods;
     }
 
+    public void setGoods(ArrayList<Food> goods) {
+        this.goods = goods;
+    }
 }

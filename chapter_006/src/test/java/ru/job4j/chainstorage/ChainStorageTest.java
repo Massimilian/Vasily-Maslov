@@ -10,17 +10,17 @@ import java.util.ArrayList;
 public class ChainStorageTest {
     FoodManager fm;
     long now = System.currentTimeMillis();
-    long minute = 60000L;
-    private long nowPlusFourSeconds = now + minute / 15;
-    private long nowPlusSixSeconds = now + minute / 10;
-    private long nowPlusEightSeconds = now + minute / 15 * 2;
-    private long nowPlusTenSeconds = now + minute / 6;
-    private int waitTime = 2000;
+    long tenSeconds = 6000L;
+    private long nowPlusFifteenthOfTenSeconds = now + tenSeconds / 15;
+    private long second = now + tenSeconds / 10;
+    private long someMoreThenSecond = now + tenSeconds / 15 * 2;
+    private long moreThenSecond = now + tenSeconds / 6;
+    private int waitTime = 200;
 
     @Test
     public void whenTryToPutSomeFoodsIntoWarehouseThenDoIt() {
-        Food first = new Food("First", now, nowPlusFourSeconds, 100);
-        Food second = new Food("Second", now, nowPlusFourSeconds, 100);
+        Food first = new Food("First", now, nowPlusFifteenthOfTenSeconds, 100);
+        Food second = new Food("Second", now, nowPlusFifteenthOfTenSeconds, 100);
         ArrayList<Food> goods = new ArrayList<>();
         goods.add(first);
         goods.add(second);
@@ -31,10 +31,10 @@ public class ChainStorageTest {
 
     @Test
     public void whenTryToUseAllStoragesInTimeThenDoIt() {
-        Food one = new Food("One", now, nowPlusFourSeconds, 100.0);
-        Food two = new Food("Two", now, nowPlusSixSeconds, 200.0);
-        Food three = new Food("Three", now, nowPlusEightSeconds, 300.0);
-        Food four = new Food("Four", now, nowPlusTenSeconds, 400.0);
+        Food one = new Food("One", now, nowPlusFifteenthOfTenSeconds, 100.0);
+        Food two = new Food("Two", now, second, 200.0);
+        Food three = new Food("Three", now, someMoreThenSecond, 300.0);
+        Food four = new Food("Four", now, moreThenSecond, 400.0);
         ArrayList<Food> goods = new ArrayList<>();
         goods.add(one);
         goods.add(two);
@@ -51,7 +51,7 @@ public class ChainStorageTest {
             e.printStackTrace();
         }
         fm.action();
-        System.out.println("Two seconds passed. 'Four' is in the warehouse, other foods are in the shop.");
+        System.out.println("1/5 of second passed. 'Four' is in the warehouse, other foods are in the shop.");
         assertThat(fm.getWarehouse().getGoods().size(), is(1));
         assertThat(fm.getShop().getGoods().size(), is(3));
         assertThat(fm.getTrash().getGoods().size(), is(0));
@@ -61,7 +61,7 @@ public class ChainStorageTest {
             e.printStackTrace();
         }
         fm.action();
-        System.out.println("Two more seconds passed. 'Four', 'Three' and 'Two' are in the shop, 'One' is in the trash.");
+        System.out.println("1/5 more of second passed. 'Four', 'Three' and 'Two' are in the shop, 'One' is in the trash.");
         assertThat(fm.getWarehouse().getGoods().size(), is(0));
         assertThat(fm.getShop().getGoods().size(), is(3));
         assertThat(fm.getTrash().getGoods().size(), is(1));
@@ -71,7 +71,7 @@ public class ChainStorageTest {
             e.printStackTrace();
         }
         fm.action();
-        System.out.println("Two more seconds passed. 'Four' and 'Three' are in the shop, 'One' and 'Two' are in the trash.");
+        System.out.println("1/5 more of second passed. 'Four' and 'Three' are in the shop, 'One' and 'Two' are in the trash.");
         assertThat(fm.getWarehouse().getGoods().size(), is(0));
         assertThat(fm.getShop().getGoods().size(), is(2));
         assertThat(fm.getTrash().getGoods().size(), is(2));
@@ -81,7 +81,7 @@ public class ChainStorageTest {
             e.printStackTrace();
         }
         fm.action();
-        System.out.println("Two more seconds passed. 'Four' is in the shop, others are in the trash.");
+        System.out.println("1/5 more of second passed. 'Four' is in the shop, others are in the trash.");
         assertThat(fm.getWarehouse().getGoods().size(), is(0));
         assertThat(fm.getShop().getGoods().size(), is(1));
         assertThat(fm.getTrash().getGoods().size(), is(3));
@@ -95,5 +95,10 @@ public class ChainStorageTest {
         assertThat(fm.getWarehouse().getGoods().size(), is(0));
         assertThat(fm.getShop().getGoods().size(), is(0));
         assertThat(fm.getTrash().getGoods().size(), is(4));
+    }
+
+    @Test
+    public void whenTryToUseNewStoragesInTimeThenDoIt() {
+
     }
 }

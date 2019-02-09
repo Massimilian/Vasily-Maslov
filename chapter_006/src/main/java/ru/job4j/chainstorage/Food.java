@@ -13,7 +13,8 @@ public class Food {
     private double price;
     private boolean discount;
     private boolean isAdded;
-
+    private boolean canReproduct;
+    private boolean isVegetable;
 
     public Food(String name, long createDate, long expaireDate, double price) {
         this.name = name;
@@ -22,6 +23,26 @@ public class Food {
         this.price = price;
         this.discount = false;
         this.isAdded = false;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public boolean isCanReproduct() {
+        return canReproduct;
+    }
+
+    public void setCanReproduct(boolean canReproduct) {
+        this.canReproduct = canReproduct;
+    }
+
+    public void setVegetable(boolean vegetable) {
+        isVegetable = vegetable;
+    }
+
+    public boolean isVegetable() {
+        return isVegetable;
     }
 
     public Date getCreateDate() {
