@@ -8,9 +8,9 @@ import static org.junit.Assert.*;
 import java.util.ArrayList;
 
 public class ChainStorageTest {
-    FoodManager fm;
-    long now = System.currentTimeMillis();
-    long tenSeconds = 6000L;
+    private FoodManager fm;
+    private long now = System.currentTimeMillis();
+    private long tenSeconds = 6000L;
     private long nowPlusFifteenthOfTenSeconds = now + tenSeconds / 15;
     private long second = now + tenSeconds / 10;
     private long someMoreThenSecond = now + tenSeconds / 15 * 2;

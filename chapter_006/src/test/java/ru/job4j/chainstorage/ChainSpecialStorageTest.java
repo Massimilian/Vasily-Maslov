@@ -9,9 +9,9 @@ import static org.junit.Assert.*;
 
 
 public class ChainSpecialStorageTest {
-    FoodManager fm;
-    long now = System.currentTimeMillis();
-    long second = 6000L;
+    private FoodManager fm;
+    private long now = System.currentTimeMillis();
+    private long second = 6000L;
     private long nowPlusFourSeconds = now + second / 15;
     private int waitTime = 600;
 
@@ -38,5 +38,17 @@ public class ChainSpecialStorageTest {
         assertThat(fm.getSfr().getGoods().size(), is(1));
         assertThat(fm.getSfr().getGoods().get(0).getName(), is("First"));
         assertThat(fm.getSfv().getGoods().size(), is(0));
+    }
+
+    @Test
+    public void whenTryToUseControlQualityClassThenDoItSuccessfully() {
+        Food first = new Food("First", now, nowPlusFourSeconds, 100);
+        Food second = new Food("Second", now, nowPlusFourSeconds, 100);
+        ArrayList<Food> goods = new ArrayList<>();
+        goods.add(first);
+        goods.add(second);
+        ControlQuality cq = new ControlQuality(goods);
+        cq.resort();
+        assertThat(cq.getGoods().size(), is(2));
     }
 }
