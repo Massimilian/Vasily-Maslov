@@ -10,6 +10,8 @@ import java.util.Map;
  */
 public class SimpleGenerator {
     private Map map;
+    private String begin = "${";
+    private String end = "}";
 
     public SimpleGenerator() {
         map = new HashMap<String, String>();
@@ -21,11 +23,11 @@ public class SimpleGenerator {
      * @param values
      */
     public void addMapValue(ArrayList<String> values) {
-        map.put(values.get(0), values.get(1));
+        map.put(String.format("%s%s%s", begin, values.get(0), end), values.get(1));
     }
 
     public void addMapValue(Map.Entry<String, String> entry) {
-        map.put(entry.getKey(), entry.getValue());
+        map.put(String.format("%s%s%s", begin, entry.getKey(), end), entry.getValue());
     }
 
     /**
@@ -35,18 +37,23 @@ public class SimpleGenerator {
      * @return
      */
     public String generate(String enter) {
-        try {
-            check();
-        } catch (NullMapException e) {
-            System.out.println(e.getMessage());
+//        try {
+//            check();
+//        } catch (NullMapException e) {
+//            System.out.println(e.getMessage());
 //            e.printStackTrace();
-        }
+//        }
+        boolean hasNot = true;
         Iterator it = this.map.entrySet().iterator();
         while (it.hasNext()) {
             Map.Entry entry = (Map.Entry) it.next();
             if (enter.contains((CharSequence) entry.getKey())) {
                 enter = enter.replace((CharSequence) entry.getKey(), (CharSequence) entry.getValue());
+                hasNot = false;
             }
+        }
+        if (hasNot) {
+            System.out.println("No changes has been detected.");
         }
         return enter;
     }
@@ -56,9 +63,9 @@ public class SimpleGenerator {
      *
      * @throws NullMapException
      */
-    private void check() throws NullMapException {
-        if (this.map.isEmpty()) {
-            throw new NullMapException("Exception! The map is empty!");
-        }
-    }
+//    private void check() throws NullMapException {
+//        if (this.map.isEmpty()) {
+//            throw new NullMapException("Exception! The map is empty!");
+//        }
+//    }
 }

@@ -96,9 +96,4 @@ public class ChainStorageTest {
         assertThat(fm.getShop().getGoods().size(), is(0));
         assertThat(fm.getTrash().getGoods().size(), is(4));
     }
-
-    @Test
-    public void whenTryToUseNewStoragesInTimeThenDoIt() {
-
-    }
 }

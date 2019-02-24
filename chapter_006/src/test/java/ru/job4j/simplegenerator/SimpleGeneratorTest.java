@@ -26,7 +26,7 @@ public class SimpleGeneratorTest {
         list.add("sos");
         list.add("Aaa");
         sg.addMapValue(list);
-        assertThat(sg.generate("I am name. Who are subject?"), is("I am Petr. Who are you?"));
-        assertThat(sg.generate("Help, sos, sos, sos"), is("Help, Aaa, Aaa, Aaa"));
+        assertThat(sg.generate("I am ${name}. Who is ${subject}?"), is("I am Petr. Who is you?"));
+        assertThat(sg.generate("Help, ${sos}, ${sos}, ${sos}"), is("Help, Aaa, Aaa, Aaa"));
     }
 }
