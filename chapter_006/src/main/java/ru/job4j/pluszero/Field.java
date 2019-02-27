@@ -24,6 +24,7 @@ public class Field {
 
     /**
      * Method for preparing this field for playing
+     *
      * @param size
      * @return prepared field
      */
@@ -53,6 +54,7 @@ public class Field {
 
     /**
      * Method to put X or O on its place.
+     *
      * @param step
      * @param view
      */
@@ -80,24 +82,24 @@ public class Field {
                 }
                 if (points[i][j] != '*') {
                     if (j <= points.length - winsize) {
-                        this.isFinished = checkColumn(i, j);
+                        this.isFinished = checkBoard(i, j, 0, 1);
                     }
                     if (this.isFinished) {
                         break;
                     }
                     if (i <= points.length - winsize) {
-                        this.isFinished = checkLine(i, j);
+                        this.isFinished = checkBoard(i, j, 1, 0);
                         if (this.isFinished) {
                             break;
                         }
                         if (j <= points.length - winsize) {
-                            this.isFinished = checkDownDiagonal(i, j);
+                            this.isFinished = checkBoard(i, j, 1, 1);
                         }
                         if (this.isFinished) {
                             break;
                         }
                         if (j >= winsize - 1) {
-                            this.isFinished = checkDownBackDiagonal(i, j);
+                            this.isFinished = checkBoard(i, j, 1, -1);
                         }
                         if (this.isFinished) {
                             break;
@@ -110,6 +112,7 @@ public class Field {
 
     /**
      * Method to answer is this a drawn game of no.
+     *
      * @return
      */
     public boolean checkDrawn() {
@@ -129,69 +132,23 @@ public class Field {
     }
 
     /**
-     * Check columns as win session.
+     * Check positions as win session.
+     *
      * @param x
      * @param y
      * @return
      */
-    private boolean checkColumn(int x, int y) {
+    private boolean checkBoard(int x, int y, int plusX, int plusY) {
+        int newPlusX = plusX;
+        int newPlusY = plusY;
         boolean equal = true;
-        for (int i = 0; i < this.winsize; i++) {
-            equal = this.points[x][y] == this.points[x][y + i];
+        for (int i = 0; i < this.winsize - 1; i++) {
+            equal = this.points[x][y] == this.points[x + newPlusX][y + newPlusY];
             if (!equal) {
                 break;
             }
-        }
-        return equal;
-    }
-
-    /**
-     * Check line as win session
-     * @param x
-     * @param y
-     * @return
-     */
-    private boolean checkLine(int x, int y) {
-        boolean equal = true;
-        for (int i = 1; i < this.winsize; i++) {
-            equal = this.points[x][y] == this.points[x + i][y];
-            if (!equal) {
-                break;
-            }
-        }
-        return equal;
-    }
-
-    /**
-     * Check down-right diagonal as win session
-     * @param x
-     * @param y
-     * @return
-     */
-    private boolean checkDownDiagonal(int x, int y) {
-        boolean equal = true;
-        for (int i = 1; i < this.winsize; i++) {
-            equal = this.points[x][y] == this.points[x + i][y + i];
-            if (!equal) {
-                break;
-            }
-        }
-        return equal;
-    }
-
-    /**
-     * Check down-left diagonal as win session
-     * @param x
-     * @param y
-     * @return
-     */
-    private boolean checkDownBackDiagonal(int x, int y) {
-        boolean equal = true;
-        for (int i = 1; i < this.winsize; i++) {
-            equal = this.points[x][y] == this.points[x + i][y - i];
-            if (!equal) {
-                break;
-            }
+            newPlusY += plusY;
+            newPlusX += plusX;
         }
         return equal;
     }
