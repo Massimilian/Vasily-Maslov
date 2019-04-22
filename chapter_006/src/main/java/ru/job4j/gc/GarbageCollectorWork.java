@@ -17,6 +17,7 @@ public class GarbageCollectorWork {
         User u = new User(0);
         System.out.println("Memory status after creating object:");
         info();
+        u = null;
         while (true) {
             new User(count++);
             count = count == Integer.MAX_VALUE ? 1 : count;
