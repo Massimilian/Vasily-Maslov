@@ -9,9 +9,9 @@ import java.util.Map;
  * Main class of generator
  */
 public class SimpleGenerator {
-    private Map map;
-    private String begin = "${";
-    private String end = "}";
+    protected Map map;
+    protected String begin = "${";
+    protected String end = "}";
 
     public SimpleGenerator() {
         map = new HashMap<String, String>();

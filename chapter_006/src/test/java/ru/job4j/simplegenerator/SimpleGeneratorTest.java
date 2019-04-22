@@ -12,7 +12,7 @@ public class SimpleGeneratorTest {
 
     @Test
     public void whenTryToUseSimpleGeneratorThenSeeThatItWorksWell() {
-        sg = new SimpleGenerator();
+        sg = new SimpleRegexGenerator();
         sg.generate("Some text.");
         ArrayList<String> list = new ArrayList<>();
         list.add("name");
