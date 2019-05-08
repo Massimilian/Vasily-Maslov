@@ -9,6 +9,11 @@ public class User {
     }
 
     @Override
+    public String toString() {
+        return "Printing this User's count - " + count;
+    }
+
+    @Override
     protected void finalize() throws Throwable {
         super.finalize();
         System.out.printf("Object %d deleted.%s", count, System.lineSeparator());
