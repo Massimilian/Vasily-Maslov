@@ -1,23 +1,18 @@
 package ru.job4j.gc;
 
 import java.lang.ref.SoftReference;
+import java.lang.ref.WeakReference;
+import java.util.ArrayList;
 import java.util.HashMap;
 
 public class Softs {
-    private HashMap<Integer, SoftReference<Object>> map = new HashMap<>();
+private HashMap<Integer, SoftReference<String>> map = new HashMap<Integer, SoftReference<String>>();
 
-    public Object get(Integer key) {
-        Object result = null;
-        if (map.containsKey(key)) {
-            result = map.get(key);
-            return result;
-        } else {
-            System.out.println("The reference is not working.");
-            return result;
-        }
+    public void putSoft(int key, String string) {
+        map.put(key, new SoftReference<String>(string));
     }
 
-    public void put(Integer key, Object object) {
-        map.put(key, new SoftReference<Object>(object));
+    public HashMap<Integer, SoftReference<String>> getMap() {
+        return map;
     }
 }
