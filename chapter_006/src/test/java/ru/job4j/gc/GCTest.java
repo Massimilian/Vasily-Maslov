@@ -10,16 +10,16 @@ import static org.junit.Assert.*;
 
 public class GCTest {
     private Softs s = new Softs();
-    private String first = "Testing value";
-    private String second = "Test";
+    private String ask = "test";
+    private String info = "I think, and that is why I'm clever.";
+    private String wrongAsk = "test-two";
 
     @Test
     public void whenTryToPutIntoSoftsValueThenDoIt() {
-        // добавляем "мягкие ссылки" в коллекцию типа HashMap. Таким образом, текстовые файлы в кэш подгружены.
-        s.putSoft(0, first);
-        s.putSoft(1, second);
-        // Проверяем, что текстовые файлы действительно добавились - вызываем мягкие ссылки на текстовые файлы.
-        assertThat(s.getMap().get(0).get(), is(first));
-        assertThat(s.getMap().get(1).get(), is(second));
+        s.getSoft(this.ask);
+        assertThat(s.getMap().get(this.ask).get(), is(this.info));
+        assertThat(s.getSoft(this.ask).get(), is(this.info));
+        s.getSoft(this.wrongAsk);
+        assertThat(s.getMap().containsKey(this.wrongAsk), is(false));
     }
 }
