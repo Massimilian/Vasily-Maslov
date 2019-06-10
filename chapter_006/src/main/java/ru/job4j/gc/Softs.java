@@ -19,6 +19,7 @@ public class Softs {
             File file = new File(String.format("%s%s%s", this.address, string, this.formatter));
             if (!file.exists()) {
                 System.out.println("This file not exists!");
+                sr = null;
             } else {
                 StringBuilder result = new StringBuilder("");
                 String str;
@@ -34,8 +35,8 @@ public class Softs {
                 }
                 this.map.put(string, new SoftReference<String>(result.toString()));
                 System.out.println("New information added!");
+                sr = map.get(string);
             }
-            sr = null;
         }
         return sr;
     }
