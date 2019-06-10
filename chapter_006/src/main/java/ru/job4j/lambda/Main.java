@@ -11,5 +11,10 @@ public class Main {
                 },
                 result -> System.out.printf("%f%s", result, System.lineSeparator())
         );
+
+        calc.multiple(1, 5, 2,
+                Calculator::add,
+                result -> System.out.println(result)
+        );
     }
 }

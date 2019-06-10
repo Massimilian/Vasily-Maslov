@@ -35,7 +35,8 @@ public class Softs {
                 }
                 this.map.put(string, new SoftReference<String>(result.toString()));
                 System.out.println("New information added!");
-                sr = map.get(string);
+//                sr = map.get(string);
+                sr = new SoftReference<String>(result.toString());
             }
         }
         return sr;
