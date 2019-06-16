@@ -76,8 +76,11 @@ public class BankTest {
         bank.addAccountToUser(passport, rich);
         bank.addUser(userTwo);
         bank.addAccountToUser(anotherPassport, second);
-        bank.transferMoney(passport, "Rich!!!", anotherPassport, "The second", 999999);
-        System.out.println();
+        assertThat(bank.transferMoney(passport + " ", "Rich!!!", anotherPassport, "The second", 999999), is(false));
+        assertThat(bank.transferMoney(passport, "Rich!!!" + "!!", anotherPassport, "The second", 999999), is(false));
+        assertThat(bank.transferMoney(passport, "Rich!!!", anotherPassport, "The second", 999999), is(true));
+        assertThat(bank.getUserAccounts(userOne.getPassport()).get(1).getValue(), is(1.0));
+        assertThat(bank.getUserAccounts(userTwo.getPassport()).get(1).getValue(), is(999999.0));
     }
 
     @Test

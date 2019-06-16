@@ -25,7 +25,7 @@ public class Bank {
 
     public void addAccountToUser(String passport, Account account) {
         if (hasUser(passport)) {
-            info.computeIfPresent(getUser(passport), (t, v) -> Stream.of(info.get(getUser(passport)), Arrays.asList(account)).flatMap(Collection::stream).collect(Collectors.toList()));
+            info.computeIfPresent(getUser(passport), (t, v) -> Stream.of(info.get(getUser(passport)), Collections.singletonList(account)).flatMap(Collection::stream).collect(Collectors.toList()));
         } else {
             System.out.println("False! There is no any account with this passport!");
         }
@@ -45,7 +45,7 @@ public class Bank {
 
     public boolean transferMoney(String srcPassport, String srcRequisite, String destPassport, String dstRequisite, double amount) {
         Boolean correct = false;
-        if (getAccount(getUser(srcPassport), srcRequisite).getValue() >= amount) {
+        if (getAccount(getUser(srcPassport), srcRequisite) != null && getAccount(getUser(destPassport), dstRequisite) != null && getAccount(getUser(srcPassport), srcRequisite).getValue() >= amount) {
             getAccount(getUser(srcPassport), srcRequisite).setValue(getAccount(getUser(srcPassport), srcRequisite).getValue() - amount);
             getAccount(getUser(destPassport), dstRequisite).setValue(getAccount(getUser(destPassport), dstRequisite).getValue() + amount);
             correct = true;
@@ -54,7 +54,13 @@ public class Bank {
     }
 
     private User getUser(String passport) {
-        return info.keySet().stream().filter(p -> p.getPassport().equals(passport)).collect(Collectors.toList()).get(0);
+        User result = null;
+        try {
+            result = info.keySet().stream().filter(p -> p.getPassport().equals(passport)).collect(Collectors.toList()).get(0);
+        } catch (IndexOutOfBoundsException ioobe) {
+            System.out.println(String.format("%s '%s'.", "The system has no information about this user, passport number:", passport));
+        }
+        return result;
     }
 
     private boolean hasUser(String passport) {
@@ -62,6 +68,16 @@ public class Bank {
     }
 
     private Account getAccount(User user, String requisites) {
-        return info.get(user).stream().filter(p -> p.getRequisites().equals(requisites)).collect(Collectors.toList()).get(0);
+        Account account = null;
+        if (user != null) {
+            try {
+                account = info.get(user).stream().filter(p -> p.getRequisites().equals(requisites)).collect(Collectors.toList()).get(0);
+            } catch (RuntimeException rte) {
+                System.out.println(String.format("%s '%s'.", "Wrong account of user, passport number", user.getPassport()));
+            }
+        } else {
+            System.out.println("Please correct information about user.");
+        }
+        return account;
     }
 }
