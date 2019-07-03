@@ -22,9 +22,9 @@ public class PhoneDictionary {
         for (Person person : persons) {
             char[] chperson = person.toString().toCharArray();
             if (chperson.length >= chkey.length) {
-                for (int j = 0; j < chperson.length - chkey.length + 1; j++) {
+                for (var j = 0; j < chperson.length - chkey.length + 1; j++) {
                     needToPut = true;
-                    for (int k = 0; k < chkey.length; k++) {
+                    for (var k = 0; k < chkey.length; k++) {
                         if (chperson[j + k] != chkey[k]) {
                             needToPut = false;
                             break;
@@ -51,9 +51,9 @@ public class PhoneDictionary {
                     person.getPhoneNumber().toCharArray()};
             for (char[] count : counts) {
                 if (count.length >= keyToArray.length) {
-                    for (int j = 0; j < count.length - keyToArray.length + 1; j++) {
+                    for (var j = 0; j < count.length - keyToArray.length + 1; j++) {
                         needToPut = true;
-                        for (int k = 0; k < keyToArray.length; k++) {
+                        for (var k = 0; k < keyToArray.length; k++) {
                             if (count[j + k] != keyToArray[k]) {
                                 needToPut = false;
                                 break;

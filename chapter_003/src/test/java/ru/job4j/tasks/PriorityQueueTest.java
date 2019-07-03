@@ -27,5 +27,4 @@ public class PriorityQueueTest {
         pq.put(task3);
         assertThat(pq.take(), is(task1));
     }
-
 }
