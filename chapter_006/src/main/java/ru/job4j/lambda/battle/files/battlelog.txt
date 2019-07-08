@@ -1,0 +1,509 @@
+BATTLE DATE: Mon Jul 08 03:05:18 MSK 2019
+Light army:
+ Human Mage; Human Crossbowman; Elf Archer; Human Crossbowman; Human Warrior; Human Warrior; Elf Warrior; Elf Warrior;
+Dark army:
+ Walking dead Necromant; Walking dead Hunter; Orc Archer; Walking dead Hunter; Orc Goblin; Orc Goblin; Orc Goblin; Orc Goblin;
+
+1. Human Warrior with 100,000000 HP made 18,000000 damage to Orc Goblin.
+Orc Goblin's HP = 82,000000 now.
+
+2. Orc Goblin with 100,000000 HP made 20,000000 damage to Human Warrior.
+Human Warrior's HP = 80,000000 now.
+
+3. Elf Warrior with 100,000000 HP made 15,000000 damage to Walking dead Necromant.
+Walking dead Necromant's HP = 85,000000 now.
+
+4. Walking dead Hunter with 100,000000 HP made 4,000000 damage to Elf Warrior.
+Elf Warrior's HP = 96,000000 now.
+
+5. Human Warrior with 80,000000 HP made 18,000000 damage to Orc Archer.
+Orc Archer's HP = 82,000000 now.
+
+6. Orc Goblin with 100,000000 HP made 20,000000 damage to Elf Warrior.
+Elf Warrior's HP = 80,000000 now.
+
+7. Human Warrior with 100,000000 HP made 18,000000 damage to Walking dead Necromant.
+Walking dead Necromant's HP = 67,000000 now.
+
+8. Human Warrior with 80,000000 HP made 18,000000 damage to Orc Goblin.
+Orc Goblin's HP = 64,000000 now.
+
+9. Elf Warrior with 96,000000 HP made 15,000000 damage to Orc Goblin.
+Orc Goblin's HP = 85,000000 now.
+
+10. Orc Archer with 82,000000 HP made 2,000000 damage to Elf Warrior.
+Elf Warrior's HP = 78,000000 now.
+
+11. Orc Goblin with 100,000000 HP made 20,000000 damage to Elf Warrior.
+Elf Warrior's HP = 58,000000 now.
+
+12. Orc Goblin with 64,000000 HP made 20,000000 damage to Elf Archer.
+Elf Archer's HP = 80,000000 now.
+
+13. Human Warrior with 100,000000 HP made 18,000000 damage to Orc Goblin.
+Orc Goblin's HP = 82,000000 now.
+
+14. Human Warrior with 100,000000 HP made 18,000000 damage to Orc Goblin.
+Orc Goblin's HP = 82,000000 now.
+
+15. Human Warrior with 80,000000 HP made 18,000000 damage to Orc Goblin.
+Orc Goblin's HP = 64,000000 now.
+
+16. Orc Goblin with 64,000000 HP made 20,000000 damage to Human Warrior.
+Human Warrior's HP = 80,000000 now.
+
+17. Orc Archer with 82,000000 HP made 3,000000 damage to Human Warrior.
+Human Warrior's HP = 77,000000 now.
+
+18. Walking dead Hunter with 100,000000 HP made 2,000000 damage to Human Warrior.
+Human Warrior's HP = 78,000000 now.
+
+19. Human Crossbowman with 100,000000 HP made 3,000000 damage to Walking dead Hunter.
+Walking dead Hunter's HP = 97,000000 now.
+
+20. Orc Archer with 82,000000 HP made 3,000000 damage to Elf Archer.
+Elf Archer's HP = 77,000000 now.
+
+21. Human Warrior with 78,000000 HP made 18,000000 damage to Walking dead Hunter.
+Walking dead Hunter's HP = 82,000000 now.
+
+22. Human Crossbowman with 100,000000 HP made 5,000000 damage to Orc Goblin.
+Orc Goblin's HP = 77,000000 now.
+
+23. Human Warrior with 78,000000 HP made 18,000000 damage to Orc Archer.
+Orc Archer's HP = 64,000000 now.
+
+24. Orc Goblin with 85,000000 HP made 20,000000 damage to Human Mage.
+Human Mage's HP = 80,000000 now.
+
+25. Walking dead Hunter with 97,000000 HP made 2,000000 damage to Human Warrior.
+Human Warrior's HP = 76,000000 now.
+
+26. Human Crossbowman with 100,000000 HP made 3,000000 damage to Walking dead Necromant.
+Walking dead Necromant's HP = 64,000000 now.
+
+27. Human Mage with 80,000000 HP made 4,000000 damage to Orc Archer.
+Orc Archer's HP = 60,000000 now.
+
+28. Human Warrior with 77,000000 HP made 18,000000 damage to Orc Goblin.
+Orc Goblin's HP = 46,000000 now.
+
+29. Human Warrior with 76,000000 HP made 18,000000 damage to Orc Archer.
+Orc Archer's HP = 42,000000 now.
+
+30. Orc Goblin with 46,000000 HP made 20,000000 damage to Human Crossbowman.
+Human Crossbowman's HP = 80,000000 now.
+
+31. Walking dead Hunter with 82,000000 HP made 2,000000 damage to Human Warrior.
+Human Warrior's HP = 74,000000 now.
+
+32. Elf Archer with 77,000000 HP made 7,000000 damage to Orc Goblin.
+Orc Goblin's HP = 70,000000 now.
+
+33. Elf Warrior with 96,000000 HP made 15,000000 damage to Walking dead Hunter.
+Walking dead Hunter's HP = 82,000000 now.
+
+34. Walking dead Hunter with 82,000000 HP made 2,000000 damage to Elf Archer.
+Elf Archer's HP = 75,000000 now.
+
+35. Walking dead Hunter with 82,000000 HP made 2,000000 damage to Elf Warrior.
+Elf Warrior's HP = 56,000000 now.
+
+36. Orc Goblin with 46,000000 HP made 20,000000 damage to Human Warrior.
+Human Warrior's HP = 54,000000 now.
+
+37. Elf Archer with 75,000000 HP made 3,000000 damage to Orc Archer.
+Orc Archer's HP = 39,000000 now.
+
+38. Orc Goblin with 46,000000 HP made 20,000000 damage to Human Mage.
+Human Mage's HP = 60,000000 now.
+
+39. Orc Goblin with 64,000000 HP made 20,000000 damage to Human Mage.
+Human Mage's HP = 40,000000 now.
+
+40. Human Crossbowman with 100,000000 HP made 5,000000 damage to Walking dead Hunter.
+Walking dead Hunter's HP = 77,000000 now.
+
+41. Orc Goblin with 70,000000 HP made 20,000000 damage to Human Warrior.
+Human Warrior's HP = 34,000000 now.
+
+42. Human Warrior with 77,000000 HP made 18,000000 damage to Orc Goblin.
+Orc Goblin's HP = 46,000000 now.
+
+43. Orc Goblin with 85,000000 HP made 20,000000 damage to Human Mage.
+Human Mage's HP = 20,000000 now.
+
+44. Human Warrior with 77,000000 HP made 18,000000 damage to Walking dead Necromant.
+Walking dead Necromant's HP = 46,000000 now.
+
+45. Elf Warrior with 56,000000 HP made 15,000000 damage to Walking dead Hunter.
+Walking dead Hunter's HP = 67,000000 now.
+
+46. Human Warrior with 77,000000 HP made 18,000000 damage to Orc Archer.
+Orc Archer's HP = 21,000000 now.
+
+47. Human Crossbowman with 80,000000 HP made 3,000000 damage to Orc Goblin.
+Orc Goblin's HP = 43,000000 now.
+
+48. Walking dead Hunter with 77,000000 HP made 4,000000 damage to Elf Archer.
+Elf Archer's HP = 71,000000 now.
+
+49. Orc Archer with 21,000000 HP made 2,000000 damage to Human Crossbowman.
+Human Crossbowman's HP = 78,000000 now.
+
+50. Orc Archer with 21,000000 HP made 3,000000 damage to Human Warrior.
+Human Warrior's HP = 31,000000 now.
+
+51. Orc Goblin with 70,000000 HP made 20,000000 damage to Elf Archer.
+Elf Archer's HP = 51,000000 now.
+
+52. Walking dead Hunter with 77,000000 HP made 2,000000 damage to Elf Warrior.
+Elf Warrior's HP = 94,000000 now.
+
+53. Human Warrior with 77,000000 HP made 18,000000 damage to Orc Goblin.
+Orc Goblin's HP = 67,000000 now.
+
+54. Walking dead Hunter with 67,000000 HP made 4,000000 damage to Human Crossbowman.
+Human Crossbowman's HP = 74,000000 now.
+
+55. Elf Archer with 51,000000 HP made 7,000000 damage to Orc Goblin.
+Orc Goblin's HP = 63,000000 now.
+
+56. Orc Goblin with 43,000000 HP made 20,000000 damage to Human Crossbowman.
+Human Crossbowman's HP = 54,000000 now.
+
+57. Human Crossbowman with 54,000000 HP made 5,000000 damage to Orc Archer.
+Orc Archer's HP = 16,000000 now.
+
+58. Elf Warrior with 56,000000 HP made 15,000000 damage to Orc Goblin.
+Orc Goblin's HP = 31,000000 now.
+
+59. Human Warrior with 77,000000 HP made 18,000000 damage to Orc Goblin.
+Orc Goblin's HP = 45,000000 now.
+
+60. Human Mage blessed Human Warrior.
+
+
+61. Human Warrior with 31,000000 HP made 36,000000 damage to Walking dead Necromant.
+Walking dead Necromant's HP = 10,000000 now.
+
+62. Human Crossbowman with 54,000000 HP made 3,000000 damage to Orc Goblin.
+Orc Goblin's HP = 28,000000 now.
+
+63. Human Crossbowman with 54,000000 HP made 3,000000 damage to Orc Goblin.
+Orc Goblin's HP = 40,000000 now.
+
+64. Elf Warrior with 94,000000 HP made 15,000000 damage to Orc Archer.
+Orc Archer's HP = 1,000000 now.
+
+65. Orc Goblin with 67,000000 HP made 20,000000 damage to Human Crossbowman.
+Human Crossbowman's HP = 34,000000 now.
+
+66. Walking dead Hunter with 67,000000 HP made 2,000000 damage to Elf Warrior.
+Elf Warrior's HP = 92,000000 now.
+
+67. Orc Archer with 1,000000 HP made 2,000000 damage to Human Mage.
+Human Mage's HP = 18,000000 now.
+
+68. Elf Archer with 51,000000 HP made 7,000000 damage to Orc Goblin.
+Orc Goblin's HP = 38,000000 now.
+
+69. Orc Archer with 1,000000 HP made 3,000000 damage to Human Warrior.
+Human Warrior's HP = 74,000000 now.
+
+70. Orc Goblin with 67,000000 HP made 20,000000 damage to Human Crossbowman.
+Human Crossbowman's HP = 14,000000 now.
+
+71. Walking dead Hunter with 67,000000 HP made 2,000000 damage to Human Warrior.
+Human Warrior's HP = 29,000000 now.
+
+72. Elf Warrior with 92,000000 HP made 15,000000 damage to Orc Goblin.
+Orc Goblin's HP = 52,000000 now.
+
+73. Human Crossbowman with 100,000000 HP made 5,000000 damage to Orc Archer.
+Orc Archer's HP = -4,000000 now.
+Orc Archer is down.
+
+74. Elf Warrior with 92,000000 HP made 15,000000 damage to Orc Goblin.
+Orc Goblin's HP = 23,000000 now.
+
+75. Orc Goblin with 28,000000 HP made 20,000000 damage to Elf Warrior.
+Elf Warrior's HP = 36,000000 now.
+
+76. Elf Warrior with 92,000000 HP made 15,000000 damage to Orc Goblin.
+Orc Goblin's HP = 8,000000 now.
+
+77. Orc Goblin with 52,000000 HP made 20,000000 damage to Elf Warrior.
+Elf Warrior's HP = 72,000000 now.
+
+78. Walking dead Hunter with 77,000000 HP made 2,000000 damage to Elf Warrior.
+Elf Warrior's HP = 34,000000 now.
+
+79. Orc Goblin with 52,000000 HP made 20,000000 damage to Human Warrior.
+Human Warrior's HP = 54,000000 now.
+
+80. Orc Goblin with 52,000000 HP made 20,000000 damage to Elf Warrior.
+Elf Warrior's HP = 14,000000 now.
+
+81. Orc Goblin with 52,000000 HP made 20,000000 damage to Human Crossbowman.
+Human Crossbowman's HP = 80,000000 now.
+
+82. Orc Goblin with 52,000000 HP made 20,000000 damage to Human Warrior.
+Human Warrior's HP = 34,000000 now.
+
+83. Elf Warrior with 72,000000 HP made 15,000000 damage to Walking dead Hunter.
+Walking dead Hunter's HP = 62,000000 now.
+
+84. Orc Goblin with 8,000000 HP made 20,000000 damage to Elf Warrior.
+Elf Warrior's HP = 52,000000 now.
+
+85. Human Warrior with 29,000000 HP made 18,000000 damage to Orc Goblin.
+Orc Goblin's HP = 34,000000 now.
+
+86. Walking dead Hunter with 62,000000 HP made 2,000000 damage to Elf Archer.
+Elf Archer's HP = 49,000000 now.
+
+87. Walking dead Necromant with 10,000000 HP made 5,000000 damage to Human Warrior.
+Human Warrior's HP = 29,000000 now.
+
+88. Human Warrior with 29,000000 HP made 18,000000 damage to Orc Goblin.
+Orc Goblin's HP = 10,000000 now.
+
+89. Walking dead Hunter with 67,000000 HP made 4,000000 damage to Human Crossbowman.
+Human Crossbowman's HP = 76,000000 now.
+
+90. Human Crossbowman with 14,000000 HP made 5,000000 damage to Orc Goblin.
+Orc Goblin's HP = 5,000000 now.
+
+91. Human Crossbowman with 76,000000 HP made 5,000000 damage to Orc Goblin.
+Orc Goblin's HP = 0,000000 now.
+Orc Goblin is down.
+
+92. Elf Archer with 49,000000 HP made 3,000000 damage to Orc Goblin.
+Orc Goblin's HP = 37,000000 now.
+
+93. Human Crossbowman with 14,000000 HP made 5,000000 damage to Walking dead Hunter.
+Walking dead Hunter's HP = 62,000000 now.
+
+94. Walking dead Hunter with 62,000000 HP made 4,000000 damage to Human Warrior.
+Human Warrior's HP = 25,000000 now.
+
+95. Elf Archer with 49,000000 HP made 3,000000 damage to Orc Goblin.
+Orc Goblin's HP = 34,000000 now.
+
+96. Human Crossbowman with 76,000000 HP made 3,000000 damage to Orc Goblin.
+Orc Goblin's HP = 31,000000 now.
+
+97. Walking dead Hunter with 62,000000 HP made 2,000000 damage to Human Crossbowman.
+Human Crossbowman's HP = 74,000000 now.
+
+98. Orc Goblin with 8,000000 HP made 20,000000 damage to Human Warrior.
+Human Warrior's HP = 9,000000 now.
+
+99. Human Crossbowman with 74,000000 HP made 5,000000 damage to Walking dead Hunter.
+Walking dead Hunter's HP = 57,000000 now.
+
+100. Walking dead Necromant with 10,000000 HP made 5,000000 damage to Elf Warrior.
+Elf Warrior's HP = 47,000000 now.
+
+101. Walking dead Hunter with 57,000000 HP made 2,000000 damage to Human Warrior.
+Human Warrior's HP = 7,000000 now.
+
+102. Elf Archer with 49,000000 HP made 7,000000 damage to Orc Goblin.
+Orc Goblin's HP = 24,000000 now.
+
+103. Orc Goblin with 34,000000 HP made 20,000000 damage to Elf Warrior.
+Elf Warrior's HP = 27,000000 now.
+
+104. Orc Goblin with 34,000000 HP made 20,000000 damage to Elf Warrior.
+Elf Warrior's HP = 7,000000 now.
+
+105. Human Mage blessed Elf Archer.
+
+
+106. Orc Goblin with 8,000000 HP made 20,000000 damage to Elf Warrior.
+Elf Warrior's HP = -6,000000 now.
+Elf Warrior is down.
+
+107. Orc Goblin with 8,000000 HP made 20,000000 damage to Human Crossbowman.
+Human Crossbowman's HP = 54,000000 now.
+
+108. Walking dead Necromant with 10,000000 HP made 5,000000 damage to Human Crossbowman.
+Human Crossbowman's HP = 49,000000 now.
+
+109. Elf Archer with 49,000000 HP made 14,000000 damage to Orc Goblin.
+Orc Goblin's HP = 10,000000 now.
+
+110. Elf Warrior with 7,000000 HP made 15,000000 damage to Orc Goblin.
+Orc Goblin's HP = 19,000000 now.
+
+111. Elf Warrior with 7,000000 HP made 15,000000 damage to Orc Goblin.
+Orc Goblin's HP = -5,000000 now.
+Orc Goblin is down.
+
+112. Human Crossbowman with 49,000000 HP made 5,000000 damage to Orc Goblin.
+Orc Goblin's HP = 3,000000 now.
+
+113. Elf Archer with 49,000000 HP made 3,000000 damage to Walking dead Hunter.
+Walking dead Hunter's HP = 54,000000 now.
+
+114. Human Crossbowman with 14,000000 HP made 5,000000 damage to Walking dead Hunter.
+Walking dead Hunter's HP = 49,000000 now.
+
+115. Human Crossbowman with 14,000000 HP made 3,000000 damage to Orc Goblin.
+Orc Goblin's HP = 16,000000 now.
+
+116. Human Mage blessed Elf Warrior.
+
+
+117. Walking dead Hunter with 49,000000 HP made 2,000000 damage to Elf Warrior.
+Elf Warrior's HP = 5,000000 now.
+
+118. Orc Goblin with 3,000000 HP made 20,000000 damage to Human Warrior.
+Human Warrior's HP = -13,000000 now.
+Human Warrior is down.
+
+119. Walking dead Hunter with 49,000000 HP made 4,000000 damage to Human Crossbowman.
+Human Crossbowman's HP = 10,000000 now.
+
+120. Orc Goblin with 3,000000 HP made 20,000000 damage to Elf Warrior.
+Elf Warrior's HP = -15,000000 now.
+Elf Warrior is down.
+
+121. Human Mage blessed Human Warrior.
+
+
+122. Human Warrior with 25,000000 HP made 36,000000 damage to Walking dead Hunter.
+Walking dead Hunter's HP = 13,000000 now.
+
+123. Orc Goblin with 16,000000 HP made 20,000000 damage to Elf Archer.
+Elf Archer's HP = 29,000000 now.
+
+124. Human Crossbowman with 10,000000 HP made 3,000000 damage to Walking dead Hunter.
+Walking dead Hunter's HP = 59,000000 now.
+
+125. Elf Archer with 29,000000 HP made 7,000000 damage to Walking dead Necromant.
+Walking dead Necromant's HP = 3,000000 now.
+
+126. Human Crossbowman with 10,000000 HP made 5,000000 damage to Walking dead Necromant.
+Walking dead Necromant's HP = -2,000000 now.
+Walking dead Necromant is down.
+
+127. Walking dead Hunter with 59,000000 HP made 4,000000 damage to Elf Archer.
+Elf Archer's HP = 25,000000 now.
+
+128. Orc Goblin with 16,000000 HP made 20,000000 damage to Human Crossbowman.
+Human Crossbowman's HP = -10,000000 now.
+Human Crossbowman is down.
+
+129. Human Warrior with 25,000000 HP made 18,000000 damage to Orc Goblin.
+Orc Goblin's HP = -2,000000 now.
+Orc Goblin is down.
+
+130. Walking dead Hunter with 59,000000 HP made 4,000000 damage to Human Mage.
+Human Mage's HP = 14,000000 now.
+
+131. Walking dead Hunter with 13,000000 HP made 2,000000 damage to Human Mage.
+Human Mage's HP = 12,000000 now.
+
+132. Orc Goblin with 3,000000 HP made 20,000000 damage to Human Mage.
+Human Mage's HP = -8,000000 now.
+Human Mage is down.
+
+133. Walking dead Hunter with 13,000000 HP made 4,000000 damage to Human Warrior.
+Human Warrior's HP = 21,000000 now.
+
+134. Walking dead Hunter with 59,000000 HP made 4,000000 damage to Human Warrior.
+Human Warrior's HP = 17,000000 now.
+
+135. Walking dead Hunter with 13,000000 HP made 4,000000 damage to Human Warrior.
+Human Warrior's HP = 13,000000 now.
+
+136. Human Crossbowman with 49,000000 HP made 3,000000 damage to Walking dead Hunter.
+Walking dead Hunter's HP = 56,000000 now.
+
+137. Orc Goblin with 3,000000 HP made 20,000000 damage to Elf Archer.
+Elf Archer's HP = 5,000000 now.
+
+138. Walking dead Hunter with 56,000000 HP made 2,000000 damage to Human Warrior.
+Human Warrior's HP = 11,000000 now.
+
+139. Elf Archer with 5,000000 HP made 3,000000 damage to Orc Goblin.
+Orc Goblin's HP = 0,000000 now.
+Orc Goblin is down.
+
+140. Human Warrior with 11,000000 HP made 18,000000 damage to Walking dead Hunter.
+Walking dead Hunter's HP = -5,000000 now.
+Walking dead Hunter is down.
+
+141. Walking dead Hunter with 56,000000 HP made 2,000000 damage to Human Crossbowman.
+Human Crossbowman's HP = 47,000000 now.
+
+142. Human Crossbowman with 47,000000 HP made 3,000000 damage to Walking dead Hunter.
+Walking dead Hunter's HP = 53,000000 now.
+
+143. Elf Archer with 5,000000 HP made 7,000000 damage to Walking dead Hunter.
+Walking dead Hunter's HP = 46,000000 now.
+
+144. Human Warrior with 11,000000 HP made 18,000000 damage to Walking dead Hunter.
+Walking dead Hunter's HP = 28,000000 now.
+
+145. Walking dead Hunter with 28,000000 HP made 2,000000 damage to Human Crossbowman.
+Human Crossbowman's HP = 45,000000 now.
+
+146. Walking dead Hunter with 28,000000 HP made 4,000000 damage to Human Crossbowman.
+Human Crossbowman's HP = 41,000000 now.
+
+147. Walking dead Hunter with 28,000000 HP made 2,000000 damage to Human Warrior.
+Human Warrior's HP = 9,000000 now.
+
+148. Walking dead Hunter with 28,000000 HP made 4,000000 damage to Elf Archer.
+Elf Archer's HP = 1,000000 now.
+
+149. Walking dead Hunter with 28,000000 HP made 4,000000 damage to Human Warrior.
+Human Warrior's HP = 5,000000 now.
+
+150. Elf Archer with 1,000000 HP made 7,000000 damage to Walking dead Hunter.
+Walking dead Hunter's HP = 21,000000 now.
+
+151. Elf Archer with 1,000000 HP made 3,000000 damage to Walking dead Hunter.
+Walking dead Hunter's HP = 18,000000 now.
+
+152. Human Crossbowman with 41,000000 HP made 5,000000 damage to Walking dead Hunter.
+Walking dead Hunter's HP = 13,000000 now.
+
+153. Walking dead Hunter with 13,000000 HP made 2,000000 damage to Human Warrior.
+Human Warrior's HP = 3,000000 now.
+
+154. Walking dead Hunter with 13,000000 HP made 4,000000 damage to Human Crossbowman.
+Human Crossbowman's HP = 37,000000 now.
+
+155. Human Crossbowman with 37,000000 HP made 3,000000 damage to Walking dead Hunter.
+Walking dead Hunter's HP = 10,000000 now.
+
+156. Human Crossbowman with 37,000000 HP made 3,000000 damage to Walking dead Hunter.
+Walking dead Hunter's HP = 7,000000 now.
+
+157. Walking dead Hunter with 7,000000 HP made 2,000000 damage to Human Crossbowman.
+Human Crossbowman's HP = 35,000000 now.
+
+158. Walking dead Hunter with 7,000000 HP made 4,000000 damage to Elf Archer.
+Elf Archer's HP = -3,000000 now.
+Elf Archer is down.
+
+159. Human Crossbowman with 35,000000 HP made 3,000000 damage to Walking dead Hunter.
+Walking dead Hunter's HP = 4,000000 now.
+
+160. Human Warrior with 3,000000 HP made 18,000000 damage to Walking dead Hunter.
+Walking dead Hunter's HP = -14,000000 now.
+Walking dead Hunter is down.
+
+Light army:
+ Human Crossbowman; Human Warrior;
+Dark army:
+...is down.
+
+
+************************
+Light team wins!
+

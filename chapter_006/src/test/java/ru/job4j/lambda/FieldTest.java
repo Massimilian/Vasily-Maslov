@@ -8,7 +8,7 @@ import java.util.Arrays;
 import static org.hamcrest.Matchers.is;
 import static org.junit.Assert.*;
 
-public class MainTest {
+public class FieldTest {
     Calculator calc = new Calculator();
     ArrayList<Double> buffer = new ArrayList<>();
 
