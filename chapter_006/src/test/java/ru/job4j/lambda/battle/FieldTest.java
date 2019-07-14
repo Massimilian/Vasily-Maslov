@@ -9,7 +9,7 @@ public class FieldTest {
     Field test = new Field();
 
     @Test
-    public void whenTryTiFightThenEnsureThatAllIsWorkingWell() {
+    public void whenTryToFightThenEnsureThatAllIsWorkingWell() {
         assertThat(test.getDarkUnits().size() == test.getLightUnits().size(), is(true));
         assertThat(test.getLightUnits().size(), is(8));
         test.info();
