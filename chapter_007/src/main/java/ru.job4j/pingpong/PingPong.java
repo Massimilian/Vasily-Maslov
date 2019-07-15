@@ -6,9 +6,8 @@ import javafx.scene.Scene;
 import javafx.scene.shape.Rectangle;
 import javafx.stage.Stage;
 
-import java.util.concurrent.Executors;
-import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.TimeUnit;
+
 
 public class PingPong extends Application {
     private static final String JOB4J = "Пинг-понг www.job4j.ru";
@@ -20,10 +19,14 @@ public class PingPong extends Application {
         Group group = new Group();
         Rectangle rect = new Rectangle(50, 100, 10, 10);
         group.getChildren().add(rect);
-        new Thread(new RectangleMove(rect, limitX)).start();
+        Thread ball = new Thread(new RectangleMove(rect, limitX));
+        ball.start();
         stage.setScene(new Scene(group, limitX, limitY));
         stage.setTitle(JOB4J);
         stage.setResizable(false);
         stage.show();
+        stage.setOnCloseRequest(
+                event -> ball.interrupt()// execute interrupt
+        );
     }
 }

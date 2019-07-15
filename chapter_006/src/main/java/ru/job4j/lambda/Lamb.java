@@ -3,6 +3,7 @@ package ru.job4j.lambda;
 //import com.sun.xml.internal.ws.policy.privateutil.PolicyUtils;
 
 import java.util.List;
+import java.util.Optional;
 import java.util.stream.Stream;
 
 public class Lamb {
@@ -14,7 +15,7 @@ public class Lamb {
 //        persons.add(new Person("Arina", 6));
         List<Person> persons = List.of(new Person("Vasia", 35), new Person("Olga", 35), new Person("Vlad", 9), new Person("Arina", 6));
 
-        Stream.iterate(0, i -> i < 10, i -> ++i).forEach(System.out::println);
+        //Stream.iterate(0, i -> i < 10, i -> ++i).forEach(System.out::println);
         //List.of(1, 2, 3, 4, 5, 6).stream().dropWhile(p -> p <= 4).forEach(System.out::println);
         //List.of(2, 3, 4, 5).stream().takeWhile(v -> v % 2 == 0).forEach(System.out::println);
         //Map<String, Integer> map = persons.stream().collect(Collectors.toMap(s -> s.getName(), b -> b.getAge()));

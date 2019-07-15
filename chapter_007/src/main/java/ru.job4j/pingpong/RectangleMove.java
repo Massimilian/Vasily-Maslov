@@ -1,6 +1,5 @@
 package ru.job4j.pingpong;
 
-import javafx.scene.shape.Circle;
 import javafx.scene.shape.Rectangle;
 
 public class RectangleMove implements Runnable {
@@ -16,6 +15,7 @@ public class RectangleMove implements Runnable {
 
     @Override
     public void run() {
+        //while (!Thread.currentThread().isInterrupted()) { // этот вариант, я так понимаю, предполагался, как правильное решение. Тем не менее, если поток запущен в вечный цикл, всё равно код работает корректно (просто прерывается, и зачем ему тогда зависеть от флага?).
         while (true) {
             if (this.rect.getX() >= frame || this.rect.getX() <= 10) {
                 moveX *= -1;
@@ -24,12 +24,10 @@ public class RectangleMove implements Runnable {
             }
             this.rect.setX(this.rect.getX() + moveX);
             this.rect.setY(this.rect.getY() + moveY);
-
-
             try {
                 Thread.sleep(40);
             } catch (InterruptedException e) {
-                e.printStackTrace();
+                return;
             }
         }
     }
