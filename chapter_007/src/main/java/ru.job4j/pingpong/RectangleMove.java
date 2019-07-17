@@ -4,26 +4,27 @@ import javafx.scene.shape.Rectangle;
 
 public class RectangleMove implements Runnable {
     private final Rectangle rect;
-    int frame;
-    int moveX = 1;
-    int moveY = 1;
+    final int frame = 290;
+    final int moveX = 1;
+    final int moveY = 1;
 
-    public RectangleMove(Rectangle rect, int size) {
+    public RectangleMove(Rectangle rect) {
         this.rect = rect;
-        this.frame = size - 10;
     }
 
     @Override
     public void run() {
         //while (!Thread.currentThread().isInterrupted()) { // этот вариант, я так понимаю, предполагался, как правильное решение. Тем не менее, если поток запущен в вечный цикл, всё равно код работает корректно (просто прерывается, и зачем ему тогда зависеть от флага?).
         while (true) {
+            int x = moveX; // сделал поля final. Поэтому пришлось вводить дополнительные локальные переменные. Какой в этом смысл?
+            int y = moveY;
             if (this.rect.getX() >= frame || this.rect.getX() <= 10) {
-                moveX *= -1;
+                x *= -1;
             } else if (this.rect.getY() >= frame || this.rect.getY() <= 10) {
-                moveY *= -1;
+                y *= -1;
             }
-            this.rect.setX(this.rect.getX() + moveX);
-            this.rect.setY(this.rect.getY() + moveY);
+            this.rect.setX(this.rect.getX() + x);
+            this.rect.setY(this.rect.getY() + y);
             try {
                 Thread.sleep(40);
             } catch (InterruptedException e) {
