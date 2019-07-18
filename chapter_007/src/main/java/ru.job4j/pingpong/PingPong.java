@@ -6,8 +6,6 @@ import javafx.scene.Scene;
 import javafx.scene.shape.Rectangle;
 import javafx.stage.Stage;
 
-import java.util.concurrent.TimeUnit;
-
 
 public class PingPong extends Application {
     private static final String JOB4J = "Пинг-понг www.job4j.ru";

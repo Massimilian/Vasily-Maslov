@@ -25,7 +25,7 @@ public class RectangleMove implements Runnable {
             try {
                 Thread.sleep(40);
             } catch (InterruptedException e) {
-                return;
+                System.out.println("Program finished.");
             }
         }
     }
