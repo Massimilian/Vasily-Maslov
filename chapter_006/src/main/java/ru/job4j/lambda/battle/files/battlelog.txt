@@ -665,3 +665,1223 @@ Dark army:
 ************************
 Light team wins!
 
+BATTLE DATE: Sat Jul 20 19:59:08 MSK 2019
+Light army:
+ Human Mage; Elf Archer; Elf Archer; Human Crossbowman; Elf Warrior; Elf Warrior; Elf Warrior; Human Warrior;
+Dark army:
+ Walking dead Necromant; Orc Archer; Orc Archer; Walking dead Hunter; Orc Goblin; Orc Goblin; Walking dead Zombi; Walking dead Zombi;
+
+Round ¹1.
+Walking dead Zombi with 100,000000 HP made 18,000000 damage to Human Warrior.
+Human Warrior's HP = 82,000000 now.
+
+Round ¹2.
+Walking dead Necromant with 100,000000 HP made 5,000000 damage to Elf Warrior.
+Elf Warrior's HP = 95,000000 now.
+
+Round ¹3.
+Elf Warrior with 100,000000 HP made 15,000000 damage to Walking dead Zombi.
+Walking dead Zombi's HP = 85,000000 now.
+
+Round ¹4.
+Elf Warrior with 100,000000 HP made 15,000000 damage to Walking dead Zombi.
+Walking dead Zombi's HP = 70,000000 now.
+
+Round ¹5.
+Walking dead Zombi with 100,000000 HP made 18,000000 damage to Human Mage.
+Human Mage's HP = 82,000000 now.
+
+Round ¹6.
+Elf Archer with 100,000000 HP made 7,000000 damage to Orc Archer.
+Orc Archer's HP = 93,000000 now.
+
+Round ¹7.
+Human Crossbowman with 100,000000 HP made 5,000000 damage to Orc Goblin.
+Orc Goblin's HP = 95,000000 now.
+
+Round ¹8.
+Walking dead Zombi with 100,000000 HP made 18,000000 damage to Human Crossbowman.
+Human Crossbowman's HP = 82,000000 now.
+
+Round ¹9.
+Orc Archer with 100,000000 HP made 2,000000 damage to Elf Warrior.
+Elf Warrior's HP = 98,000000 now.
+
+Round ¹10.
+Walking dead Necromant with 100,000000 HP made 5,000000 damage to Elf Archer.
+Elf Archer's HP = 95,000000 now.
+
+Round ¹11.
+Orc Goblin with 95,000000 HP made 20,000000 damage to Elf Archer.
+Elf Archer's HP = 75,000000 now.
+
+Round ¹12.
+Elf Warrior with 95,000000 HP made 15,000000 damage to Walking dead Zombi.
+Walking dead Zombi's HP = 85,000000 now.
+
+Round ¹13.
+Orc Archer with 93,000000 HP made 3,000000 damage to Human Mage.
+Human Mage's HP = 79,000000 now.
+
+Round ¹14.
+Human Mage with 79,000000 HP made 4,000000 damage to Orc Goblin.
+Orc Goblin's HP = 96,000000 now.
+
+Round ¹15.
+Orc Goblin with 96,000000 HP made 20,000000 damage to Human Warrior.
+Human Warrior's HP = 62,000000 now.
+
+Round ¹16.
+Walking dead Zombi with 85,000000 HP made 18,000000 damage to Elf Archer.
+Elf Archer's HP = 82,000000 now.
+
+Round ¹17.
+Human Crossbowman with 82,000000 HP made 5,000000 damage to Walking dead Zombi.
+Walking dead Zombi's HP = 65,000000 now.
+
+Round ¹18.
+Human Warrior with 62,000000 HP made 18,000000 damage to Walking dead Necromant.
+Walking dead Necromant's HP = 82,000000 now.
+
+Round ¹19.
+Walking dead Hunter with 100,000000 HP made 2,000000 damage to Elf Warrior.
+Elf Warrior's HP = 93,000000 now.
+
+Round ¹20.
+Elf Warrior with 98,000000 HP made 15,000000 damage to Walking dead Hunter.
+Walking dead Hunter's HP = 85,000000 now.
+
+Round ¹21.
+Orc Goblin with 95,000000 HP made 20,000000 damage to Human Crossbowman.
+Human Crossbowman's HP = 62,000000 now.
+
+Round ¹22.
+Orc Archer with 93,000000 HP made 2,000000 damage to Elf Warrior.
+Elf Warrior's HP = 96,000000 now.
+
+Round ¹23.
+Elf Warrior with 96,000000 HP made 15,000000 damage to Orc Goblin.
+Orc Goblin's HP = 81,000000 now.
+
+Round ¹24.
+Human Crossbowman with 62,000000 HP made 5,000000 damage to Orc Archer.
+Orc Archer's HP = 88,000000 now.
+
+Round ¹25.
+Orc Archer with 100,000000 HP made 2,000000 damage to Elf Archer.
+Elf Archer's HP = 80,000000 now.
+
+Round ¹26.
+Elf Archer with 80,000000 HP made 3,000000 damage to Walking dead Necromant.
+Walking dead Necromant's HP = 79,000000 now.
+
+Round ¹27.
+Orc Goblin with 81,000000 HP made 20,000000 damage to Elf Warrior.
+Elf Warrior's HP = 73,000000 now.
+
+Round ¹28.
+Orc Goblin with 81,000000 HP made 20,000000 damage to Elf Warrior.
+Elf Warrior's HP = 80,000000 now.
+
+Round ¹29.
+Human Crossbowman with 62,000000 HP made 3,000000 damage to Orc Goblin.
+Orc Goblin's HP = 92,000000 now.
+
+Round ¹30.
+Walking dead Zombi with 85,000000 HP made 18,000000 damage to Elf Warrior.
+Elf Warrior's HP = 78,000000 now.
+
+Round ¹31.
+Orc Archer with 100,000000 HP made 3,000000 damage to Elf Archer.
+Elf Archer's HP = 72,000000 now.
+
+Round ¹32.
+Elf Warrior with 78,000000 HP made 15,000000 damage to Walking dead Zombi.
+Walking dead Zombi's HP = 70,000000 now.
+
+Round ¹33.
+Elf Archer with 80,000000 HP made 3,000000 damage to Orc Goblin.
+Orc Goblin's HP = 89,000000 now.
+
+Round ¹34.
+Walking dead Zombi with 70,000000 HP made 18,000000 damage to Elf Warrior.
+Elf Warrior's HP = 55,000000 now.
+
+Round ¹35.
+Human Mage blessed Elf Warrior.
+
+
+Round ¹36.
+Walking dead Zombi with 65,000000 HP made 18,000000 damage to Elf Warrior.
+Elf Warrior's HP = 60,000000 now.
+
+Round ¹37.
+Elf Warrior with 60,000000 HP made 30,000000 damage to Orc Goblin.
+Orc Goblin's HP = 59,000000 now.
+
+Round ¹38.
+Elf Archer with 80,000000 HP made 7,000000 damage to Orc Archer.
+Orc Archer's HP = 81,000000 now.
+
+Round ¹39.
+Elf Warrior with 80,000000 HP made 15,000000 damage to Orc Goblin.
+Orc Goblin's HP = 44,000000 now.
+
+Round ¹40.
+Elf Archer with 72,000000 HP made 7,000000 damage to Orc Archer.
+Orc Archer's HP = 93,000000 now.
+
+Round ¹41.
+Walking dead Necromant cursed Elf Warrior.
+
+
+Round ¹42.
+Walking dead Necromant cursed Elf Warrior.
+
+
+Round ¹43.
+Walking dead Necromant cursed Elf Warrior.
+
+
+Round ¹44.
+Orc Goblin with 44,000000 HP made 20,000000 damage to Elf Archer.
+Elf Archer's HP = 52,000000 now.
+
+Round ¹45.
+Elf Warrior with 55,000000 HP made 7,500000 damage to Walking dead Zombi.
+Walking dead Zombi's HP = 62,500000 now.
+
+Round ¹46.
+Elf Archer with 52,000000 HP made 7,000000 damage to Orc Archer.
+Orc Archer's HP = 86,000000 now.
+
+Round ¹47.
+Elf Warrior with 55,000000 HP made 15,000000 damage to Walking dead Zombi.
+Walking dead Zombi's HP = 47,500000 now.
+
+Round ¹48.
+Walking dead Zombi with 47,500000 HP made 18,000000 damage to Human Warrior.
+Human Warrior's HP = 44,000000 now.
+
+Round ¹49.
+Orc Goblin with 44,000000 HP made 20,000000 damage to Elf Archer.
+Elf Archer's HP = 60,000000 now.
+
+Round ¹50.
+Walking dead Hunter with 85,000000 HP made 4,000000 damage to Human Mage.
+Human Mage's HP = 75,000000 now.
+
+Round ¹51.
+Orc Archer with 81,000000 HP made 2,000000 damage to Elf Archer.
+Elf Archer's HP = 58,000000 now.
+
+Round ¹52.
+Elf Warrior with 60,000000 HP made 7,500000 damage to Walking dead Hunter.
+Walking dead Hunter's HP = 77,500000 now.
+
+Round ¹53.
+Human Crossbowman with 62,000000 HP made 3,000000 damage to Walking dead Hunter.
+Walking dead Hunter's HP = 74,500000 now.
+
+Round ¹54.
+Orc Archer with 81,000000 HP made 3,000000 damage to Human Warrior.
+Human Warrior's HP = 41,000000 now.
+
+Round ¹55.
+Elf Warrior with 80,000000 HP made 15,000000 damage to Walking dead Necromant.
+Walking dead Necromant's HP = 64,000000 now.
+
+Round ¹56.
+Orc Goblin with 81,000000 HP made 20,000000 damage to Elf Archer.
+Elf Archer's HP = 32,000000 now.
+
+Round ¹57.
+Walking dead Zombi with 47,500000 HP made 18,000000 damage to Elf Archer.
+Elf Archer's HP = 14,000000 now.
+
+Round ¹58.
+Walking dead Necromant with 64,000000 HP made 5,000000 damage to Human Mage.
+Human Mage's HP = 70,000000 now.
+
+Round ¹59.
+Walking dead Zombi with 65,000000 HP made 18,000000 damage to Elf Archer.
+Elf Archer's HP = 40,000000 now.
+
+Round ¹60.
+Human Warrior with 41,000000 HP made 18,000000 damage to Orc Goblin.
+Orc Goblin's HP = 63,000000 now.
+
+Round ¹61.
+Human Mage with 70,000000 HP made 4,000000 damage to Orc Archer.
+Orc Archer's HP = 77,000000 now.
+
+Round ¹62.
+Elf Warrior with 60,000000 HP made 15,000000 damage to Orc Archer.
+Orc Archer's HP = 62,000000 now.
+
+Round ¹63.
+Walking dead Zombi with 47,500000 HP made 18,000000 damage to Elf Archer.
+Elf Archer's HP = 22,000000 now.
+
+Round ¹64.
+Orc Archer with 62,000000 HP made 3,000000 damage to Elf Warrior.
+Elf Warrior's HP = 57,000000 now.
+
+Round ¹65.
+Elf Warrior with 57,000000 HP made 15,000000 damage to Orc Goblin.
+Orc Goblin's HP = 29,000000 now.
+
+Round ¹66.
+Elf Warrior with 80,000000 HP made 15,000000 damage to Orc Archer.
+Orc Archer's HP = 47,000000 now.
+
+Round ¹67.
+Walking dead Necromant with 64,000000 HP made 5,000000 damage to Elf Warrior.
+Elf Warrior's HP = 52,000000 now.
+
+Round ¹68.
+Elf Warrior with 80,000000 HP made 15,000000 damage to Walking dead Zombi.
+Walking dead Zombi's HP = 50,000000 now.
+
+Round ¹69.
+Walking dead Necromant cursed Elf Archer.
+
+
+Round ¹70.
+Walking dead Necromant cursed Elf Warrior.
+
+
+Round ¹71.
+Walking dead Hunter with 74,500000 HP made 4,000000 damage to Elf Archer.
+Elf Archer's HP = 10,000000 now.
+
+Round ¹72.
+Human Crossbowman with 62,000000 HP made 5,000000 damage to Walking dead Zombi.
+Walking dead Zombi's HP = 42,500000 now.
+
+Round ¹73.
+Elf Warrior with 55,000000 HP made 15,000000 damage to Walking dead Zombi.
+Walking dead Zombi's HP = 35,000000 now.
+
+Round ¹74.
+Walking dead Necromant with 64,000000 HP made 5,000000 damage to Human Mage.
+Human Mage's HP = 65,000000 now.
+
+Round ¹75.
+Elf Warrior with 55,000000 HP made 15,000000 damage to Orc Goblin.
+Orc Goblin's HP = 48,000000 now.
+
+Round ¹76.
+Elf Warrior with 55,000000 HP made 15,000000 damage to Orc Goblin.
+Orc Goblin's HP = 14,000000 now.
+
+Round ¹77.
+Orc Archer with 86,000000 HP made 2,000000 damage to Elf Archer.
+Elf Archer's HP = 20,000000 now.
+
+Round ¹78.
+Human Mage blessed Human Crossbowman.
+
+
+Round ¹79.
+Walking dead Necromant with 64,000000 HP made 5,000000 damage to Elf Warrior.
+Elf Warrior's HP = 75,000000 now.
+
+Round ¹80.
+Human Crossbowman with 62,000000 HP made 6,000000 damage to Orc Archer.
+Orc Archer's HP = 80,000000 now.
+
+Round ¹81.
+Orc Archer with 47,000000 HP made 2,000000 damage to Elf Archer.
+Elf Archer's HP = 18,000000 now.
+
+Round ¹82.
+Orc Goblin with 14,000000 HP made 20,000000 damage to Elf Warrior.
+Elf Warrior's HP = 35,000000 now.
+
+Round ¹83.
+Orc Goblin with 48,000000 HP made 20,000000 damage to Elf Warrior.
+Elf Warrior's HP = 15,000000 now.
+
+Round ¹84.
+Orc Archer with 47,000000 HP made 3,000000 damage to Elf Warrior.
+Elf Warrior's HP = 72,000000 now.
+
+Round ¹85.
+Walking dead Zombi with 35,000000 HP made 18,000000 damage to Human Crossbowman.
+Human Crossbowman's HP = 44,000000 now.
+
+Round ¹86.
+Elf Warrior with 72,000000 HP made 7,500000 damage to Orc Archer.
+Orc Archer's HP = 39,500000 now.
+
+Round ¹87.
+Human Crossbowman with 44,000000 HP made 3,000000 damage to Walking dead Zombi.
+Walking dead Zombi's HP = 39,500000 now.
+
+Round ¹88.
+Elf Warrior with 15,000000 HP made 15,000000 damage to Orc Archer.
+Orc Archer's HP = 65,000000 now.
+
+Round ¹89.
+Walking dead Zombi with 39,500000 HP made 18,000000 damage to Elf Warrior.
+Elf Warrior's HP = 34,000000 now.
+
+Round ¹90.
+Walking dead Necromant with 64,000000 HP made 5,000000 damage to Elf Warrior.
+Elf Warrior's HP = 10,000000 now.
+
+Round ¹91.
+Human Warrior with 41,000000 HP made 18,000000 damage to Walking dead Necromant.
+Walking dead Necromant's HP = 46,000000 now.
+
+Round ¹92.
+Human Mage blessed Elf Archer.
+
+
+Round ¹93.
+Orc Archer with 65,000000 HP made 2,000000 damage to Elf Warrior.
+Elf Warrior's HP = 8,000000 now.
+
+Round ¹94.
+Walking dead Zombi with 35,000000 HP made 18,000000 damage to Elf Archer.
+Elf Archer's HP = -8,000000 now.
+Elf Archer is down.
+
+Round ¹95.
+Elf Warrior with 8,000000 HP made 15,000000 damage to Orc Goblin.
+Orc Goblin's HP = -1,000000 now.
+Orc Goblin is down.
+
+Round ¹96.
+Walking dead Zombi with 39,500000 HP made 18,000000 damage to Human Crossbowman.
+Human Crossbowman's HP = 26,000000 now.
+
+Round ¹97.
+Human Mage with 65,000000 HP made 4,000000 damage to Walking dead Zombi.
+Walking dead Zombi's HP = 35,500000 now.
+
+Round ¹98.
+Walking dead Necromant cursed Human Warrior.
+
+
+Round ¹99.
+Walking dead Zombi with 35,500000 HP made 18,000000 damage to Elf Warrior.
+Elf Warrior's HP = -10,000000 now.
+Elf Warrior is down.
+
+Round ¹100.
+Orc Goblin with 48,000000 HP made 20,000000 damage to Elf Warrior.
+Elf Warrior's HP = 14,000000 now.
+
+Round ¹101.
+Walking dead Hunter with 74,500000 HP made 2,000000 damage to Elf Warrior.
+Elf Warrior's HP = 12,000000 now.
+
+Round ¹102.
+Elf Warrior with 12,000000 HP made 15,000000 damage to Walking dead Zombi.
+Walking dead Zombi's HP = 20,000000 now.
+
+Round ¹103.
+Walking dead Zombi with 20,000000 HP made 18,000000 damage to Human Crossbowman.
+Human Crossbowman's HP = 8,000000 now.
+
+Round ¹104.
+Orc Archer with 39,500000 HP made 3,000000 damage to Elf Warrior.
+Elf Warrior's HP = 9,000000 now.
+
+Round ¹105.
+Orc Archer with 65,000000 HP made 2,000000 damage to Human Crossbowman.
+Human Crossbowman's HP = 6,000000 now.
+
+Round ¹106.
+Walking dead Hunter with 74,500000 HP made 4,000000 damage to Human Mage.
+Human Mage's HP = 61,000000 now.
+
+Round ¹107.
+Human Crossbowman with 6,000000 HP made 3,000000 damage to Orc Archer.
+Orc Archer's HP = 36,500000 now.
+
+Round ¹108.
+Walking dead Hunter with 74,500000 HP made 4,000000 damage to Human Warrior.
+Human Warrior's HP = 37,000000 now.
+
+Round ¹109.
+Orc Archer with 65,000000 HP made 2,000000 damage to Elf Archer.
+Elf Archer's HP = 16,000000 now.
+
+Round ¹110.
+Walking dead Necromant cursed Elf Archer.
+
+
+Round ¹111.
+Human Mage with 61,000000 HP made 4,000000 damage to Orc Archer.
+Orc Archer's HP = 32,500000 now.
+
+Round ¹112.
+Walking dead Zombi with 20,000000 HP made 18,000000 damage to Elf Warrior.
+Elf Warrior's HP = -9,000000 now.
+Elf Warrior is down.
+
+Round ¹113.
+Elf Warrior with 72,000000 HP made 15,000000 damage to Walking dead Zombi.
+Walking dead Zombi's HP = 5,000000 now.
+
+Round ¹114.
+Walking dead Zombi with 35,500000 HP made 18,000000 damage to Elf Warrior.
+Elf Warrior's HP = 54,000000 now.
+
+Round ¹115.
+Human Crossbowman with 6,000000 HP made 3,000000 damage to Walking dead Zombi.
+Walking dead Zombi's HP = 2,000000 now.
+
+Round ¹116.
+Orc Archer with 32,500000 HP made 2,000000 damage to Human Warrior.
+Human Warrior's HP = 35,000000 now.
+
+Round ¹117.
+Orc Archer with 32,500000 HP made 2,000000 damage to Human Mage.
+Human Mage's HP = 59,000000 now.
+
+Round ¹118.
+Human Mage blessed Elf Warrior.
+
+
+Round ¹119.
+Elf Warrior with 54,000000 HP made 30,000000 damage to Walking dead Zombi.
+Walking dead Zombi's HP = 5,500000 now.
+
+Round ¹120.
+Walking dead Hunter with 74,500000 HP made 4,000000 damage to Human Crossbowman.
+Human Crossbowman's HP = 2,000000 now.
+
+Round ¹121.
+Walking dead Hunter with 74,500000 HP made 4,000000 damage to Elf Archer.
+Elf Archer's HP = 12,000000 now.
+
+Round ¹122.
+Walking dead Hunter with 74,500000 HP made 2,000000 damage to Human Crossbowman.
+Human Crossbowman's HP = 0,000000 now.
+Human Crossbowman is down.
+
+Round ¹123.
+Orc Archer with 32,500000 HP made 2,000000 damage to Human Warrior.
+Human Warrior's HP = 33,000000 now.
+
+Round ¹124.
+Orc Archer with 32,500000 HP made 3,000000 damage to Elf Warrior.
+Elf Warrior's HP = 51,000000 now.
+
+Round ¹125.
+Elf Archer with 12,000000 HP made 1,500000 damage to Orc Goblin.
+Orc Goblin's HP = 46,500000 now.
+
+Round ¹126.
+Human Mage with 59,000000 HP made 4,000000 damage to Walking dead Necromant.
+Walking dead Necromant's HP = 42,000000 now.
+
+Round ¹127.
+Walking dead Hunter with 74,500000 HP made 2,000000 damage to Human Mage.
+Human Mage's HP = 57,000000 now.
+
+Round ¹128.
+Human Mage blessed Elf Warrior.
+
+
+Round ¹129.
+Elf Warrior with 51,000000 HP made 30,000000 damage to Orc Archer.
+Orc Archer's HP = 35,000000 now.
+
+Round ¹130.
+Walking dead Necromant with 42,000000 HP made 5,000000 damage to Human Warrior.
+Human Warrior's HP = 28,000000 now.
+
+Round ¹131.
+Human Mage blessed Elf Archer.
+
+
+Round ¹132.
+Walking dead Hunter with 74,500000 HP made 4,000000 damage to Human Warrior.
+Human Warrior's HP = 24,000000 now.
+
+Round ¹133.
+Orc Archer with 35,000000 HP made 3,000000 damage to Elf Warrior.
+Elf Warrior's HP = 48,000000 now.
+
+Round ¹134.
+Walking dead Hunter with 74,500000 HP made 2,000000 damage to Elf Warrior.
+Elf Warrior's HP = 46,000000 now.
+
+Round ¹135.
+Walking dead Hunter with 74,500000 HP made 4,000000 damage to Human Warrior.
+Human Warrior's HP = 20,000000 now.
+
+Round ¹136.
+Elf Archer with 12,000000 HP made 6,000000 damage to Orc Goblin.
+Orc Goblin's HP = 40,500000 now.
+
+Round ¹137.
+Elf Archer with 12,000000 HP made 3,000000 damage to Orc Archer.
+Orc Archer's HP = 29,500000 now.
+
+Round ¹138.
+Elf Archer with 12,000000 HP made 7,000000 damage to Orc Goblin.
+Orc Goblin's HP = 33,500000 now.
+
+Round ¹139.
+Human Warrior with 20,000000 HP made 9,000000 damage to Walking dead Necromant.
+Walking dead Necromant's HP = 33,000000 now.
+
+Round ¹140.
+Elf Warrior with 46,000000 HP made 15,000000 damage to Walking dead Necromant.
+Walking dead Necromant's HP = 18,000000 now.
+
+Round ¹141.
+Orc Archer with 29,500000 HP made 2,000000 damage to Human Warrior.
+Human Warrior's HP = 18,000000 now.
+
+Round ¹142.
+Elf Warrior with 46,000000 HP made 15,000000 damage to Walking dead Hunter.
+Walking dead Hunter's HP = 59,500000 now.
+
+Round ¹143.
+Elf Warrior with 46,000000 HP made 15,000000 damage to Walking dead Zombi.
+Walking dead Zombi's HP = -9,500000 now.
+Walking dead Zombi is down.
+
+Round ¹144.
+Walking dead Hunter with 59,500000 HP made 4,000000 damage to Elf Warrior.
+Elf Warrior's HP = 42,000000 now.
+
+Round ¹145.
+Walking dead Hunter with 59,500000 HP made 2,000000 damage to Elf Archer.
+Elf Archer's HP = 10,000000 now.
+
+Round ¹146.
+Human Warrior with 18,000000 HP made 18,000000 damage to Walking dead Necromant.
+Walking dead Necromant's HP = 0,000000 now.
+Walking dead Necromant is down.
+
+Round ¹147.
+Elf Warrior with 42,000000 HP made 15,000000 damage to Orc Archer.
+Orc Archer's HP = 14,500000 now.
+
+Round ¹148.
+Human Warrior with 18,000000 HP made 18,000000 damage to Orc Archer.
+Orc Archer's HP = 17,000000 now.
+
+Round ¹149.
+Orc Archer with 14,500000 HP made 2,000000 damage to Human Warrior.
+Human Warrior's HP = 16,000000 now.
+
+Round ¹150.
+Orc Goblin with 33,500000 HP made 20,000000 damage to Human Warrior.
+Human Warrior's HP = -4,000000 now.
+Human Warrior is down.
+
+Round ¹151.
+Elf Warrior with 42,000000 HP made 15,000000 damage to Orc Archer.
+Orc Archer's HP = 2,000000 now.
+
+Round ¹152.
+Orc Archer with 14,500000 HP made 2,000000 damage to Elf Archer.
+Elf Archer's HP = 8,000000 now.
+
+Round ¹153.
+Human Mage blessed Elf Archer.
+
+
+Round ¹154.
+Elf Archer with 8,000000 HP made 6,000000 damage to Orc Archer.
+Orc Archer's HP = -4,000000 now.
+Orc Archer is down.
+
+Round ¹155.
+Elf Archer with 8,000000 HP made 3,000000 damage to Walking dead Hunter.
+Walking dead Hunter's HP = 56,500000 now.
+
+Round ¹156.
+Orc Archer with 14,500000 HP made 2,000000 damage to Elf Archer.
+Elf Archer's HP = 6,000000 now.
+
+Round ¹157.
+Elf Warrior with 42,000000 HP made 15,000000 damage to Walking dead Hunter.
+Walking dead Hunter's HP = 41,500000 now.
+
+Round ¹158.
+Elf Archer with 6,000000 HP made 7,000000 damage to Orc Goblin.
+Orc Goblin's HP = 26,500000 now.
+
+Round ¹159.
+Walking dead Zombi with 2,000000 HP made 18,000000 damage to Human Mage.
+Human Mage's HP = 39,000000 now.
+
+Round ¹160.
+Orc Goblin with 26,500000 HP made 20,000000 damage to Elf Archer.
+Elf Archer's HP = -14,000000 now.
+Elf Archer is down.
+
+Round ¹161.
+Elf Warrior with 42,000000 HP made 15,000000 damage to Walking dead Hunter.
+Walking dead Hunter's HP = 26,500000 now.
+
+Round ¹162.
+Elf Warrior with 42,000000 HP made 15,000000 damage to Orc Goblin.
+Orc Goblin's HP = 11,500000 now.
+
+Round ¹163.
+Elf Warrior with 42,000000 HP made 15,000000 damage to Orc Archer.
+Orc Archer's HP = -0,500000 now.
+Orc Archer is down.
+
+Round ¹164.
+Elf Warrior with 42,000000 HP made 15,000000 damage to Walking dead Zombi.
+Walking dead Zombi's HP = -13,000000 now.
+Walking dead Zombi is down.
+
+Round ¹165.
+Human Mage with 39,000000 HP made 4,000000 damage to Walking dead Hunter.
+Walking dead Hunter's HP = 22,500000 now.
+
+Round ¹166.
+Orc Goblin with 11,500000 HP made 20,000000 damage to Elf Warrior.
+Elf Warrior's HP = 22,000000 now.
+
+Round ¹167.
+Elf Warrior with 22,000000 HP made 15,000000 damage to Walking dead Hunter.
+Walking dead Hunter's HP = 7,500000 now.
+
+Round ¹168.
+Human Mage with 39,000000 HP made 4,000000 damage to Orc Goblin.
+Orc Goblin's HP = 7,500000 now.
+
+Round ¹169.
+Walking dead Hunter with 7,500000 HP made 4,000000 damage to Elf Warrior.
+Elf Warrior's HP = 18,000000 now.
+
+Round ¹170.
+Walking dead Hunter with 7,500000 HP made 4,000000 damage to Human Mage.
+Human Mage's HP = 35,000000 now.
+
+Round ¹171.
+Elf Warrior with 18,000000 HP made 15,000000 damage to Orc Goblin.
+Orc Goblin's HP = -7,500000 now.
+Orc Goblin is down.
+
+Round ¹172.
+Walking dead Hunter with 7,500000 HP made 2,000000 damage to Elf Warrior.
+Elf Warrior's HP = 16,000000 now.
+
+Round ¹173.
+Human Mage with 35,000000 HP made 4,000000 damage to Walking dead Hunter.
+Walking dead Hunter's HP = 3,500000 now.
+
+Round ¹174.
+Walking dead Hunter with 3,500000 HP made 4,000000 damage to Elf Warrior.
+Elf Warrior's HP = 12,000000 now.
+
+Round ¹175.
+Walking dead Hunter with 3,500000 HP made 2,000000 damage to Elf Warrior.
+Elf Warrior's HP = 10,000000 now.
+
+Round ¹176.
+Walking dead Hunter with 3,500000 HP made 2,000000 damage to Human Mage.
+Human Mage's HP = 33,000000 now.
+
+Round ¹177.
+Elf Warrior with 10,000000 HP made 15,000000 damage to Walking dead Hunter.
+Walking dead Hunter's HP = -11,500000 now.
+Walking dead Hunter is down.
+
+Light army:
+ Human Mage; Elf Warrior;
+Dark army:
+...is down.
+
+
+************************
+Light team wins!
+
+BATTLE DATE: Sat Jul 20 20:04:29 MSK 2019
+Light army:
+ Elf Mage; Human Crossbowman; Human Crossbowman; Human Crossbowman; Elf Warrior; Human Warrior; Elf Warrior; Human Warrior;
+Dark army:
+ Walking dead Necromant; Orc Archer; Orc Archer; Walking dead Hunter; Walking dead Zombi; Walking dead Zombi; Walking dead Zombi; Orc Goblin;
+
+Round ¹1.
+Elf Mage blessed Human Warrior.
+
+
+Round ¹2.
+Orc Archer with 100,000000 HP made 3,000000 damage to Human Crossbowman.
+Human Crossbowman's HP = 97,000000 now.
+
+Round ¹3.
+Human Warrior with 100,000000 HP made 36,000000 damage to Orc Goblin.
+Orc Goblin's HP = 64,000000 now.
+
+Round ¹4.
+Elf Mage with 100,000000 HP made 10,000000 damage to Walking dead Necromant.
+Walking dead Necromant's HP = 90,000000 now.
+
+Round ¹5.
+Walking dead Zombi with 100,000000 HP made 18,000000 damage to Human Warrior.
+Human Warrior's HP = 82,000000 now.
+
+Round ¹6.
+Orc Goblin with 64,000000 HP made 20,000000 damage to Human Warrior.
+Human Warrior's HP = 62,000000 now.
+
+Round ¹7.
+Walking dead Zombi with 100,000000 HP made 18,000000 damage to Human Crossbowman.
+Human Crossbowman's HP = 79,000000 now.
+
+Round ¹8.
+Orc Goblin with 64,000000 HP made 20,000000 damage to Human Crossbowman.
+Human Crossbowman's HP = 59,000000 now.
+
+Round ¹9.
+Walking dead Zombi with 100,000000 HP made 18,000000 damage to Human Crossbowman.
+Human Crossbowman's HP = 82,000000 now.
+
+Round ¹10.
+Human Crossbowman with 59,000000 HP made 5,000000 damage to Orc Goblin.
+Orc Goblin's HP = 59,000000 now.
+
+Round ¹11.
+Elf Mage blessed Elf Warrior.
+
+
+Round ¹12.
+Walking dead Zombi with 100,000000 HP made 18,000000 damage to Elf Mage.
+Elf Mage's HP = 82,000000 now.
+
+Round ¹13.
+Elf Warrior with 100,000000 HP made 30,000000 damage to Walking dead Hunter.
+Walking dead Hunter's HP = 70,000000 now.
+
+Round ¹14.
+Orc Archer with 100,000000 HP made 2,000000 damage to Elf Warrior.
+Elf Warrior's HP = 98,000000 now.
+
+Round ¹15.
+Human Warrior with 62,000000 HP made 18,000000 damage to Walking dead Hunter.
+Walking dead Hunter's HP = 52,000000 now.
+
+Round ¹16.
+Walking dead Zombi with 100,000000 HP made 18,000000 damage to Human Crossbowman.
+Human Crossbowman's HP = 41,000000 now.
+
+Round ¹17.
+Walking dead Zombi with 100,000000 HP made 18,000000 damage to Elf Warrior.
+Elf Warrior's HP = 80,000000 now.
+
+Round ¹18.
+Walking dead Zombi with 100,000000 HP made 18,000000 damage to Human Warrior.
+Human Warrior's HP = 44,000000 now.
+
+Round ¹19.
+Elf Mage blessed Elf Warrior.
+
+
+Round ¹20.
+Walking dead Zombi with 100,000000 HP made 18,000000 damage to Elf Mage.
+Elf Mage's HP = 64,000000 now.
+
+Round ¹21.
+Walking dead Zombi with 100,000000 HP made 18,000000 damage to Human Crossbowman.
+Human Crossbowman's HP = 82,000000 now.
+
+Round ¹22.
+Elf Warrior with 100,000000 HP made 30,000000 damage to Walking dead Zombi.
+Walking dead Zombi's HP = 70,000000 now.
+
+Round ¹23.
+Human Crossbowman with 41,000000 HP made 3,000000 damage to Orc Goblin.
+Orc Goblin's HP = 56,000000 now.
+
+Round ¹24.
+Orc Goblin with 56,000000 HP made 20,000000 damage to Human Crossbowman.
+Human Crossbowman's HP = 62,000000 now.
+
+Round ¹25.
+Walking dead Zombi with 100,000000 HP made 18,000000 damage to Elf Warrior.
+Elf Warrior's HP = 62,000000 now.
+
+Round ¹26.
+Human Warrior with 44,000000 HP made 18,000000 damage to Orc Archer.
+Orc Archer's HP = 82,000000 now.
+
+Round ¹27.
+Elf Mage blessed Human Crossbowman.
+
+
+Round ¹28.
+Human Crossbowman with 62,000000 HP made 6,000000 damage to Walking dead Hunter.
+Walking dead Hunter's HP = 46,000000 now.
+
+Round ¹29.
+Elf Mage with 64,000000 HP made 10,000000 damage to Walking dead Hunter.
+Walking dead Hunter's HP = 36,000000 now.
+
+Round ¹30.
+Human Crossbowman with 62,000000 HP made 5,000000 damage to Walking dead Necromant.
+Walking dead Necromant's HP = 85,000000 now.
+
+Round ¹31.
+Walking dead Hunter with 36,000000 HP made 2,000000 damage to Elf Mage.
+Elf Mage's HP = 62,000000 now.
+
+Round ¹32.
+Walking dead Zombi with 100,000000 HP made 18,000000 damage to Elf Warrior.
+Elf Warrior's HP = 82,000000 now.
+
+Round ¹33.
+Walking dead Zombi with 100,000000 HP made 18,000000 damage to Human Crossbowman.
+Human Crossbowman's HP = 44,000000 now.
+
+Round ¹34.
+Walking dead Zombi with 100,000000 HP made 18,000000 damage to Elf Warrior.
+Elf Warrior's HP = 44,000000 now.
+
+Round ¹35.
+Walking dead Hunter with 36,000000 HP made 2,000000 damage to Human Crossbowman.
+Human Crossbowman's HP = 39,000000 now.
+
+Round ¹36.
+Orc Archer with 100,000000 HP made 3,000000 damage to Elf Warrior.
+Elf Warrior's HP = 41,000000 now.
+
+Round ¹37.
+Orc Archer with 100,000000 HP made 3,000000 damage to Human Crossbowman.
+Human Crossbowman's HP = 36,000000 now.
+
+Round ¹38.
+Elf Warrior with 41,000000 HP made 15,000000 damage to Walking dead Zombi.
+Walking dead Zombi's HP = 85,000000 now.
+
+Round ¹39.
+Human Crossbowman with 82,000000 HP made 3,000000 damage to Walking dead Necromant.
+Walking dead Necromant's HP = 82,000000 now.
+
+Round ¹40.
+Orc Goblin with 56,000000 HP made 20,000000 damage to Human Warrior.
+Human Warrior's HP = 24,000000 now.
+
+Round ¹41.
+Human Warrior with 24,000000 HP made 18,000000 damage to Orc Archer.
+Orc Archer's HP = 82,000000 now.
+
+Round ¹42.
+Walking dead Zombi with 85,000000 HP made 18,000000 damage to Human Crossbowman.
+Human Crossbowman's HP = 18,000000 now.
+
+Round ¹43.
+Walking dead Zombi with 100,000000 HP made 18,000000 damage to Human Crossbowman.
+Human Crossbowman's HP = 64,000000 now.
+
+Round ¹44.
+Elf Warrior with 41,000000 HP made 15,000000 damage to Walking dead Zombi.
+Walking dead Zombi's HP = 55,000000 now.
+
+Round ¹45.
+Human Warrior with 24,000000 HP made 18,000000 damage to Orc Archer.
+Orc Archer's HP = 64,000000 now.
+
+Round ¹46.
+Orc Archer with 82,000000 HP made 2,000000 damage to Elf Warrior.
+Elf Warrior's HP = 39,000000 now.
+
+Round ¹47.
+Walking dead Zombi with 85,000000 HP made 18,000000 damage to Elf Warrior.
+Elf Warrior's HP = 21,000000 now.
+
+Round ¹48.
+Walking dead Zombi with 100,000000 HP made 18,000000 damage to Elf Warrior.
+Elf Warrior's HP = 64,000000 now.
+
+Round ¹49.
+Walking dead Hunter with 36,000000 HP made 2,000000 damage to Human Warrior.
+Human Warrior's HP = 98,000000 now.
+
+Round ¹50.
+Elf Warrior with 21,000000 HP made 15,000000 damage to Walking dead Zombi.
+Walking dead Zombi's HP = 40,000000 now.
+
+Round ¹51.
+Orc Goblin with 56,000000 HP made 20,000000 damage to Human Warrior.
+Human Warrior's HP = 4,000000 now.
+
+Round ¹52.
+Orc Archer with 82,000000 HP made 2,000000 damage to Elf Warrior.
+Elf Warrior's HP = 62,000000 now.
+
+Round ¹53.
+Walking dead Zombi with 40,000000 HP made 18,000000 damage to Elf Mage.
+Elf Mage's HP = 44,000000 now.
+
+Round ¹54.
+Human Crossbowman with 44,000000 HP made 3,000000 damage to Orc Goblin.
+Orc Goblin's HP = 53,000000 now.
+
+Round ¹55.
+Human Crossbowman with 44,000000 HP made 3,000000 damage to Walking dead Zombi.
+Walking dead Zombi's HP = 37,000000 now.
+
+Round ¹56.
+Human Warrior with 98,000000 HP made 18,000000 damage to Walking dead Necromant.
+Walking dead Necromant's HP = 64,000000 now.
+
+Round ¹57.
+Orc Goblin with 53,000000 HP made 20,000000 damage to Human Warrior.
+Human Warrior's HP = -16,000000 now.
+Human Warrior is down.
+
+Round ¹58.
+Human Crossbowman with 44,000000 HP made 3,000000 damage to Walking dead Hunter.
+Walking dead Hunter's HP = 33,000000 now.
+
+Round ¹59.
+Orc Archer with 82,000000 HP made 3,000000 damage to Human Crossbowman.
+Human Crossbowman's HP = 15,000000 now.
+
+Round ¹60.
+Elf Mage with 44,000000 HP made 10,000000 damage to Walking dead Zombi.
+Walking dead Zombi's HP = 27,000000 now.
+
+Round ¹61.
+Walking dead Zombi with 27,000000 HP made 18,000000 damage to Human Crossbowman.
+Human Crossbowman's HP = -3,000000 now.
+Human Crossbowman is down.
+
+Round ¹62.
+Walking dead Necromant cursed Elf Mage.
+
+
+Round ¹63.
+Walking dead Zombi with 100,000000 HP made 18,000000 damage to Human Warrior.
+Human Warrior's HP = 80,000000 now.
+
+Round ¹64.
+Walking dead Necromant with 64,000000 HP made 5,000000 damage to Human Warrior.
+Human Warrior's HP = 75,000000 now.
+
+Round ¹65.
+Walking dead Zombi with 85,000000 HP made 18,000000 damage to Human Crossbowman.
+Human Crossbowman's HP = 46,000000 now.
+
+Round ¹66.
+Human Crossbowman with 44,000000 HP made 3,000000 damage to Orc Archer.
+Orc Archer's HP = 79,000000 now.
+
+Round ¹67.
+Walking dead Zombi with 100,000000 HP made 18,000000 damage to Human Crossbowman.
+Human Crossbowman's HP = 28,000000 now.
+
+Round ¹68.
+Human Crossbowman with 44,000000 HP made 3,000000 damage to Orc Archer.
+Orc Archer's HP = 76,000000 now.
+
+Round ¹69.
+Orc Goblin with 53,000000 HP made 20,000000 damage to Elf Warrior.
+Elf Warrior's HP = 1,000000 now.
+
+Round ¹70.
+Elf Mage blessed Human Crossbowman.
+
+
+Round ¹71.
+Human Crossbowman with 28,000000 HP made 6,000000 damage to Walking dead Necromant.
+Walking dead Necromant's HP = 58,000000 now.
+
+Round ¹72.
+Walking dead Zombi with 100,000000 HP made 18,000000 damage to Elf Mage.
+Elf Mage's HP = 26,000000 now.
+
+Round ¹73.
+Elf Warrior with 1,000000 HP made 15,000000 damage to Walking dead Zombi.
+Walking dead Zombi's HP = 12,000000 now.
+
+Round ¹74.
+Human Warrior with 75,000000 HP made 18,000000 damage to Orc Archer.
+Orc Archer's HP = 46,000000 now.
+
+Round ¹75.
+Elf Mage blessed Elf Warrior.
+
+
+Round ¹76.
+Elf Warrior with 1,000000 HP made 30,000000 damage to Walking dead Zombi.
+Walking dead Zombi's HP = 70,000000 now.
+
+Round ¹77.
+Walking dead Hunter with 33,000000 HP made 4,000000 damage to Human Crossbowman.
+Human Crossbowman's HP = 24,000000 now.
+
+Round ¹78.
+Walking dead Hunter with 33,000000 HP made 4,000000 damage to Elf Warrior.
+Elf Warrior's HP = -3,000000 now.
+Elf Warrior is down.
+
+Round ¹79.
+Walking dead Zombi with 12,000000 HP made 18,000000 damage to Human Crossbowman.
+Human Crossbowman's HP = 6,000000 now.
+
+Round ¹80.
+Walking dead Zombi with 12,000000 HP made 18,000000 damage to Elf Warrior.
+Elf Warrior's HP = 44,000000 now.
+
+Round ¹81.
+Walking dead Zombi with 12,000000 HP made 18,000000 damage to Human Crossbowman.
+Human Crossbowman's HP = -12,000000 now.
+Human Crossbowman is down.
+
+Round ¹82.
+Walking dead Hunter with 33,000000 HP made 4,000000 damage to Human Warrior.
+Human Warrior's HP = 71,000000 now.
+
+Round ¹83.
+Walking dead Hunter with 33,000000 HP made 2,000000 damage to Elf Mage.
+Elf Mage's HP = 24,000000 now.
+
+Round ¹84.
+Walking dead Zombi with 12,000000 HP made 18,000000 damage to Human Warrior.
+Human Warrior's HP = 53,000000 now.
+
+Round ¹85.
+Elf Warrior with 44,000000 HP made 15,000000 damage to Orc Goblin.
+Orc Goblin's HP = 38,000000 now.
+
+Round ¹86.
+Orc Archer with 46,000000 HP made 3,000000 damage to Elf Warrior.
+Elf Warrior's HP = 41,000000 now.
+
+Round ¹87.
+Orc Goblin with 38,000000 HP made 20,000000 damage to Human Warrior.
+Human Warrior's HP = 33,000000 now.
+
+Round ¹88.
+Human Crossbowman with 44,000000 HP made 5,000000 damage to Walking dead Hunter.
+Walking dead Hunter's HP = 28,000000 now.
+
+Round ¹89.
+Elf Warrior with 41,000000 HP made 15,000000 damage to Orc Archer.
+Orc Archer's HP = 31,000000 now.
+
+Round ¹90.
+Human Crossbowman with 44,000000 HP made 3,000000 damage to Orc Archer.
+Orc Archer's HP = 73,000000 now.
+
+Round ¹91.
+Elf Warrior with 41,000000 HP made 15,000000 damage to Walking dead Zombi.
+Walking dead Zombi's HP = -3,000000 now.
+Walking dead Zombi is down.
+
+Round ¹92.
+Walking dead Hunter with 28,000000 HP made 2,000000 damage to Elf Warrior.
+Elf Warrior's HP = 39,000000 now.
+
+Round ¹93.
+Elf Mage blessed Elf Mage.
+
+
+Round ¹94.
+Walking dead Zombi with 85,000000 HP made 18,000000 damage to Human Warrior.
+Human Warrior's HP = 15,000000 now.
+
+Round ¹95.
+Walking dead Hunter with 28,000000 HP made 2,000000 damage to Elf Mage.
+Elf Mage's HP = 22,000000 now.
+
+Round ¹96.
+Elf Mage with 22,000000 HP made 20,000000 damage to Walking dead Zombi.
+Walking dead Zombi's HP = 65,000000 now.
+
+Round ¹97.
+Orc Archer with 31,000000 HP made 3,000000 damage to Human Crossbowman.
+Human Crossbowman's HP = 41,000000 now.
+
+Round ¹98.
+Walking dead Zombi with 65,000000 HP made 18,000000 damage to Human Crossbowman.
+Human Crossbowman's HP = 23,000000 now.
+
+Round ¹99.
+Walking dead Zombi with 70,000000 HP made 18,000000 damage to Elf Mage.
+Elf Mage's HP = 4,000000 now.
+
+Round ¹100.
+Elf Mage blessed Elf Warrior.
+
+
+Round ¹101.
+Orc Archer with 73,000000 HP made 2,000000 damage to Elf Warrior.
+Elf Warrior's HP = 37,000000 now.
+
+Round ¹102.
+Elf Warrior with 37,000000 HP made 30,000000 damage to Walking dead Zombi.
+Walking dead Zombi's HP = 35,000000 now.
+
+Round ¹103.
+Walking dead Zombi with 35,000000 HP made 18,000000 damage to Elf Warrior.
+Elf Warrior's HP = 19,000000 now.
+
+Round ¹104.
+Elf Mage with 4,000000 HP made 10,000000 damage to Orc Goblin.
+Orc Goblin's HP = 28,000000 now.
+
+Round ¹105.
+Orc Goblin with 28,000000 HP made 20,000000 damage to Elf Warrior.
+Elf Warrior's HP = -1,000000 now.
+Elf Warrior is down.
+
+Round ¹106.
+Human Crossbowman with 23,000000 HP made 5,000000 damage to Walking dead Necromant.
+Walking dead Necromant's HP = 53,000000 now.
+
+Round ¹107.
+Human Crossbowman with 23,000000 HP made 5,000000 damage to Orc Goblin.
+Orc Goblin's HP = 23,000000 now.
+
+Round ¹108.
+Walking dead Zombi with 35,000000 HP made 18,000000 damage to Human Warrior.
+Human Warrior's HP = -3,000000 now.
+Human Warrior is down.
+
+Round ¹109.
+Walking dead Zombi with 70,000000 HP made 18,000000 damage to Elf Mage.
+Elf Mage's HP = -14,000000 now.
+Elf Mage is down.
+
+Round ¹110.
+Orc Archer with 31,000000 HP made 3,000000 damage to Human Crossbowman.
+Human Crossbowman's HP = 20,000000 now.
+
+Round ¹111.
+Human Crossbowman with 20,000000 HP made 3,000000 damage to Walking dead Necromant.
+Walking dead Necromant's HP = 50,000000 now.
+
+Round ¹112.
+Human Crossbowman with 20,000000 HP made 3,000000 damage to Walking dead Necromant.
+Walking dead Necromant's HP = 47,000000 now.
+
+Round ¹113.
+Walking dead Zombi with 35,000000 HP made 18,000000 damage to Human Crossbowman.
+Human Crossbowman's HP = 2,000000 now.
+
+Round ¹114.
+Human Crossbowman with 2,000000 HP made 5,000000 damage to Walking dead Necromant.
+Walking dead Necromant's HP = 42,000000 now.
+
+Round ¹115.
+Walking dead Zombi with 35,000000 HP made 18,000000 damage to Human Crossbowman.
+Human Crossbowman's HP = -16,000000 now.
+Human Crossbowman is down.
+
+Light army:
+...is down.
+Dark army:
+ Walking dead Necromant; Orc Archer; Orc Archer; Walking dead Hunter; Walking dead Zombi; Walking dead Zombi; Orc Goblin;
+
+************************
+Dark team wins!
+

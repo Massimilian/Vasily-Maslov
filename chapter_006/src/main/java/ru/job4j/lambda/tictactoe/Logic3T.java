@@ -44,10 +44,7 @@ public class Logic3T {
      * @return is the winner
      */
     private boolean crutching(Predicate<Figure3T> predicate) {
-        return this.crutch(predicate, 0, 0, 1, 0) ||
-                this.crutch(predicate, 1, 0, 0, 1) ||
-                this.fillBy(predicate, 0, 0, 1, 1) ||
-                this.fillBy(predicate, this.table.length - 1, 0, -1, 1);
+        return this.crutch(predicate, 0, 0, 1, 0) || this.crutch(predicate, 1, 0, 0, 1) || this.fillBy(predicate, 0, 0, 1, 1) || this.fillBy(predicate, this.table.length - 1, 0, -1, 1);
     }
 
     /**
