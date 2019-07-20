@@ -3,15 +3,15 @@ package ru.job4j.storage;
 import java.util.Objects;
 
 public class User {
-    private final int ID;
+    private final int id;
     private int amount;
 
-    public User(int ID) {
-        this.ID = ID;
+    public User(int id) {
+        this.id = id;
     }
 
-    public User(int ID, int amount) {
-        this.ID = ID;
+    public User(int id, int amount) {
+        this.id = id;
         this.amount = amount;
     }
 
@@ -32,11 +32,11 @@ public class User {
             return false;
         }
         User user = (User) o;
-        return ID == user.ID;
+        return id == user.id;
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(ID);
+        return Objects.hash(id);
     }
 }

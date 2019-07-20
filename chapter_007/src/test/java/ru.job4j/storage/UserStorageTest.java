@@ -7,7 +7,7 @@ import static org.hamcrest.Matchers.is;
 import static org.junit.Assert.assertThat;
 
 public class UserStorageTest {
-    UserStorage stoge = new UserStorage();
+    private UserStorage stoge = new UserStorage();
 
     @Test
     public void whenTryToUseStorageThenUseItWell() {

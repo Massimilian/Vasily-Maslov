@@ -27,7 +27,7 @@ public class CountTest {
         final Count count = new Count(); //Создаем счетчик.
         Thread first = new ThreadCount(count); //Создаем нити.
         Thread second = new ThreadCount(count);
-        first.start();//Запускаем нити.
+        first.start(); //Запускаем нити.
         second.start();
         first.join(); //Заставляем главную нить дождаться выполнения наших нитей.
         second.join();
