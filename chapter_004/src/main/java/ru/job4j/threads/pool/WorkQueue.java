@@ -9,7 +9,7 @@ public class WorkQueue {
     private final int nThreads = Runtime.getRuntime().availableProcessors();
     // создаём массив для хоанения потоков
     private final PoolWorker[] threads = new PoolWorker[nThreads];
-    // сохздаём очередь для хранения нитей
+    // создаём очередь для хранения нитей
     private final LinkedList<Runnable> queue = new LinkedList<Runnable>();
 
     public WorkQueue() {
