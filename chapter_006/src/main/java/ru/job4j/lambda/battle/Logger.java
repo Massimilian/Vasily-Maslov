@@ -8,7 +8,7 @@ import java.util.Date;
 import static java.lang.String.format;
 
 public class Logger {
-    private File log = new File("C:\\projects\\Vasily-Maslov\\chapter_006\\src\\main\\java\\ru\\job4j\\lambda\\battle\\files\\battlelog.txt");
+    private File log = new File("battlelog.txt");
     private FileWriter fw;
 
     public Logger() {
