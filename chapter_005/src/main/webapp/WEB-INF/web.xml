@@ -1,5 +1,5 @@
-
 <web-app>
+
     <servlet>
         <servlet-name>EchoServlet</servlet-name>
         <servlet-class>ru.job4j.servlets.EchoServlet</servlet-class>
@@ -10,14 +10,16 @@
         <url-pattern>/echo</url-pattern>
     </servlet-mapping>
 
+
     <servlet>
-        <servlet-name>MyServlet</servlet-name>
-        <servlet-class>ru.job4j.servlets.MyServlet</servlet-class>
+        <servlet-name>CrudServlet</servlet-name>
+        <servlet-class>ru.job4j.crudservlet.CrudServlet</servlet-class>
+        <load-on-startup>1</load-on-startup>
     </servlet>
 
     <servlet-mapping>
-        <servlet-name>MyServlet</servlet-name>
-        <url-pattern>/my</url-pattern>
+        <servlet-name>CrudServlet</servlet-name>
+        <url-pattern>/crud</url-pattern>
     </servlet-mapping>
 
 </web-app>
