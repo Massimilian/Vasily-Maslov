@@ -32,11 +32,10 @@ public class Cash {
      */
     public void reNew(Base base) {
         int version = storage.get(base.getId()).getVersion();
-        base.setVersion(base.getVersion() + 1);
-        if (version == base.getVersion()) {
+        if (version == base.getVersion() + 1) {
             throw new OptimisticException();
         } else {
-            storage.computeIfPresent(base.getId(), ((i, bas) -> base));
+            storage.computeIfPresent(base.getId(), ((i, bas) -> bas.upgrade()));
         }
     }
 }

@@ -9,6 +9,14 @@ public class Base {
         this.version = 0;
     }
 
+    public Base(int id, int version) {
+        this.id = id;
+        this.version = version;
+    }
+
+    public Base upgrade() {
+        return new Base(this.id, this.version + 1);
+    }
     public int getId() {
         return id;
     }
