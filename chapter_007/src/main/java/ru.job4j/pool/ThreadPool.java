@@ -19,7 +19,6 @@ public class ThreadPool {
 
     // будим все потоки. Если размер threads не больше количества ядер в процессоре, то добавляем задачу (одновременно изымая её из tasks и освобождая место для следующей задачи). Иначе ждём.
     private void run() {
-        notifyAll();
         if (this.threads.size() < this.size) {
             threads.add(new Thread(tasks.poll()));
         } else {
@@ -33,6 +32,6 @@ public class ThreadPool {
 
     // по реализации данного метода не нашёл никаких указаний.
     public void shutdown() {
-
+        threads.stream().forEach(t -> t.interrupt());
     }
 }
