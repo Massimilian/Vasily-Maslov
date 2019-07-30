@@ -1,12 +1,13 @@
 package ru.job4j.crudservlet;
 
 import java.util.List;
+import java.util.concurrent.atomic.AtomicInteger;
 
 /**
  * Base interface for storing users.
  */
 public interface Store {
-    public long getValue();
+    public int getValue();
 
     public List<User> getList();
 

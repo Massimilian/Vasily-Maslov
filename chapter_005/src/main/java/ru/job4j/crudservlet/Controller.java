@@ -68,10 +68,10 @@ public class Controller {
             prep = new User(logic.getValue(), split[1], split[2], split[3], new Date());
         }
         if (split.length >= 5 && spec) {
-            Long id = 0L;
+            int id = 0;
             boolean correct = true;
             try {
-                id = Long.parseLong(split[1]);
+                id = Integer.parseInt(split[1]);
             } catch (Exception e) {
                 correct = false;
             }

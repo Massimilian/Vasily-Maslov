@@ -13,7 +13,6 @@ import java.io.PrintWriter;
 public class CrudServlet extends HttpServlet {
     private final Store logic = ValidateService.getValidateService();
     private final Controller controller = new Controller(logic);
-    String reg = "";
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
@@ -26,9 +25,7 @@ public class CrudServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         resp.setContentType("text/html");
-        reg = req.getParameter("action");
-        this.controller.works(reg);
+        this.controller.works(req.getParameter("action"));
         this.doGet(req, resp);
     }
-
 }
