@@ -7,12 +7,12 @@ public class BomberRun extends CreatureRun {
 
     @Override
     public void run() {
-        board.getBoard()[creature.getCell().getPosX()][creature.getCell().getPosY()].lock();
+        board.setCreature(creature.getCell());
         while (true) {
-            Cell temp = new Cell(creature.getCell().getPosX(), creature.getCell().getPosY());
+            Cell temp = new Cell(creature.getCell());
             System.out.printf("Bomberman's position is %s %s. %s", temp.getPosX(), temp.getPosY(), System.lineSeparator());
             creature.move();
-            if (board.getBoard()[creature.getCell().getPosX()][creature.getCell().getPosY()].tryLock()) {
+            if (board.tryCell(creature.getCell())) {
                 try {
                     Thread.sleep(1000);
                 } catch (InterruptedException e) {

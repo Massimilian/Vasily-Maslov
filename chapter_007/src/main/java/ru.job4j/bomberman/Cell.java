@@ -9,6 +9,11 @@ public class Cell {
         this.posY = posY;
     }
 
+    public Cell(Cell cell) {
+        this.posX = cell.getPosX();
+        this.posY = cell.getPosY();
+    }
+
     public int getPosX() {
         return posX;
     }

@@ -16,6 +16,14 @@ public class Board {
         }
     }
 
+    public boolean tryCell(Cell cell) {
+        return this.board[cell.getPosX()][cell.getPosY()].tryLock();
+    }
+
+    public void setCreature(Cell cell) {
+        this.board[cell.getPosX()][cell.getPosY()].lock();
+    }
+
     public ReentrantLock[][] getBoard() {
         return board;
     }

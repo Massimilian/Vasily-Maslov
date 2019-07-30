@@ -2,11 +2,11 @@ package ru.job4j.emailnotification;
 
 public class User {
     final private String reg = "[\\w]+@[\\w]+\\.[a-z]{2,5}";
-    private String UserName;
+    private String userName;
     private String email;
 
     public User(String userName, String email) {
-        UserName = userName;
+        this.userName = userName;
         this.email = email;
         System.out.printf("%s%s", check() ? "User made." : "Incorrect e-mail, please change.", System.lineSeparator());
     }
@@ -16,7 +16,7 @@ public class User {
     }
 
     public String getUserName() {
-        return UserName;
+        return userName;
     }
 
     public String getEmail() {
