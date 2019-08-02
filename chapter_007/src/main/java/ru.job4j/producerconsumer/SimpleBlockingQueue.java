@@ -19,8 +19,8 @@ public class SimpleBlockingQueue<T> {
 
     public void offer(T value) {
         synchronized (this) {
-            int max = 10; // limiter of queue size.
-            while (queue.size() >= max) {
+            int maxSize = 10;
+            while (queue.size() >= maxSize) {
                 try {
                     wait();
                 } catch (InterruptedException e) {
