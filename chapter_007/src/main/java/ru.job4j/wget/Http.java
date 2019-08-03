@@ -8,6 +8,7 @@ import java.util.concurrent.Callable;
 
 public class Http implements Callable {
     private final Downloadable downl;
+    private long speedShooter = 0L;
 
     public Http(Downloadable downl) {
         this.downl = downl;
@@ -35,15 +36,25 @@ public class Http implements Callable {
         System.out.println("Response Code : " + responseCode);
         BufferedReader in = new BufferedReader(new InputStreamReader(con.getInputStream())); // переносим информацию с соединения в буфер
         String inputLine;
+        int count = 0;
         StringBuffer response = new StringBuffer();
+        long currentTime = System.nanoTime();
         while ((inputLine = in.readLine()) != null) {
-            if (inputLine.length() > downl.getSpeed()) {
-                Thread.currentThread().sleep(1000);
-                System.out.println("...download limited...");
+            speedShooter += inputLine.length();
+            if (speedShooter >= downl.getSpeed()) {
+                if (System.nanoTime() - currentTime < 1000000000) {
+                    System.out.printf("...download limited; %d seconds passed...%s", ++count, System.lineSeparator());
+                    Thread.currentThread().sleep(1000);
+                    speedShooter = 0;
+                    currentTime = System.nanoTime();
+                }
             }
             response.append(inputLine); // записываем в строку.
         }
         in.close();
+        System.out.printf("...download finished!%s", System.lineSeparator());
         return response.toString();
     }
 }
+
+
