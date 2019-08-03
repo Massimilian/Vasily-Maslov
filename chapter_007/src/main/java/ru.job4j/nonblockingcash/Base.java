@@ -1,7 +1,7 @@
 package ru.job4j.nonblockingcash;
 
 public class Base {
-    private int id;
+    private final int id;
     private int version;
 
     public Base(int id) {
