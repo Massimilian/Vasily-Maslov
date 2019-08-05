@@ -1,5 +1,8 @@
 package ru.job4j.bomberman;
 
+/**
+ * The single cell of board.
+ */
 public class Cell {
     private int posX;
     private int posY;
