@@ -21,7 +21,7 @@ public class CashTest {
         cash.add(c);
         cash.add(a);
         assertThat(cash.getStorage().size(), is(3));
-        assertThat(cash.getStorage().get(a.getId()).getVersion(), is(1));
+        assertThat(cash.getStorage().get(a.getId()).getVersion(), is(0));
     }
 
     @Test

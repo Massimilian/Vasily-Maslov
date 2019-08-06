@@ -33,15 +33,19 @@ public class Cash {
      * @param base for update
      * @return updated or not
      */
-    public boolean update(Base base) {
-        boolean result = false;
-        if (storage.get(base.getId()).getVersion() != base.getVersion() + 1) {
-            storage.computeIfPresent(base.getId(), ((i, bas) -> bas.upgrade()));
-            result = true;
-        } else {
+    public boolean update(Base base) throws OptimisticException {
+        Base falta = new Base(-1, -1);
+        storage.computeIfPresent(base.getId(), (i, bas) -> base.getVersion() == bas.getVersion() ? new Base(base.getId(), base.getVersion() + 1) : falta);
+        if (storage.contains(falta)) {
             throw new OptimisticException();
         }
-        return result;
+//        if (storage.get(base.getId()).getVersion() != base.getVersion() + 1) {
+//            storage.computeIfPresent(base.getId(), ((i, bas) -> bas.upgrade()));
+//            result = true;
+//        } else {
+//            throw new OptimisticException();
+//        }
+        return true;
     }
 
     /**
