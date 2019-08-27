@@ -39,12 +39,6 @@ public class Cash {
         if (storage.contains(falta)) {
             throw new OptimisticException();
         }
-//        if (storage.get(base.getId()).getVersion() != base.getVersion() + 1) {
-//            storage.computeIfPresent(base.getId(), ((i, bas) -> bas.upgrade()));
-//            result = true;
-//        } else {
-//            throw new OptimisticException();
-//        }
         return true;
     }
 

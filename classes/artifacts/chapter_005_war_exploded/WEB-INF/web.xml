@@ -22,13 +22,22 @@
     </servlet-mapping>
 
     <servlet>
-        <servlet-name>UsersServlet</servlet-name>
-        <servlet-class>ru.job4j.crudservlet.UsersServlet</servlet-class>
+        <servlet-name>TestServlet</servlet-name>
+        <servlet-class>ru.job4j.servtests.TestServlet</servlet-class>
     </servlet>
 
     <servlet-mapping>
-        <servlet-name>UsersServlet</servlet-name>
-        <url-pattern>/list</url-pattern>
+        <servlet-name>TestServlet</servlet-name>
+        <url-pattern>/test</url-pattern>
     </servlet-mapping>
 
+    <servlet>
+        <servlet-name>TestSecondServlet</servlet-name>
+        <servlet-class>ru.job4j.servtests.TestSecondServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>TestSecondServlet</servlet-name>
+        <url-pattern>/second</url-pattern>
+    </servlet-mapping>
 </web-app>

@@ -10,7 +10,6 @@
         <url-pattern>/echo</url-pattern>
     </servlet-mapping>
 
-
     <servlet>
         <servlet-name>CrudServlet</servlet-name>
         <servlet-class>ru.job4j.crudservlet.CrudServlet</servlet-class>
@@ -22,4 +21,23 @@
         <url-pattern>/crud</url-pattern>
     </servlet-mapping>
 
+    <servlet>
+        <servlet-name>TestServlet</servlet-name>
+        <servlet-class>ru.job4j.servtests.TestServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>TestServlet</servlet-name>
+        <url-pattern>/test</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>TestSecondServlet</servlet-name>
+        <servlet-class>ru.job4j.servtests.TestSecondServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>TestSecondServlet</servlet-name>
+        <url-pattern>/second</url-pattern>
+    </servlet-mapping>
 </web-app>
