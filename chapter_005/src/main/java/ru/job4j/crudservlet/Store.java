@@ -8,8 +8,12 @@ import java.util.concurrent.atomic.AtomicInteger;
  */
 public interface Store {
     public int getValue();
-
     public List<User> getList();
+
+
+    public String getCommand();
+
+    public void setCommand(String command);
 
     /**
      * Add new User

@@ -13,9 +13,10 @@ import java.util.stream.Stream;
  * Logic Layout.
  */
 @ThreadSafe
-public class ValidateService implements Store {
-    private static final ValidateService instance = new ValidateService();
+public class ValidServ implements Store {
+    private static final ValidServ INST = new ValidServ();
     private final List<User> list = new CopyOnWriteArrayList<>();
+    private String command;
     AtomicInteger value = new AtomicInteger(0);
 
     public List<User> getList() {
@@ -26,18 +27,28 @@ public class ValidateService implements Store {
         return value.incrementAndGet();
     }
 
-    public static ValidateService getValidateService() {
-        return instance;
+    public static ValidServ getValidateService() {
+        return INST;
     }
 
-    private ValidateService() {
+    private ValidServ() {
+    }
+
+    @Override
+    public String getCommand() {
+        return command;
+    }
+
+    @Override
+    public void setCommand(String command) {
+        this.command = command;
     }
 
     @Override
     public boolean add(User user) {
         boolean res = false;
-        if (!instance.getList().contains(user)) {
-            instance.getList().add(user);
+        if (!INST.getList().contains(user)) {
+            INST.getList().add(user);
             res = true;
         }
         return res;
@@ -46,9 +57,9 @@ public class ValidateService implements Store {
     @Override
     public boolean update(User user) {
         boolean res = false;
-        if (instance.getList().contains(user)) {
-            instance.getList().remove(this.find(user.getId()));
-            instance.getList().add(user);
+        if (INST.getList().contains(user)) {
+            INST.getList().remove(this.find(user.getId()));
+            INST.getList().add(user);
             res = true;
         }
         return res;
@@ -57,8 +68,8 @@ public class ValidateService implements Store {
     @Override
     public boolean delete(User user) {
         boolean res = false;
-        if (instance.getList().contains(user)) {
-            instance.getList().remove(user);
+        if (INST.getList().contains(user)) {
+            INST.getList().remove(user);
             res = true;
         }
         return res;
@@ -66,18 +77,18 @@ public class ValidateService implements Store {
 
     @Override
     public List<User> findAll(List<Long> ids) {
-        return ids.stream().map(instance::find).flatMap(Stream::ofNullable).collect(Collectors.toList());
+        return ids.stream().map(INST::find).flatMap(Stream::ofNullable).collect(Collectors.toList());
     }
 
     @Override
     public void deleteAll() {
-        instance.getList().clear();
+        INST.getList().clear();
     }
 
     private User find(long id) {
         User result = null;
-        if (instance.getList().contains(new User(id, "", "", "", new Date()))) {
-            result = instance.getList().get(instance.getList().indexOf(new User(id, "", "", "", new Date())));
+        if (INST.getList().contains(new User(id, "", "", "", new Date()))) {
+            result = INST.getList().get(INST.getList().indexOf(new User(id, "", "", "", new Date())));
         }
         return result;
     }

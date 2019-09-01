@@ -8,7 +8,7 @@ import java.util.Date;
 public class Controller {
     private final Store logic;
     String info = "Program started.";
-    String separator = "&";
+    private String separator = "&";
 
     public Controller(Store logic) {
         this.logic = logic;
@@ -16,6 +16,10 @@ public class Controller {
 
     public String getInfo() {
         return info;
+    }
+
+    public String getSeparator() {
+        return separator;
     }
 
     /**
@@ -57,7 +61,7 @@ public class Controller {
     }
 
     /**
-     * @param input is contains the information about request
+     * @param input contains the information about request
      * @param spec  for correct the specification of User
      * @return prepared User
      */
