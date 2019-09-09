@@ -11,17 +11,6 @@
     </servlet-mapping>
 
     <servlet>
-        <servlet-name>CrudServlet</servlet-name>
-        <servlet-class>ru.job4j.crudservlet.CrudServlet</servlet-class>
-        <load-on-startup>1</load-on-startup>
-    </servlet>
-
-    <servlet-mapping>
-        <servlet-name>CrudServlet</servlet-name>
-        <url-pattern>/crud</url-pattern>
-    </servlet-mapping>
-
-    <servlet>
         <servlet-name>AddServlet</servlet-name>
         <servlet-class>ru.job4j.crudservlet.AddServlet</servlet-class>
     </servlet>

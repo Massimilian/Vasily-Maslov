@@ -16,8 +16,13 @@ import java.util.stream.Stream;
 public class ValidServ implements Store {
     private static final ValidServ INST = new ValidServ();
     private final List<User> list = new CopyOnWriteArrayList<>();
+    Color color = new Color();
     private String command;
     AtomicInteger value = new AtomicInteger(0);
+
+    public Color getColor() {
+        return INST.color;
+    }
 
     public List<User> getList() {
         return list;
