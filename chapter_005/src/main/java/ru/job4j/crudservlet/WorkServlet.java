@@ -8,6 +8,8 @@ import java.io.PrintWriter;
 
 public class WorkServlet extends FatherServlet {
 
+    static String resultOfWork;
+
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         resp.setContentType("text/html");
@@ -47,7 +49,9 @@ public class WorkServlet extends FatherServlet {
         sb.append(req.getParameter("login"));
         sb.append(controller.getSeparator());
         sb.append(req.getParameter("mail"));
-        controller.works(sb.toString());
+        String s = "add&name&login&mail@mail.ru";
+        //controller.works(sb.toString());
+        controller.works(s);
         this.doGet(req, resp);
     }
 }
