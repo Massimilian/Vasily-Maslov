@@ -25,11 +25,18 @@ public class DBStore implements Store {
 
     private DBStore() {
         try {
+//            connection = DriverManager.getConnection(url, username, password);
+//            PreparedStatement st = connection.prepareStatement("CREATE TABLE IF NOT EXISTS users_system (id SERIAL PRIMARY KEY, name VARCHAR(200), login VARCHAR(200), email VARCHAR(200), create_date TIMESTAMP)");
+//            ResultSet rs = st.executeQuery();
+//            st.close();
+            Class.forName("org.postgresql.Driver");
             connection = DriverManager.getConnection(url, username, password);
             PreparedStatement st = connection.prepareStatement("CREATE TABLE IF NOT EXISTS users_system (id SERIAL PRIMARY KEY, name VARCHAR(200), login VARCHAR(200), email VARCHAR(200), create_date TIMESTAMP)");
-            ResultSet rs = st.executeQuery();
+            st.executeUpdate();
             st.close();
         } catch (SQLException e) {
+            e.printStackTrace();
+        } catch (ClassNotFoundException e) {
             e.printStackTrace();
         }
     }
@@ -44,6 +51,7 @@ public class DBStore implements Store {
     public List<User> getList() {
         ArrayList<User> users = new ArrayList<User>();
         try {
+            Class.forName("org.postgresql.Driver");
             connection = DriverManager.getConnection(url, username, password);
             Statement st = connection.createStatement();
             ResultSet rs = st.executeQuery("SELECT * FROM users_system");
@@ -53,6 +61,8 @@ public class DBStore implements Store {
             st.close();
             rs.close();
         } catch (SQLException e) {
+            e.printStackTrace();
+        } catch (ClassNotFoundException e) {
             e.printStackTrace();
         } finally {
             try {
@@ -77,16 +87,20 @@ public class DBStore implements Store {
     @Override
     public boolean add(User user) {
         try {
+            Class.forName("org.postgresql.Driver");
             connection = DriverManager.getConnection(url, username, password);
             PreparedStatement st = connection.prepareStatement("INSERT INTO users_system (name, login, email, create_date) VALUES (?, ?, ?, ?)");
             st.setString(1, user.getName());
             st.setString(2, user.getLogin());
             st.setString(3, user.getEmail());
             st.setTimestamp(4, new Timestamp(System.currentTimeMillis()));
-            ResultSet rs = st.executeQuery();
+            st.executeUpdate();
             st.close();
-            rs.close();
+            //rs.close();
+
         } catch (SQLException e) {
+            e.printStackTrace();
+        } catch (ClassNotFoundException e) {
             e.printStackTrace();
         } finally {
             try {
@@ -108,9 +122,9 @@ public class DBStore implements Store {
             st.setString(3, user.getEmail());
             st.setTimestamp(4, new Timestamp(System.currentTimeMillis()));
             st.setLong(5, user.getId());
-            ResultSet rs = st.executeQuery();
+            st.executeUpdate();
             st.close();
-            rs.close();
+            //rs.close();
         } catch (SQLException e) {
             e.printStackTrace();
         } finally {
@@ -129,9 +143,9 @@ public class DBStore implements Store {
             connection = DriverManager.getConnection(url, username, password);
             PreparedStatement st = connection.prepareStatement("DELETE FROM users_system VALUES WHERE id = ?");
             st.setLong(1, user.getId());
-            ResultSet rs = st.executeQuery();
+            st.executeUpdate();
             st.close();
-            rs.close();
+            //rs.close();
         } catch (SQLException e) {
             e.printStackTrace();
         } finally {

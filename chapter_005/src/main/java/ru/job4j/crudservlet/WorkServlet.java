@@ -8,8 +8,6 @@ import java.io.PrintWriter;
 
 public class WorkServlet extends FatherServlet {
 
-    static String resultOfWork;
-
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         resp.setContentType("text/html");
@@ -28,6 +26,7 @@ public class WorkServlet extends FatherServlet {
                 // Вопрос: можно ли, не делая контроллер статическим классом, обратиться к нему через jsp?
                 // Это - единственная причина, почему не удалось засунуть весь метод doGet в jsp.
                 "<input type='submit'>" +
+                "" +
                 "</form>" +
                 "</body>" +
                 "</html>");
@@ -49,9 +48,7 @@ public class WorkServlet extends FatherServlet {
         sb.append(req.getParameter("login"));
         sb.append(controller.getSeparator());
         sb.append(req.getParameter("mail"));
-        String s = "add&name&login&mail@mail.ru";
-        //controller.works(sb.toString());
-        controller.works(s);
+        controller.works(sb.toString());
         this.doGet(req, resp);
     }
 }
