@@ -50,4 +50,43 @@
         <url-pattern>/delete</url-pattern>
     </servlet-mapping>
 
+    <servlet>
+        <servlet-name>StartServlet</servlet-name>
+        <servlet-class>ru.job4j.planner.plannerServlets.StartServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>StartServlet</servlet-name>
+        <url-pattern>/start</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>EditServlet</servlet-name>
+        <servlet-class>ru.job4j.planner.plannerServlets.EditServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>EditServlet</servlet-name>
+        <url-pattern>/editor</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>NewServlet</servlet-name>
+        <servlet-class>ru.job4j.planner.plannerServlets.NewServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>NewServlet</servlet-name>
+        <url-pattern>/new</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>DelServlet</servlet-name>
+        <servlet-class>ru.job4j.planner.plannerServlets.DelServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>DelServlet</servlet-name>
+        <url-pattern>/del</url-pattern>
+    </servlet-mapping>
 </web-app>
