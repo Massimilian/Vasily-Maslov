@@ -12,24 +12,24 @@ public class WorkServlet extends FatherServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         resp.setContentType("text/html");
         PrintWriter pw = new PrintWriter(resp.getOutputStream());
-        pw.append("<!DOCTYPE html>" +
-                "<html lang=\"en\">" +
-                "<head>" +
-                "<meta charset=\"UTF-8\">" +
-                "</head>" +
-                "<body>" +
-                "<form action='" +
-                req.getContextPath() +
-                "/index.jsp'" +
-                "method='post'>" +
-                this.controller.getInfo() + // запрашиваем результат работы.
+        pw.append("<!DOCTYPE html>"
+                + "<html lang=\"en\">"
+                + "<head>"
+                + "<meta charset=\"UTF-8\">"
+                + "</head>"
+                + "<body>"
+                + "<form action='"
+                + req.getContextPath()
+                + "/index.jsp'"
+                + "method='post'>"
+                + this.controller.getInfo() + // запрашиваем результат работы.
                 // Вопрос: можно ли, не делая контроллер статическим классом, обратиться к нему через jsp?
                 // Это - единственная причина, почему не удалось засунуть весь метод doGet в jsp.
-                "<input type='submit'>" +
-                "" +
-                "</form>" +
-                "</body>" +
-                "</html>");
+                "<input type='submit'>"
+                + ""
+                + "</form>"
+                + "</body>"
+                + "</html>");
         pw.flush();
     }
 

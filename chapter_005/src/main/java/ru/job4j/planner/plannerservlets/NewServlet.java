@@ -1,4 +1,4 @@
-package ru.job4j.planner.plannerServlets;
+package ru.job4j.planner.plannerservlets;
 
 import ru.job4j.planner.Task;
 import ru.job4j.planner.TaskStorage;

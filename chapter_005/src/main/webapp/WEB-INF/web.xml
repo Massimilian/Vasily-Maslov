@@ -52,7 +52,7 @@
 
     <servlet>
         <servlet-name>StartServlet</servlet-name>
-        <servlet-class>ru.job4j.planner.plannerServlets.StartServlet</servlet-class>
+        <servlet-class>ru.job4j.planner.plannerservlets.StartServlet</servlet-class>
     </servlet>
 
     <servlet-mapping>
@@ -62,7 +62,7 @@
 
     <servlet>
         <servlet-name>EditServlet</servlet-name>
-        <servlet-class>ru.job4j.planner.plannerServlets.EditServlet</servlet-class>
+        <servlet-class>ru.job4j.planner.plannerservlets.EditServlet</servlet-class>
     </servlet>
 
     <servlet-mapping>
@@ -72,7 +72,7 @@
 
     <servlet>
         <servlet-name>NewServlet</servlet-name>
-        <servlet-class>ru.job4j.planner.plannerServlets.NewServlet</servlet-class>
+        <servlet-class>ru.job4j.planner.plannerservlets.NewServlet</servlet-class>
     </servlet>
 
     <servlet-mapping>
@@ -82,7 +82,7 @@
 
     <servlet>
         <servlet-name>DelServlet</servlet-name>
-        <servlet-class>ru.job4j.planner.plannerServlets.DelServlet</servlet-class>
+        <servlet-class>ru.job4j.planner.plannerservlets.DelServlet</servlet-class>
     </servlet>
 
     <servlet-mapping>

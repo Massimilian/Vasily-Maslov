@@ -7,7 +7,7 @@ import java.util.concurrent.CopyOnWriteArrayList;
 import java.util.concurrent.atomic.AtomicInteger;
 
 public class DBStore implements Store {
-    private static DBStore INSTANCE;
+    private static DBStore instance;
     private final List<User> list = new CopyOnWriteArrayList<>();
     AtomicInteger value = new AtomicInteger(0);
     private String command;
@@ -17,10 +17,10 @@ public class DBStore implements Store {
     Connection connection = null;
 
     public static DBStore getInstance() {
-        if (INSTANCE == null) {
-            INSTANCE = new DBStore();
+        if (instance == null) {
+            instance = new DBStore();
         }
-        return INSTANCE;
+        return instance;
     }
 
     private DBStore() {
