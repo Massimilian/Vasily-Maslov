@@ -1,5 +1,6 @@
 <%@ page import="ru.job4j.crudservlet.User" %>
-<%@ page import="ru.job4j.crudservlet.ValidServ" %><%--
+<%@ page import="ru.job4j.crudservlet.ValidServ" %>
+<%@ page import="ru.job4j.crudservlet.DBStore" %><%--
   Created by IntelliJ IDEA.
   User: admin
   Date: 09.09.2019
@@ -20,7 +21,7 @@
         <th>Mail address</th>
         <th>Last change</th>
     </tr>
-    <%for (User user : ValidServ.getValidateService().getList()) {%>
+    <%for (User user : DBStore.getInstance().getList()) {%>
     <tr style="background-color:<%=ValidServ.getValidateService().getColor().get()%>">
         <td><%=user.getId()%>
         </td>
