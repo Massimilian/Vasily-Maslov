@@ -20,7 +20,7 @@ public class WorkServlet extends FatherServlet {
                 + "<body>"
                 + "<form action='"
                 + req.getContextPath()
-                + "/index.jsp'"
+                + "/main.jsp'"
                 + "method='post'>"
                 + this.controller.getInfo() + // запрашиваем результат работы.
                 // Вопрос: можно ли, не делая контроллер статическим классом, обратиться к нему через jsp?
