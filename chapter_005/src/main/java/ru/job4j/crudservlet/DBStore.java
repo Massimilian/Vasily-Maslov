@@ -25,10 +25,6 @@ public class DBStore implements Store {
 
     private DBStore() {
         try {
-//            connection = DriverManager.getConnection(url, username, password);
-//            PreparedStatement st = connection.prepareStatement("CREATE TABLE IF NOT EXISTS users_system (id SERIAL PRIMARY KEY, name VARCHAR(200), login VARCHAR(200), email VARCHAR(200), create_date TIMESTAMP)");
-//            ResultSet rs = st.executeQuery();
-//            st.close();
             Class.forName("org.postgresql.Driver");
             connection = DriverManager.getConnection(url, username, password);
             PreparedStatement st = connection.prepareStatement("CREATE TABLE IF NOT EXISTS users_system (id SERIAL PRIMARY KEY, name VARCHAR(200), login VARCHAR(200), email VARCHAR(200), create_date TIMESTAMP)");

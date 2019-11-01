@@ -10,6 +10,6 @@ public class DeleteServlet extends FatherServlet {
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         resp.setContentType("text/html");
         this.logic.setCommand("delete");
-        resp.sendRedirect(String.format("%s/delete.jsp", req.getContextPath()));
+        req.getRequestDispatcher("/WEB-INF/storageViews/delete.jsp").forward(req, resp);
     }
 }

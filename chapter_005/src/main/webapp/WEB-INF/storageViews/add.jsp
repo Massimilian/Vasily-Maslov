@@ -11,7 +11,7 @@
     <title>Add new User</title>
 </head>
 <body>
-<form action="<%=request.getContextPath()%>/work" method="post">
+<form action="${pageContext.servletContext.contextPath}/work" method="post">
     Name :
     <input type="text" name="name">
     Login :

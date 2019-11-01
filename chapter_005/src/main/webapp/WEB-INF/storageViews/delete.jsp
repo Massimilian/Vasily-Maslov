@@ -11,7 +11,7 @@
     <title>Delete User</title>
 </head>
 <body>
-<form action="<%=request.getContextPath()%>/work" method="post">
+<form action="${pageContext.servletContext.contextPath}/work" method="post">
     Enter ID number :
     <input type="text" name="id">
     <input type="submit">

@@ -10,6 +10,6 @@ public class AddServlet extends FatherServlet {
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         resp.setContentType("text/html");
         this.logic.setCommand("add");
-        resp.sendRedirect(String.format("%s/add.jsp", req.getContextPath()));
+        req.getRequestDispatcher("/WEB-INF/storageViews/add.jsp").forward(req, resp);
     }
 }

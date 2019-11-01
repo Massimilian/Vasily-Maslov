@@ -4,7 +4,7 @@ public class Color {
     private String[] colors = {"yellowgreen", "lightgreen"};
     private int num = 0;
 
-    public String get() {
+    public String getColors() {
         String result = colors[num++];
         num = num == colors.length ? 0 : num;
         return result;
