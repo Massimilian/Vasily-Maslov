@@ -1,6 +1,8 @@
 <%@ page import="ru.job4j.planner.Task" %>
 <%@ page import="ru.job4j.planner.TaskStorage" %>
-<%@ page import="java.util.ArrayList" %><%--
+<%@ page import="java.util.ArrayList" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%--
   Created by IntelliJ IDEA.
   User: admin
   Date: 12.10.2019
@@ -33,27 +35,26 @@
         <th>Information</th>
         <th>Create date</th>
     </tr>
-    <% ArrayList<Task> tasks = TaskStorage.getInstance().asList();
-        if (tasks.size() == 0) {%>
-    <h5> ....... you have not tasks.</h5>
-    <%}%>
-    <%
-        for (Task task : tasks) {
-    %>
+    <c:choose>
+        <c:when test="${TaskStorage.getInstance().asList().size() == 0}">
+            <h5> ....... you have not tasks.</h5>
+        </c:when>
+    </c:choose>
 
-    <tr style="background-color: <%=TaskStorage.getInstance().chosedColor(task.getUrgency())%>">
-        <td><%=task.getNumber()%>
+    <c:forEach items="${tasks}" var="task">
+        <tr style="background-color: <c:out value="${task.color}"></c:out>">
+            <td><c:out value="${task.number}"></c:out>
         </td>
-        <td><%=task.getInfo()%>
+            <td><c:out value="${task.info}"></c:out>
         </td>
-        <td><%=task.getCreateDate()%>
+            <td><c:out value="${task.createDate}"></c:out>
         </td>
     </tr>
-    <%
-        }%>
+    </c:forEach>
+
 </table>
 <p>Add new :</p>
-<form action="<%=request.getContextPath()%>/new" method="post">
+<form action="${pageContext.servletContext.contextPath}/new" method="post">
     Enter task information:
     <input type="text" name="info">
     Enter task urgency(1 - 7):
@@ -61,7 +62,7 @@
     <input type="submit">
 </form>
 <p>Edit:</p>
-<form action="<%=request.getContextPath()%>/editor" method="post">
+<form action="${pageContext.servletContext.contextPath}/editor" method="post">
     Enter id-number of the task for add:
     <input type="text" name="id">
     Enter new task information:
@@ -71,7 +72,7 @@
     <input type="submit">
 </form>
 <p>Delete :</p>
-<form action="<%=request.getContextPath()%>/del" method="post">
+<form action="${pageContext.servletContext.contextPath}/del" method="post">
     Enter id-number of the task for delete:
     <input type="text" name="id">
     <input type="submit">

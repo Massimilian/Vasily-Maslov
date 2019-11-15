@@ -41,12 +41,12 @@
     </servlet-mapping>
 
     <servlet>
-        <servlet-name>EditServlet</servlet-name>
-        <servlet-class>ru.job4j.crudservlet.EditServlet</servlet-class>
+        <servlet-name>Edit</servlet-name>
+        <servlet-class>ru.job4j.crudservlet.Edit</servlet-class>
     </servlet>
 
     <servlet-mapping>
-        <servlet-name>EditServlet</servlet-name>
+        <servlet-name>Edit</servlet-name>
         <url-pattern>/edit</url-pattern>
     </servlet-mapping>
 
@@ -98,5 +98,15 @@
     <servlet-mapping>
         <servlet-name>DelServlet</servlet-name>
         <url-pattern>/del</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>StartJournalServlet</servlet-name>
+        <servlet-class>ru.job4j.journal.servlets.StartJournalServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>StartJournalServlet</servlet-name>
+        <url-pattern>/startjou</url-pattern>
     </servlet-mapping>
 </web-app>

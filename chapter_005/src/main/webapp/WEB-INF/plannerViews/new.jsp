@@ -17,7 +17,7 @@
     </style>
 </head>
 <body>
-<form action="<%=request.getContextPath()%>/start" method="post">
+<form action="${pageContext.servletContext.contextPath}/start" method="post">
     <p>New task added! </p>
     <input type="submit">
 </form>

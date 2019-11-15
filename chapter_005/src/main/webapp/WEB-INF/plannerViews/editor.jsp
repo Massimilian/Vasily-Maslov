@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page import="ru.job4j.planner.TaskStorage" %><%--
   Created by IntelliJ IDEA.
   User: admin
@@ -17,12 +18,15 @@
 </head>
 <body>
 
-<form action="<%=request.getContextPath()%>/start" method="post">
-    <%if (TaskStorage.getInstance().isResult()) {%>
-    <p style="color: green">Edition complite! </p>
-    <%} else {%>
-    <p style="color: red">Edition false! </p>
-    <%}%>
+<form action="${pageContext.servletContext.contextPath}/start" method="post">
+    <c:choose>
+        <c:when test="${TaskStorage.getInstance().isResult()}">
+            <p style="color: green">Edition complite! </p>
+        </c:when>
+        <c:when test="${!TaskStorage.getInstance().isResult()}">
+            <p style="color: red">Edition false! </p>
+        </c:when>
+    </c:choose>
     <input type="submit">
 </form>
 </body>

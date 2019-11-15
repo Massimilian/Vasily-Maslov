@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page import="ru.job4j.planner.TaskStorage" %><%--
   Created by IntelliJ IDEA.
   User: admin
@@ -16,12 +17,16 @@
     </style>
 </head>
 <body>
-<form action="<%=request.getContextPath()%>/start" method="post">
-    <%if (TaskStorage.getInstance().isResult()) {%>
-    <p style="color: green">Delete complite! </p>
-    <%} else {%>
-    <p style="color: red">Impossible! </p>
-    <%}%>
+<form action="${pageContext.servletContext.contextPath}/start" method="post">
+
+    <c:choose>
+        <c:when test="${result == true}">
+            <p style="color: green">Delete complite! </p>
+        </c:when>
+        <c:otherwise>
+            <p style="color: red">Delete impossible!</p>
+        </c:otherwise>
+    </c:choose>
     <input type="submit">
 </form>
 </body>
