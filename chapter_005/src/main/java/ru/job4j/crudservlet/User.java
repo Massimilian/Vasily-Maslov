@@ -12,6 +12,7 @@ public class User {
     private final String login;
     private final String email;
     private final Date createDate;
+    private String photoId;
 
     /**
      * Special constructor for add VALIDATE parameters.
@@ -48,6 +49,10 @@ public class User {
 
     public Date getCreateDate() {
         return createDate;
+    }
+
+    public String getPhotoId() {
+        return photoId;
     }
 
     /**
