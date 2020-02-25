@@ -7,6 +7,7 @@ import java.util.concurrent.atomic.AtomicInteger;
  * Base interface for storing users.
  */
 public interface Store {
+
     public int getValue();
     public List<User> getList();
 
@@ -51,4 +52,18 @@ public interface Store {
      * Clear the store.
      */
     public void deleteAll();
+
+    /**
+     * The result of user checking
+     *
+     * @return
+     */
+    public boolean userCheck(String login);
+
+    /**
+     * the result of admin checking
+     *
+     * @return
+     */
+    public boolean adminCheck(String login, String password);
 }

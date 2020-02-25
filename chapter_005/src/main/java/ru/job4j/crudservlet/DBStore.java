@@ -2,19 +2,21 @@ package ru.job4j.crudservlet;
 
 import java.sql.*;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 import java.util.concurrent.CopyOnWriteArrayList;
 import java.util.concurrent.atomic.AtomicInteger;
 
 public class DBStore implements Store {
     private static DBStore instance;
-    private final List<User> list = new CopyOnWriteArrayList<>();
+    private List<User> list = new CopyOnWriteArrayList<>();
     AtomicInteger value = new AtomicInteger(0);
     private String command;
     String url = "jdbc:postgresql://localhost:5432/postgres";
     String username = "postgres";
     String password = "qetupoi";
     Connection connection = null;
+    private User admin = new User(1, "Admin", "Admin", "admin@crud.com", new Date(), "admin");
 
     public static DBStore getInstance() {
         if (instance == null) {
@@ -22,6 +24,33 @@ public class DBStore implements Store {
         }
         return instance;
     }
+
+    private boolean specialAdd() {
+        try {
+            Class.forName("org.postgresql.Driver");
+            connection = DriverManager.getConnection(url, username, password);
+            PreparedStatement st = connection.prepareStatement("INSERT INTO users_system (id, name, login, email, create_date) VALUES (?, ?, ?, ?, ?) ON CONFLICT DO NOTHING");
+            st.setLong(1, this.admin.getId());
+            st.setString(2, this.admin.getName());
+            st.setString(3, this.admin.getLogin());
+            st.setString(4, this.admin.getEmail());
+            st.setTimestamp(5, new Timestamp(System.currentTimeMillis()));
+            st.executeUpdate();
+            st.close();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        } finally {
+            try {
+                connection.close();
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+        }
+        return true;
+    }
+
 
     private DBStore() {
         try {
@@ -35,8 +64,28 @@ public class DBStore implements Store {
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
         }
+        this.specialAdd();
+        this.list = getList();
     }
 
+    @Override
+    public boolean userCheck(String login) {
+        boolean result = false;
+        if (!login.equals(admin.getLogin())) {
+            for (User user : list) {
+                if (user.getLogin().equals(login)) {
+                    result = true;
+                    break;
+                }
+            }
+        }
+        return result;
+    }
+
+    @Override
+    public boolean adminCheck(String login, String password) {
+        return admin.getLogin().equals(login) && admin.getPassword().equals(password);
+    }
 
     @Override
     public int getValue() {
@@ -52,7 +101,7 @@ public class DBStore implements Store {
             Statement st = connection.createStatement();
             ResultSet rs = st.executeQuery("SELECT * FROM users_system");
             while (rs.next()) {
-                users.add(new User(rs.getLong("id"), rs.getString("name"), rs.getString("login"), rs.getString("email"), rs.getTimestamp("create_date")));
+                users.add(new User(rs.getLong("id"), rs.getString("name"), rs.getString("login"), rs.getString("email"), rs.getTimestamp("create_date"), null));
             }
             st.close();
             rs.close();
@@ -92,8 +141,6 @@ public class DBStore implements Store {
             st.setTimestamp(4, new Timestamp(System.currentTimeMillis()));
             st.executeUpdate();
             st.close();
-            //rs.close();
-
         } catch (SQLException e) {
             e.printStackTrace();
         } catch (ClassNotFoundException e) {
@@ -105,6 +152,7 @@ public class DBStore implements Store {
                 e.printStackTrace();
             }
         }
+        this.list.add(user);
         return true;
     }
 

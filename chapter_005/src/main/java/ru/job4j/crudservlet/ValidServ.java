@@ -90,10 +90,20 @@ public class ValidServ implements Store {
         INST.getList().clear();
     }
 
+    @Override
+    public boolean userCheck(String login) {
+        return false;
+    }
+
+    @Override
+    public boolean adminCheck(String login, String password) {
+        return false;
+    }
+
     private User find(long id) {
         User result = null;
-        if (INST.getList().contains(new User(id, "", "", "", new Date()))) {
-            result = INST.getList().get(INST.getList().indexOf(new User(id, "", "", "", new Date())));
+        if (INST.getList().contains(new User(id, "", "", "", new Date(), null))) {
+            result = INST.getList().get(INST.getList().indexOf(new User(id, "", "", "", new Date(), null)));
         }
         return result;
     }

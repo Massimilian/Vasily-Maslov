@@ -13,6 +13,7 @@ public class User {
     private final String email;
     private final Date createDate;
     private String photoId;
+    private String password;
 
     /**
      * Special constructor for add VALIDATE parameters.
@@ -23,12 +24,13 @@ public class User {
      * @param email      only mail form
      * @param createDate this date
      */
-    public User(long id, String name, String login, String email, Date createDate) {
+    public User(long id, String name, String login, String email, Date createDate, String password) {
         this.id = id;
         this.name = name.matches("[A-Z][A-Za-z]+") ? name : "Unknown_name";
         this.login = login.matches("[\\w]+") ? login : "Unknown_login";
         this.email = email.matches("[A-Za-z0-9]+@[a-z0-9]+[.][a-z]{0,5}") ? email : "Unknown_e-mail";
         this.createDate = createDate;
+        this.password = password;
     }
 
     public long getId() {
@@ -53,6 +55,10 @@ public class User {
 
     public String getPhotoId() {
         return photoId;
+    }
+
+    public String getPassword() {
+        return password;
     }
 
     /**

@@ -9,12 +9,12 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>Title</title>
+    <title>Working status</title>
 </head>
 <body>
-<form action="${pageContext.servletContext.contextPath}/main" method="post">
+<form action="${pageContext.servletContext.contextPath}/main" method="get">
     <c:out value="${info}"></c:out>
-    <input type='submit'>
+    <input type='submit' value='back'>
 </form>
 </body>
 </html>

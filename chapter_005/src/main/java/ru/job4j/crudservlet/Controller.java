@@ -69,7 +69,7 @@ public class Controller {
         String[] split = input.split(separator);
         User prep = null;
         if (split.length >= 4 && !spec) {
-            prep = new User(logic.getValue(), split[1], split[2], split[3], new Date());
+            prep = new User(logic.getValue(), split[1], split[2], split[3], new Date(), null);
         }
         if (split.length >= 5 && spec) {
             int id = 0;
@@ -80,7 +80,7 @@ public class Controller {
                 correct = false;
             }
             if (correct) {
-                prep = new User(id, split[2], split[3], split[4], new Date());
+                prep = new User(id, split[2], split[3], split[4], new Date(), null);
             }
         }
         return prep;

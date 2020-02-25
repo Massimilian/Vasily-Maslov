@@ -35,17 +35,20 @@
         </tr>
     </c:forEach>
 </table>
-Add new :
-<form action="${pageContext.servletContext.contextPath}/add" method="post">
-    <input type="submit">
+<form action="${pageContext.servletContext.contextPath}/add.adm" method="post">
+    <input type="submit" value="Add new">
 </form>
-Edit :
-<form action="${pageContext.servletContext.contextPath}/edit" method="post">
-    <input type="submit">
+<form action="${pageContext.servletContext.contextPath}/edit.adm" method="post">
+    <input type="submit" value="Edit">
 </form>
-Delete :
-<form action="${pageContext.servletContext.contextPath}/delete" method="post">
-    <input type="submit">
+<form action="${pageContext.servletContext.contextPath}/delete.adm" method="post">
+    <input type="submit" value="Delete">
+</form>
+<form action="${pageContext.servletContext.contextPath}/profileedit" method="post">
+    <input type="submit" value="Don't press!">
+</form>
+<form action="${pageContext.servletContext.contextPath}/crudsignout">
+    <input type="submit" value="Exit">
 </form>
 </body>
 </html>

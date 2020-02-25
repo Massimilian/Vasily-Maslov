@@ -1,5 +1,45 @@
 <web-app>
 
+    <filter>
+        <filter-name>AuthFilter</filter-name>
+        <filter-class>ru.job4j.for_delete.AuthFilter</filter-class>
+    </filter>
+
+    <filter-mapping>
+        <filter-name>AuthFilter</filter-name>
+        <url-pattern>/fordel</url-pattern>
+    </filter-mapping>
+
+    <filter>
+        <filter-name>CrudAuthFilter</filter-name>
+        <filter-class>ru.job4j.crudservlet.CrudAuthFilter</filter-class>
+    </filter>
+
+    <filter-mapping>
+        <filter-name>CrudAuthFilter</filter-name>
+        <url-pattern>/main</url-pattern>
+    </filter-mapping>
+
+    <filter>
+        <filter-name>CrudAdminAuthFilter</filter-name>
+        <filter-class>ru.job4j.crudservlet.CrudAdminAuthFilter</filter-class>
+    </filter>
+
+    <filter-mapping>
+        <filter-name>CrudAdminAuthFilter</filter-name>
+        <url-pattern>*.adm</url-pattern>
+    </filter-mapping>
+
+    <servlet>
+        <servlet-name>WholeStart</servlet-name>
+        <servlet-class>ru.job4j.whole_start.WholeStartServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>WholeStart</servlet-name>
+        <url-pattern>/</url-pattern>
+    </servlet-mapping>
+
     <servlet>
         <servlet-name>UsersController</servlet-name>
         <servlet-class>ru.job4j.servlets.UsersController</servlet-class>
@@ -7,7 +47,17 @@
 
     <servlet-mapping>
         <servlet-name>UsersController</servlet-name>
-        <url-pattern>/</url-pattern>
+        <url-pattern>/ucont</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>AuthStartServlet</servlet-name>
+        <servlet-class>ru.job4j.crudservlet.AuthStartServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>AuthStartServlet</servlet-name>
+        <url-pattern>/auth</url-pattern>
     </servlet-mapping>
 
     <servlet>
@@ -27,7 +77,7 @@
 
     <servlet-mapping>
         <servlet-name>AddServlet</servlet-name>
-        <url-pattern>/add</url-pattern>
+        <url-pattern>/add.adm</url-pattern>
     </servlet-mapping>
 
     <servlet>
@@ -37,7 +87,7 @@
 
     <servlet-mapping>
         <servlet-name>WorkServlet</servlet-name>
-        <url-pattern>/work</url-pattern>
+        <url-pattern>/work.adm</url-pattern>
     </servlet-mapping>
 
     <servlet>
@@ -47,7 +97,7 @@
 
     <servlet-mapping>
         <servlet-name>Edit</servlet-name>
-        <url-pattern>/edit</url-pattern>
+        <url-pattern>/edit.adm</url-pattern>
     </servlet-mapping>
 
     <servlet>
@@ -57,7 +107,7 @@
 
     <servlet-mapping>
         <servlet-name>DeleteServlet</servlet-name>
-        <url-pattern>/delete</url-pattern>
+        <url-pattern>/delete.adm</url-pattern>
     </servlet-mapping>
 
     <servlet>
@@ -128,5 +178,145 @@
     <servlet-mapping>
         <servlet-name>DownloadServlet</servlet-name>
         <url-pattern>/download</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>MainColorServlet</servlet-name>
+        <servlet-class>ru.job4j.practice.colors.MainColorServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>MainColorServlet</servlet-name>
+        <url-pattern>/color</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>GetColorServlet</servlet-name>
+        <servlet-class>ru.job4j.practice.colors.GetColorServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>GetColorServlet</servlet-name>
+        <url-pattern>/getcolor</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>ProfileEditServlet</servlet-name>
+        <servlet-class>ru.job4j.crudservlet.ProfileEditServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>ProfileEditServlet</servlet-name>
+        <url-pattern>/profileedit</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>UserServlet</servlet-name>
+        <servlet-class>ru.job4j.for_delete.UserServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>UserServlet</servlet-name>
+        <url-pattern>/fordel</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>SignIn</servlet-name>
+        <servlet-class>ru.job4j.for_delete.SignIn</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>SignIn</servlet-name>
+        <url-pattern>/signin</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>SignOut</servlet-name>
+        <servlet-class>ru.job4j.for_delete.SignOut</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>SignOut</servlet-name>
+        <url-pattern>/signout</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>VocabularyServlet</servlet-name>
+        <servlet-class>ru.job4j.vocabulary.VocabularyServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>VocabularyServlet</servlet-name>
+        <url-pattern>/vocabulary</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>VocabularyAddServlet</servlet-name>
+        <servlet-class>ru.job4j.vocabulary.VocabularyAddServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>VocabularyAddServlet</servlet-name>
+        <url-pattern>/vocabularyadd</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>VocabularyDeleteServlet</servlet-name>
+        <servlet-class>ru.job4j.vocabulary.VocabularyDeleteServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>VocabularyDeleteServlet</servlet-name>
+        <url-pattern>/vocabularydelete</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>OkServlet</servlet-name>
+        <servlet-class>ru.job4j.vocabulary.OkServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>OkServlet</servlet-name>
+        <url-pattern>/vocabularyok</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>VocabularyCheckingServlet</servlet-name>
+        <servlet-class>ru.job4j.vocabulary.VocabularyCheckingServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>VocabularyCheckingServlet</servlet-name>
+        <url-pattern>/vocabularychecking</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>UserSignInServlet</servlet-name>
+        <servlet-class>ru.job4j.crudservlet.UserSignInServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>UserSignInServlet</servlet-name>
+        <url-pattern>/crudsignin</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>AdminSignInServlet</servlet-name>
+        <servlet-class>ru.job4j.crudservlet.AdminSignInServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>AdminSignInServlet</servlet-name>
+        <url-pattern>/admincrudsignin</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>EveryoneSignOutServlet</servlet-name>
+        <servlet-class>ru.job4j.crudservlet.EveryoneSignOutServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>EveryoneSignOutServlet</servlet-name>
+        <url-pattern>/crudsignout</url-pattern>
     </servlet-mapping>
 </web-app>
