@@ -61,8 +61,8 @@ public class TaskStorage {
     }
 
     public boolean delete(int id) {
-        boolean result = this.checkTask(id);
-        if (result) {
+        this.result = this.checkTask(id);
+        if (this.result) {
             try {
                 Class.forName("org.postgresql.Driver");
                 connection = DriverManager.getConnection(url, username, password);
@@ -106,7 +106,6 @@ public class TaskStorage {
             while (rs.next()) {
                 Task task = new Task(rs.getInt("id"), rs.getString("info"), rs.getInt("urgency"), rs.getTimestamp("create_date"));
                 tasks.add(task);
-
             }
             st.close();
             rs.close();

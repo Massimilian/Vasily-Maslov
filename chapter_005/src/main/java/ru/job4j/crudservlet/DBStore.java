@@ -51,7 +51,6 @@ public class DBStore implements Store {
         return true;
     }
 
-
     private DBStore() {
         try {
             Class.forName("org.postgresql.Driver");
@@ -178,7 +177,17 @@ public class DBStore implements Store {
                 e.printStackTrace();
             }
         }
+        updateInList(user);
         return true;
+    }
+
+    private void updateInList(User user) {
+        for (User temp : this.list) {
+            if (temp.equals(user)) {
+                temp = user;
+                break;
+            }
+        }
     }
 
     @Override
@@ -199,6 +208,7 @@ public class DBStore implements Store {
                 e.printStackTrace();
             }
         }
+        this.list.remove(user);
         return true;
     }
 
@@ -224,5 +234,15 @@ public class DBStore implements Store {
                 e.printStackTrace();
             }
         }
+    }
+
+    public long findUserIdByLogin(String login) {
+        long result = 0L;
+        for (User user : this.list) {
+            if (user.getLogin().equals(login)) {
+                result = user.getId();
+            }
+        }
+        return result;
     }
 }

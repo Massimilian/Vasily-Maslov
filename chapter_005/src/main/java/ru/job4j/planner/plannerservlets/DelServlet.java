@@ -12,7 +12,9 @@ public class DelServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         resp.setContentType("text/html");
-        resp.sendRedirect(String.format("%s/del.jsp", req.getContextPath()));
+        //resp.sendRedirect(String.format("%s/del.jsp", req.getContextPath()));
+        req.setAttribute("result", TaskStorage.getInstance().isResult());
+        req.getRequestDispatcher("/WEB-INF/plannerViews/del.jsp").forward(req, resp);
     }
 
     @Override

@@ -13,7 +13,7 @@ public class NewServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         resp.setContentType("text/html");
-        resp.sendRedirect(String.format("%s/new.jsp", req.getContextPath()));
+        req.getRequestDispatcher("/WEB-INF/plannerViews/new.jsp").forward(req, resp);
     }
 
     @Override

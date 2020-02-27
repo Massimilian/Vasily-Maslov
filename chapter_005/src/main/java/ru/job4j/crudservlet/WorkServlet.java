@@ -1,12 +1,10 @@
 package ru.job4j.crudservlet;
 
-import ru.job4j.servlets.UserStorage;
-
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import java.io.IOException;
-import java.io.PrintWriter;
 
 public class WorkServlet extends FatherServlet {
 
@@ -24,6 +22,7 @@ public class WorkServlet extends FatherServlet {
         sb.append(this.logic.getCommand());
         sb.append(controller.getSeparator());
         if (this.logic.getCommand().equals("update") || this.logic.getCommand().equals("delete")) {
+            checkWork(req, resp);
             sb.append(req.getParameter("id"));
             sb.append(controller.getSeparator());
         }
@@ -32,7 +31,13 @@ public class WorkServlet extends FatherServlet {
         sb.append(req.getParameter("login"));
         sb.append(controller.getSeparator());
         sb.append(req.getParameter("mail"));
-        controller.works(sb.toString());
         this.doGet(req, resp);
+    }
+
+    public void checkWork(HttpServletRequest req, HttpServletResponse resp) throws IOException {
+        HttpSession session = req.getSession();
+        if (Long.parseLong(req.getParameter("id")) != DBStore.getInstance().findUserIdByLogin(session.getAttribute("login").toString())) {
+            resp.sendRedirect(String.format("%s/attencion", req.getContextPath()));
+        }
     }
 }

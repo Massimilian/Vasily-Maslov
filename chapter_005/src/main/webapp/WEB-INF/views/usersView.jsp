@@ -11,7 +11,7 @@
 <!--... Было до jstl -->
 <!--<form action=" %=request.getContextPath()% /" method="post"> -->
 <!--... Стало с jstl -->
-<form action="${pageContext.servletContext.contextPath}/" method="post">
+<form action="${pageContext.servletContext.contextPath}/ucont" method="post">
     Login: <input type="text" name="login"><br/>
     Email: <input type="text" name="email"><br/>
     <input type="submit">

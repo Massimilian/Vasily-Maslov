@@ -20,14 +20,34 @@
         <url-pattern>/main</url-pattern>
     </filter-mapping>
 
+    <!--    <filter>
+            <filter-name>CrudAdminAuthFilter</filter-name>
+            <filter-class>ru.job4j.crudservlet.CrudAdminAuthFilter</filter-class>
+        </filter>
+
+        <filter-mapping>
+            <filter-name>CrudAdminAuthFilter</filter-name>
+            <url-pattern>*.adm</url-pattern>
+        </filter-mapping> -->
+
     <filter>
-        <filter-name>CrudAdminAuthFilter</filter-name>
-        <filter-class>ru.job4j.crudservlet.CrudAdminAuthFilter</filter-class>
+        <filter-name>AccessFilterOne</filter-name>
+        <filter-class>ru.job4j.access.filteres.AccessFilterOne</filter-class>
     </filter>
 
     <filter-mapping>
-        <filter-name>CrudAdminAuthFilter</filter-name>
-        <url-pattern>*.adm</url-pattern>
+        <filter-name>AccessFilterOne</filter-name>
+        <url-pattern>/accesslevelone</url-pattern>
+    </filter-mapping>
+
+    <filter>
+        <filter-name>AccessFilterTwo</filter-name>
+        <filter-class>ru.job4j.access.filteres.AccessFilterTwo</filter-class>
+    </filter>
+
+    <filter-mapping>
+        <filter-name>AccessFilterTwo</filter-name>
+        <url-pattern>/accessleveltwo</url-pattern>
     </filter-mapping>
 
     <servlet>
@@ -319,4 +339,75 @@
         <servlet-name>EveryoneSignOutServlet</servlet-name>
         <url-pattern>/crudsignout</url-pattern>
     </servlet-mapping>
+
+    <servlet>
+        <servlet-name>AttencionServlet</servlet-name>
+        <servlet-class>ru.job4j.crudservlet.AttencionServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>AttencionServlet</servlet-name>
+        <url-pattern>/attencion</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>AccessMainServlet</servlet-name>
+        <servlet-class>ru.job4j.access.AccessMainServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>AccessMainServlet</servlet-name>
+        <url-pattern>/accessmain</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>AccessPageOne</servlet-name>
+        <servlet-class>ru.job4j.access.AccessPageOne</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>AccessPageOne</servlet-name>
+        <url-pattern>/accesspageone</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>AccessPageTwo</servlet-name>
+        <servlet-class>ru.job4j.access.AccessPageTwo</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>AccessPageTwo</servlet-name>
+        <url-pattern>/accesspagetwo</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>AccessCheckServlet</servlet-name>
+        <servlet-class>ru.job4j.access.AccessCheckServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>AccessCheckServlet</servlet-name>
+        <url-pattern>/accesscheck</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>AccessLevelOne</servlet-name>
+        <servlet-class>ru.job4j.access.AccessLevelOne</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>AccessLevelOne</servlet-name>
+        <url-pattern>/accesslevelone</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>AccessLevelTwo</servlet-name>
+        <servlet-class>ru.job4j.access.AccessLevelTwo</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>AccessLevelTwo</servlet-name>
+        <url-pattern>/accessleveltwo</url-pattern>
+    </servlet-mapping>
+
 </web-app>

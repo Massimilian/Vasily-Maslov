@@ -35,6 +35,6 @@ public class UsersController extends HttpServlet {
         // путём вытаскивания значений login и email из пришедшего объекта типа HttpServletResponse
         UserStorage.getInstance().add(new User(req.getParameter("login"), req.getParameter("email")));
         // Идёт переброска на страницу jsp, которая обозначена в web как базовая (без дополнительного адреса)
-        resp.sendRedirect(String.format("%s/", req.getContextPath()));
+        resp.sendRedirect(String.format("%s/ucont", req.getContextPath()));
     }
 }

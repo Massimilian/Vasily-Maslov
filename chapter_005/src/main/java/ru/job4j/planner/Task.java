@@ -7,6 +7,7 @@ public class Task {
     String info;
     int urgency;
     Date createDate;
+    String color;
 
     public Task(String info, int urgency) {
         this.info = info;
@@ -34,5 +35,34 @@ public class Task {
 
     public Date getCreateDate() {
         return createDate;
+    }
+
+    public String getColor() {
+        switch (this.urgency) {
+            case 1:
+                this.color = "crimson";
+                break;
+            case 2:
+                this.color = "orange";
+                break;
+            case 3:
+                this.color = "gold";
+                break;
+            case 4:
+                this.color = "chartreuse";
+                break;
+            case 5:
+                this.color = "aquamarine";
+                break;
+            case 6:
+                this.color = "aqua";
+                break;
+            case 7:
+                this.color = "fuchsia";
+                break;
+            default:
+                this.color = "aliceblue";
+        }
+        return this.color;
     }
 }
