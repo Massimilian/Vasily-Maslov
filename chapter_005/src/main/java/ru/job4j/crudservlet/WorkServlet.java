@@ -22,7 +22,6 @@ public class WorkServlet extends FatherServlet {
         sb.append(this.logic.getCommand());
         sb.append(controller.getSeparator());
         if (this.logic.getCommand().equals("update") || this.logic.getCommand().equals("delete")) {
-            checkWork(req, resp);
             sb.append(req.getParameter("id"));
             sb.append(controller.getSeparator());
         }
@@ -31,13 +30,45 @@ public class WorkServlet extends FatherServlet {
         sb.append(req.getParameter("login"));
         sb.append(controller.getSeparator());
         sb.append(req.getParameter("mail"));
+        if (isAdmin(req)) {
+            controller.works(sb.toString());
+        } else {
+            if (this.logic.getCommand().equals("add")) {
+                this.controller.setInfo("Access problems. Enter your valid login and try again.");
+            } else if (checkWork(req)) {
+                renovateSession(req);
+                controller.works(sb.toString());
+            } else {
+                this.controller.setInfo("Access problems. Enter your valid login and try again.");
+            }
+        }
         this.doGet(req, resp);
     }
 
-    public void checkWork(HttpServletRequest req, HttpServletResponse resp) throws IOException {
+    private boolean checkWork(HttpServletRequest req) throws IOException {
+        boolean result = true;
         HttpSession session = req.getSession();
+        System.out.println(Long.parseLong(req.getParameter("id")));
+        System.out.println(DBStore.getInstance().findUserIdByLogin(session.getAttribute("login").toString()));
         if (Long.parseLong(req.getParameter("id")) != DBStore.getInstance().findUserIdByLogin(session.getAttribute("login").toString())) {
-            resp.sendRedirect(String.format("%s/attencion", req.getContextPath()));
+            result = false;
         }
+        return result;
+    }
+
+    private void renovateSession(HttpServletRequest req) {
+        HttpSession session = req.getSession();
+        synchronized (session) {
+            session.setAttribute("login", req.getParameter("login"));
+        }
+    }
+
+    private boolean isAdmin(HttpServletRequest req) {
+        HttpSession session = req.getSession();
+        boolean result = false;
+        if (session.getAttribute("admin") != null) {
+            result = session.getAttribute("login").equals("admin") && session.getAttribute("admin").equals("admin");
+        }
+        return result;
     }
 }

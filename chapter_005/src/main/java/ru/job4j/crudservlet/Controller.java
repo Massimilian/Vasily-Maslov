@@ -18,6 +18,10 @@ public class Controller {
         return info;
     }
 
+    public void setInfo(String info) {
+        this.info = info;
+    }
+
     public String getSeparator() {
         return separator;
     }
