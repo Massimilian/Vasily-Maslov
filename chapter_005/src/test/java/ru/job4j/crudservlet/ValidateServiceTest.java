@@ -1,8 +1,6 @@
 package ru.job4j.crudservlet;
 
 import org.junit.Test;
-import ru.job4j.crudservlet.User;
-import ru.job4j.crudservlet.ValidServ;
 
 import java.util.Date;
 import java.util.List;
@@ -11,9 +9,9 @@ import static org.hamcrest.Matchers.is;
 import static org.junit.Assert.assertThat;
 
 public class ValidateServiceTest {
-    private User userZero = new User(0, "Zero", "Zero", "zero@zero.com", new Date());
-    private User userAnotherZero = new User(0, "AnotherZero", "AnotherZero", "anotherZero@zero.com", new Date());
-    private User userOne = new User(1, "One", "One", "one@one.com", new Date());
+    private User userZero = new User(0, "Zero", "Zero", "zero@zero.com", new Date(), null);
+    private User userAnotherZero = new User(0, "AnotherZero", "AnotherZero", "anotherZero@zero.com", new Date(), null);
+    private User userOne = new User(1, "One", "One", "one@one.com", new Date(), null);
 
     @Test
     public void whenAddNewValueThenPutItInTheList() {
