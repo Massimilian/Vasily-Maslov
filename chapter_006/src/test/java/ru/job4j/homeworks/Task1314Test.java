@@ -8,8 +8,8 @@ import static org.hamcrest.Matchers.is;
 import static org.junit.Assert.*;
 
 public class Task1314Test {
-    Task1314 test = new Task1314();
-    ArrayList<Moment1314> times = new ArrayList<>();
+    private Task1314 test = new Task1314();
+    private ArrayList<Moment1314> times = new ArrayList<>();
 
     @Test
     public void whenTryToChangeTheMoreEarlierTimeThenDoIt() {

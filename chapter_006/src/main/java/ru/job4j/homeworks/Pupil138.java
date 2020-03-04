@@ -4,6 +4,7 @@ public class Pupil138 {
     String surname;
     String name;
     String address;
+    int height;
     int number = 0;
 
     public Pupil138(String surname, String name, String address, int number) {
@@ -17,6 +18,11 @@ public class Pupil138 {
         this.surname = surname;
         this.name = name;
         this.address = address;
+    }
+
+    public Pupil138(String surname, int height) {
+        this.surname = surname;
+        this.height = height;
     }
 
     public String getSurname() {
@@ -33,5 +39,9 @@ public class Pupil138 {
 
     public int getNumber() {
         return number;
+    }
+
+    public int getHeight() {
+        return height;
     }
 }
